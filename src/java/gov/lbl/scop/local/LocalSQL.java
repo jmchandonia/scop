@@ -1,0 +1,1251 @@
+/*
+ * Software to build and maintain SCOPe, https://scop.berkeley.edu/
+ *
+ * Copyright (C) 2012-2018 The Regents of the University of California
+ *
+ * For feedback, mailto:scope@compbio.berkeley.edu
+ *
+ * This library is free software; you can redistribute it and/or
+ * modify it under the terms of the GNU Lesser General Public
+ * License as published by the Free Software Foundation; either
+ * Version 2.1 of the License, or (at your option) any later version.
+ * This library is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public
+ * License along with this library; if not, write to the Free Software
+ * Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA 02110-1301
+ * USA
+ */
+package gov.lbl.scop.local;
+
+import gov.lbl.scop.util.RAF;
+
+import java.sql.*;
+import java.util.*;
+import java.util.regex.*;
+import org.strbio.util.StringUtil;
+
+/**
+   Class to access local SQL database.
+
+   <pre>
+   Version 1.2, 9/13/11 - close all ResultSets
+   Version 1.1, 11/17/10 - added code related to Notify
+   Version 1.0, 8/7/8 - adapted from gov.lbl.pcap.LocalSQL
+   </pre>
+
+   @author JMC
+   @version 1.2, 9/13/11
+*/
+public class LocalSQL {
+    /**
+       Connection to the db
+    */
+    private static Connection con = null;
+
+    /**
+       statement to access the db
+    */
+    private static Statement stmt = null;
+
+    /**
+       database URLs for RO access, separated by ;
+    */
+    private static String roURLs = null;
+
+    /**
+       database URLs for RW access, separated by ;
+    */
+    private static String rwURLs = null;
+
+    /**
+       connect to db using a particular URL or set of URLs separated by ;
+    */
+    final public static void connect(String urls) {
+        if ((con == null) || (stmt == null)) {
+            try {
+                Class.forName("org.gjt.mm.mysql.Driver").newInstance();
+                String[] url = urls.split(";");
+                for (int i = 0; i < url.length; i++) {
+                    try {
+                        con = DriverManager.getConnection(url[i]);
+                    } catch (Exception e2) {
+                        con = null;
+                    }
+                    if (con != null) i = url.length;
+                }
+                stmt = con.createStatement();
+            } catch (Exception e) {
+                System.err.println("Exception when attempting to make a DB connection.  Is MySQL connector in your classpath?  " + e.getMessage());
+            }
+        }
+    }
+
+    /**
+       connect to db with default access level
+    */
+    final public static void connect() {
+        if (roURLs == null)
+            roURLs = SCOP.getProperty("db.ro_urls");
+        if (roURLs == null)
+            roURLs = "jdbc:mysql://localhost/scop?user=anonymous";
+        connect(roURLs);
+    }
+
+    /**
+       connect to db with rw access
+    */
+    final public static void connectRW() {
+        if (rwURLs == null)
+            rwURLs = SCOP.getProperty("db.rw_urls");
+        if (rwURLs == null)
+            rwURLs = "jdbc:mysql://localhost/scop?user=anonymous";
+        connect(rwURLs);
+    }
+
+    /**
+       make another Statement, or null if an error occurs.
+    */
+    final public static Statement createStatement() {
+        if (con == null) connect();
+        try {
+            return con.createStatement();
+        } catch (Exception e) {
+            System.err.println("Exception caught when connecting to DB " + e.getMessage());
+        }
+        return null;
+    }
+
+    /**
+       make another Statement that returns results one
+       row at a time, or null if an error occurs.
+    */
+    final public static Statement createStatementOneRow() {
+        if (con == null) connect();
+        try {
+            Statement stmt = con.createStatement(java.sql.ResultSet.TYPE_FORWARD_ONLY,
+                                                 java.sql.ResultSet.CONCUR_READ_ONLY);
+            stmt.setFetchSize(Integer.MIN_VALUE);
+            return stmt;
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
+
+    /**
+       make a PreparedStatement, or null if an error occurs.
+    */
+    final public static PreparedStatement prepareStatement(String s) {
+        if (con == null) connect();
+        try {
+            return con.prepareStatement(s);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
+
+    /**
+       make a PreparedStatement, or null if an error occurs.
+    */
+    final public static PreparedStatement prepareStatement(String s,
+                                                           int autogeneratedkeys) {
+        if (con == null) connect();
+        try {
+            return con.prepareStatement(s,
+                                        autogeneratedkeys);
+        } catch (Exception e) {
+            System.err.println(e.getMessage());
+        }
+        return null;
+    }
+    
+    /**
+       turn on/off manual committing, for transactions
+    */
+    final public static void setAutoCommit(boolean b) throws Exception {
+        if (con == null)
+            return;
+        con.setAutoCommit(b);
+    }
+
+    /**
+       commit updates
+    */
+    final public static void commit() throws Exception {
+        if (con == null)
+            return;
+        con.commit();
+    }
+
+    /**
+       roll back updates
+    */
+    final public static void rollback() throws Exception {
+        if (con == null)
+            return;
+        con.rollback();
+    }
+
+    /**
+       returns level id from an abbreviation, or 0 if not found
+    */
+    final public static int lookupLevelAbbrev(String abbrev) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from scop_level where abbreviation=\"" + abbrev + "\"");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns abbreviation for a level id, or null if not found
+    */
+    final public static String lookupLevelAbbrev(int id) throws SQLException {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select abbreviation from scop_level where id="+id);
+        if (rs.next()) {
+            rv = rs.getString(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+    
+    /**
+       returns history type id from an abbreviation, or 0 if not found
+    */
+    final public static int lookupHistoryTypeAbbrev(String abbrev) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from scop_history_type where abbreviation=\"" + abbrev + "\"");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns pdb id from 4-letter code, or 0 if not found
+    */
+    final public static int lookupPDB(String code) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from pdb_entry where code=\"" + code + "\"");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+
+    /**
+       returns on-hold pdb id from 4-letter code, or 0 if not found
+    */
+    final public static int lookupPDBOnHold(String code) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from pdb_onhold_entry where code=\"" + code + "\"");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns current pdb release, or 0 if not found
+    */
+    final public static int getCurrentPDBRelease(int entryID) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from pdb_release where pdb_entry_id=" + entryID + " and replaced_by is null");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns pdb code from id, or null if not found
+    */
+    final public static String getPDBCode(int id) throws SQLException {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select code from pdb_entry where id=" + id);
+        if (rs.next()) {
+            rv = rs.getString(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns release, or 0 if not found
+    */
+    final public static int lookupSCOPRelease(String version) throws Exception {
+        Statement stmt = createStatement();
+        if (stmt == null) {
+            throw new Exception("Failure to connect to DB");
+        }
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from scop_release where version=\"" + version + "\"");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        if (rv==0) {
+            rs = stmt.executeQuery("select id from scop_release where old_version=\"" + version + "\"");
+            if (rs.next()) {
+                rv = rs.getInt(1);
+            }
+            rs.close();
+        }
+	
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns version for a release, or null if not found
+    */
+    final public static String lookupSCOPRelease(int id) throws Exception {
+        Statement stmt = createStatement();
+        if (stmt == null)
+            throw new Exception("Failure to connect to DB");
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select version from scop_release where id="+id);
+        if (rs.next())
+            rv = rs.getString(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+    
+    /**
+       returns Pfam release, or 0 if not found
+    */
+    final public static int lookupPfamRelease(String version) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from pfam_release where version=\"" + version + "\"");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns CDD release, or 0 if not found
+    */
+    final public static int lookupCDDRelease(String version) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from cdd_release where version=\"" + version + "\"");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns id of a Pfam accession number, or 0 if not found.  If
+       releaseID is 0, use latest release.
+    */
+    final public static int lookupPfam(String acc,
+                                       int releaseID) throws SQLException {
+        PreparedStatement stmt = prepareStatement("select id from pfam where accession like ? and release_id=?");
+        stmt.setString(1,acc+"%");
+        if (releaseID==0)
+            stmt.setInt(2,getLatestPfamRelease());
+        else
+            stmt.setInt(2,releaseID);
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns id of a CDD accession number, or 0 if not found.  If
+       releaseID is 0, use latest release.
+    */
+    final public static int lookupCdd(String acc,
+                                      int releaseID) throws SQLException {
+        PreparedStatement stmt = prepareStatement("select id from cdd where accession=? and release_id=?");
+        stmt.setString(1,acc);
+        if (releaseID==0)
+            stmt.setInt(2,getLatestCddRelease());
+        else
+            stmt.setInt(2,releaseID);
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+    
+    /**
+       returns node, or 0 if not found, or -1 if duplicate
+    */
+    final public static int lookupNodeBySunid(int sunid, int scopReleaseID) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from scop_node where sunid=" + sunid + " and release_id=" + scopReleaseID);
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        if (rs.next()) {
+            rv = -1;
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns node, or 0 if not found, or -1 if duplicate
+    */
+    final public static int lookupNodeBySid(String sid, int scopReleaseID) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from scop_node where sid=\"" + sid + "\" and release_id=" + scopReleaseID);
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        if (rs.next()) {
+            rv = -1;
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns node, or 0 if not found, or -1 if duplicate.
+       Will only return node of type family or below
+    */
+    final public static int lookupNodeBySCCS(String sccs, int scopReleaseID) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select id from scop_node where sccs=\"" + sccs + "\" and release_id=" + scopReleaseID + " and level_id<=5");
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        if (rs.next()) {
+            rv = -1;
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns node, or 0 if not found, or -1 if ambiguous
+    */
+    final public static int lookupNodeByDescription(String description, int scopReleaseID) throws SQLException {
+        PreparedStatement stmt = prepareStatement("select id from scop_node where description=? and release_id=?");
+        int rv = 0;
+        stmt.setString(1,description);
+        stmt.setInt(2,scopReleaseID);
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        if (rs.next()) {
+            rv = -1;
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns node, or 0 if not found, or -1 if ambiguous
+    */
+    final public static int lookupNodeByDescription(String description,
+                                                    int scopReleaseID,
+                                                    int parentNodeID) throws SQLException {
+        PreparedStatement stmt = prepareStatement("select id from scop_node where description=? and release_id=? and parent_node_id=?");
+        int rv = 0;
+        stmt.setString(1,description);
+        stmt.setInt(2,scopReleaseID);
+        stmt.setInt(3,parentNodeID);
+        ResultSet rs = stmt.executeQuery();
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        if (rs.next()) {
+            rv = -1;
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+    
+    /**
+       parses a unique node identifier.  Returns 0 if not found, -1
+       if ambiguous.  Looks in latest scop release, or a specified
+       older release (release 0 means use latest).  Will parse sunid,
+       sid, sccs, or node ids of the format Nxxxxx.  In the later case,
+       Nxxxx is checked to be sure it belongs to the corresponding
+       release unless scopReleaseID is 0.
+    */
+    final public static int lookupNode(String id, int scopReleaseID) throws SQLException {
+        int rv = 0;
+        if (id.startsWith("N")) {
+            rv = StringUtil.atoi(id,1);
+            Statement stmt = createStatement();
+            String query = "select id from scop_node where id="+rv;
+            if (scopReleaseID > 0)
+                query += " and release_id="+scopReleaseID;
+            ResultSet rs = stmt.executeQuery(query);
+            if (!rs.next())
+                rv = 0;
+            rs.close();
+            stmt.close();
+        }
+        else {
+            if (scopReleaseID==0)
+                scopReleaseID = getLatestSCOPRelease(false);
+            if ((id.startsWith("d")) &&
+                (id.length()==7) &&
+                (id.charAt(1) != '.'))
+                rv = LocalSQL.lookupNodeBySid(id,
+                                              scopReleaseID);
+            else if ((id.charAt(0) >= 'a') &&
+                     (id.charAt(0) <= 'l'))
+                rv = LocalSQL.lookupNodeBySCCS(id,
+                                               scopReleaseID);
+            else {
+                int sunid = StringUtil.atoi(id);
+                rv = LocalSQL.lookupNodeBySunid(sunid,
+                                                scopReleaseID);
+            }
+        }
+        return rv;
+    }
+
+    /**
+       Finds the correct RAF entry to use for a particular PDB chain
+       for a given version of SCOP.  If scopReleaseID is 0, the NULL
+       version is used.  Returns 0 if not found.
+    */
+    final public static int findRAF(String code, char chain, int scopReleaseID) throws Exception {
+        Statement stmt = createStatement();
+        String rel = null;
+        int rv = 0;
+        if (scopReleaseID > 0)
+            rel = "r.first_release_id<=" + scopReleaseID + " and r.last_release_id>=" + scopReleaseID;
+        else
+            rel = "r.first_release_id is null and r.last_release_id is null";
+        ResultSet rs = stmt.executeQuery("select r.id from raf r, pdb_chain c, pdb_release re, pdb_entry e where e.code=\"" + code + "\" and re.pdb_entry_id=e.id and c.pdb_release_id=re.id and c.chain=\"" + chain + "\" and r.pdb_chain_id=c.id and " + rel);
+        if (rs.next())
+            rv = rs.getInt(1);
+        if (rs.next()) {
+            System.err.println("duplicate RAF:" + code + chain + " " + scopReleaseID);
+            System.exit(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Finds the correct RAF entry to use for a particular PDB chain,
+       for a given version of SCOP.  If scopReleaseID is 0, the NULL
+       version is used.  Returns 0 if not found.
+    */
+    final public static int findRAF(int pdbChainID, int scopReleaseID) throws Exception {
+        Statement stmt = createStatement();
+        String rel = null;
+        int rv = 0;
+        if (scopReleaseID > 0)
+            rel = "first_release_id<=" + scopReleaseID + " and last_release_id>=" + scopReleaseID;
+        else
+            rel = "first_release_id is null and last_release_id is null";
+        ResultSet rs = stmt.executeQuery("select id from raf where pdb_chain_id=" + pdbChainID + " and " + rel);
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Gets the first residue from a raf entry
+    */
+    final public static String getFirstRAF(int rafID) throws Exception {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select substr(line,29,5) from raf where id=" + rafID);
+        if (rs.next()) {
+            rv = rs.getString(1).trim();
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Gets the last residue from a raf entry
+    */
+    final public static String getLastRAF(int rafID) throws Exception {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select substr(line,34,5) from raf where id=" + rafID);
+        if (rs.next()) {
+            rv = rs.getString(1).trim();
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       gets comments for a node, or null if none
+    */
+    final public static String getComments(int nodeID) throws Exception {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select description from scop_comment where node_id=" + nodeID);
+        while (rs.next()) {
+            if (rv == null)
+                rv = rs.getString(1);
+            else
+                rv += " ; " + rs.getString(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+
+    /**
+       returns sequence for a particular scop node, according
+       to source:
+
+       1 = ATOM
+       2 = SEQRES
+
+       and according to style:
+       1 = single chain
+       2 = multi-chain original style (OS)
+       3 = multi-chain genetic domain (GD)
+
+       If style 2, the order argument is a 0-based index saying which
+       sequence to return.  For example, in "1avo A:,B:"
+       order 0 would return 1avoA, and order 1 would return 1avoB.
+
+       sequences are lower case, but separate parts of domains that
+       are discontiguous on a chain (or on different chains, in the
+       case of GD sequences) are separated by a capital X
+
+       Returns null if error.
+    */
+    final public static RAF.SequenceFragment domainSeq(int domainID, int sourceType, int styleType, int order) {
+        try {
+            Statement stmt = LocalSQL.createStatement();
+            ResultSet rs = stmt.executeQuery("select description from scop_node where id=" + domainID);
+            rs.next();
+            String description = rs.getString(1).substring(5);
+            rs.close();
+            char chain = ' ';
+            char lastChain = ' ';
+            RAF.SequenceFragment rv = new RAF.SequenceFragment();
+            int currentChain = 0;
+            boolean firstRegion = true;
+            boolean addedFragment = false;
+            String body = null;
+            Pattern regionPattern = Pattern.compile("\\s*(\\S+?)-(\\S+)\\s*$");
+
+            // System.out.println("node description is "+description);
+
+            StringTokenizer st = new StringTokenizer(description, ",");
+            while (st.hasMoreTokens()) {
+                String region = st.nextToken();
+                int pos = region.indexOf(':');
+                if (pos == -1)
+                    chain = ' ';
+                else {
+                    chain = region.charAt(pos - 1);
+                    region = region.substring(pos + 1);
+                }
+
+                if (firstRegion) {
+                    lastChain = chain;
+                    firstRegion = false;
+                }
+
+                if (lastChain != chain)
+                    currentChain++;
+
+                if ((styleType != 2) || (currentChain == order)) {
+                    // include this region
+                    // System.out.println("using region "+region);
+                    if ((body == null) || (chain != lastChain)) {
+                        // get a new RAF body
+                        // System.out.println("getting RAF for "+domainID);
+                        rs = stmt.executeQuery("select raf_get_body(r.id) from raf r, pdb_chain c, link_pdb l, scop_node n where r.pdb_chain_id=c.id and l.pdb_chain_id=c.id and c.chain=\"" + chain + "\" and l.node_id=n.id and n.release_id >= r.first_release_id and n.release_id <= r.last_release_id and n.id=" + domainID);
+                        if (!rs.next()) {
+                            // System.out.println("RAF not found");
+                            rs = stmt.executeQuery("select raf_get_body(r.id) from raf r, pdb_chain c, link_pdb l, scop_node n where r.pdb_chain_id=c.id and l.pdb_chain_id=c.id and c.chain=\"" + Character.toLowerCase(chain) + "\" and l.node_id=n.id and n.release_id >= r.first_release_id and n.release_id <= r.last_release_id and n.id=" + domainID);
+                            if (rs.next()) {
+                                System.out.println(domainID + " " + description + " needs case fixed.");
+                            } else {
+                                rs.close();
+                                stmt.close();
+                                return null;
+                            }
+                        }
+                        body = rs.getString(1);
+                        if (rs.next()) {
+                            System.out.println("error - raf logic wrong");
+                            System.exit(1);
+                        }
+                        rs.close();
+                    }
+                    // figure out boundaries
+                    String firstRes = null;
+                    String lastRes = null;
+                    Matcher m = regionPattern.matcher(region);
+                    if (m.matches()) {
+                        firstRes = m.group(1);
+                        lastRes = m.group(2);
+                    }
+                    RAF.SequenceFragment f = null;
+
+                    if ((firstRes != null) && (lastRes != null))
+                        f = RAF.partialChainSeq(body, sourceType, firstRes, lastRes);
+                    else {
+                        // for SEQRES, we only want region within ATOMs
+                        int st2 = sourceType;
+                        if (st2 == 2) st2++;
+                        f = RAF.wholeChainSeq(body, st2);
+                    }
+
+                    // if error, blow the whole sequence
+                    if (f == null) {
+                        stmt.close();
+                        return null;
+                    }
+
+                    // append f to end, with X if needed
+                    if (addedFragment)
+                        rv.append('X');
+                    rv.append(f);
+                    addedFragment = true;
+                }
+
+                lastChain = chain;
+            }
+            stmt.close();
+            return rv;
+        } catch (Exception e) {
+            System.out.println("Exception: " + e.getMessage());
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+       Walks up the SCOP tree until parent at a given level is found,
+       or 0 if not found
+    */
+    final public static int findParent(int nodeID, int levelID) throws Exception {
+        Statement stmt = LocalSQL.createStatement();
+        while (true) {
+            ResultSet rs = stmt.executeQuery("select p.id, p.level_id from scop_node p, scop_node c where c.parent_node_id is not null and c.parent_node_id=p.id and c.id=" + nodeID);
+            if (rs.next()) {
+                nodeID = rs.getInt(1);
+                int level = rs.getInt(2);
+                if (level == levelID) {
+                    rs.close();
+                    stmt.close();
+                    return nodeID;
+                }
+            }
+            else {
+                rs.close();
+                stmt.close();
+                return 0;
+            }
+            rs.close();
+        }
+    }
+
+    /**
+       Finds all children of a given node; optionally (if levelID is non-zero)
+       at a given level.  Empty vector if not found.
+    */
+    final public static Vector<Integer> findChildren(int nodeID, int levelID) throws Exception {
+        Statement stmt = LocalSQL.createStatement();
+        Vector<Integer> rv = new Vector<Integer>();
+        ResultSet rs = stmt.executeQuery("select id, level_id from scop_node where parent_node_id = "+nodeID);
+        while (rs.next()) {
+            int childNodeID = rs.getInt(1);
+            int level = rs.getInt(2);
+            if ((level == levelID) ||
+                (levelID == 0)) {
+                rv.add(new Integer(childNodeID));
+            }
+            if ((level < 8) &&
+                ((level < levelID) ||
+                 (levelID == 0))) {
+                rv.addAll(findChildren(childNodeID,levelID));
+            }
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+    
+    /**
+       Checks whether one SCOP node is an ancestor of another.
+    */
+    final public static boolean isAncestor(int parentNodeID, int childNodeID) throws Exception {
+        int parentLevel = getLevel(parentNodeID);
+        int realParent = findParent(childNodeID,parentLevel);
+        if (realParent==parentNodeID)
+            return true;
+        return false;
+    }
+    
+    /**
+       Gets description for a given scop node, or null if not found
+    */
+    final public static String getDescription(int nodeID) throws Exception {
+        Statement stmt = LocalSQL.createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select description from scop_node where id=" + nodeID);
+        if (rs.next()) {
+            rv = rs.getString(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns sunid for a node, or -1 if not found
+    */
+    final public static int getSunid(int id) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = -1;
+        ResultSet rs = stmt.executeQuery("select sunid from scop_node where id=" + id);
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns sccs for a node, or null if not found
+    */
+    final public static String getSCCS(int id) throws SQLException {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select sccs from scop_node where id=" + id);
+        if (rs.next())
+            rv = rs.getString(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns level for a node, or 0 if not found
+    */
+    final public static int getLevel(int id) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select level_id from scop_node where id=" + id);
+        if (rs.next())
+            rv = rs.getInt(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       returns SCOP release ID for a node, or 0 if not found
+    */
+    final public static int getSCOPRelease(int id) throws SQLException {
+        Statement stmt = createStatement();
+        int rv = 0;
+        ResultSet rs = stmt.executeQuery("select release_id from scop_node where id=" + id);
+        if (rs.next())
+            rv = rs.getInt(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Finds id for a particular sid in a version of ASTRAL.
+    */
+    final public static int findASTRALDomain(String sid, int scopReleaseID, int sourceID) throws Exception {
+        Statement stmt = createStatement();
+        String rel = null;
+        int rv = 0;
+        if (scopReleaseID > 0)
+            rel = "n.release_id=" + scopReleaseID;
+        else
+            rel = "n.release_id is null";
+        ResultSet rs = stmt.executeQuery("select a.id from astral_domain a, scop_node n where a.sid=\"" + sid + "\" and a.node_id=n.id and source_id=" + sourceID + " and " + rel);
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Finds id for a particular sid in a version of ASTRAL.
+    */
+    final public static int findASTRALChain(String sid, int scopReleaseID, int sourceID) throws Exception {
+        Statement stmt = createStatement();
+        String rel = null;
+        int rv = 0;
+        if (scopReleaseID > 0)
+            rel = "r.first_release_id<=" + scopReleaseID + " and r.last_release_id>=" + scopReleaseID;
+        else
+            rel = "r.first_release_id is null and r.last_release_id is null";
+        ResultSet rs = stmt.executeQuery("select a.id from astral_chain a, raf r where a.sid=\"" + sid + "\" and a.raf_id=r.id and source_id=" + sourceID + " and " + rel);
+        if (rs.next()) {
+            rv = rs.getInt(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Returns the path to the PDB-style file for a given SCOP node,
+       or null if not found
+    */
+    final public static String getPDBStylePath(int nodeID) throws Exception {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select file_path from scop_node_pdbstyle where node_id=" + nodeID);
+        if (rs.next()) {
+            rv = rs.getString(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Returns the path to the PDB-style file for a given ASTEROID
+       or null if not found
+    */
+    final public static String getPDBStylePathASTEROID(int asteroidID) throws Exception {
+        Statement stmt = createStatement();
+        String rv = null;
+        ResultSet rs = stmt.executeQuery("select file_path from asteroid_pdbstyle where asteroid_id=" + asteroidID);
+        if (rs.next()) {
+            rv = rs.getString(1);
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Create a new job
+       <p/>
+       See job_type table in the SCOP DB for the ID numbers
+    */
+    final public static int newJob(int jobTypeID, int targetID, String args)
+        throws Exception {
+        Statement stmt = createStatement();
+        int jobID = newJob(jobTypeID, targetID, args, stmt);
+        stmt.close();
+        return jobID;
+    }
+
+    /**
+       Create a new job, using existing statement, or 0 if failed.
+
+       See job_type table in the SCOP DB for the ID numbers
+
+       Warning:  does not sanitize args--don't allow any user input!
+    */
+    final public static int newJob(int jobTypeID, int targetID, String args, Statement stmt) throws Exception {
+        ResultSet rs;
+        int priority = 0;
+        switch (jobTypeID) {
+	    case 3:
+            priority = 1;
+            break;
+	    case 4:
+            priority = 2;
+            break;
+	    case 5:
+	    case 9:
+	    case 10:
+	    case 11:
+	    case 12:
+	    case 20:
+            priority = 3;
+            break;
+	    case 16:
+	    case 17:
+	    case 18:
+	    case 19:
+            priority = 4;
+            break;
+	    case 7:
+	    case 21:
+            priority = 5;
+            break;
+	    case 8:
+            priority = 6;
+            break;
+	    default:
+            priority = 0;
+        }
+        rs = stmt.executeQuery("select id from job where job_type_id=" + jobTypeID + " and target_id=" + targetID + " and args " + (args == null ? " is null" : "=\"" + args + "\""));
+        if (rs.next()) {
+            rs.close();
+            return 0;
+        }
+        rs.close();
+
+        stmt.executeUpdate("lock table job write, job_done write");
+        stmt.executeUpdate("insert into job values(null," + jobTypeID + ",now(),null," + targetID + "," + (args == null ? "null" : "\"" + args + "\"") + ",0,null," + priority + ",null)",
+                           Statement.RETURN_GENERATED_KEYS);
+        rs = stmt.getGeneratedKeys();
+        rs.next();
+        int jobID = rs.getInt(1);
+        rs.close();
+        stmt.executeUpdate("unlock tables");
+
+        return jobID;
+    }
+
+    /**
+       get email address for user, or null if not found
+    */
+    final public static String getEmail(int userID) {
+        try {
+            Statement stmt = createStatement();
+            ResultSet rs = stmt.executeQuery("select email from user where id=" + userID);
+            if (rs.next()) {
+                String email = rs.getString(1);
+                if (email.indexOf('@') > 0) {
+                    rs.close();
+                    stmt.close();
+                    return email;
+                }
+            }
+            rs.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    /**
+       search for user name, or 0 if not found
+    */
+    final public static int getUserID(String userName) {
+        try {
+            Statement stmt = createStatement();
+            ResultSet rs = stmt.executeQuery("select id from user where name=\"" + userName + "\"");
+            if (rs.next()) {
+                int rv = rs.getInt(1);
+                rs.close();
+                stmt.close();
+                return rv;
+            }
+            rs.close();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    /**
+       make a SCOP node; return node id or 0 if error.
+       String values should be null if not assigned.
+       If curationID is 0, will use last version, or assume human
+       curated.
+    */
+    final public static int createNode(int sunid,
+                                       String sccs,
+                                       String sid,
+                                       String description,
+                                       int levelID,
+                                       int parentNodeID,
+                                       int scopReleaseID,
+                                       int curationID) {
+        try {
+            Statement stmt = createStatement();
+            if (curationID==0) {
+                curationID = 1; // human-curated, by default
+                ResultSet rs = stmt.executeQuery("select curation_type_id from scop_node where sunid="+sunid+" and release_id="+(scopReleaseID-1));
+                if (rs.next())
+                    curationID = rs.getInt(1);
+                rs.close();
+            }
+
+            PreparedStatement stmt2 = prepareStatement("insert into scop_node values (null,?, ?, ?, ?, ?, ?, ?, ?)",Statement.RETURN_GENERATED_KEYS);
+            stmt2.setInt(1,sunid);
+            stmt2.setString(2,sccs==null? "" : sccs);
+            stmt2.setString(3,sid);
+            stmt2.setString(4,description);
+            stmt2.setInt(5,levelID);
+            if (parentNodeID==0)
+                stmt2.setNull(6,java.sql.Types.INTEGER);
+            else
+                stmt2.setInt(6,parentNodeID);
+            stmt2.setInt(7,scopReleaseID);
+            stmt2.setInt(8,curationID);
+            stmt2.executeUpdate();
+            ResultSet rs = stmt2.getGeneratedKeys();
+            rs.next();
+            int rv = rs.getInt(1);
+            rs.close();
+            stmt.close();
+            stmt2.close();
+            return rv;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return 0;
+    }
+
+    /**
+       gets next available sunid, and increments stored value
+    */
+    final public static int getNextSunid() throws Exception {
+        Statement stmt = createStatement();
+        stmt.executeUpdate("call get_next_sunid(@a)");
+        ResultSet rs = stmt.executeQuery("select @a");
+        rs.next();
+        int rv = rs.getInt(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       sets next available sunid
+    */
+    final public static void setNextSunid(int sunid) throws SQLException {
+        Statement stmt = createStatement();
+        stmt.executeUpdate("call set_next_sunid(" + sunid + ")");
+        stmt.close();
+    }
+
+    /**
+       get last update date for a release, or null if none
+       for the release in question
+    */
+    final public static java.sql.Date getUpdateDate(int scopReleaseID) throws SQLException {
+        Statement stmt = createStatement();
+        java.sql.Date rv = null;
+        ResultSet rs = stmt.executeQuery("select max(time_occurred) from scop_history where release_id=" + scopReleaseID + " and change_type_id=12");
+        if (rs.next())
+            rv = rs.getDate(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       Get the appropriate database name (i.e., SCOP or SCOPe) for
+       a given release
+    */
+    final public static String getDBName(int scopReleaseID) throws SQLException {
+        Statement stmt = createStatement();
+        String rv = "SCOP";
+        ResultSet rs = stmt.executeQuery("select series from scop_release where id="+scopReleaseID);
+        if (rs.next()) {
+            int series = rs.getInt(1);
+            if (series==2) rv += "e";
+        }
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+    
+    /**
+       gets latest SCOP release id; if publicOnly is set, then
+       looks only at public releases.
+    */
+    final public static int getLatestSCOPRelease(boolean publicOnly) throws SQLException {
+        Statement stmt = createStatement();
+        String query = "select max(id) from scop_release";
+        if (publicOnly)
+            query += " where is_public=1";
+        ResultSet rs = stmt.executeQuery(query);
+        rs.next();
+        int rv = rs.getInt(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       gets latest pfam release id
+    */
+    final public static int getLatestPfamRelease() throws SQLException {
+        Statement stmt = createStatement();
+        String query = "select max(id) from pfam_release";
+        ResultSet rs = stmt.executeQuery(query);
+        rs.next();
+        int rv = rs.getInt(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+
+    /**
+       gets latest cdd release id
+    */
+    final public static int getLatestCddRelease() throws SQLException {
+        Statement stmt = createStatement();
+        String query = "select max(id) from cdd_release";
+        ResultSet rs = stmt.executeQuery(query);
+        rs.next();
+        int rv = rs.getInt(1);
+        rs.close();
+        stmt.close();
+        return rv;
+    }
+}
