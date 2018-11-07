@@ -316,7 +316,7 @@ public class ASTEROIDS {
                 resIDEnd = m.group(2);
             }
             else if ((region.length() == 0) ||
-                       (region.equals("-"))) {
+                     (region.equals("-"))) {
                 // use whole region
                 resIDStart = rafLine.substring(28, 33).trim();
                 resIDEnd = rafLine.substring(33, 38).trim();
@@ -484,7 +484,7 @@ public class ASTEROIDS {
          */
         public enum Source {
             UNKNOWN, BLAST, PFAM, FAM, SF, SCOPSEQMATCH
-                };
+        };
 
         /**
          * where did this annotation come from?
@@ -499,7 +499,7 @@ public class ASTEROIDS {
          */
         public enum ConfidenceLevel {
             HIGH, MEDIUM, LOW
-                };
+        };
 
         /**
          * The confidence level for the annotation

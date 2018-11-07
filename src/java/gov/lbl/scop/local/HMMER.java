@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2008-2018 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *

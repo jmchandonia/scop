@@ -819,10 +819,10 @@ public class Thumbnail {
         outfile.close();
 
         /*
-        if (description != null) {
-            System.out.println("pymol script is "+tmpFile.getPath());
-            System.exit(0);
-        }
+          if (description != null) {
+          System.out.println("pymol script is "+tmpFile.getPath());
+          System.exit(0);
+          }
         */
 
         Program pymol = new Program("/usr/bin/pymol");

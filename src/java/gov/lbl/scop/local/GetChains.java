@@ -28,11 +28,11 @@ import org.strbio.io.*;
 import org.strbio.local.*;
 
 /**
- Class to run getChains.pl
- */
+   Class to run getChains.pl
+*/
 public class GetChains extends Program {
     final public String programName() {
-	return "/lab/proj/astral/bin/getChains.pl";
+        return "/lab/proj/astral/bin/getChains.pl";
     }
 
     /**
@@ -41,50 +41,50 @@ public class GetChains extends Program {
        or null if failure
     */
     final public static HashMap<Character,String> getChains(String fileName) {
-	GetChains gc = new GetChains();
-	HashMap<Character,String> rv = new HashMap<Character,String>();
-	BufferedReader infile;
-	String buffer;
-	try {
-	    File tmpFile = File.createTempFile("getch",null);
-	    tmpFile.delete();
+        GetChains gc = new GetChains();
+        HashMap<Character,String> rv = new HashMap<Character,String>();
+        BufferedReader infile;
+        String buffer;
+        try {
+            File tmpFile = File.createTempFile("getch",null);
+            tmpFile.delete();
 
-	    String[] input = new String[2];
-	    input[0] = fileName;
-	    input[1] = tmpFile.getPath();
+            String[] input = new String[2];
+            input[0] = fileName;
+            input[1] = tmpFile.getPath();
 
-	    gc.run(input);
+            gc.run(input);
 
-	    // read output
-	    infile = IO.openReader(tmpFile.getPath());
-	    while ((buffer = infile.readLine()) != null) {
-		StringTokenizer st = new StringTokenizer(buffer,"\t");
-		char c = st.nextToken().charAt(0);
-		String chainType = st.nextToken();
-		rv.put(new Character(c),chainType);
-	    }
-	    infile.close();
+            // read output
+            infile = IO.openReader(tmpFile.getPath());
+            while ((buffer = infile.readLine()) != null) {
+                StringTokenizer st = new StringTokenizer(buffer,"\t");
+                char c = st.nextToken().charAt(0);
+                String chainType = st.nextToken();
+                rv.put(new Character(c),chainType);
+            }
+            infile.close();
 
-	    tmpFile.delete();
-	}
-	catch (IOException e) {
-	    rv = null;
-	    e.printStackTrace();
-	}
-	return rv;
+            tmpFile.delete();
+        }
+        catch (IOException e) {
+            rv = null;
+            e.printStackTrace();
+        }
+        return rv;
     }
 
     /**
        test:  prints chains for a PDBML file
     */
     final public static void main(String[] argv) {
-	HashMap<Character,String> rv = getChains(argv[0]);
-	if (rv==null)
-	    System.out.println("no output");
-	else {
-	    for (Character c : rv.keySet()) {
-		System.out.println(c+" "+rv.get(c));
-	    }
-	}
+        HashMap<Character,String> rv = getChains(argv[0]);
+        if (rv==null)
+            System.out.println("no output");
+        else {
+            for (Character c : rv.keySet()) {
+                System.out.println(c+" "+rv.get(c));
+            }
+        }
     }
 }

@@ -52,51 +52,51 @@ public class CommonSCOPQueries {
     public static String getScopReleaseName(int scopReleaseID) {
         String releaseName = "unknown";
         switch (scopReleaseID) {
-            case (1):
-                releaseName = "1.55";
-                break;
-            case (2):
-                releaseName = "1.57";
-                break;
-            case (3):
-                releaseName = "1.59";
-                break;
-            case (4):
-                releaseName = "1.61";
-                break;
-            case (5):
-                releaseName = "1.63";
-                break;
-            case (6):
-                releaseName = "1.65";
-                break;
-            case (7):
-                releaseName = "1.67";
-                break;
-            case (8):
-                releaseName = "1.69";
-                break;
-            case (9):
-                releaseName = "1.71";
-                break;
-            case (10):
-                releaseName = "1.73";
-                break;
-            case (11):
-                releaseName = "1.75";
-                break;
-            case (12):
-                releaseName = "2.01";
-                break;
-            case (13):
-                releaseName = "2.02";
-                break;
-            case (14):
-                releaseName = "2.03";
-                break;
-            case (15):
-                releaseName = "2.04";
-                break;
+        case (1):
+            releaseName = "1.55";
+            break;
+        case (2):
+            releaseName = "1.57";
+            break;
+        case (3):
+            releaseName = "1.59";
+            break;
+        case (4):
+            releaseName = "1.61";
+            break;
+        case (5):
+            releaseName = "1.63";
+            break;
+        case (6):
+            releaseName = "1.65";
+            break;
+        case (7):
+            releaseName = "1.67";
+            break;
+        case (8):
+            releaseName = "1.69";
+            break;
+        case (9):
+            releaseName = "1.71";
+            break;
+        case (10):
+            releaseName = "1.73";
+            break;
+        case (11):
+            releaseName = "1.75";
+            break;
+        case (12):
+            releaseName = "2.01";
+            break;
+        case (13):
+            releaseName = "2.02";
+            break;
+        case (14):
+            releaseName = "2.03";
+            break;
+        case (15):
+            releaseName = "2.04";
+            break;
         }
         return releaseName;
     }
@@ -144,7 +144,7 @@ public class CommonSCOPQueries {
         //String query="select distinct(r.pdb_chain_id) from astral_chain ac, raf r where ac.raf_id=r.id and source_id=2 and " +
         //    "r.last_release_id<="+ scopReleaseID + " and seq_id="+seqID;
         String query = "select distinct(r.pdb_chain_id) from astral_chain ac, raf r where ac.raf_id=r.id and source_id=2 and " +
-                "r.first_release_id<=" + scopReleaseID + " and r.last_release_id>=" + scopReleaseID + " and ac.seq_id=" + seqID;
+            "r.first_release_id<=" + scopReleaseID + " and r.last_release_id>=" + scopReleaseID + " and ac.seq_id=" + seqID;
         Statement stmt = LocalSQL.createStatement();
         ResultSet rs = stmt.executeQuery(query);
         while (rs.next()) {
@@ -171,32 +171,32 @@ public class CommonSCOPQueries {
     public static String getScopNodeLevelString(int level) throws Exception {
         String levelString;
         switch (level) {
-            case (1):
-                levelString = "ROOT";
-                break;
-            case (2):
-                levelString = "CLASS";
-                break;
-            case (3):
-                levelString = "FOLD";
-                break;
-            case (4):
-                levelString = "SUPERFAMILY";
-                break;
-            case (5):
-                levelString = "FAMILY";
-                break;
-            case (6):
-                levelString = "SPECIES";
-                break;
-            case (7):
-                levelString = "PROTEIN";
-                break;
-            case (8):
-                levelString = "DOMAIN";
-                break;
-            default:
-                throw new Exception("Could not find level " + level);
+        case (1):
+            levelString = "ROOT";
+            break;
+        case (2):
+            levelString = "CLASS";
+            break;
+        case (3):
+            levelString = "FOLD";
+            break;
+        case (4):
+            levelString = "SUPERFAMILY";
+            break;
+        case (5):
+            levelString = "FAMILY";
+            break;
+        case (6):
+            levelString = "SPECIES";
+            break;
+        case (7):
+            levelString = "PROTEIN";
+            break;
+        case (8):
+            levelString = "DOMAIN";
+            break;
+        default:
+            throw new Exception("Could not find level " + level);
         }
         return levelString;
     }
@@ -416,7 +416,7 @@ public class CommonSCOPQueries {
      */
     final public static int getSeqLengthFromScopNodeID(int nodeID) throws SQLException {
         String query = "select length(s.seq) from astral_seq s, astral_domain d " +
-                "where d.source_id=2 and s.id=d.seq_id and d.node_id=" + nodeID;
+            "where d.source_id=2 and s.id=d.seq_id and d.node_id=" + nodeID;
         Statement stmt = LocalSQL.createStatement();
         ResultSet rs = stmt.executeQuery(query);
         rs.next();
@@ -435,7 +435,7 @@ public class CommonSCOPQueries {
      * @throws Exception
      */
     final public static ArrayList<Integer> getScopNodeIDsForAstralChain(int astralChainID, int scopReleaseID) throws Exception {
-      int pdbChainID = CommonSCOPQueries.getPDBChainIDFromAstralChainID(astralChainID);
+        int pdbChainID = CommonSCOPQueries.getPDBChainIDFromAstralChainID(astralChainID);
         return getScopNodeIDsForPdbChain(pdbChainID, scopReleaseID);
     }
 
@@ -451,9 +451,9 @@ public class CommonSCOPQueries {
     final public static ArrayList<Integer> getScopNodeIDsForPdbChain(int pdbChainID, int scopReleaseID) throws SQLException {
         ArrayList<Integer> answerArray = new ArrayList<Integer>();
         String query = "select n.id from scop_node n, link_pdb l where " +
-                "n.id=l.node_id and" +
-                " n.release_id=" + scopReleaseID +
-                " and l.pdb_chain_id=" + pdbChainID;
+            "n.id=l.node_id and" +
+            " n.release_id=" + scopReleaseID +
+            " and l.pdb_chain_id=" + pdbChainID;
         Statement stmt = LocalSQL.createStatement();
         ResultSet rs = stmt.executeQuery(query);
         while (rs.next()) {
@@ -677,10 +677,10 @@ public class CommonSCOPQueries {
      */
     final public static String getRAFLineForScopNode(int scopNodeID) throws SQLException {
         String query = "select r.line from scop_node n, link_pdb l, raf r where " +
-                "l.node_id=n.id and l.pdb_chain_id=r.pdb_chain_id and " +
-                "r.first_release_id<=n.release_id and " +
-                "r.last_release_id>=n.release_id and n.id=" + scopNodeID +
-                " order by first_release_id desc";
+            "l.node_id=n.id and l.pdb_chain_id=r.pdb_chain_id and " +
+            "r.first_release_id<=n.release_id and " +
+            "r.last_release_id>=n.release_id and n.id=" + scopNodeID +
+            " order by first_release_id desc";
         Statement stmt = LocalSQL.createStatement();
         ResultSet rs = stmt.executeQuery(query);
         rs.next();
