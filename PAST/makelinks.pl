@@ -2,7 +2,7 @@
 #
 #   makelinks.pl - remaking links from a pruned directory.
 #
-#   Copyright (C) 2001-2018 The Regents of the University of California
+#   Copyright (C) 2001-2021 Degui Zhi and John-Marc Chandonia
 #
 #   This program is free software; you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License as published by the
@@ -59,7 +59,7 @@ sub processLSLR;
 
 MAIN : {
     if ($#ARGV != 1) {
-	die ("syntax:  makelinks.pl snapshot previous-snapshot\n");
+	die("syntax:  makelinks.pl snapshot previous-snapshot\n");
     }
 
     my $newdir = $ARGV[0];
@@ -73,46 +73,46 @@ MAIN : {
     chdir("$root/data/");
 
     if (! -e "$newdir") {
-	die "snapshot '$newdir' does not exist!\n";
+	die("snapshot '$newdir' does not exist!\n");
     }
 
     if (! -e "$olddir") {
-	die "snapshot '$olddir' does not exist!\n";
+	die("snapshot '$olddir' does not exist!\n");
     }
 
     if (! -e "$olddir/snapshot") {
-	die "snapshot '$olddir' was pruned; you have to makelinks on it first.\n";
+	die("snapshot '$olddir' was pruned; you have to makelinks on it first.\n");
     }
 
     if (-e "$newdir/snapshot") {
-	die "snapshot '$newdir' doesn't seemed to have been pruned.\n";
+	die("snapshot '$newdir' doesn't seemed to have been pruned.\n");
     }
 
     if (! -w $newdir) {
-	die "you aren't supposed to makelinks on '$newdir'.\n";
+	die("you aren't supposed to makelinks on '$newdir'.\n");
     }
 
     # what are our current files?
     chdir("$olddir/snapshot") or 
-	die "Couldn't cd to old snapshot directory!\n";
+	die("Couldn't cd to old snapshot directory!\n");
 
     # make ls-lR of old directory, following symlinks
-    system ("ls -lLR *hash > $tmpDir/tmpOldLSLRm");
+    system("ls -lLR *hash > $tmpDir/tmpOldLSLRm");
 
     # get dates from this file
     my $aref = processLSLR("$tmpDir/tmpOldLSLRm");
-    unlink ("$tmpDir/tmpOldLSLRm");
+    unlink("$tmpDir/tmpOldLSLRm");
     my @oldDates = @$aref;
 
     # make ls-lR of current directory, following symlinks
     chdir("$root/data/");
     chdir("$newdir/files") or 
-	die "Couldn't cd to new snapshot directory!\n";
-    system ("ls -lLR *hash > $tmpDir/tmpNewLSLRm");
+	die("Couldn't cd to new snapshot directory!\n");
+    system("ls -lLR *hash > $tmpDir/tmpNewLSLRm");
 
     # get dates from this file
     $aref = processLSLR("$tmpDir/tmpNewLSLRm");
-    unlink ("$tmpDir/tmpNewLSLRm");
+    unlink("$tmpDir/tmpNewLSLRm");
     my @newDates = @$aref;
 
     # set up dirs for this to go in
@@ -215,29 +215,29 @@ MAIN : {
 	    if (exists($newD{$entry})) {
 		# link new snapshot to new files
 		my $myFile = "$newLoc"."$hashDir"."$fileName";
-		symlink ("../../../../".$myFile, $snapFile);
+		symlink("../../../../".$myFile, $snapFile);
 	    }
 	    else {
 		# link new snapshot to old files
 		my $myOldSnap = "$oldSnap"."$hashDir"."$fileName";
 		my $myOldFile = readlink($myOldSnap);
-		symlink ($myOldFile, $snapFile);
+		symlink($myOldFile, $snapFile);
 	    }
 
 	    # link 'all' directory to hash directory
 	    my $snapAll = "$newSnap"."$fileName";
 	    $snapAll =~ s/hash/all/;
 	    $snapFile =~ s/$newdir\/snapshot/\.\./;
-	    symlink ($snapFile, $snapAll);
+	    symlink($snapFile, $snapAll);
 	}
     }
 
     # symlink index, seq dirs to snapshot dir
     if (-e "$newdir/files/seq") {
-	symlink ("../files/seq", "$newdir/snapshot/seq");
+	symlink("../files/seq", "$newdir/snapshot/seq");
     }
     if (-e "$newdir/files/index") {
-	symlink ("../files/index", "$newdir/snapshot/index");
+	symlink("../files/index", "$newdir/snapshot/index");
     }
 }
 
@@ -288,37 +288,37 @@ sub processLSLR {
 		$re2 = qr/(....)-noc-bundle\.tar\.gz$/o;
 	    }
 	    elsif ((/xml-obs-hash/) ||
-		   (/data\/structures\/obsolete\/XML/)) {
+		   (/obsolete\/XML/)) {
 		$dirType = 5;
 		$re = qr/(....)\.xml\.gz$/o;
 		$re2 = qr/(....)\.noc\.gz$/o;
 	    }
 	    elsif ((/xml-hash/) ||
-		   (/data\/structures\/divided\/XML/)) {
+		   (/divided\/XML/)) {
 		$dirType = 4;
 		$re = qr/(....)\.xml\.gz$/o;
 		$re2 = qr/(....)\.noc\.gz$/o;
 	    }
 	    elsif ((/cif-obs-hash/) ||
-		   (/data\/structures\/obsolete\/mmCIF/)) {
+		   (/obsolete\/mmCIF/)) {
 		$dirType = 3;
 		$re = qr/(....)\.cif\.gz$/o;
 		$re2 = qr/(....)\.noc\.gz$/o;
 	    }
 	    elsif ((/cif-hash/) ||
-		   (/data\/structures\/divided\/mmCIF/)) {
+		   (/divided\/mmCIF/)) {
 		$dirType = 2;
 		$re = qr/(....)\.cif\.gz$/o;
 		$re2 = qr/(....)\.noc\.gz$/o;
 	    }
 	    elsif ((/obs-hash/) ||
-		   (/data\/structures\/obsolete\/pdb/)) {
+		   (/obsolete\/pdb/)) {
 		$dirType = 1;
 		$re = qr/pdb(....)\.ent\.gz$/o;
 		$re2 = qr/pdb(....)\.noc\.gz$/o;
 	    }
 	    elsif ((/hash/) ||
-		   (/data\/structures\/divided\/pdb/)) {
+		   (/divided\/pdb/)) {
 		$dirType = 0;
 		$re = qr/pdb(....)\.ent\.gz$/o;
 		$re2 = qr/pdb(....)\.noc\.gz$/o;

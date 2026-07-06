@@ -2,7 +2,7 @@
 #
 #   prune.pl - pruning back an old PDB snapshot to save on inodes.
 #
-#   Copyright (C) 2001-2018 The Regents of the University of California
+#   Copyright (C) 2001-2021 Degui Zhi and John-Marc Chandonia
 #
 #   This program is free software; you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License as published by the
@@ -45,28 +45,28 @@ my $root = "/lab/db/pdb";
 
 MAIN : {
     if ($#ARGV != 0) {
-	die ("syntax:  prune.pl snapshot\n");
+	die("syntax:  prune.pl snapshot\n");
     }
 
     my $newdir = $ARGV[0];
 
-    chdir("$root/data/") or die ("root directory in script does not exist!\n");
+    chdir("$root/data/") or die("root directory in script does not exist!\n");
 
     if (! -e "$newdir") {
-	die "snapshot '$newdir' does not exist!\n";
+	die("snapshot '$newdir' does not exist!\n");
     }
 
     if (! -l "latest") {
-	die "'latest' link does not exist!\n";
+	die("'latest' link does not exist!\n");
     }
 
     if ($newdir eq readlink("latest")) {
-	die "you can't prune the latest snapshot.\n";
+	die("you can't prune the latest snapshot.\n");
     }
 
     if (! -w $newdir) {
-	die "you aren't supposed to prune '$newdir'.\n";
+	die("you aren't supposed to prune '$newdir'.\n");
     }
 
-    system ("rm -rf $newdir/snapshot");
+    system("rm -rf $newdir/snapshot");
 }

@@ -2,7 +2,7 @@
 #
 #   fixcompress.pl - migrate old (pre-1.3) PAST archives to new format
 #
-#   Copyright (C) 2001-2018 The Regents of the University of California
+#   Copyright (C) 2001-2021 Degui Zhi and John-Marc Chandonia
 #
 #   This program is free software; you can redistribute it and/or modify it
 #   under the terms of the GNU General Public License as published by the
@@ -46,14 +46,14 @@ MAIN : {
 
     # what is dir with old files
     my $oldDir = shift;
-    die ("snapshot directory not found\n") if (! -d $oldDir);
+    die("snapshot directory not found\n") if (! -d $oldDir);
 
     # what is dir with old files
     chdir("$oldDir/files") or 
-	die "Couldn't cd to old files directory!\n";
+	die("Couldn't cd to old files directory!\n");
 
     # make ls-lR of current directory, following symlinks
-    system ("ls -lLR *hash > /tmp/tmpOldLSLR1");
+    system("ls -lLR *hash > /tmp/tmpOldLSLR1");
 
     # get dates from this file
     my $aref = processLSLR("/tmp/tmpOldLSLR1");
