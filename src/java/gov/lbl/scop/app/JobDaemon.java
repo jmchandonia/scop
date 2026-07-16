@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2025 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -58,8 +58,9 @@ public class JobDaemon {
     /**
      * max time to allow job to run before calling it crashed
      * WHAT_CHECK can run for up to 12 hrs, so max time is 24h.
+     * We think FATCAT may take 24 hrs, so max time is 48h
      */
-    final public static int MAX_TIME_SECONDS = 86400;
+    final public static int MAX_TIME_SECONDS = 172800;
 
     /**
      * run jobs in their own thread
@@ -168,6 +169,18 @@ public class JobDaemon {
                 case 22:
                     CDDSeqs.cddSeq(targetID,
                                    StringUtil.atoi(arg[0]));
+                    break;
+                case 23:
+                    MakeThumbnailsChain.makeThumbnailChain(targetID,
+                                                           (nFailures > 1));
+                    break;
+                case 24:
+                    FatcatPairs.runComparisons(targetID,
+                                               StringUtil.atoi(arg[0]));
+                    break;
+                case 25:
+                    ChainDomainFatcatPairs.runComparisons(targetID,
+                                                          StringUtil.atoi(arg[0]));
                     break;
                 }
             } catch (Exception e) {

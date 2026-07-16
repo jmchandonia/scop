@@ -450,6 +450,7 @@ public class ParsePDBXML {
             for (File pdb : pdbs) {
                 String fileName = StringUtil.replace(pdb.getAbsolutePath(),"/mnt/net/imperial.jmcnet/data","");
                 fileName = StringUtil.replace(fileName,"/mnt/net/ipa.jmcnet/data","");
+                fileName = StringUtil.replace(fileName,"/mnt/net/dipa.jmcnet/data","");
 
                 if (fileName.endsWith(".Z"))
                     continue;

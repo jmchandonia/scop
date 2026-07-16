@@ -900,6 +900,7 @@ public class PromoteASTEROIDS {
 
             // add to index
             MakeIndex.indexNode(nodeID);
+            MakeAPISearchIndex.indexNode(nodeID);
 
             // add to history
             stmt.executeUpdate("insert into scop_history values (null, "+nodeID+", null, "+scopReleaseID+", 12, now())");

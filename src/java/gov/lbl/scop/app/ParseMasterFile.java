@@ -335,11 +335,14 @@ public class ParseMasterFile {
                             pdbChainID = MakeNewRAF.lookupChain(releaseID,' ');
                         }
                         if (pdbChainID==0)
-                            throw new IOException("error: chain missing in "+domain);
-                        if (action==1) {
-                            stmt.executeUpdate("insert into link_pdb values ("+
-                                               lastNodeID+", "+
-                                               pdbChainID+")");
+                            System.out.println("error: chain missing in "+domain);
+                            // throw new IOException("error: chain missing in "+domain);
+                        else {
+                            if (action==1) {
+                                stmt.executeUpdate("insert into link_pdb values ("+
+                                                   lastNodeID+", "+
+                                                   pdbChainID+")");
+                            }
                         }
                     }
                     else {  // RE or CH
@@ -454,18 +457,21 @@ public class ParseMasterFile {
                                     pdbChainID = MakeNewRAF.lookupChain(releaseID,chain);
                                 }
                                 if (pdbChainID==0)
-                                    throw new IOException("error: chain missing in "+domain);
+                                    System.out.println("error: chain missing in "+domain);
+                                    // throw new IOException("error: chain missing in "+domain);
 
-                                if ((action==1) || (action==3)) {
-                                    rs = stmt.executeQuery("select node_id from link_pdb where node_id="+lastNodeID+" and pdb_chain_id="+pdbChainID);
-                                    if (!rs.next()) {
-                                        rs.close();
-                                        stmt.executeUpdate("insert into link_pdb values ("+
-                                                           lastNodeID+", "+
-                                                           pdbChainID+")");
+                                else {
+                                    if ((action==1) || (action==3)) {
+                                        rs = stmt.executeQuery("select node_id from link_pdb where node_id="+lastNodeID+" and pdb_chain_id="+pdbChainID);
+                                        if (!rs.next()) {
+                                            rs.close();
+                                            stmt.executeUpdate("insert into link_pdb values ("+
+                                                               lastNodeID+", "+
+                                                               pdbChainID+")");
+                                        }
+                                        else
+                                            rs.close();
                                     }
-                                    else
-                                        rs.close();
                                 }
                             }
                         }

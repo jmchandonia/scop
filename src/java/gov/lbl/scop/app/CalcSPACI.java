@@ -163,7 +163,7 @@ public class CalcSPACI {
             rs.close();
 
             if ((pdbPath != null) &&
-                (pdbPath.endsWith(".pdb-bundle.tar.gz"))) {
+                (!pdbPath.endsWith(".pdb-bundle.tar.gz"))) {
                 System.out.println("Getting resolution for "+pdbPath);
 
                 resolution = PDB.getResolution(pdbPath);
@@ -216,7 +216,7 @@ public class CalcSPACI {
             rs.close();
 
             if ((pdbPath != null) &&
-                (pdbPath.endsWith(".pdb-bundle.tar.gz"))) {
+                (!pdbPath.endsWith(".pdb-bundle.tar.gz"))) {
                 System.out.println("Getting R factor for "+pdbPath);
                 rFactor = PDB.getRFactor(pdbPath);
             }
@@ -454,8 +454,20 @@ public class CalcSPACI {
                     if (Double.compare(rv[1],realR)!=0)
                         System.out.println(fileName+" R "+realR+" "+rv[1]);
                 }
+                System.exit(0);
             }
-
+            
+            else if (argv.length > 0) {
+                int id = StringUtil.atoi(argv[0]);
+                 
+                 getResolution(id);
+                 getRFactor(id);
+                 runWhatcheck(id);
+                 runProcheck(id);
+                 calcSPACI(id);
+                 System.exit(0);
+            }
+            
             boolean done = false;
             while (!done) {
                 // pick one spaci at a time to calculate

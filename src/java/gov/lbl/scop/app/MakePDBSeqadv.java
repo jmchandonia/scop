@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2023 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -226,6 +226,14 @@ public class MakePDBSeqadv {
                 inElement = 12;
                 curDBRef.pdbEnd = "";
             }
+            else if ((qName.equals("PDBx:pdbx_seq_align_beg_ins_code")) &&
+                     (inElement==2)) {
+                inElement = 11;
+            }
+            else if ((qName.equals("PDBx:pdbx_seq_align_end_ins_code")) &&
+                     (inElement==2)) {
+                inElement = 12;
+            }
             else if ((qName.equals("PDBx:align_id")) &&
                      (inElement==3)) {
                 inElement = 13;
@@ -332,6 +340,10 @@ public class MakePDBSeqadv {
             else if (((qName.equals("PDBx:pdbx_auth_seq_align_beg")) &&
                       (inElement==11)) ||
                      ((qName.equals("PDBx:pdbx_auth_seq_align_end")) &&
+                      (inElement==12)) ||
+                     ((qName.equals("PDBx:pdbx_seq_align_beg_ins_code")) &&
+                      (inElement==11)) ||
+                     ((qName.equals("PDBx:pdbx_seq_align_end_ins_code")) &&
                       (inElement==12))) {
                 inElement = 2;
             }
@@ -481,7 +493,7 @@ public class MakePDBSeqadv {
                     stmt.executeUpdate("delete from pdb_chain_diff where pdb_chain_id="+pdbChainID);
                     stmt.executeUpdate("delete from pdb_chain_dbref where pdb_chain_id="+pdbChainID);
 
-                    rs = stmt.executeQuery("select raf_get_body(id) from raf where pdb_chain_id="+pdbChainID+" and first_release_id is null and last_release_id is null");
+                    rs = stmt.executeQuery("select raf_get_body(id) from raf where pdb_chain_id="+pdbChainID+" and first_release_id is null and last_release_id is null and raf_version_id=3");
                     if (!rs.next()) {
                         rs.close();
                         continue;
@@ -497,7 +509,8 @@ public class MakePDBSeqadv {
                     Vector<DBRef> dbRefs = h.dbRefs.get(entity);
                     if (dbRefs != null) {
                         for (DBRef d : dbRefs) {
-                            // System.out.println("debug: "+d.dbName+" "+d.dbCode+" "+d.dbStart+" "+d.dbEnd);
+                            // System.out.println("debug: "+d.pdbStart+" "+d.pdbEnd+" "+d.dbName+" "+d.dbCode+" "+d.dbStart+" "+d.dbEnd);
+                            // System.out.println("debug: "+rafBody);
                             stmt2.setString(2,d.dbName);
                             stmt2.setString(3,d.dbCode);
                             stmt2.setString(4,d.dbAccession);
@@ -591,13 +604,29 @@ public class MakePDBSeqadv {
                     findSeqadv(id);
                 }
             }
-            else
-                rs = stmt.executeQuery("select pdb_release_id from pdb_local where xml_path = \""+argv[0]+"\"");
-            while (rs.next()) {
-                int id = rs.getInt(1);
-                findSeqadv(id);
+            else if (argv[0].equals("fixnull")) {
+                rs = stmt.executeQuery("select distinct(c.pdb_release_id) from pdb_chain_dbref pcd, pdb_chain c where c.id=pcd.pdb_chain_id and (pcd.pdb_align_start is null or pcd.pdb_align_end is null)");
+                while (rs.next()) {
+                    int id = rs.getInt(1);
+                    System.err.println("redoing pdb release "+id);
+                    findSeqadv(id);
+                }
             }
-	    
+            else if (argv[0].equals("fixv3")) {
+                rs = stmt.executeQuery("select distinct(c.pdb_release_id) from pdb_chain_dbref pcd, pdb_chain c, raf r where c.id=pcd.pdb_chain_id and r.pdb_chain_id=c.id and r.first_release_id is null and r.last_release_id is null and r.raf_version_id=3");
+                while (rs.next()) {
+                    int id = rs.getInt(1);
+                    System.err.println("redoing pdb release "+id);
+                    findSeqadv(id);
+                }
+            }
+            else {
+                rs = stmt.executeQuery("select pdb_release_id from pdb_local where xml_path = \""+argv[0]+"\"");
+                while (rs.next()) {
+                    int id = rs.getInt(1);
+                    findSeqadv(id);
+                }
+            }
         }
         catch (Exception e) {
             System.out.println("Exception: "+e.getMessage());

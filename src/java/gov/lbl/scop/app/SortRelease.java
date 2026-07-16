@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2008-2018 The Regents of the University of California
+ * Copyright (C) 2008-2021 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -135,7 +135,7 @@ public class SortRelease {
             }
 
             // work around mysql bug #5103 by temporarily disabling keys
-            stmt.executeUpdate("alter table scop_node drop foreign key scop_node_ibfk_3");
+            // stmt.executeUpdate("alter table scop_node drop foreign key scop_node_ibfk_3");
 
             // move all nodes out of the way
             query = "update scop_node set id=id+"+nOffset;

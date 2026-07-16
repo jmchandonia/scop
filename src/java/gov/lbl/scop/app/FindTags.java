@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2021 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -128,6 +128,7 @@ public class FindTags {
         // if domain is a tag, skip it
         int newNodeID = LocalSQL.lookupNodeBySid(scopDomain.sid,
                                                  scopReleaseID);
+        // System.out.println("debug: sid "+scopDomain.sid+" "+newNodeID);
         String scopDomainSCCS = LocalSQL.getSCCS(newNodeID);
         if (scopDomainSCCS.startsWith("l")) {
             System.out.println("skipping "+scopDomain.sid+"; already annotated as tag");
@@ -143,38 +144,50 @@ public class FindTags {
         if (asDomainsOverlap==null) {
             // extend nearest region by up to MAX_LINKER residues
             int linkerSize = AnnotationSet.getLinkerSize(tagRegion, scopRegion);
+            boolean domainChanged = false;
             if ((linkerSize <= MAX_LINKER) && (linkerSize > 0)) {
                 scopRegion.length += linkerSize;
                 if (isNTag)
                     scopRegion.start -= linkerSize;
-                System.out.println("adjusted domain "+scopDomain.sid+" "+oldHeader+" -> "+scopDomain.getHeaderRegions(asDomains.rafLine));
-                if (parentID > -1) {
-                    stmt.executeUpdate("update scop_node set description=\""+scopDomain.getHeaderRegions(asDomains.rafLine)+"\" where id="+scopDomain.hitNodeID);
-                    // but keep same sunid
-                    if (oldNodeID > 0) {
-                        stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+scopDomain.hitNodeID+", "+scopReleaseID+", 11, now())");
+                if (!oldHeader.equals(scopDomain.getHeaderRegions(asDomains.rafLine))) {
+                    domainChanged = true;
+                    System.out.println("adjusted domain "+scopDomain.sid+" "+oldHeader+" -> "+scopDomain.getHeaderRegions(asDomains.rafLine));
+                    if (parentID > -1) {
+                        stmt.executeUpdate("update scop_node set description=\""+scopDomain.getHeaderRegions(asDomains.rafLine)+"\" where id="+scopDomain.hitNodeID);
+                        // but keep same sunid
+                        if (oldNodeID > 0) {
+                            stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+scopDomain.hitNodeID+", "+scopReleaseID+", 11, now())");
+                        }
                     }
                 }
             }
 
             // add new region
-            asDomains.annotations.add(tag);
-            tag.sid = StableSid.assignNewSid(tag.getHeaderRegions(asDomains.rafLine));
-            System.out.println("added tag domain "+tag.sid+" "+tag.getHeaderRegions(asDomains.rafLine));
-            if (parentID > -1) {
-                int nodeID = LocalSQL.createNode(0,
-                                                 "l.1.1.1",
-                                                 tag.sid,
-                                                 tag.getHeaderRegions(asDomains.rafLine),
-                                                 8,
-                                                 parentID,
-                                                 scopReleaseID,
-                                                 7);
-                stmt.executeUpdate("insert into link_pdb values("+
-                                   nodeID+
-                                   ", "+pdbChainID+")");
-
-                rv = nodeID;
+            if (domainChanged) {
+                asDomains.annotations.add(tag);
+                // System.out.println("sid = "+scopDomain.sid);
+                // System.out.println("oldHeader = "+oldHeader);
+                // System.out.println("tag = "+tag.toString());
+                // System.out.println("header = "+tag.getHeaderRegions(asDomains.rafLine));
+                if (tag.getHeaderRegions(asDomains.rafLine) != null) {
+                    tag.sid = StableSid.assignNewSid(tag.getHeaderRegions(asDomains.rafLine));
+                    System.out.println("added tag domain "+tag.sid+" "+tag.getHeaderRegions(asDomains.rafLine));
+                    if (parentID > -1) {
+                        int nodeID = LocalSQL.createNode(0,
+                                                         "l.1.1.1",
+                                                         tag.sid,
+                                                         tag.getHeaderRegions(asDomains.rafLine),
+                                                         8,
+                                                         parentID,
+                                                         scopReleaseID,
+                                                         7);
+                        stmt.executeUpdate("insert into link_pdb values("+
+                                           nodeID+
+                                           ", "+pdbChainID+")");
+                        
+                        rv = nodeID;
+                    }
+                }
             }
         }
         else {
@@ -199,39 +212,46 @@ public class FindTags {
                 scopRegion.start += olap;
             if (scopDomain.nOverlap(tag) > 0)
                 throw new Exception("bug in olap code!");
-            
-            if (scopDomain.sid.endsWith("_"))
-                scopDomain.sid = StableSid.assignNewSid(scopDomain.getHeaderRegions(asDomains.rafLine));
-            System.out.println("adjusted domain "+scopDomain.sid+" "+oldHeader+" -> "+scopDomain.getHeaderRegions(asDomains.rafLine));
-            if (parentID > -1) {
-                stmt.executeUpdate("update scop_node set description=\""+scopDomain.getHeaderRegions(asDomains.rafLine)+"\", sid=\""+scopDomain.sid+"\" where id="+scopDomain.hitNodeID);
-                // but keep same sunid
-                if (oldNodeID > 0) {
-                    stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+scopDomain.hitNodeID+", "+scopReleaseID+", 11, now())");
-                }
-            }
 
-            // add tag region last
-            tag.sid = StableSid.assignNewSid(tag.getHeaderRegions(asDomains.rafLine));
-            System.out.println("added tag domain "+tag.sid+" "+tag.getHeaderRegions(asDomains.rafLine));
-            if (parentID > -1) {
-                int nodeID = LocalSQL.createNode(0,
-                                                 "l.1.1.1",
-                                                 tag.sid,
-                                                 tag.getHeaderRegions(asDomains.rafLine),
-                                                 8,
-                                                 parentID,
-                                                 scopReleaseID,
-                                                 7);
-                stmt.executeUpdate("insert into link_pdb values("+
-                                   nodeID+
-                                   ", "+pdbChainID+")");
-                rv = nodeID;
+            boolean domainChanged = false;
+            if (!oldHeader.equals(scopDomain.getHeaderRegions(asDomains.rafLine))) {
+                domainChanged = true;
+            
+                if (scopDomain.sid.endsWith("_"))
+                    scopDomain.sid = StableSid.assignNewSid(scopDomain.getHeaderRegions(asDomains.rafLine));
+                System.out.println("adjusted domain "+scopDomain.sid+" "+oldHeader+" -> "+scopDomain.getHeaderRegions(asDomains.rafLine));
+                if (parentID > -1) {
+                    stmt.executeUpdate("update scop_node set description=\""+scopDomain.getHeaderRegions(asDomains.rafLine)+"\", sid=\""+scopDomain.sid+"\" where id="+scopDomain.hitNodeID);
+                    // but keep same sunid
+                    if (oldNodeID > 0) {
+                        stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+scopDomain.hitNodeID+", "+scopReleaseID+", 11, now())");
+                    }
+                }
+
+                // add tag region last
+                if (tag.getHeaderRegions(asDomains.rafLine) != null) {
+                    tag.sid = StableSid.assignNewSid(tag.getHeaderRegions(asDomains.rafLine));
+                    System.out.println("added tag domain "+tag.sid+" "+tag.getHeaderRegions(asDomains.rafLine));
+                    if (parentID > -1) {
+                        int nodeID = LocalSQL.createNode(0,
+                                                         "l.1.1.1",
+                                                         tag.sid,
+                                                         tag.getHeaderRegions(asDomains.rafLine),
+                                                         8,
+                                                         parentID,
+                                                         scopReleaseID,
+                                                         7);
+                        stmt.executeUpdate("insert into link_pdb values("+
+                                           nodeID+
+                                           ", "+pdbChainID+")");
+                        rv = nodeID;
                 
-                // add "split" record   
-                if (oldNodeID > 0) {
-                    stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+scopDomain.hitNodeID+", "+scopReleaseID+", 5, now())");
-                    stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+nodeID+", "+scopReleaseID+", 5, now())");
+                        // add "split" record       
+                        if (oldNodeID > 0) {
+                            stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+scopDomain.hitNodeID+", "+scopReleaseID+", 5, now())");
+                            stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+nodeID+", "+scopReleaseID+", 5, now())");
+                        }
+                    }
                 }
             }
         }
@@ -240,12 +260,38 @@ public class FindTags {
     }
 
     /**
-       Splits out any tag domains from an astral chain (must already
-       have assigned scop domains). does nothing for genetic
-       domains or chains without scop domains.  returns list of
-       node ids of tag domains created.
-    */
-    final public static HashSet<Integer> splitTagDomains(int astralChainID) throws Exception {
+     * Finds tags based on an ASTRAL chain ID. Must already
+     * have assigned scop domains. Does nothing for genetic
+     * domains or chains without scop domains.
+     * Returns a list of Annotation objects. 
+     * @param astralChainID
+     * @return rv: rv[0] = N-tag found in findTagsInChain, null if not found
+     *             rv[1] = C-tag found in findTagsInChain, null if not found
+     *             rv[2] = N-tag found in findTagsInRAF, null if not found
+     *             rv[3] = C-tag found in findTagsInRAF, null if not found
+     */
+    public static Annotation[] findTagsFromASTRALChain(int astralChainID) throws Exception {
+        Annotation[] tags = findTagsInChain(astralChainID);
+        Annotation[] rafTags = FindTags2.findTagsInRAF(astralChainID);
+        Annotation[] rv = new Annotation[4];
+        rv[0] = tags[0];
+        rv[1] = tags[1];
+        rv[2] = rafTags[0];
+        rv[3] = rafTags[1];
+        return rv;
+    }
+
+    /**
+     * Splits out any tag domains from an astral chain. returns list of
+     * node ids of tag domains created.
+     * @param astralChainID
+     * @param tags: tags[0] = N-tag found in findTagsInChain, null if not found
+     *              tags[1] = C-tag found in findTagsInChain, null if not found
+     *              tags[2] = N-tag found in findTagsInRAF, null if not found
+     *              tags[3] = C-tag found in findTagsInRAF, null if not found
+     * @return rv: list of node ids of tag domains created.
+     */
+    public static HashSet<Integer> splitTagDomains(int astralChainID, Annotation[] tags) throws Exception {
         HashSet<Integer> rv = new HashSet<Integer>();
         Statement stmt = LocalSQL.createStatement();
         ResultSet rs = stmt.executeQuery("select ac.sid, ac.source_id, r.last_release_id, r.pdb_chain_id from astral_chain ac, raf r where ac.raf_id=r.id and ac.id="+astralChainID);
@@ -257,8 +303,6 @@ public class FindTags {
         int pdbChainID = rs.getInt(4);
         rs.close();
         stmt.close();
-
-        Annotation[] tags = findTagsInChain(astralChainID);
 
         // we're done with SEQRES seqs:
         // only need to split if in ATOM residues
@@ -286,31 +330,79 @@ public class FindTags {
 
         Annotation nTag = tags[0];
         Annotation cTag = tags[1];
+        Annotation rafNtag = tags[2];
+        Annotation rafCtag = tags[3];
+
+        Annotation nTagProcess = null;
+        Annotation cTagProcess = null;
         String rafBody = RAF.getRAFBody(asDomains.rafLine);
         
+        // choose longest N tag (or whichever one is not null)
+        // If lengths are equal, choose tag created by FindTags2.findTagsInRAF()
+        if (nTag != null && rafNtag != null) {
+            int nTagLength = nTag.length();
+            int rafNtagLength = rafNtag.length();
+            nTagProcess = (nTagLength > rafNtagLength) ? nTag : rafNtag;
+        } else if (nTag != null && rafNtag == null) {
+            nTagProcess = nTag;
+        } else if (nTag == null && rafNtag != null) {
+            nTagProcess = rafNtag;
+        }
+
+        // choose longest tag (or whichever one is not null)
+        // If lengths are equal, choose tag created by FindTags2.findTagsInRAF()
+        // If both null, do nothing.
+        if (nTag != null && rafNtag != null) {
+            int nTagLength = nTag.length();
+            int rafNtagLength = rafNtag.length();
+            nTagProcess = (nTagLength > rafNtagLength) ? nTag : rafNtag;
+        } else if (nTag != null && rafNtag == null) {
+            nTagProcess = nTag;
+        } else if (nTag == null && rafNtag != null) {
+            nTagProcess = rafNtag;
+        }
+
+        if (cTag != null && rafCtag != null) {
+            int cTagLength = cTag.length();
+            int rafCtagLength = rafCtag.length();
+            cTagProcess = (cTagLength > rafCtagLength) ? cTag : rafCtag;
+        } else if (cTag != null && rafCtag == null) {
+            cTagProcess = cTag;
+        } else if (cTag == null && rafCtag != null) {
+            cTagProcess = rafCtag;
+        }
+
         // adjust existing domains
-        if (nTag != null) {
+        if (nTagProcess != null) {
             int nodeID = processTag(scopReleaseID,
-                                    nTag,
+                                    nTagProcess,
                                     asDomains,
                                     rafBody,
                                     true,
                                     pdbChainID);
             if (nodeID != 0)
-                rv.add(new Integer(nodeID));
+                rv.add(nodeID);
         }
-        if (cTag != null) {
+        if (cTagProcess != null) {
             int nodeID = processTag(scopReleaseID,
-                                    cTag,
+                                    cTagProcess,
                                     asDomains,
                                     rafBody,
                                     false,
                                     pdbChainID);
             if (nodeID != 0)
-                rv.add(new Integer(nodeID));
+                rv.add(nodeID);
         }
         return rv;
     }
+
+    /**
+       if not tags given, find them first
+    */
+    public static HashSet<Integer> splitTagDomains(int astralChainID) throws Exception {
+        Annotation[] foundTags = findTagsFromASTRALChain(astralChainID);
+        return splitTagDomains(astralChainID, foundTags);
+    }    
 
     /**
        initialize lists of long tags
@@ -323,14 +415,27 @@ public class FindTags {
         nTagIndex = new HashMap<String,Integer>();
         cTagIndex = new HashMap<String,Integer>();
 
-        ResultSet rs = stmt.executeQuery("select raf_get_body(r.id), t.tag_start, t.tag_end, t.pdb_chain_diff_id from pdb_chain_tag t, raf r where t.tag_end-t.tag_start+1 >= "+MIN_TAG_LENGTH+" and r.pdb_chain_id=t.pdb_chain_id and r.first_release_id is null and r.last_release_id is null");
+        ResultSet rs = stmt.executeQuery("select raf_get_body(r.id), t.tag_start, t.tag_end, t.pdb_chain_diff_id from pdb_chain_tag t, raf r where r.raf_version_id=3 and t.tag_end-t.tag_start+1 >= "+MIN_TAG_LENGTH+" and r.pdb_chain_id=t.pdb_chain_id and r.first_release_id is null and r.last_release_id is null");
         while (rs.next()) {
             String rafBody = rs.getString(1);
             int tagStart = rs.getInt(2);
             int tagEnd = rs.getInt(3);
             int diffID = rs.getInt(4);
 
-            RAF.SequenceFragment sf = RAF.partialChainSeq(rafBody,2,tagStart,tagEnd);
+            // System.err.println(rafBody);
+            // System.err.println(tagStart);
+            // System.err.println(tagEnd);
+            // System.err.println(diffID);
+
+            RAF.SequenceFragment sf = null;
+            try {
+                sf = RAF.partialChainSeq(rafBody,2,tagStart,tagEnd);
+            }
+            catch (Exception e) {
+                // ignore bad pdbchaindiff records
+                continue;
+            }
+            
             if (sf.xCount > 0)
                 continue;
 
@@ -587,11 +692,13 @@ public class FindTags {
                 int refID = rs.getInt(1);
                 String refCode = rs.getString(2);
                 int start = rs.getInt(3);
-                if (rs.wasNull())
+                if (rs.wasNull()) {
                     start = 0;
+                }
                 int end = rs.getInt(4);
-                if (rs.wasNull())
+                if (rs.wasNull()) {
                     end = RAF.getSeqLength(rafBody)-1;
+                }
                 Annotation a = new Annotation(Annotation.Source.UNKNOWN,
                                               -1,
                                               start,
@@ -609,11 +716,13 @@ public class FindTags {
                     int refID = rs.getInt(1);
                     String refCode = rs.getString(2);
                     int start = rs.getInt(3);
-                    if (rs.wasNull())
+                    if (rs.wasNull()) {
                         start = 0;
+                    }
                     int end = rs.getInt(4);
-                    if (rs.wasNull())
+                    if (rs.wasNull()) {
                         end = RAF.getSeqLength(rafBody)-1;
+                    }
                     Annotation a = new Annotation(Annotation.Source.UNKNOWN,
                                                   -1,
                                                   start,
@@ -627,8 +736,9 @@ public class FindTags {
 
             // shrink proposed tags where they overlap with uniprot seq
             Annotation a = null;
-            if (nTag != null) 
+            if (nTag != null) {
                 a = asUniprot.getBestMatch(nTag);
+            }   
             if (a != null) {
                 int olap = a.nOverlap(nTag);
                 AnnotationRegion r = nTag.regions.elementAt(0);
@@ -638,24 +748,25 @@ public class FindTags {
                     r.length -= olap;
                     // check that nothing else overlaps
                     Annotation a2 = asUniprot.getBestMatch(nTag);
-                    if (a2 == null)
+                    if (a2 == null) {
                         killTag = false;
+                    }
                 }
-
                 System.out.println("\ndebug: "+pdbChainID+" "+seqID);
                 if (killTag) {
                     System.out.println("debug: eliminating nTag "+nTag.toString());
                     System.out.println("debug: uniprot "+a.toString());
                     nTag = null;
-                }
-                else {
+                } else {
                     System.out.println("debug: shortening nTag "+nTag.toString());
                     System.out.println("debug: uniprot "+a.toString());
                 }
                 a = null;
             }
-            if (cTag != null) 
+            if (cTag != null) {
                 a = asUniprot.getBestMatch(cTag);
+            }
+                
             if (a != null) {
                 int olap = a.nOverlap(cTag);
                 AnnotationRegion r = cTag.regions.elementAt(0);
@@ -666,10 +777,10 @@ public class FindTags {
                     r.length -= olap;
                     // check that nothing else overlaps
                     Annotation a2 = asUniprot.getBestMatch(cTag);
-                    if (a2 == null)
+                    if (a2 == null) {
                         killTag = false;
+                    }
                 }
-                
                 System.out.println("\ndebug: "+pdbChainID+" "+seqID);
                 if (killTag) {
                     System.out.println("debug: eliminating cTag "+cTag.toString());
@@ -701,8 +812,9 @@ public class FindTags {
                                           r.start+r.length-1).getSequence();
         }
 
-        if ((nTag != null) || (cTag != null))
+        if ((nTag != null) || (cTag != null)) {
             System.out.println((inferredTags? 2 : 1)+" "+sid+" "+seq+" "+nTagSeq+" "+cTagSeq);
+        } 
 
         // record tags in table
         if ((seq.startsWith(nTagSeq)) && (nTag != null)) {
@@ -711,10 +823,10 @@ public class FindTags {
             stmt.executeUpdate("insert into pdb_chain_tag values (null, "+
                                pdbChainID+", 0, "+
                                (r.length-1)+", "+
-                               nTag.hitNodeID+")");
-        }
-        else if (nTag != null)
+                               nTag.hitNodeID+", 7)");
+        } else if (nTag != null) {
             throw new Exception("error in ntag");
+        }
 
         if ((seq.endsWith(cTagSeq)) && (cTag != null)) {
             AnnotationRegion r = cTag.regions.elementAt(0);
@@ -723,10 +835,11 @@ public class FindTags {
                                pdbChainID+", "+
                                r.start+", "+
                                (r.start+r.length-1)+", "+
-                               cTag.hitNodeID+")");
-        }
-        else if (cTag != null)
+                               cTag.hitNodeID+", 7)");
+        } else if (cTag != null) {
             throw new Exception("error in ctag");
+        }
+            
         stmt.close();
 
         rv[0] = nTag;
@@ -752,11 +865,13 @@ public class FindTags {
             int tagFamID = LocalSQL.lookupNodeBySCCS("l.1.1.1",
                                                      scopReleaseID);
             if ((lastPublicRelease == scopReleaseID) &&
-                (argv.length == 0))
-                tagFamID = 0;  // avoid changing public release
+                (argv.length == 0)) {
+                    tagFamID = 0;
+            } // avoid changing public release  
 
-            if (tagFamID>0)
+            if (tagFamID>0) {
                 startLiveChanges();
+            }
 
             // work on a specific chain
             if (argv.length > 0) {
@@ -774,14 +889,17 @@ public class FindTags {
                     int astralChainID = rs.getInt(1);
                     rs.close();
                     System.out.println("Trying to find tags for node "+nodeID);
-                    HashSet<Integer> tags = splitTagDomains(astralChainID);
+
+                    Annotation[] foundTags = findTagsFromASTRALChain(astralChainID);
+                    HashSet<Integer> tags = splitTagDomains(astralChainID, foundTags);
+
                     for (Integer i : tags) {
                         System.out.println("Created tag node "+i);
                         stmt.executeUpdate("update scop_node set sunid="+LocalSQL.getNextSunid()+" where id="+i);
                     }
-                }
-                else
+                } else {
                     throw new Exception("Must specify node ID as Nxxxxx");
+                }
                 System.exit(0);
             }
             
@@ -794,7 +912,8 @@ public class FindTags {
             while (rs.next()) {
                 int astralChainID = rs.getInt(1);
 
-                splitTagDomains(astralChainID);
+                Annotation[] tags = findTagsFromASTRALChain(astralChainID);
+                splitTagDomains(astralChainID, tags);
 
                 doneChains.add(new Integer(astralChainID));
             }
@@ -808,10 +927,12 @@ public class FindTags {
             while (rs.next()) {
                 int astralChainID = rs.getInt(1);
 
-                if (doneChains.contains(new Integer(astralChainID)))
+                if (doneChains.contains(new Integer(astralChainID))) {
                     continue;
+                }
 
-                splitTagDomains(astralChainID);
+                Annotation[] tags = findTagsFromASTRALChain(astralChainID);
+                splitTagDomains(astralChainID, tags);
             }
             rs.close();
             stmt.close();

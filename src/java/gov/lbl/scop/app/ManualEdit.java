@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2021 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -48,7 +48,7 @@ public class ManualEdit {
         Statement stmt = LocalSQL.createStatement();
 
         int scopReleaseID = LocalSQL.getLatestSCOPRelease(false);
-	
+    
         int lastPublicRelease = LocalSQL.getLatestSCOPRelease(true);
         if (scopReleaseID!=lastPublicRelease+1)
             throw new Exception("can only undelete node into non-public release");
@@ -67,7 +67,7 @@ public class ManualEdit {
         int oldParentSun = LocalSQL.getSunid(oldParentID);
         if (oldParentSun == -1)
             throw new Exception("Failed to find parent in old release");
-	
+    
         int newParentID = LocalSQL.lookupNodeBySunid(oldParentSun,
                                                      scopReleaseID);
         if (newParentID <= 0) {
@@ -95,7 +95,7 @@ public class ManualEdit {
         rs.close();
 
         // delete history of deletion
-        stmt.executeUpdate("delete from scop_history where old_node_id="+oldNodeID+" and release_id="+scopReleaseID+" and change_type_id<4");	
+        stmt.executeUpdate("delete from scop_history where old_node_id="+oldNodeID+" and release_id="+scopReleaseID+" and change_type_id<4");   
 
         stmt.close();
 
@@ -147,7 +147,8 @@ public class ManualEdit {
     */
     final public static void moveNode(int nodeID,
                                       int newParentID,
-                                      boolean leaveHistory) throws Exception {
+                                      boolean leaveHistory,
+                                      boolean doCheck) throws Exception {
         Statement stmt = LocalSQL.createStatement();
 
         ResultSet rs = stmt.executeQuery("select sunid, release_id, parent_node_id, level_id, sccs from scop_node where id="+nodeID);
@@ -157,6 +158,7 @@ public class ManualEdit {
         int scopReleaseID = rs.getInt(2);
         int oldParentID = rs.getInt(3);
         int levelID = rs.getInt(4);
+
         String oldSCCS = rs.getString(5);
         rs.close();
 
@@ -206,6 +208,37 @@ public class ManualEdit {
         }
 
         stmt.close();
+
+        //run check here
+        if ((levelID==8) && (doCheck)) {
+            //make domain seq
+            ////domainSeq(int domainID, int sourceType, int styleType, int order)
+            String sccs=LocalSQL.getSCCS(newParentID);
+
+            RAF.SequenceFragment atom = LocalSQL.domainSeq(nodeID, 1, 3, 0);
+            if (atom==null) {
+                atom = LocalSQL.domainSeq(nodeID, 1, 1, 0);
+            }
+            RAF.SequenceFragment seqres = LocalSQL.domainSeq(nodeID, 2, 3, 0);
+            if (seqres==null) {
+                seqres = LocalSQL.domainSeq(nodeID, 2, 1, 0);
+            }
+            //issue a warning
+            //System.out.println("atom: " + atom.getSequence().length());
+            //System.out.println("seqres: " + seqres.getSequence().length());
+
+            int code = NewEntryConsistencyCheck.newEntryCheckSQL(sccs, seqres.getSequence().length(), atom.getSequence().length(), scopReleaseID);
+            NewEntryConsistencyCheck.printMessages(code);
+        }
+    }
+
+    /**
+       default is no check unless manually adding
+    */
+    final public static void moveNode(int nodeID,
+                                      int newParentID,
+                                      boolean leaveHistory) throws Exception {
+        moveNode(nodeID, newParentID, leaveHistory, false);
     }
 
     /**
@@ -253,11 +286,28 @@ public class ManualEdit {
     final public static void editNode(int nodeID,
                                       String newDesc) throws Exception {
         PreparedStatement stmt = LocalSQL.prepareStatement("update scop_node set description=?, curation_type_id=1 where id=?");
+        //reformat
+        if ((newDesc.indexOf("[TaxId:") > -1) &&
+            (newDesc.indexOf("[TaxId: ") == -1)) {
+            newDesc = StringUtil.replace(newDesc,
+                                             "[TaxId:",
+                                             "[TaxId: ");
+        }
+        /*System.out.println(newDesc);*/
+
         stmt.setString(1,newDesc);
         stmt.setInt(2,nodeID);
         stmt.executeUpdate();
+
+        //fix TaxID ??
+        int levelID = LocalSQL.getLevel(nodeID);
+        if (levelID==7)
+            MakeSpecies.processNode(nodeID, newDesc);
+
         // fix pdb links changed by the edit
         MakeLinks.linkPDB(nodeID);
+    
+
         stmt.close();
     }
 
@@ -268,7 +318,8 @@ public class ManualEdit {
        Some checks to try to eliminate human errors
     */
     final public static int newNode(int parentNodeID,
-                                    String description) throws Exception {
+                                    String description,
+                                    boolean doCheck) throws Exception {
         int levelID = LocalSQL.getLevel(parentNodeID);
         levelID++;
         String sccs = null;
@@ -283,7 +334,7 @@ public class ManualEdit {
                                              "[TaxId:",
                                              "[TaxId: ");
         }
-
+        /*System.out.println(description);*/
         int nodeID = LocalSQL.lookupNodeByDescription(description,
                                                       scopReleaseID,
                                                       parentNodeID);
@@ -293,9 +344,9 @@ public class ManualEdit {
         if ((levelID!=7) && (description.indexOf("[TaxId:") > -1))
             throw new Exception("TaxID only applicable to species level; must be an error");
 
-        if ((levelID==8) && (description.indexOf(" ") != 4))
+        if ((levelID==8) && (description.indexOf(" ") != 4)) 
             throw new Exception("This does not look properly formatted for a domain entry");
-	
+
         nodeID = LocalSQL.createNode(0,
                                      sccs,
                                      null,
@@ -308,11 +359,37 @@ public class ManualEdit {
         // make appropriate links
         if (levelID==7)
             MakeSpecies.processNode(nodeID, description);
-        if (levelID==8)
+        if (levelID==8) {
             MakeLinks.linkPDB(nodeID);
-	
+        }
+        
+        //run check here
+        if ((levelID==8) && (doCheck)) {
+            RAF.SequenceFragment atom = LocalSQL.domainSeq(nodeID, 1, 3, 0);
+            if (atom==null) {
+                atom = LocalSQL.domainSeq(nodeID, 1, 1, 0);
+            }
+            RAF.SequenceFragment seqres = LocalSQL.domainSeq(nodeID, 2, 3, 0);
+            if (seqres==null) {
+                seqres = LocalSQL.domainSeq(nodeID, 2, 1, 0);
+            }
+            //issue a warning
+            //System.out.println("atom: " + atom.getSequence().length());
+            //System.out.println("seqres: " + seqres.getSequence().length());
+
+            int code = NewEntryConsistencyCheck.newEntryCheckSQL(sccs, seqres.getSequence().length(), atom.getSequence().length(), scopReleaseID);
+            NewEntryConsistencyCheck.printMessages(code);
+        }
         return nodeID;
     }
+
+    /**
+       default is not to do checks unless manually adding
+    */
+    final public static int newNode(int parentNodeID,
+                                    String description) throws Exception {
+        return newNode(parentNodeID, description, false);
+    }    
 
     /**
        Split a node into several, with same level and parent.
@@ -325,7 +402,7 @@ public class ManualEdit {
         if ((descriptions==null) ||
             (descriptions.length==0))
             return null;
-	
+    
         Statement stmt = LocalSQL.createStatement();
 
         int levelID = LocalSQL.getLevel(nodeID);
@@ -383,7 +460,8 @@ public class ManualEdit {
         String[] newNodes = newNodeList.split(" ");
         for (String newNode : newNodes) {
             int newNodeID = LocalSQL.lookupNode(newNode, scopReleaseID);
-            stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+(newNodeID==0 ? "null" : newNodeID)+", "+scopReleaseID+", "+changeTypeID+", now())");
+            // System.err.println("insert into scop_history values (null, "+oldNodeID+", "+(newNodeID==-1 ? "null" : newNodeID)+", "+scopReleaseID+", "+changeTypeID+", now())");
+            stmt.executeUpdate("insert into scop_history values (null, "+oldNodeID+", "+(newNodeID==-1 ? "null" : newNodeID)+", "+scopReleaseID+", "+changeTypeID+", now())");
         }
         stmt.close();
     }
@@ -432,8 +510,8 @@ public class ManualEdit {
     }
 
     /**
-       Remove comment  First argument is node ID, 2nd is start of comment(s)
-       to remove.
+       Remove comment
+       First argument is node ID, 2nd is start of comment(s) to remove.
     */
     final public static void rmComment(int nodeID,
                                        String commentPrefix) throws Exception {
@@ -454,6 +532,168 @@ public class ManualEdit {
         stmt.close();
         return;
     }
+
+    /** 
+        Get all domain under the specied nodeID and releaseID, helper function to addInconsistent and rmInconsistent.
+    */
+    final private static ArrayList<Integer> getDomains (int nodeID, int scopReleaseID) throws Exception {
+        Statement stmt = LocalSQL.createStatement();
+        ResultSet rs;
+
+        ArrayList<Integer> nodeIDs = new ArrayList<Integer>();
+        int levelID = LocalSQL.getLevel(nodeID);
+        if (levelID==8){
+            nodeIDs.add(nodeID);
+            System.out.println("1 domain affected");
+
+        } else if (levelID==7){
+            rs = stmt.executeQuery("SELECT id FROM scop_node WHERE release_id=" + scopReleaseID + " AND parent_node_id=" + nodeID);
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                nodeIDs.add(id);
+            }
+            rs.close();
+            stmt.close();
+            System.out.println(nodeIDs.size() + " domain(s) affected");
+
+        } else if (levelID==6) {
+            rs = stmt.executeQuery("SELECT n.id FROM scop_node AS n, scop_node AS p"
+                + " WHERE n.release_id=" + scopReleaseID + " AND n.parent_node_id = p.id AND p.parent_node_id=" + nodeID);
+            while (rs.next()) {
+                int id = rs.getInt(1);
+                nodeIDs.add(id);
+            }
+            rs.close();
+            stmt.close();
+            System.out.println(nodeIDs.size() + " domain(s) affected");
+
+        } else {
+            //decides to label at their highest level if >= family level
+            nodeIDs.add(nodeID);
+            System.out.println("one entry of level " + levelID + " affected");
+        }
+        
+        return nodeIDs;
+
+    }
+
+    /** 
+        Add/update a row to scop_node_inconsistent.
+        Take in a nodeID and label all domains belonging to the nodeID as the incType given if nodeID is below family
+        Take in a nodeID and label the node as the incType given if nodeID is equal or above family
+    */
+    final public static void addInconsistent(int nodeID, String incType) throws Exception {
+        int scopReleaseID = LocalSQL.getSCOPRelease(nodeID);
+
+        int lastRelease = LocalSQL.getLatestSCOPRelease(false);
+        if (scopReleaseID!=lastRelease)
+            throw new Exception("can't edit an old release");
+        int lastPublicRelease = LocalSQL.getLatestSCOPRelease(true);
+        if (scopReleaseID==lastPublicRelease)
+            throw new Exception("can't edit a public release");
+        
+        Statement stmt = LocalSQL.createStatement();
+        PreparedStatement stmt2;
+        ResultSet rs;
+        int inc;
+
+        //get inc id from abreviation
+        rs = stmt.executeQuery("SELECT id FROM scop_inconsistent_type WHERE abbreviation=" + '"' + incType + '"');
+        if (rs.next()) {
+            inc = rs.getInt(1);
+            rs.close();
+            stmt.close();
+        } else {
+            System.out.println("Invalid inconsistent type abbreviation");
+            rs.close();
+            stmt.close();
+            return;
+        }
+        
+        ArrayList<Integer> nodeIDs = getDomains(nodeID, scopReleaseID);
+
+        //add each domain
+        for (int id : nodeIDs) {
+            System.out.print(LocalSQL.getSunid(id) + ", ");
+            stmt2 = LocalSQL.prepareStatement("REPLACE INTO scop_node_inconsistent VALUES (null, ?, ?)");
+            stmt2.setInt(1, id);
+            stmt2.setInt(2, inc);
+            stmt2.executeUpdate();
+            stmt2.close();
+        }
+        System.out.println();
+        return;
+    }
+
+    /** 
+        Remove a row of scop_node_inconsistent
+    */
+    final public static void rmInconsistent(int nodeID, String incType) throws Exception {
+        int scopReleaseID = LocalSQL.getSCOPRelease(nodeID);
+
+        int lastRelease = LocalSQL.getLatestSCOPRelease(false);
+        if (scopReleaseID!=lastRelease)
+            throw new Exception("can't edit an old release");
+
+        int lastPublicRelease = LocalSQL.getLatestSCOPRelease(true);
+        if (scopReleaseID==lastPublicRelease)
+            throw new Exception("can't edit a public release");
+        
+        Statement stmt = LocalSQL.createStatement();
+        PreparedStatement stmt2;
+        ResultSet rs;
+        int inc;
+
+        //get inc id from abreviation
+        rs = stmt.executeQuery("SELECT id FROM scop_inconsistent_type WHERE abbreviation=" + '"' + incType + '"');
+        //System.out.println("SELECT id FROM scop_inconsistent_type WHERE abbreviation=" + '"' + incType + '"');
+        if (rs.next()) {
+            inc = rs.getInt(1);
+            rs.close();
+            stmt.close();
+        } else {
+            System.out.println("Invalid inconsistent type abbreviation");
+            rs.close();
+            stmt.close();
+            return;
+        }
+        
+        ArrayList<Integer> nodeIDs = getDomains(nodeID, scopReleaseID);
+        //add each domain
+        for (int id : nodeIDs) {
+            System.out.print(LocalSQL.getSunid(id) + ", ");
+            stmt2 = LocalSQL.prepareStatement("DELETE FROM scop_node_inconsistent WHERE node_id=? AND inconsistent_id=?");
+            stmt2.setInt(1, id);
+            stmt2.setInt(2, inc);
+            stmt2.executeUpdate();
+            stmt2.close();
+        }
+        System.out.println();
+        return;
+    }
+
+    /** 
+        Add/update a row to scop_node_repeat
+    */
+    final public static void repeat(int nodeID, String description) throws Exception {
+        int scopReleaseID = LocalSQL.getSCOPRelease(nodeID);
+
+        int lastRelease = LocalSQL.getLatestSCOPRelease(false);
+        if (scopReleaseID!=lastRelease)
+            throw new Exception("can't edit an old release");
+        int lastPublicRelease = LocalSQL.getLatestSCOPRelease(true);
+        if (scopReleaseID==lastPublicRelease)
+            throw new Exception("can't edit a public release");
+            
+        String sccs = LocalSQL.getSCCS(nodeID);
+        PreparedStatement stmt = LocalSQL.prepareStatement("REPLACE INTO scop_node_repeat VALUES (null, ?, ?)");
+        stmt.setInt(1, nodeID);
+        stmt.setString(2, description);
+        stmt.executeUpdate();
+        stmt.close();
+        return;
+    }
+
     
     /**
        replace domains from an obsolete node with domains from
@@ -465,11 +705,11 @@ public class ManualEdit {
         ResultSet rs, rs2;
 
         int scopReleaseID = LocalSQL.getLatestSCOPRelease(false);
-	
+    
         int lastPublicRelease = LocalSQL.getLatestSCOPRelease(true);
         if (scopReleaseID==lastPublicRelease)
             throw new Exception("can't edit a public release");
-	
+    
         rs = stmt.executeQuery("select code from pdb_entry where id="+pdbEntryID);
         if (!rs.next())
             throw new Exception ("PDB entry not found: "+pdbEntryID);
@@ -573,7 +813,7 @@ public class ManualEdit {
                     throw new Exception("PDB entry "+argv[1]+" not found");
                 System.exit(0);
             }
-	    
+        
             int nodeID = 0;
             int scopReleaseID = LocalSQL.getLatestSCOPRelease(false);
 
@@ -613,10 +853,10 @@ public class ManualEdit {
             }
             else if (argv[0].equals("mv")) {
                 int newParent = LocalSQL.lookupNode(argv[2],scopReleaseID);
-                moveNode(nodeID, newParent, true);
+                moveNode(nodeID, newParent, true, true);
             }
             else if (argv[0].equals("new")) {
-                int rv = newNode(nodeID, argv[2]);
+                int rv = newNode(nodeID, argv[2], true);
                 System.out.println(rv);
             }
             else if (argv[0].equals("edit")) {
@@ -660,7 +900,19 @@ public class ManualEdit {
                     }
                     else
                         System.out.println("check node: http://strgen.org/~jmc/scop-boot/?node="+id);
-                }
+                }            
+            }
+            else if (argv[0].equals("inconsistent")) {
+                addInconsistent(nodeID, argv[2]);
+            }
+            else if (argv[0].equals("rmInconsistent")) {
+                rmInconsistent(nodeID, argv[2]); 
+            }
+            else if (argv[0].equals("repeat")) {
+                repeat(nodeID, argv[2]); 
+            }
+            else {
+                System.out.println("no command matches");
             }
             stmt.close();
             stmt2.close();

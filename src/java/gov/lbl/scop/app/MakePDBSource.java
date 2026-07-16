@@ -341,7 +341,8 @@ public class MakePDBSource {
         System.out.println("finding sources for "+xml);
         System.out.flush();
 
-        stmt.executeUpdate("delete from pdb_chain_source where pdb_chain_id in (select id from pdb_chain where pdb_release_id="+pdbReleaseID+")");
+        // JMC 2025-03-27: comment out during new PDB processing due to slowness
+        // stmt.executeUpdate("delete from pdb_chain_source where pdb_chain_id in (select id from pdb_chain where pdb_release_id="+pdbReleaseID+")");
 
         BufferedReader infile = IO.openReader(xml);
         PDBMLHandler h = new PDBMLHandler();

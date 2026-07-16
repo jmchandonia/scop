@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2025 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -44,12 +44,15 @@ public class QueueDaemon {
     */
     final public static HashMap<String,Integer> HOST_JOBS = new HashMap<String,Integer>() {
         {
-            put("node0.jmcnet",new Integer(8));
-            // put("node1.jmcnet",new Integer(6));
-            put("node2.jmcnet",new Integer(6));
-            put("node3.jmcnet",new Integer(6));
-            put("node4.jmcnet",new Integer(6));
-            put("node5.jmcnet",new Integer(6));
+            put("new-porter.jmcnet",new Integer(16));
+            put("new-stout.jmcnet",new Integer(16));
+            put("porter.jmcnet",new Integer(16));
+            put("stout.jmcnet",new Integer(16));
+            put("new-mead.jmcnet",new Integer(16));
+            put("node1.jmcnet",new Integer(16));
+            put("node2.jmcnet",new Integer(16));
+            put("node3.jmcnet",new Integer(16));
+            put("node6.jmcnet",new Integer(16));
         }
     };
 
@@ -62,7 +65,7 @@ public class QueueDaemon {
        How often (in numbers of polls) to start cleanup jobs?
        1440 = 1 day, if we poll once per minute
     */
-    final public static int CLEANUP_INTERVAL = 1440;
+    final public static int CLEANUP_INTERVAL = 2880;
 
     final public static void main(String argv[]) {
         try {
@@ -92,6 +95,8 @@ public class QueueDaemon {
             for (Integer nJobs : HOST_JOBS.values()) {
                 MAX_JOBS += nJobs.intValue();
             }
+            System.out.println(new java.util.Date().toString());
+            System.out.println("Want to run "+MAX_JOBS);
 
             // let admins know daemon was restarted
             stmt.executeUpdate("insert into notify_message_queue (template_id, user_id) values (4,1)");
@@ -103,8 +108,8 @@ public class QueueDaemon {
                 ResultSet rs = countJobs.executeQuery();
                 rs.next();
                 int nTasks = rs.getInt(1);
-                int nJobs = nTasks;
-                if (nJobs > MAX_JOBS) nJobs = MAX_JOBS;
+                int nJobsWanted = nTasks;
+                if (nJobsWanted > MAX_JOBS) nJobsWanted = MAX_JOBS;
                 if (nTasks != lastNTasks) {
                     if (nTasks == 0) {
                         stmt.executeUpdate("insert into notify_message_queue (template_id, user_id) values (2,1)");
@@ -120,21 +125,37 @@ public class QueueDaemon {
                 // check jobs that are running
                 Vector<GridEngine.JobStatus> jobs =
                     GridEngine.getJobs();
-                int scopJobs = 0;
+                int nScopJobs = 0;
+                int realMaxJobs = 0;  // because some machines may not be accepting jobs
+                ArrayList<String> hostsRunningJobs = new ArrayList<String>();
+                boolean scopJobWaiting = false;
                 for (GridEngine.JobStatus j : jobs) {
-                    if ((j.name.equals("scop_job_daemon.sh")) &&
-                        (j.state.equals("r"))) {
+                    // System.out.println("job name '"+j.name+"'");
+                    if (j.name.equals("scop_job_daemon.sh")) {
+                        nScopJobs++;
+                        if (j.state.equals("qw"))
+                            scopJobWaiting = true;
+                    }
+                    if (j.state.equals("r")) {
                         int pos = j.queue.indexOf('@');
                         if (pos > -1) {
                             String machine = j.queue.substring(pos+1);
-                            if (HOST_JOBS.keySet().contains(machine))
-                                scopJobs++;
+                            if ((HOST_JOBS.keySet().contains(machine)) &&
+                                (!hostsRunningJobs.contains(machine)))
+                                hostsRunningJobs.add(machine);
                         }
                     }
                 }
+                for (String host : hostsRunningJobs)
+                    realMaxJobs += HOST_JOBS.get(host).intValue();
+                if ((nJobsWanted > realMaxJobs) && (scopJobWaiting))
+                    nJobsWanted = realMaxJobs;
+
+                System.out.println(new java.util.Date().toString());
+                System.out.println("SCOP jobs in queue "+nScopJobs);
 
                 // start new jobs if required
-                int jobsToStart = nJobs - scopJobs;
+                int jobsToStart = nJobsWanted - nScopJobs;
                 for (int i=0; i<jobsToStart; i++) {
                     GridEngine.submit("/lab/proj/astral/bin/scop_job_daemon.sh");
                     System.out.println(new java.util.Date().toString());
@@ -173,7 +194,7 @@ public class QueueDaemon {
                     parms[2] = "-pe";
                     parms[3] = "serial";
                     parms[5] = "-p";
-                    parms[6] = "10";
+                    parms[6] = "16";
                     parms[7] = "/lab/proj/astral/bin/cleanup_host.sh";
                     for (String host : HOST_JOBS.keySet()) {
                         parms[1] = "hostname="+host;

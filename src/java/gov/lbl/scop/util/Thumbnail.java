@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2026 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -23,6 +23,9 @@ package gov.lbl.scop.util;
 
 import java.sql.*;
 import java.io.*;
+import java.nio.file.Files;
+import java.awt.image.BufferedImage;
+import javax.imageio.ImageIO;
 import java.util.*;
 import java.text.*;
 import org.strbio.io.*;
@@ -36,10 +39,87 @@ import gov.lbl.scop.local.LocalSQL;
 
 /**
    Utilities related to creating thumbnails for SCOP
-
-   
 */
 public class Thumbnail {
+    final private static String GIMP_CONSOLE = "/usr/bin/gimp-console";
+    private static Boolean gimpUsesExplicitBatchInterpreter = null;
+
+    final private static boolean gimpUsesExplicitBatchInterpreter()
+        throws Exception {
+        if (gimpUsesExplicitBatchInterpreter == null) {
+            Program gimp = new Program(GIMP_CONSOLE);
+            ByteArrayOutputStream os = new ByteArrayOutputStream();
+            gimp.setOutput(os);
+            gimp.setError(null);
+            String[] args = new String[1];
+            args[0] = "--version";
+            gimp.run(args);
+
+            String version = os.toString();
+            int major = 0;
+            for (String token : version.split("[^0-9.]+")) {
+                if (token.length() == 0)
+                    continue;
+                int dot = token.indexOf('.');
+                String majorString = (dot == -1) ? token : token.substring(0, dot);
+                try {
+                    major = Integer.parseInt(majorString);
+                    break;
+                }
+                catch (NumberFormatException e) {
+                    // Try the next token.
+                }
+            }
+            if (major == 0)
+                throw new IOException("Could not parse GIMP version from: "+version);
+
+            gimpUsesExplicitBatchInterpreter = Boolean.valueOf(major >= 3);
+        }
+        return gimpUsesExplicitBatchInterpreter.booleanValue();
+    }
+
+    final private static String[] gimpBatchArgs(String script) throws Exception {
+        if (gimpUsesExplicitBatchInterpreter()) {
+            String[] args = new String[8];
+            args[0] = "-c";
+            args[1] = "-i";
+            args[2] = "-d";
+            args[3] = "-f";
+            args[4] = "--batch-interpreter=plug-in-script-fu-eval";
+            args[5] = "-b";
+            args[6] = script;
+            args[7] = "--quit";
+            return args;
+        }
+        else {
+            String[] args = new String[6];
+            args[0] = "-c";
+            args[1] = "-i";
+            args[2] = "-d";
+            args[3] = "-f";
+            args[4] = "-b";
+            args[5] = "(begin "+script+" (gimp-quit 0))";
+            return args;
+        }
+    }
+
+    final private static int[] getImageSize(String fileName) throws Exception {
+        BufferedImage image = ImageIO.read(new File(fileName));
+        if (image == null)
+            throw new IOException("Could not read image dimensions from "+
+                                  fileName);
+        int[] size = new int[2];
+        size[0] = image.getWidth();
+        size[1] = image.getHeight();
+        return size;
+    }
+
+    final private static File createTempPNG(String prefix) throws Exception {
+        File file = File.createTempFile(prefix, ".png");
+        file.delete();
+        return file;
+    }
+
     /**
        Pymol cartoons break on multi-models, so eliminate all but 1st
        model.  Renumber monomers consecutively within each chain, and
@@ -183,6 +263,26 @@ public class Thumbnail {
     }
 
     /**
+       helper function to find out whether a PDB-style is CA-only
+    */
+    final public static boolean isPdbCAOnly(String pdbPath) throws Exception {
+        if (pdbPath == null)
+            return false;
+	
+        File f = File.createTempFile("caonly",".ent");
+        f.delete();
+        HashMap<String,String> mm = mungePDB(pdbPath,
+                                             f.getPath(),
+                                             null);
+        f.delete();
+        if (mm==null)
+            return false;
+        if (mm.get("caOnly")!=null)
+            return true;
+        return false;
+    }
+
+    /**
        get the path corresponding to a particular node
     */
     final public static String getPath(int nodeID,
@@ -201,6 +301,23 @@ public class Thumbnail {
         rs.close();
         stmt.close();
         return ("/lab/proj/astral/thumbs/"+release+"/"+hash+"/"+sid+"/");
+    }
+
+    /**
+       returns the path used to store chain thumbnails
+    */
+    final public static String getChainPath(int chainID) throws Exception {
+        Statement stmt = LocalSQL.createStatement();
+        ResultSet rs;
+        rs = stmt.executeQuery("select e.code, c.chain from pdb_entry e, pdb_release r, pdb_chain c where e.id = r.pdb_entry_id and r.id = c.pdb_release_id and c.id = " + chainID);
+        rs.next();
+
+        String code = rs.getString(1).toLowerCase();
+        String hash = code.substring(1, 3);
+        String chain = rs.getString(2).toUpperCase();
+        rs.close();
+        stmt.close();
+        return ("/lab/proj/astral/thumbs/chain/"+hash+"/"+code+chain+"/");
     }
 
     /**
@@ -316,59 +433,179 @@ public class Thumbnail {
         f.mkdirs();
 
         // make one large image of chain, with node hilighted
-        makeForPDBFile(optimized.getPath(),
-                       angle,
-                       f.getPath()+"/"+whichImage+".png",
-                       description,
-                       mm,
-                       needsCPU,
-                       false,
-                       caOnly);
+        File rendered = createTempPNG(whichImage);
+        try {
+            makeForPDBFile(optimized.getPath(),
+                           angle,
+                           rendered.getPath(),
+                           description,
+                           mm,
+                           needsCPU,
+                           false,
+                           caOnly);
 
-        // crop and scale it
-        makeThumbs(f.getPath()+"/"+whichImage+".png",
-                   f.getPath()+"/"+whichImage.charAt(0)+"s.png",
-                   f.getPath()+"/"+whichImage.charAt(0)+"l.png");
+            // crop and scale it
+            makeThumbs(rendered.getPath(),
+                       f.getPath()+"/"+whichImage.charAt(0)+"s.png",
+                       f.getPath()+"/"+whichImage.charAt(0)+"l.png");
 
-        saveThumb(nodeID,
-                  isASTEROID,
-                  whichImage+"_small",
-                  f.getPath()+"/"+whichImage.charAt(0)+"s.png");
+            saveThumb(nodeID,
+                      isASTEROID,
+                      whichImage+"_small",
+                      f.getPath()+"/"+whichImage.charAt(0)+"s.png");
 
-        saveThumb(nodeID,
-                  isASTEROID,
-                  whichImage+"_large",
-                  f.getPath()+"/"+whichImage.charAt(0)+"l.png");
-
-        File f2 = new File(f.getPath()+"/"+whichImage+".png");
-        f2.delete();
+            saveThumb(nodeID,
+                      isASTEROID,
+                      whichImage+"_large",
+                      f.getPath()+"/"+whichImage.charAt(0)+"l.png");
+        }
+        finally {
+            rendered.delete();
+        }
 
         // if domain, make tiny thumbnail as well
         if (whichImage.equals("domain")) {
             // make one large image of chain, with node hilighted
-            makeForPDBFile(optimized.getPath(),
-                           angle,
-                           f.getPath()+"/domain.png",
-                           description,
-                           mm,
-                           needsCPU,
-                           true,
-                           caOnly);
+            File renderedTiny = createTempPNG("domain-tiny");
+            try {
+                makeForPDBFile(optimized.getPath(),
+                               angle,
+                               renderedTiny.getPath(),
+                               description,
+                               mm,
+                               needsCPU,
+                               true,
+                               caOnly);
 
-            // crop and scale it
-            makeThumbTiny(f.getPath()+"/domain.png",
+                // crop and scale it
+                makeThumbTiny(renderedTiny.getPath(),
+                              f.getPath()+"/dt.png");
+
+                saveThumb(nodeID,
+                          isASTEROID,
+                          "domain_tiny",
                           f.getPath()+"/dt.png");
-
-            saveThumb(nodeID,
-                      isASTEROID,
-                      "domain_tiny",
-                      f.getPath()+"/dt.png");
-
-            f = new File(f.getPath()+"/domain.png");
-            f.delete();
+            }
+            finally {
+                renderedTiny.delete();
+            }
         }
 
         optimized.delete();
+        stmt.close();
+    }
+
+    /**
+       make thumbnail for a given PDB chain id
+    */
+    final public static void makeForChain(int chainID,
+                                          String description,
+                                          String whichImage,
+                                          boolean needsCPU) throws Exception {
+        String pdbPath = null;
+        String chainSet = null;
+        boolean caOnly = false;
+        Statement stmt = LocalSQL.createStatement();
+        ResultSet rs;
+        if (whichImage.equals("chain")) {
+            chainSet = "";
+            rs = stmt.executeQuery("select c.chain, l.pdb_path from pdb_chain c, pdb_local l where c.id="+ chainID +" and c.pdb_release_id = l.pdb_release_id");
+            while (rs.next()) {
+                chainSet += rs.getString(1);
+                pdbPath = rs.getString(2);
+            }
+            rs.close();
+            caOnly = isPdbCAOnly(pdbPath);
+        } else if (whichImage.equals("structure")) {
+            rs = stmt.executeQuery("select l.pdb_path from pdb_chain c, pdb_local l where c.id="+ chainID +" and c.pdb_release_id = l.pdb_release_id");
+            if (rs.next())
+                pdbPath = rs.getString(1);
+            rs.close();
+            caOnly = isPdbCAOnly(pdbPath);
+        }
+        String outputPath = getChainPath(chainID);
+	
+        File f = File.createTempFile(whichImage,".ent");
+        f.delete();
+        // System.out.println("ovop temp file path: " + f.getPath());
+
+        // deal with bundles
+        File unBundled = null;
+        if (pdbPath.endsWith(".pdb-bundle.tar.gz")) {
+            unBundled = ParsePDBXML.unBundle(pdbPath);
+            pdbPath = unBundled.getAbsolutePath();
+        }
+
+        HashMap<String,String> mm = mungePDB(pdbPath,
+                                             f.getPath(),
+                                             chainSet);
+
+        if (unBundled != null)
+            unBundled.delete();
+	
+        if (mm==null) {
+            f.delete();
+            throw new Exception("Couldn't find any atoms for "+whichImage+" "+outputPath);
+        }
+
+        if (mm.get("caOnly")!=null)
+            caOnly = true;
+        
+        // Generate optimized view
+        Ovop o = new Ovop();
+        File optimized = o.optimizeView(f);
+        if ((optimized == null) || (!optimized.exists())) {
+            System.out.println("Warning - ovop crashed on "+whichImage+" "+outputPath);
+            optimized = f;
+        }
+        else {
+            f.delete();
+        }
+
+        // Change suffix of Ovop output file to PyMol-readable (.pdb)
+        String ovop_pdb_path = optimized.getPath().replace(".tmp", ".pdb");
+        File ovop_pdb_temp_file = new File(ovop_pdb_path);
+        Files.move(optimized.toPath(), ovop_pdb_temp_file.toPath());
+
+        // Set ProteinSet and angle
+        ProteinSet ps = new ProteinSet();
+        ps.read(ovop_pdb_path);
+
+        double angle = optimalRotation(ps);
+
+        f = new File(outputPath);
+        f.mkdirs();
+
+        // make one large image of chain
+        File rendered = createTempPNG(whichImage);
+        try {
+            makeForPDBFile(ovop_pdb_path,
+                           angle,
+                           rendered.getPath(),
+                           description,
+                           mm,
+                           needsCPU,
+                           false,
+                           caOnly);
+        
+            // crop and scale it
+            makeThumbs(rendered.getPath(),
+                       f.getPath()+"/"+whichImage.charAt(0)+"s.png",
+                       f.getPath()+"/"+whichImage.charAt(0)+"l.png");
+        
+            saveChainThumb(chainID,
+                           whichImage+"_small",
+                           f.getPath()+"/"+whichImage.charAt(0)+"s.png");
+
+            saveChainThumb(chainID,
+                           whichImage+"_large",
+                           f.getPath()+"/"+whichImage.charAt(0)+"l.png");
+        }
+        finally {
+            rendered.delete();
+        }
+        optimized.delete();
+        ovop_pdb_temp_file.delete();
         stmt.close();
     }
     
@@ -429,26 +666,29 @@ public class Thumbnail {
         f.mkdirs();
 
         // make one large image of chain, with node hilighted
-        makeForPDBFile(optimized.getPath(),
-                       angle,
-                       f.getPath()+"/domain.png",
-                       description,
-                       mm,
-                       true,
-                       true,
-                       caOnly);
+        File renderedTiny = createTempPNG("domain-tiny");
+        try {
+            makeForPDBFile(optimized.getPath(),
+                           angle,
+                           renderedTiny.getPath(),
+                           description,
+                           mm,
+                           true,
+                           true,
+                           caOnly);
 
-        // crop and scale it
-        makeThumbTiny(f.getPath()+"/domain.png",
+            // crop and scale it
+            makeThumbTiny(renderedTiny.getPath(),
+                          f.getPath()+"/dt.png");
+
+            saveThumb(nodeID,
+                      false,
+                      "domain_tiny",
                       f.getPath()+"/dt.png");
-
-        saveThumb(nodeID,
-                  false,
-                  "domain_tiny",
-                  f.getPath()+"/dt.png");
-
-        f = new File(f.getPath()+"/domain.png");
-        f.delete();
+        }
+        finally {
+            renderedTiny.delete();
+        }
 
         optimized.delete();
         stmt.close();
@@ -501,26 +741,9 @@ public class Thumbnail {
         Statement stmt = LocalSQL.createStatement();
 
         // get actual dimensions
-        File tmpFile = File.createTempFile("imid",".txt");
-        tmpFile.delete();
-        Program id = new Program("/usr/bin/identify");
-        OutputStream os = new PrintStream(tmpFile);
-        id.setOutput(os);
-        String[] args = new String[1];
-        args[0] = fileName;
-        id.run(args);
-        os.flush();
-        os.close();
-
-        BufferedReader infile = IO.openReader(tmpFile.getPath());
-        String buffer = infile.readLine();
-        int pos = buffer.indexOf(" ");
-        pos = buffer.indexOf(" ",pos+1);
-        int width = StringUtil.atoi(buffer,pos+1);
-        pos = buffer.indexOf("x",pos+1);
-        int height = StringUtil.atoi(buffer,pos+1);
-        infile.close();
-        tmpFile.delete();
+        int[] size = getImageSize(fileName);
+        int width = size[0];
+        int height = size[1];
 
         stmt.executeUpdate("delete from thumbnail where image_path=\""+
                            fileName+"\"");
@@ -551,6 +774,48 @@ public class Thumbnail {
             rs.close();
 
         stmt.executeUpdate("update "+tableName+" set "+whichThumb+"="+thumbID+" where "+idName+"="+nodeID);
+	
+        stmt.close();
+    }
+
+    /**
+     * saves chain thumbnails
+     */
+    final public static void saveChainThumb(int chainID,
+                                            String whichThumb,
+                                            String fileName) throws Exception {
+        Statement stmt = LocalSQL.createStatement();
+
+        // get actual dimensions
+        int[] size = getImageSize(fileName);
+        int width = size[0];
+        int height = size[1];
+
+        stmt.executeUpdate("delete from thumbnail where image_path=\""+
+                           fileName+"\"");
+                                                
+        stmt.executeUpdate("insert into thumbnail values (null, \""+
+                           fileName+"\", "+
+                           width+", "+
+                           height+")",
+                           Statement.RETURN_GENERATED_KEYS);
+        ResultSet rs = stmt.getGeneratedKeys();
+        rs.next();
+        int thumbID = rs.getInt(1);
+        rs.close();
+
+        String idName = "chain_id";
+        String tableName = "pdb_chain_thumbnail";
+
+        rs = stmt.executeQuery("select "+idName+" from "+tableName+" where "+idName+"="+chainID);
+        if (!rs.next()) {
+            rs.close();
+            stmt.executeUpdate("insert into "+tableName+"("+idName+") values ("+chainID+")");
+        }
+        else
+            rs.close();
+
+        stmt.executeUpdate("update "+tableName+" set "+whichThumb+"="+thumbID+" where "+idName+"="+chainID);
 	
         stmt.close();
     }
@@ -783,6 +1048,7 @@ public class Thumbnail {
                                             boolean colorBySS,
                                             boolean caOnly) throws Exception {
 
+
         File tmpFile = File.createTempFile("pml",".pml");
         tmpFile.delete();
         PrintfWriter outfile = new PrintfWriter(tmpFile.getPath());
@@ -818,53 +1084,44 @@ public class Thumbnail {
         outfile.printf("quit\n");
         outfile.close();
 
-        /*
-          if (description != null) {
-          System.out.println("pymol script is "+tmpFile.getPath());
-          System.exit(0);
-          }
-        */
-
-        Program pymol = new Program("/usr/bin/pymol");
-        pymol.setOutput(null);
-        pymol.setError(null);
-        String[] args = new String[2];
-        args[0] = "-c";
-        args[1] = tmpFile.getPath();
-        pymol.run(args);
-
+        ProcessBuilder pb = new ProcessBuilder("/usr/bin/pymol", "-c", tmpFile.getPath());
+        pb.redirectErrorStream(true);
+        Process p = pb.start();
+        ByteArrayOutputStream pymolLog = new ByteArrayOutputStream();
+        InputStream pymolOutput = p.getInputStream();
+        byte[] buffer = new byte[8192];
+        int n;
+        while ((n = pymolOutput.read(buffer)) != -1) {
+            if (pymolLog.size() < 65536)
+                pymolLog.write(buffer, 0, n);
+        }
+        int exitCode = p.waitFor();
         tmpFile.delete();
+        if (exitCode != 0)
+            throw new IOException("PyMOL failed with exit code "+exitCode+
+                                  " while writing "+imageFileName+":\n"+
+                                  pymolLog.toString());
     }
     
     final public static void makeThumbs(String fileName,
                                         String smallFileName,
                                         String mediumFileName) throws Exception {
-        Program gimp = new Program("/usr/bin/gimp-console");
+
+        Program gimp = new Program(GIMP_CONSOLE);
         gimp.setOutput(null);
         gimp.setError(null);
-        String[] args = new String[6];
-        args[0] = "-c";
-        args[1] = "-i";
-        args[2] = "-d";
-        args[3] = "-f";
-        args[4] = "-b";
-        args[5] = "(begin (scop-thumbs \""+fileName+"\" \""+smallFileName+"\" \""+mediumFileName+"\") (gimp-quit 0))";
-        gimp.run(args);
+        gimp.run(gimpBatchArgs("(scop-thumbs \""+fileName+"\" \""+
+                               smallFileName+"\" \""+
+                               mediumFileName+"\")"));
     }
 
     final public static void makeThumbTiny(String fileName,
                                            String tinyFileName) throws Exception {
-        Program gimp = new Program("/usr/bin/gimp-console");
+        Program gimp = new Program(GIMP_CONSOLE);
         gimp.setOutput(null);
         gimp.setError(null);
-        String[] args = new String[6];
-        args[0] = "-c";
-        args[1] = "-i";
-        args[2] = "-d";
-        args[3] = "-f";
-        args[4] = "-b";
-        args[5] = "(begin (scop-thumb-tiny \""+fileName+"\" \""+tinyFileName+"\") (gimp-quit 0))";
-        gimp.run(args);
+        gimp.run(gimpBatchArgs("(scop-thumb-tiny \""+fileName+"\" \""+
+                               tinyFileName+"\")"));
     }
 
     /**

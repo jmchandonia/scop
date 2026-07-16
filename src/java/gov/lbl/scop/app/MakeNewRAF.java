@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2021 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -79,20 +79,32 @@ public class MakeNewRAF {
     */
     final public static void makeRAF(int pdbReleaseID) throws Exception {
         Statement stmt = LocalSQL.createStatement();
-        ResultSet rs = stmt.executeQuery("select xml_path from pdb_local where pdb_release_id="+pdbReleaseID);
+        ResultSet rs = stmt.executeQuery("select xml_path, is_raf_calculated from pdb_local where pdb_release_id="+pdbReleaseID);
         if (!rs.next()) {
             stmt.close();
             return;
         }
 	
         String xml = rs.getString(1);
+        int isRafCalculated = rs.getInt(2);
+        if (isRafCalculated == 2) {
+            stmt.close();
+            return;
+        }
 
         stmt.executeUpdate("update pdb_local set is_raf_calculated=2 where pdb_release_id="+pdbReleaseID);
         // delete old versions of this raf not used before
-        // stmt.executeUpdate("delete a, r from astral_chain a join raf r on (a.raf_id = r.id and r.first_release_id is null and r.last_release_id is null) join pdb_chain c on (c.id=r.pdb_chain_id and c.pdb_release_id="+pdbReleaseID+")");
-        stmt.executeUpdate("delete from astral_chain where raf_id in (select id from raf where first_release_id is null and last_release_id is null and pdb_chain_id in (select id from pdb_chain where pdb_release_id="+pdbReleaseID+"))");
-        stmt.executeUpdate("delete from raf where first_release_id is null and last_release_id is null and pdb_chain_id in (select id from pdb_chain where pdb_release_id="+pdbReleaseID+")");
+        // Delete astral_chain rows first (the children)
+        stmt.executeUpdate("delete a from astral_chain a " +
+                           "join raf r on (a.raf_id = r.id and r.raf_version_id=3 " +
+                           "and r.first_release_id is null and r.last_release_id is null) " +
+                           "join pdb_chain c on (c.id=r.pdb_chain_id and c.pdb_release_id=" + pdbReleaseID + ")");
 
+        // Then delete the raf rows (the parents)
+        stmt.executeUpdate("delete r from raf r " +
+                           "join pdb_chain c on (c.id=r.pdb_chain_id and c.pdb_release_id=" + pdbReleaseID + ") " +
+                           "where r.raf_version_id=3 " +
+                           "and r.first_release_id is null and r.last_release_id is null");
 
         System.out.println("making RAF for "+xml);
         System.out.flush();
@@ -130,7 +142,7 @@ public class MakeNewRAF {
                     rs.next();
                     int poly = rs.getInt(1);
                     if (poly==1) {
-                        stmt.executeUpdate("insert into raf values (null, 2, "+
+                        stmt.executeUpdate("insert into raf values (null, 3, "+
                                            pdbChainID+", null, null, \""+
                                            line+"\")",
                                            Statement.RETURN_GENERATED_KEYS);

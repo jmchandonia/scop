@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2008-2018 The Regents of the University of California
+ * Copyright (C) 2008-2021 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -131,10 +131,11 @@ public class FixSpecies {
                     int newSpeciesID = MakeSpecies.processNode(nodeID, description);
                     for (Integer i : oldNodes) {
                         rs2 = stmt2.executeQuery("select description from scop_node where id="+i);
-                        rs2.next();
-                        String desc2 = rs2.getString(1);
+                        if (rs2.next()) {
+                            String desc2 = rs2.getString(1);
+                            MakeSpecies.processNode(i.intValue(), desc2);
+                        }                            
                         rs2.close();
-                        MakeSpecies.processNode(i.intValue(), desc2);
                     }
                     MakeSpecies.linkPDBSpecies(newSpeciesID);
                     stmt.close();

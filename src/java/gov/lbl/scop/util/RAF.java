@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2023 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -31,7 +31,7 @@ import java.sql.Statement;
 import java.util.HashMap;
 
 /**
-   Utilities related to calculating sequence from RAF.
+   Updated by Lindsey Guan 6/20 for RAF version 3
 */
 public class RAF {
     public static class SequenceFragment {
@@ -95,24 +95,46 @@ public class RAF {
        <p/>
        (as in astral_seq_source table)
     */
-    final public static SequenceFragment wholeChainSeq(String body, int sourceType) {
+    final public static SequenceFragment wholeChainSeq(String body, int sourceType) throws IllegalArgumentException {
         int l = body.length();
         SequenceFragment rv = new SequenceFragment(l / 7);
         boolean inSeq = true;
-        if (sourceType == 3)
-            inSeq = false;
+        int atomStart = 0;
+        int atomEnd = l - 7;
+        if (sourceType == 3) {
+            for (int i = 0; i < l; i += 7) {
+                if (body.charAt(i + 5) != '.') {
+                    atomStart = i;
+                    break;
+                }
+            }
+            for (int i = l - 7; i >= 0; i -= 7) {
+                if (body.charAt(i + 5) != '.') {
+                    atomEnd = i;
+                    break;
+                }
+            }
+        }
         for (int i = 0; i < l; i += 7) {
-            String resID = body.substring(i, i + 5).trim();
-            if ((sourceType == 3) && (!inSeq) && (!resID.equals("B")))
-                inSeq = true;
-            if ((resID.equals("E")) && (sourceType != 2))
-                return rv;
+            char atomRes = body.charAt(i + 5);
+            char seqRes = body.charAt(i + 6);
+
+            if (sourceType == 3) {
+                if (i < atomStart || i > atomEnd) {
+                    inSeq = false;
+                } else {
+                    inSeq = true;
+                }
+            }
             char seqChar;
-            if (sourceType == 3)
-                seqChar = body.charAt(i + 6);
-            else
-                seqChar = body.charAt(i + 4 + sourceType);
-            if (inSeq)
+            if (sourceType == 1) {
+                seqChar = atomRes;
+            } else if (sourceType == 2 || sourceType == 3) {
+                seqChar = seqRes;
+            } else {
+                throw new IllegalArgumentException("'sourceType' must have value 1, 2, or 3.");
+            }  
+            if (inSeq && seqChar != '.' && seqChar != '"')
                 rv.append(seqChar);
         }
         return rv;
@@ -137,11 +159,12 @@ public class RAF {
         int l = body.length();
         int direction = 1;
         if (!forward) direction = -1;
-
+        // System.out.println("debug Indexof: resID = " + resID);
         for (int i = (forward ? 0 : l - 7);
              (forward && (i < l)) || (!forward && (i >= 0));
              i += 7 * direction) {
             String curResID = body.substring(i, i + 5).trim();
+            // System.out.println("debug Indexof: curResID = " + curResID);
             if (curResID.equals(resID))
                 return (i / 7);
         }
@@ -163,62 +186,102 @@ public class RAF {
     */
     final public static int translateIndex(String body,
                                            int index,
-                                           int sourceType) {
+                                           int sourceType) throws IllegalArgumentException {
         int l = body.length();
         boolean inSeq = true;
-        if (sourceType == 3)
-            inSeq = false;
+        int atomStart = 0;
+        int atomEnd = l - 7;
+        if (sourceType == 3) {
+            for (int i = 0; i < l; i += 7) {
+                if (body.charAt(i + 5) != '.') {
+                    atomStart = i;
+                    break;
+                }
+            }
+            for (int i = l - 7; i >= 0; i -= 7) {
+                if (body.charAt(i + 5) != '.') {
+                    atomEnd = i;
+                    break;
+                }
+            }
+        }
         for (int i = 0; i < l; i += 7) {
-            String resID = body.substring(i, i + 5).trim();
-            if ((sourceType == 3) && (!inSeq) && (!resID.equals("B")))
-                inSeq = true;
-            if ((resID.equals("E")) && (sourceType != 2))
-                return -1;
+            char atomRes = body.charAt(i + 5);
+            char seqRes = body.charAt(i + 6);
+
+            if (sourceType == 3) {
+                if (i < atomStart || i > atomEnd) {
+                    inSeq = false;
+                } else {
+                    inSeq = true;
+                }
+            }
             char seqChar;
-            if (sourceType == 3)
-                seqChar = body.charAt(i + 6);
-            else
-                seqChar = body.charAt(i + 4 + sourceType);
-            if (inSeq) {
-                if ((seqChar != '.') &&
-                    (seqChar != '"'))
-                    if (index-- == 0)
-                        return (i / 7);
+            if (sourceType == 1) {
+                seqChar = atomRes;
+            } else if (sourceType == 2 || sourceType == 3) {
+                seqChar = seqRes;
+            } else {
+                throw new IllegalArgumentException("'sourceType' must have value 1, 2, or 3.");
+            }
+            if (inSeq && seqChar != '.' && seqChar != '"') {
+                if (index-- == 0) {
+                    return (i / 7);
+                }           
             }
         }
         return -1;
     }
 
     /**
-       Translate an a RAF (0-based) into into an index
+       Translate a RAF (0-based) index into an index
        (0-based) in a whole chain seq (type depends on sourceType).
        -1 if not found.
     */
     final public static int rTranslateIndex(String body,
                                             int index,
-                                            int sourceType) {
+                                            int sourceType) throws IllegalArgumentException {
         int l = body.length();
         int rv = -1;
         boolean inSeq = true;
-        if (sourceType == 3)
-            inSeq = false;
+        int atomStart = 0;
+        int atomEnd = l - 7;
+        if (sourceType == 3) {
+            for (int i = 0; i < l; i += 7) {
+                if (body.charAt(i + 5) != '.') {
+                    atomStart = i;
+                    break;
+                }
+            }
+            for (int i = l - 7; i >= 0; i -= 7) {
+                if (body.charAt(i + 5) != '.') {
+                    atomEnd = i;
+                    break;
+                }
+            }
+        }
         for (int i = 0; i <= (index * 7); i += 7) {
-            if (i >= l)
-                return -1;
-            String resID = body.substring(i, i + 5).trim();
-            if ((sourceType == 3) && (!inSeq) && (!resID.equals("B")))
-                inSeq = true;
-            if ((resID.equals("E")) && (sourceType != 2))
-                return -1;
+            char atomRes = body.charAt(i + 5);
+            char seqRes = body.charAt(i + 6);
+
+            if (sourceType == 3) {
+                if (i < atomStart || i > atomEnd) {
+                    inSeq = false;
+                } else {
+                    inSeq = true;
+                }
+            }
             char seqChar;
-            if (sourceType == 3)
-                seqChar = body.charAt(i + 6);
-            else
-                seqChar = body.charAt(i + 4 + sourceType);
-            if (inSeq) {
-                if ((seqChar != '.') &&
-                    (seqChar != '"'))
-                    rv++;
+            if (sourceType == 1) {
+                seqChar = atomRes;
+            } else if (sourceType == 2 || sourceType == 3) {
+                seqChar = seqRes;
+            } else {
+                throw new IllegalArgumentException("'sourceType' must have value 1, 2, or 3.");
+            }
+
+            if (inSeq && seqChar != '.' && seqChar != '"') {
+                rv++;
             }
         }
         return rv;
@@ -234,20 +297,14 @@ public class RAF {
                                             boolean forward) {
         int l = body.length();
         int direction = 1;
-        if (!forward) direction = -1;
-
-        for (int i = index * 7;
-             (forward && (i < l)) || (!forward && (i >= 0));
-             i += 7 * direction) {
-            String resID = body.substring(i, i + 5).trim();
-            if ((!resID.equals("B")) &&
-                (!resID.equals("M")) &&
-                (!resID.equals("E")))
+        if (!forward) {
+            direction = -1;
+        } 
+        for (int i = index * 7; (forward && (i < l)) || (!forward && (i >= 0)); i += 7 * direction) {
+            char atomRes = body.charAt(i + 5);
+            if (atomRes != '.' && atomRes != '"') {
                 return (i / 7);
-            if (resID.equals("E") && forward)
-                return -1;
-            if (resID.equals("B") && !forward)
-                return -1;
+            }     
         }
         return -1;
     }
@@ -266,14 +323,11 @@ public class RAF {
         int direction = 1;
         if (!forward) direction = -1;
 
-        for (int i = (index + direction) * 7;
-             (forward && (i < l)) || (!forward && (i >= 0));
-             i += 7 * direction) {
-            String resID = body.substring(i, i + 5).trim();
-            if ((resID.equals("B")) ||
-                (resID.equals("M")) ||
-                (resID.equals("E")))
+        for (int i = (index + direction) * 7; (forward && (i < l)) || (!forward && (i >= 0)); i += 7 * direction) {
+            char atomRes = body.charAt(i + 5);
+            if (atomRes == '.' || atomRes == '"') {
                 return (i / 7 - direction);
+            }
         }
         if (forward)
             return (l / 7 - 1);
@@ -290,11 +344,10 @@ public class RAF {
                                   int i2) {
         int rv = 0;
         for (int i = i1 * 7; i <= i2 * 7; i += 7) {
-            String resID = body.substring(i, i + 5).trim();
-            if ((resID.equals("B")) ||
-                (resID.equals("M")) ||
-                (resID.equals("E")))
+            char atomRes = body.charAt(i + 5);
+            if (atomRes == '.' || atomRes == '"') {
                 rv++;
+            }
         }
         return rv;
     }
@@ -315,10 +368,11 @@ public class RAF {
         int lastResN = indexOf(body, lastRes, false);
         // System.out.println(firstRes+" "+firstResN);
         // System.out.println(lastRes+" "+lastResN);
-        if ((firstResN == -1) || (lastResN == -1) || (firstResN > lastResN))
+        if ((firstResN == -1) || (lastResN == -1) || (firstResN > lastResN)) {
             return null;
-        else
+        } else {
             return partialChainSeq(body, sourceType, firstResN, lastResN);
+        }      
     }
 
     /**
@@ -331,10 +385,20 @@ public class RAF {
        greater than or equal to firstRes.  Indices are not checked;
        this will cause an exception if off either end.
     */
-    final public static SequenceFragment partialChainSeq(String body, int sourceType, int firstRes, int lastRes) {
+    final public static SequenceFragment partialChainSeq(String body, 
+                                                         int sourceType, 
+                                                         int firstRes, 
+                                                         int lastRes) throws IllegalArgumentException {
         SequenceFragment rv = new SequenceFragment(lastRes - firstRes + 1);
         for (int i = firstRes * 7; i <= lastRes * 7; i += 7) {
-            rv.append(body.charAt(i + 4 + sourceType));
+            // System.err.println("debug: '"+body.substring(i,i+7)+"'");
+            if (sourceType == 1) {
+                rv.append(body.charAt(i + 5));
+            } else if (sourceType == 2) {
+                rv.append(body.charAt(i + 6));
+            } else {
+                throw new IllegalArgumentException("'sourceType' must have value 1 or 2.");
+            }
         }
         return rv;
     }
@@ -343,11 +407,13 @@ public class RAF {
 
     /**
        Set up chemical dictionary
+       (Unchanged for RAF version 3)
     */
     final private static void setupChemDic() throws Exception {
         String chemDicFile = SCOP.getProperty("xml2raf.chem_dic");
-        if (chemDicFile == null)
+        if (chemDicFile == null) {
             throw new Exception("Error; must define local property 'xml2raf.chem_dic' with path to XML2RAF's chemical dictionary cache file");
+        }
         BufferedReader infile = IO.openReader(chemDicFile);
         String buffer;
         chemDic = new HashMap<String, String>();
@@ -404,21 +470,26 @@ public class RAF {
     /**
        translate a single modified residue, using
        chemical dictionary
+       (Unchanged for RAF version 3)
     */
     final public static String translatePDBRes(String res) throws Exception {
-        if (chemDic == null)
+        if (chemDic == null) {
             setupChemDic();
+        }
         String translation = chemDic.get(res.toLowerCase());
-        if (translation == null)
+        if (translation == null) {
             return("x");
-        if (translation.equals("."))
+        }
+        if (translation.equals(".")) {
             return("");
+        }
         return translation;
     }
 
     /**
        translate chemically modified residues as in XML2RAF,
        where chemically modified residues are in ()
+       (Unchanged for RAF version 3)
     */
     final public static String translatePDBSeq(String seq) throws Exception {
         StringBuffer sb = new StringBuffer();
@@ -427,15 +498,17 @@ public class RAF {
             int pos2 = seq.indexOf('(', pos1);
             if (pos2 == -1) {
                 sb.append(seq.substring(pos1));
-                if (sb.length() == 0)
+                if (sb.length() == 0) {
                     return null;
-                else
+                } else {
                     return (sb.toString());
+                }  
             } else {
                 sb.append(seq.substring(pos1, pos2));
                 pos1 = seq.indexOf(')', pos2 + 1) + 1;
-                if (pos1 == 0)
+                if (pos1 == 0) {
                     throw new Exception("Mismatched parentheses in " + seq);
+                }
                 String modRes = seq.substring(pos2 + 1, pos1 - 1);
                 sb.append(translatePDBRes(modRes));
             }
@@ -446,10 +519,12 @@ public class RAF {
        checks whether sequence is probably nucleotide.
        Same algorithm as MUSCLE; see if at least 95% of the first
        100 letters (fewer if there are fewer chars) look like nucleic acids.
+       (Unchanged for RAF version 3)
     */
     final public static boolean isNucleotide(String seq) throws Exception {
-        if (seq == null)
+        if (seq == null) {
             return false;
+        }
         seq = seq.toLowerCase();
         int pos = 0;
         int total = 0;
@@ -457,15 +532,18 @@ public class RAF {
         String tranSeq = translatePDBSeq(seq);
         while ((pos < 100) && (pos < tranSeq.length()) && (pos != -1)) {
             char c = tranSeq.charAt(pos++);
-            if (c != 'x')
+            if (c != 'x') {
                 total++;
+            }   
             if ((c == 'a') ||
                 (c == 'c') ||
                 (c == 'g') ||
                 (c == 't') ||
                 (c == 'u') ||
-                (c == 'n'))
+                (c == 'n')) {
                 totalNuc++;
+            }
+                
         }
         if (total == 0) {
             if ((seq.indexOf("(a)") > -1) ||
@@ -479,18 +557,22 @@ public class RAF {
                 (seq.indexOf("(dg)") > -1) ||
                 (seq.indexOf("(dc)") > -1) ||
                 (seq.indexOf("(du)") > -1) ||
-                (seq.indexOf("(dn)") > -1))
+                (seq.indexOf("(dn)") > -1)) {
                 return true;
+            }
+                
             return false;
         }
         double ratio = (double) totalNuc / (double) total;
-        if (ratio >= 0.95)
+        if (ratio >= 0.95) {
             return true;
+        }
         return false;
     }
 
     /**
        checks sequences that have already been calculated
+       (Unchanged for RAF version 3)
     */
     final public static void main(String argv[]) {
         try {
@@ -508,8 +590,9 @@ public class RAF {
 
                     String seq2 = sf.getSequence();
                     int reject2 = 0;
-                    if (sf.isReject()) reject2 = 1;
-
+                    if (sf.isReject()) {
+                        reject2 = 1;
+                    } 
                     if (!seq.equals(seq2)) {
                         System.out.println("SEQ:");
                         System.out.println(" old: " + seq);
@@ -537,7 +620,9 @@ public class RAF {
     }
 
     /**
-     * Check that the residues are sequentially numbered
+     * Check that the residues are sequentially numbered.
+     * (Unchanged for RAF version 3, as sequential numbering is not
+     * required of RAF lines.)
      *
      * @param rafLine
      * @return
@@ -566,7 +651,7 @@ public class RAF {
             else if (resID.equals("M") || resID.equals("E")) {
                 currentRes++;
             }
-            // we have encountered the first numbered residue.  Very good.
+            // we have encountered the first numbered residue. Very good.
             else if (!encounteredFirstNumberedResidue) {
                 char lastChar = resID.charAt(resID.length() - 1);
                 if (Character.isLetter(lastChar)) {  //handle insertion code

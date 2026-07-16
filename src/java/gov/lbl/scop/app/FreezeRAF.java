@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2008-2018 The Regents of the University of California
+ * Copyright (C) 2008-2021 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -69,12 +69,12 @@ public class FreezeRAF {
         ResultSet rs;
         int oldScopID = scopReleaseID-1;  // must be consecutive
 	    
-        rs = stmt.executeQuery("select line from raf where pdb_chain_id="+pdbChainID+" and last_release_id is null");
+        rs = stmt.executeQuery("select line from raf where pdb_chain_id="+pdbChainID+" and last_release_id is null and raf_version_id=3");
         if (rs.next()) {
             String newLine = rs.getString(1);
 
             // is there an old RAF line that's the same as this one?
-            rs = stmt.executeQuery("select id,line from raf where pdb_chain_id="+pdbChainID+" and last_release_id="+oldScopID);
+            rs = stmt.executeQuery("select id,line from raf where pdb_chain_id="+pdbChainID+" and last_release_id="+oldScopID+" and raf_version_id=3");
             if (rs.next()) {
                 int oldRAFID = rs.getInt(1);
                 String oldLine = rs.getString(2);
@@ -88,7 +88,7 @@ public class FreezeRAF {
             rs.close();
 
             // old line different or missing; we need to insert it.
-            stmt.executeUpdate("insert into raf values (null, 2, "+pdbChainID+", "+scopReleaseID+", "+scopReleaseID+", \""+newLine+"\")",
+            stmt.executeUpdate("insert into raf values (null, 3, "+pdbChainID+", "+scopReleaseID+", "+scopReleaseID+", \""+newLine+"\")",
                                Statement.RETURN_GENERATED_KEYS);
             rs = stmt.getGeneratedKeys();
             rs.next();

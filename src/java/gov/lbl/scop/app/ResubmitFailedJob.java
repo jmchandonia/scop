@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2008-2018 The Regents of the University of California
+ * Copyright (C) 2008-2020 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -45,7 +45,7 @@ public class ResubmitFailedJob {
 
             String query = "select id, job_type_id, target_id, args from job_done where n_failures=10";
             if (argv.length > 0)
-                query += " and status like \"%"+argv[0]+"%\"";
+                query += " and id="+argv[0]+"";
             rs = stmt.executeQuery(query);
             while (rs.next()) {
                 int jobID = rs.getInt(1);

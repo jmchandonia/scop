@@ -1,7 +1,7 @@
 /*
  * Software to build and maintain SCOPe, https://scop.berkeley.edu/
  *
- * Copyright (C) 2012-2018 The Regents of the University of California
+ * Copyright (C) 2012-2022 The Regents of the University of California
  *
  * For feedback, mailto:scope@compbio.berkeley.edu
  *
@@ -146,6 +146,21 @@ public class CheckDomainCoverage {
                                 System.out.println("Unknown residue for "+rafCode+rafChain+": "+sid+" "+description);
                                 indexEnd = indexStart - 1; // avoid crash in next step
                             }
+                            else {
+                                // check that start and end are not gaps;
+                                // needed for RAF version 3
+                                int nGaps = RAF.nGaps(rafBody,
+                                                      indexStart,
+                                                      indexStart);
+                                if (nGaps==1)
+                                    System.out.println("Invalid start residue for "+rafCode+rafChain+": "+sid+" "+description);
+                                
+                                nGaps = RAF.nGaps(rafBody,
+                                                  indexEnd,
+                                                  indexEnd);
+                                if (nGaps==1)
+                                    System.out.println("Invalid end residue for "+rafCode+rafChain+": "+sid+" "+description);
+                            }
                             for (int i=indexStart; i<=indexEnd; i++) {
                                 if (covered[i]==true) {
                                     System.out.println("Overlapping domains for "+rafCode+rafChain+": "+sid+" "+description);
@@ -169,10 +184,16 @@ public class CheckDomainCoverage {
 
                 // finally, cover all un-observed residues
                 for (int i=0; i<l; i++) {
+                    /*
                     String resID = RAF.getResID(rafBody,i);
                     if (resID.equals("B") ||
                         resID.equals("M") ||
                         resID.equals("E"))
+                        covered[i] = true;
+                        */
+                    // fix for RAF version 3:
+                    int nGaps = RAF.nGaps(rafBody,i,i);
+                    if (nGaps==1)
                         covered[i] = true;
                 }
 
