@@ -73,6 +73,7 @@ my %num2month = reverse %month2num;
 
 sub processLSLR;
 sub processJSON;
+sub dateKey;
 
 MAIN : {
     # check that executables exist
@@ -339,87 +340,94 @@ MAIN : {
             printf("debug:  oldDate is $oldDate\n");
             printf("debug:  newDate is $newDate\n");
             if ($oldDate ne $newDate) {
-                # check actual mod times
-                my $pdbFile = "$pdbLoc"."$hashDir"."$fileName";
-                if ($i == 6) {
-                    $pdbFile = "$pdbLoc"."$hashDir"."$entry/"."$fileName";
+                my $oldDateKey = dateKey($oldDate);
+                my $newDateKey = dateKey($newDate);
+                if ((defined $oldDateKey) && (defined $newDateKey) && ($newDateKey le $oldDateKey)) {
+                    printf("debug:  newDate is not newer than oldDate; reusing local file\n");
                 }
-
-                my $myFile = "$newLoc"."$hashDir"."$fileName";
-
-                # Get modification time via HEAD request
-		my $newMtime;
-                my $pdbFileUrl = "$pdbRootUrl/$pdbFile";
-                my $request = HTTP::Request->new('HEAD', $pdbFileUrl);
-                my $response = $ua->request($request);
-                if ($response->is_success) {
-                    my $last_modified = $response->header('Last-Modified');
-                    if ($last_modified) {
-                        $newMtime = str2time($last_modified);
-                        printf("debug:  modtime at PDB is $newMtime\n");
-                    } else {
-                        die "Could not retrieve Last-Modified header";
+                else {
+                    # check actual mod times
+                    my $pdbFile = "$pdbLoc"."$hashDir"."$fileName";
+                    if ($i == 6) {
+                        $pdbFile = "$pdbLoc"."$hashDir"."$entry/"."$fileName";
                     }
-                }
 
-                while (!$newMtime) {
-                    if ($resetTime > 10000) {
-                        die "Couldn't connect to PDB after multiple tries: ",$response->status_line;
-                    }
-                    # re-open connection
-                    sleep($resetTime);
-                    $resetTime *= 1.5;
-                    print("Retrying connection to $pdbFileUrl\n");
-                    system("date");
-                    $response = $ua->request($request);
+                    my $myFile = "$newLoc"."$hashDir"."$fileName";
+
+                    # Get modification time via HEAD request
+                    my $newMtime;
+                    my $pdbFileUrl = "$pdbRootUrl/$pdbFile";
+                    my $request = HTTP::Request->new('HEAD', $pdbFileUrl);
+                    my $response = $ua->request($request);
                     if ($response->is_success) {
                         my $last_modified = $response->header('Last-Modified');
-                        $newMtime = str2time($last_modified);
-                    }
-                }
-                $resetTime = 10;
-                my $oldMtime = 0;
-                if (exists $oldD{$entry}) {
-                    my $myOldSnap = "$oldSnap"."$hashDir"."$fileName";
-                    if (! -e $myOldSnap) {
-                        $myOldSnap =~ s/\.gz//;
-                    }
-                    my $myOldFile = "$oldSnap"."$hashDir".readlink($myOldSnap);
-                    $oldMtime = (stat($myOldFile))[9];
-                }
-                printf("debug:  local modtime is $oldMtime\n");
-                if ($oldMtime != $newMtime) {
-                    # download the file to new files
-                    mkdir("$newLoc"."$hashDir", 0755) if (! -d "$newLoc"."$hashDir");
-                    system("date");
-                    printf("getting file $pdbFile\n");
-                    $response = $ua->get($pdbFileUrl,
-					 ':content_file' => $myFile);
-                    printf("debug:  getting file\n");
-                    printf("debug:  pdbFile is $pdbFile\n");
-                    printf("debug:  myFile is $myFile\n");
-                    if ($response->is_success) {
-                        utime($newMtime, $newMtime, $myFile);    
-                        $downloaded = 1;
+                        if ($last_modified) {
+                            $newMtime = str2time($last_modified);
+                            printf("debug:  modtime at PDB is $newMtime\n");
+                        } else {
+                            die "Could not retrieve Last-Modified header";
+                        }
                     }
 
-		    while (!$downloaded) {
-			if ($resetTime > 10000) {
-			    die "Couldn't download file multiple tries: ",$response->status_line;
-			}
-			# re-open connection
-			sleep($resetTime);
-			$resetTime *= 1.5;
-			print("Retrying connection to $pdbFileUrl\n");
-			system("date");
-			$response = $ua->get("$pdbFileUrl",
+                    while (!$newMtime) {
+                        if ($resetTime > 10000) {
+                            die "Couldn't connect to PDB after multiple tries: ",$response->status_line;
+                        }
+                        # re-open connection
+                        sleep($resetTime);
+                        $resetTime *= 1.5;
+                        print("Retrying connection to $pdbFileUrl\n");
+                        system("date");
+                        $response = $ua->request($request);
+                        if ($response->is_success) {
+                            my $last_modified = $response->header('Last-Modified');
+                            $newMtime = str2time($last_modified);
+                        }
+                    }
+                    $resetTime = 10;
+                    my $oldMtime = 0;
+                    if (exists $oldD{$entry}) {
+                        my $myOldSnap = "$oldSnap"."$hashDir"."$fileName";
+                        if (! -e $myOldSnap) {
+                            $myOldSnap =~ s/\.gz//;
+                        }
+                        my $myOldFile = "$oldSnap"."$hashDir".readlink($myOldSnap);
+                        $oldMtime = (stat($myOldFile))[9];
+                    }
+                    printf("debug:  local modtime is $oldMtime\n");
+                    if ($oldMtime != $newMtime) {
+                        # download the file to new files
+                        mkdir("$newLoc"."$hashDir", 0755) if (! -d "$newLoc"."$hashDir");
+                        system("date");
+                        printf("getting file $pdbFile\n");
+                        $response = $ua->get($pdbFileUrl,
 					     ':content_file' => $myFile);
-			if ($response->is_success) {
-			    utime($newMtime, $newMtime, $myFile);    
-			    $downloaded = 1;
-			}
+                        printf("debug:  getting file\n");
+                        printf("debug:  pdbFile is $pdbFile\n");
+                        printf("debug:  myFile is $myFile\n");
+                        if ($response->is_success) {
+                            utime($newMtime, $newMtime, $myFile);    
+                            $downloaded = 1;
+                        }
+
+		        while (!$downloaded) {
+			    if ($resetTime > 10000) {
+			        die "Couldn't download file multiple tries: ",$response->status_line;
+			    }
+			    # re-open connection
+			    sleep($resetTime);
+			    $resetTime *= 1.5;
+			    print("Retrying connection to $pdbFileUrl\n");
+			    system("date");
+			    $response = $ua->get("$pdbFileUrl",
+						 ':content_file' => $myFile);
+			    if ($response->is_success) {
+			        utime($newMtime, $newMtime, $myFile);    
+			        $downloaded = 1;
+			    }
+		        }
 		    }
-		}
+                }
 	    }
 
             if ($downloaded) {
@@ -603,6 +611,17 @@ MAIN : {
 
     # normal exit
     exit(0);
+}
+
+sub dateKey {
+    my ($date) = @_;
+    return undef if (! defined $date);
+    return undef if ($date !~ /^([A-Z][a-z][a-z])\s+(\d{1,2})\s+(\d{4})$/);
+
+    my $month = $month2num{$1};
+    return undef if (! defined $month);
+
+    return sprintf("%04d%02d%02d", $3, $month, $2);
 }
 
 # returns an array of 2*$num_items=14 hashes.
