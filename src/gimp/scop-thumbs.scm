@@ -1,32 +1,61 @@
+(define (scop-selected-layer image)
+  (if (defined? 'gimp-image-get-selected-layers)
+      (vector-ref (car (gimp-image-get-selected-layers image)) 0)
+      (car (gimp-image-get-active-layer image))))
+
+(define (scop-selected-drawable image)
+  (if (defined? 'gimp-image-get-selected-drawables)
+      (vector-ref (car (gimp-image-get-selected-drawables image)) 0)
+      (car (gimp-image-get-active-drawable image))))
+
+(define (scop-image-width image)
+  (if (defined? 'gimp-image-get-width)
+      (car (gimp-image-get-width image))
+      (car (gimp-image-width image))))
+
+(define (scop-image-height image)
+  (if (defined? 'gimp-image-get-height)
+      (car (gimp-image-get-height image))
+      (car (gimp-image-height image))))
+
+(define (scop-autocrop image drawable)
+  (if (defined? 'gimp-image-autocrop)
+      (gimp-image-autocrop image drawable)
+      (plug-in-autocrop RUN-NONINTERACTIVE image drawable)))
+
+(define (scop-file-save image drawable filename)
+  (if (defined? 'gimp-image-get-width)
+      (gimp-file-save RUN-NONINTERACTIVE image filename)
+      (gimp-file-save RUN-NONINTERACTIVE image drawable filename filename)))
+
 (define (scop-thumbs filename small-filename medium-filename)
   (let* ((org-image (car (gimp-file-load RUN-NONINTERACTIVE
 				     filename filename)))
-	 (drawable (car (gimp-image-get-active-layer org-image))))
+	 (drawable (scop-selected-layer org-image)))
 	     
-    (plug-in-autocrop RUN-NONINTERACTIVE
-		      org-image drawable)
+    (scop-autocrop org-image drawable)
 
-    (let* ((org-width  (car (gimp-image-width  org-image)))
-	   (org-height (car (gimp-image-height org-image))))
+    (let* ((org-width  (scop-image-width  org-image))
+	   (org-height (scop-image-height org-image)))
 
       (let* ((image (car (gimp-image-duplicate org-image)))
-	     (drawable (car (gimp-image-get-active-drawable image)))
+	     (drawable (scop-selected-drawable image))
 	     (height 100)
 	     (width (max 1 (* org-width (/ height org-height)))))
       
 	(gimp-image-scale image width height)
 
-	(gimp-file-save RUN-NONINTERACTIVE
-			image drawable small-filename small-filename))
+	(scop-file-save image drawable small-filename)
+	(gimp-image-delete image))
 
       (let* ((image (car (gimp-image-duplicate org-image)))
-	     (drawable (car (gimp-image-get-active-drawable image)))
+	     (drawable (scop-selected-drawable image))
 	     (height 500)
 	     (width (max 1 (* org-width (/ height org-height)))))
       
 	(gimp-image-scale image width height)
 
-	(gimp-file-save RUN-NONINTERACTIVE
-			image drawable medium-filename medium-filename))
+	(scop-file-save image drawable medium-filename)
+	(gimp-image-delete image))
 
       (gimp-image-delete org-image))))
