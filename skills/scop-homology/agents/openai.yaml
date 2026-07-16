@@ -1,0 +1,4 @@
+interface:
+  display_name: "SCOP Homology"
+  short_description: "Answer SCOP/ASTRAL/SCOPe homology questions"
+  default_prompt: "Use $scop-homology to answer a protein homology question with SCOPe API data."
