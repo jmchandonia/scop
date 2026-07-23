@@ -1,141 +1,122 @@
 ---
 name: scop-homology
-description: Use classic SCOP, ASTRAL, and SCOPe protein structural classification data through the public SCOPe REST API to answer questions about protein domains, hierarchy, homology, folds, families, superfamilies, stable releases, ASTRAL/SPACI/AEROSPACI data, and reproducible SCOPe citations. Use for SCOP/SCOPe/ASTRAL questions only; this skill does not cover SCOP2, CATH, ECOD, or other protein classification resources.
+description: Use classic SCOP, ASTRAL, and SCOPe structural-classification data through the public SCOPe REST API to answer questions about protein domains, hierarchy, homology, folds, families, superfamilies, stable releases, ASTRAL quality, and reproducible citations. Use for SCOP/SCOPe/ASTRAL questions only; this skill does not cover SCOP2, CATH, ECOD, or other classification resources.
 ---
 
 # SCOP Homology
 
-Use this skill to answer questions with SCOP and SCOPe data from the REST API. Do not scrape SCOPe web pages: bot access to human web pages may be blocked, and the API is the supported machine interface.
+Use the public SCOPe REST API at `https://scop.berkeley.edu/api/v1`.
+Do not scrape human-facing SCOPe pages or use internal database identifiers.
 
-Primary sources for interpretation:
+## Evidence Gates
 
-- Current database content and current semantics: `references/api-usage.md` and `references/biological-interpretation.md`, distilled from the downloaded SCOPe online help.
-- How to reason biologically with SCOP: reference 6, Brenner et al. 1996, "Understanding protein structure: Using SCOP for fold interpretation", distilled in `references/biological-interpretation.md`.
+SCOPe facts are data, not facts to reconstruct from model memory.
 
-## API First
+- Do not state a release-specific SID, SUNID, SCCS, hierarchy, boundary,
+  annotation, periodic label, or numeric value unless it appears in an API
+  response inspected during the current task.
+- Do not rank structures by SPACI, AEROSPACI, resolution, R factor, or another
+  quality measure unless the compared records were retrieved for every
+  structure. If a required value is absent, do not rank them by that measure.
+- Do not describe a historical classification change unless the relevant
+  releases were queried separately or a returned history record supports it.
+- Do not assert that two domains share a family or superfamily until both
+  lineages have been retrieved in the same release.
+- Do not infer a specific substrate, reaction, ligand, phenotype, or
+  interchangeable structural template from family or superfamily placement
+  alone.
 
-Use `https://scop.berkeley.edu/api/v1` as the default base URL. Check `https://scop.berkeley.edu/api/v1/openapi.yaml` when exact endpoint details matter.
+If required evidence is unavailable, say that the claim cannot be verified
+from the available data and name the API request needed. Never fill the gap
+with a definite answer from memory.
 
-Use only public identifiers in requests and answers:
+## Core Workflow
 
-- `sunid`: public numeric SCOP/SCOPe unique identifier for any hierarchy node.
-- `sid`: stable domain identifier such as `d4as4b_`.
-- `sccs`: public classification string such as `e.7.1.1`.
-- PDB code: four-character PDB identifier such as `4as4`.
-- Release: public release selector such as `2.08` or `1.75`.
+1. Select a stable release for reproducible work.
+2. Resolve each public identifier or search for the named entity.
+3. Retrieve the domain or PDB record and its lineage.
+4. Retrieve annotations and homology warnings before interpreting special
+   cases.
+5. Retrieve any additional evidence required by the question, such as quality
+   records or the same entity in an older release.
+6. Separate verified SCOPe facts from biological interpretation and from
+   conclusions SCOPe does not establish.
 
-Do not expose or invent internal database IDs such as `node_id` or `release_id`.
+Use only public identifiers:
 
-Prefer release-stable requests for reproducible answers. The API defaults to the current release, but answers should report the release returned by the API. For old data, use canonical release-scoped paths such as `/releases/2.08/sunids/{sunid}`.
+- `sunid`: public numeric identifier for a hierarchy node.
+- `sid`: public domain identifier.
+- `sccs`: public class/fold/superfamily/family string.
+- PDB code.
+- Public release selector such as `2.08`.
 
-## Common Workflows
+Never expose or invent `node_id`, `release_id`, or other internal IDs.
 
-1. Given a PDB code, fetch `/releases/{release}/pdb/{code}` and `/releases/{release}/pdb/{code}/domains`, then inspect each domain's parents, annotations, homology, and images as needed.
-2. Given a `sid`, `sunid`, or `sccs`, call `/releases/{release}/resolve/{identifier}` if the identifier type is unclear; otherwise use `/releases/{release}/sids/{sid}`, `/releases/{release}/sunids/{sunid}`, or `/releases/{release}/sccs/{sccs}` directly.
-3. For hierarchy context, call `/parents` for lineage and `/children?limit=...` for paginated descendants.
-4. For biological interpretation, call `/annotations` and `/homology` before claiming homology, novelty, artifacts, repeats, or "not true fold/family" caveats.
-5. For common-name or keyword lookup, use `/releases/{release}/search?q=...` with a small `limit`; exact identifiers are still preferred when available.
-6. For structure quality and ASTRAL-derived quality information, use `/releases/{release}/pdb/{code}/quality` or `/releases/{release}/astral/quality/pdb/{code}`.
-7. For visualization, use `/images` on the domain or node endpoint to retrieve thumbnail and larger static image URLs.
-8. For parseable files, ASTRAL sequences/subsets, RAF maps, and PDB-style coordinate archives, use `/releases/{release}/downloads` or the narrower ASTRAL/download endpoints. Do not scrape download pages.
-9. For worked examples based on the SCOPe help and papers, read `references/biological-interpretation.md`, especially the examples using `d4akea1`, `d1ux8a_`, `d1akea1`, and `d1shka_`.
+## Required Evidence By Claim
 
-## Code Samples
+| Claim | Minimum evidence |
+|---|---|
+| Domain identity and boundaries | Domain endpoint in the selected release |
+| Family, superfamily, fold, or class | Parent lineage in the selected release |
+| Relationship between two domains | Both lineages in the same release |
+| Artifact, fragment, repeat, or heterogeneity caveat | Annotation and homology responses |
+| Best structural representative | Quality responses for every candidate |
+| Historical reclassification | Responses from every compared release |
+| Current periodic-release status | Current-release metadata |
 
-Minimal Python lookup:
+Use `scripts/scop_compare.py` for deterministic domain-lineage and quality
+comparisons when local execution and network access are available. The script
+fails rather than inventing a comparison when required records are missing.
 
-```python
-import requests
+## Biological Interpretation
 
-BASE = "https://scop.berkeley.edu/api/v1"
+- The domain is the fundamental classified unit. A chain can contain multiple,
+  inserted, discontinuous, swapped, or intertwined domains.
+- A shared family normally indicates the closer SCOPe relationship.
+- A shared superfamily supports probable common ancestry, but not exact
+  biochemical function.
+- A shared fold or class indicates structural similarity. It does not by itself
+  establish common ancestry.
+- Protein and species levels are SCOPe hierarchy levels and must not be treated
+  as equivalent to external taxonomy or sequence-database records.
+- An automated match is not automatically low quality, but it should be
+  reported as automated when that status matters.
+- SPACI and AEROSPACI measure structural quality for representative selection;
+  they are not homology or functional-similarity scores.
+- Stable releases are the normal basis for reproducible analysis. Periodic
+  updates do not replace stable releases.
 
-def get_json(path, **params):
-    r = requests.get(f"{BASE}{path}", params=params, timeout=30)
-    r.raise_for_status()
-    return r.json()
+For detailed hierarchy semantics, special annotations, and biological
+limitations, read `references/biological-interpretation.md`.
 
-node = get_json("/releases/2.08/sunids/194566")
-parents = get_json("/releases/2.08/sunids/194566/parents")
-annotations = get_json("/releases/2.08/sunids/194566/annotations")
+## API Navigation
 
-print(node.get("release"), node.get("sunid"), node.get("sccs"), node.get("description"))
-for parent in parents.get("parents", []):
-    print(parent.get("level"), parent.get("sccs"), parent.get("description"))
-```
+- Exact identifier: use the corresponding `sids`, `sunids`, or `sccs`
+  release-scoped endpoint.
+- Unknown identifier type: use `/releases/{release}/resolve/{identifier}`.
+- Name or keyword: use `/releases/{release}/search?q=...` with a small limit,
+  then resolve the selected result.
+- Lineage: use `/parents`.
+- Descendants: use `/children?limit=...` and follow opaque cursors.
+- PDB domains: use `/releases/{release}/pdb/{code}/domains`.
+- Caveats: use `/annotations` and `/homology`.
+- Quality: use `/releases/{release}/pdb/{code}/quality`.
+- Current release: use `/releases/current`.
 
-PDB-to-domain workflow:
+Read `references/api-usage.md` for exact endpoint patterns and pagination.
 
-```python
-import requests
+## Answer Discipline
 
-BASE = "https://scop.berkeley.edu/api/v1"
+Structure a biological answer around:
 
-def j(path, **params):
-    response = requests.get(f"{BASE}{path}", params=params, timeout=30)
-    response.raise_for_status()
-    return response.json()
+1. **Verified SCOPe facts:** release, public identifiers, hierarchy, and
+   annotations actually retrieved.
+2. **Interpretation:** the relationship justified by the deepest shared
+   homology-bearing level and any relevant structural evidence.
+3. **Limits:** functions, mechanisms, histories, or rankings not established by
+   the retrieved data.
+4. **Evidence:** concise release-scoped API paths used.
 
-pdb_code = "4as4"
-release = "2.08"
-
-summary = j(f"/releases/{release}/pdb/{pdb_code}")
-domains = j(f"/releases/{release}/pdb/{pdb_code}/domains")
-quality = j(f"/releases/{release}/pdb/{pdb_code}/quality")
-
-for domain in domains.get("domains", []):
-    sid = domain["sid"]
-    detail = j(f"/releases/{release}/sids/{sid}")
-    lineage = j(f"/releases/{release}/sids/{sid}/parents")
-    homology = j(f"/releases/{release}/sids/{sid}/homology")
-    print(sid, detail.get("sccs"), detail.get("description"))
-    print("release:", detail.get("release"))
-    print("homology warnings:", homology.get("warnings", []))
-    print("lineage levels:", [p.get("level") for p in lineage.get("parents", [])])
-```
-
-Paginated traversal:
-
-```python
-import requests
-
-BASE = "https://scop.berkeley.edu/api/v1"
-
-cursor = None
-while True:
-    params = {"limit": 100}
-    if cursor:
-        params["cursor"] = cursor
-    data = requests.get(f"{BASE}/releases/2.08/domains", params=params, timeout=30).json()
-    for domain in data.get("domains", []):
-        process(domain)
-    cursor = data.get("next_cursor")
-    if not cursor:
-        break
-```
-
-Shell check:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/resolve/d4as4b_'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb/4as4/domains'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/194566/homology'
-```
-
-## Biological Interpretation Rules
-
-Apply these rules before answering biological questions:
-
-- Treat the domain as the fundamental classified unit, not necessarily the whole PDB chain or whole protein.
-- Family and superfamily are the main homology-bearing levels. A family usually indicates closer evolutionary relationship; a superfamily indicates probable common ancestry based on structural, functional, and sequence evidence.
-- Fold and class group structures by geometry and secondary-structure organization; they do not by themselves imply homology.
-- Species and protein levels describe lower-level grouping within a family/superfamily and should not be confused with NCBI species or UniProt records unless the API response explicitly links them.
-- Check `annotations` and `homology` for artifacts, cloning/expression tags, repeats, structural heterogeneity, fragments, "not true fold", or other caveats before making strong claims.
-- SCOPe includes automated classification, but manual curation is still central for new folds, superfamilies, families, artifacts, and corrections. Avoid implying that every classification is a de novo manual decision.
-- ASTRAL is now integrated into SCOPe. Refer to ASTRAL as SCOPe-derived sequence, subset, RAF, coordinate, and quality resources rather than as a separate current database.
-- Stable releases are best for benchmarking and reproducibility. Periodic SCOPe updates add new PDB entries to the current release without changing older domains; they do not replace stable releases.
-
-## Resource Loading
-
-Read `references/api-usage.md` when endpoint choice, parameters, pagination, or code examples matter.
-
-Read `references/biological-interpretation.md` when answering questions about homology, fold interpretation, hierarchy semantics, ASTRAL, structural heterogeneity, artifacts, releases, citations, or how examples from the papers map to API workflows.
+Do not turn absence of a warning into positive evidence. Do not turn a protein
+name, shared ligand, motif, fold, or quality score into a stronger evolutionary
+claim than the hierarchy supports.

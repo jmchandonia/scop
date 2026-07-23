@@ -4,231 +4,122 @@ Base URL: `https://scop.berkeley.edu/api/v1`
 
 OpenAPI: `https://scop.berkeley.edu/api/v1/openapi.yaml`
 
-Use this reference for endpoint selection, stable identifiers, pagination, and reproducible API requests.
-
-## Principles
-
-- Use the API instead of scraping HTML pages.
-- Use public identifiers only: `sunid`, `sid`, `sccs`, PDB code, and public release strings such as `2.08`.
-- Do not ask for or expose internal SQL, `node_id`, `release_id`, table names, or direct database access.
-- Default to current release only for exploratory questions. For reproducible answers, use `/releases/{release}/...` paths and include the returned release in the answer.
-- Prefer exact lookup endpoints over broad search. Use `/releases/{release}/search?q=...` for common names, keywords, PDB codes, SIDs, SUNIDs, and SCCS strings when the exact identifier is not known.
-- Prefer canonical release-first paths. Older query-parameter aliases should not be used in new agent workflows.
-- Use pagination on collection endpoints. Treat cursors as opaque.
+Use release-scoped endpoints for reproducible answers. Replace placeholders
+such as `{release}`, `{sid}`, and `{code}` with public values returned or
+provided during the task.
 
 ## Release Selection
 
-Current release metadata:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/current'
+```text
+GET /releases/current
+GET /releases
+GET /releases/{release}/root
 ```
 
-All public releases:
+Use the current endpoint to discover current status. Use a stable public
+release selector for reproducible analysis. Query each release separately when
+the question asks about a historical change.
 
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases'
+## Resolution And Search
+
+```text
+GET /releases/{release}/resolve/{identifier}
+GET /releases/{release}/search?q={query}&limit=10
+GET /releases/{release}/sids/{sid}
+GET /releases/{release}/sunids/{sunid}
+GET /releases/{release}/sccs/{sccs}
 ```
 
-The current release is queried by default. To query an old release, use release-first paths:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/194566'
-```
-
-Use stable public versions such as `2.08`; ordinary clients should not need internal release IDs or special stable labels. SCOPe releases starting with 2.02 may have periodic update labels; stable releases are still the right selector for most reproducible analyses and benchmarking.
-
-## Identifier Resolution
-
-Resolve when the identifier type is ambiguous:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/resolve/d4as4b_'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/resolve/194566'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/resolve/e.7.1.1'
-```
-
-Direct lookups:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/194566'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4as4b_'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sccs/e.7.1.1'
-```
-
-Common-name or keyword search:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/search?q=adenylate%20kinase&limit=10'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/search?q=histone&limit=10'
-```
+Prefer exact lookup after search. Search results are candidates, not sufficient
+evidence for a hierarchy or homology claim.
 
 ## Hierarchy
 
-Get level definitions:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/levels'
+```text
+GET /levels
+GET /releases/{release}/sids/{sid}/parents
+GET /releases/{release}/sunids/{sunid}/parents
+GET /releases/{release}/sccs/{sccs}/parents
+GET /releases/{release}/sunids/{sunid}/children?limit=100
 ```
 
-Get root for a release:
+Treat `next_cursor` as opaque. Before comparing two domains, retrieve both
+parent lineages in the same release. Compare hierarchy nodes by their public
+level and SUNID, not by similar name strings.
 
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/root'
+## PDB Records
+
+```text
+GET /releases/{release}/pdb/{code}
+GET /releases/{release}/pdb/{code}/chains
+GET /releases/{release}/pdb/{code}/domains
+GET /releases/{release}/pdb/{code}/heterogens
+GET /releases/{release}/pdb/{code}/revisions
 ```
 
-Get lineage:
+Do not assume one chain equals one domain. Retrieve the domain list before
+making a chain-level biological interpretation.
 
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/194566/parents'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4as4b_/parents'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sccs/e.7.1.1/parents'
+## Annotations And Homology
+
+```text
+GET /releases/{release}/sids/{sid}/annotations
+GET /releases/{release}/sids/{sid}/homology
+GET /releases/{release}/sunids/{sunid}/annotations
+GET /releases/{release}/sunids/{sunid}/homology
 ```
 
-Get children with seek pagination:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/46456/children?limit=100'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sccs/a.1/children?limit=100'
-```
-
-Continue with the returned `next_cursor` value if present:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/46456/children?limit=100&cursor=OPAQUE_CURSOR'
-```
-
-## PDB Entries
-
-Compact PDB summary:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb/4as4'
-```
-
-Domains and chains:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb/4as4/domains'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb/4as4/chains'
-```
-
-Heterogens and revisions:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb/4as4/heterogens'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb/4as4/revisions'
-```
-
-## Annotations, Homology, Images
-
-Annotations include comments, inconsistencies, repeats, and cross-references when available:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/194566/annotations'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4as4b_/annotations'
-```
-
-Homology endpoints summarize homology scope and warnings:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/194566/homology'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4as4b_/homology'
-```
-
-Images endpoints expose thumbnail and larger static image URLs for domain, chain, and structure contexts:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sunids/194566/images'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4as4b_/images'
-```
+Check both endpoints when artifacts, fragments, repeats, alternative domain
+divisions, structural heterogeneity, or unusual fold/family semantics could
+affect the answer. Absence of a warning is not independent proof of homology.
 
 ## ASTRAL Quality
 
-SPACI/AEROSPACI quality for a PDB entry:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb/4as4/quality'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/astral/quality/pdb/4as4'
+```text
+GET /releases/{release}/pdb/{code}/quality
+GET /releases/{release}/astral/quality/pdb/{code}
+GET /releases/{release}/astral/quality?limit=100
 ```
 
-Paginated release-wide quality rows:
+Only compare structures using fields retrieved for all candidates. Report the
+actual AEROSPACI/SPACI values and relevant experimental fields. If a requested
+measure is missing for any candidate, state that the comparison cannot be made
+using that measure.
 
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/astral/quality?limit=100'
+## Collections And Downloads
+
+```text
+GET /releases/{release}/domains?limit=100
+GET /releases/{release}/pdb?limit=100
+GET /releases/{release}/downloads
+GET /releases/{release}/parseable-files
+GET /releases/{release}/astral/files
+GET /releases/{release}/astral/raf
+GET /releases/{release}/astral/pdbstyle
+GET /releases/{release}/astral/subsets
 ```
 
-Use AEROSPACI/SPACI as quality guidance, not as a homology measure. AEROSPACI was designed to choose high-quality representatives in representative subsets by penalizing known aberrant entries.
+Follow pagination for collection claims. A partial first page is not evidence
+for release-wide counts or absence.
 
-## Collections
+## Evidence Failures
 
-Domain index:
+- `404`: verify the identifier and release; do not silently switch releases.
+- Missing field: state that the requested claim is not supported by that
+  response.
+- Timeout or unavailable API: name the required request and abstain from exact
+  release-specific claims.
+- Conflicting records: report the conflict and the releases involved instead
+  of selecting the convenient value.
+- Endpoint absent from OpenAPI: state that the current public API does not
+  expose the requested information.
 
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/domains?limit=100'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/domains?class=a&limit=100'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/domains?sccs_prefix=a.39&limit=100'
-```
+## Answer Checklist
 
-PDB index:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/pdb?limit=100'
-```
-
-Downloads and ASTRAL manifests:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/downloads'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/parseable-files'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/astral/files'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/astral/raf'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/astral/pdbstyle'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/astral/subsets'
-```
-
-Always follow `next_cursor` rather than constructing offsets.
-
-## Answer Shape
-
-When answering from API data, include:
-
-- Identifier used: `sid`, `sunid`, `sccs`, or PDB code.
 - Release returned by the API.
-- Lineage when biological interpretation depends on hierarchy.
-- Annotation/homology warnings when present.
-- A statement of uncertainty if an endpoint lacks a field needed for the requested conclusion.
-
-Do not answer biological claims solely from a name string when lineage, annotations, or homology endpoints are available.
-
-## Worked API Examples From Help/Papers
-
-The SCOPe help's domain-visualization example uses `d4akea1`. To reproduce that lookup:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4akea1'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4akea1/parents'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d4akea1/images'
-```
-
-Expected interpretation: `d4akea1` is an E. coli adenylate kinase domain in SCOPe 2.08, family `c.37.1.1` "Nucleotide and nucleoside kinases", superfamily `c.37.1` "P-loop containing nucleoside triphosphate hydrolases". The images endpoint returns thumbnail and larger domain/chain/structure image URLs.
-
-The parseable-file help examples include `d1ux8a_`:
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d1ux8a_'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d1ux8a_/parents'
-```
-
-Expected interpretation: `d1ux8a_` is a Bacillus subtilis truncated hemoglobin domain in family `a.1.1.1`, superfamily `a.1.1`, fold `a.1` "Globin-like", class `a` "All alpha proteins".
-
-To answer a homology question like "Are adenylate kinase domain `d1akea1` and shikimate kinase domain `d1shka_` homologous in SCOPe?":
-
-```bash
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d1akea1/parents'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d1shka_/parents'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d1akea1/homology'
-curl -sS 'https://scop.berkeley.edu/api/v1/releases/2.08/sids/d1shka_/homology'
-```
-
-Expected interpretation: the domains have different families, `c.37.1.1` and `c.37.1.2`, but share superfamily `c.37.1` "P-loop containing nucleoside triphosphate hydrolases". In SCOPe terms that supports probable common ancestry at the superfamily level, with different family-level groupings.
+- Public identifier for every classified entity.
+- Lineage for evolutionary claims.
+- Annotation or homology warning when biologically material.
+- Actual quality fields for rankings.
+- Clear separation of verified facts, interpretation, and unsupported
+  conclusions.
