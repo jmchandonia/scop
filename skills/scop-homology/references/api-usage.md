@@ -18,7 +18,10 @@ GET /releases/{release}/root
 
 Use the current endpoint to discover current status. Use a stable public
 release selector for reproducible analysis. Query each release separately when
-the question asks about a historical change.
+the question asks about a historical change. The current-status response
+reports release labels and dates; it does not by itself define what records a
+periodic update added or whether a particular classification changed. Do not
+invent those semantics from the label.
 
 ## Resolution And Search
 
@@ -113,6 +116,9 @@ for release-wide counts or absence.
   of selecting the convenient value.
 - Endpoint absent from OpenAPI: state that the current public API does not
   expose the requested information.
+- Classification present but rationale absent: report the classification and
+  say that the API response does not expose the supporting alignment,
+  literature argument, or curator reasoning.
 
 ## Answer Checklist
 

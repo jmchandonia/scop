@@ -25,6 +25,10 @@ SCOPe facts are data, not facts to reconstruct from model memory.
 - Do not infer a specific substrate, reaction, ligand, phenotype, or
   interchangeable structural template from family or superfamily placement
   alone.
+- Do not call domains analogs, convergent, independently evolved, or
+  nonhomologous merely because SCOPe places them in different superfamilies.
+  That placement means SCOPe makes no positive homology assertion between
+  them; it is not proof of a negative evolutionary claim.
 
 If required evidence is unavailable, say that the claim cannot be verified
 from the available data and name the API request needed. Never fill the gap
@@ -59,10 +63,12 @@ Never expose or invent `node_id`, `release_id`, or other internal IDs.
 | Domain identity and boundaries | Domain endpoint in the selected release |
 | Family, superfamily, fold, or class | Parent lineage in the selected release |
 | Relationship between two domains | Both lineages in the same release |
+| Analogy, convergence, independent origin, or absence of homology | Evidence outside hierarchy placement; different superfamilies alone are insufficient |
 | Artifact, fragment, repeat, or heterogeneity caveat | Annotation and homology responses |
 | Best structural representative | Quality responses for every candidate |
 | Historical reclassification | Responses from every compared release |
 | Current periodic-release status | Current-release metadata |
+| Specific structural or functional rationale | Retrieved alignment, structure, paper, or other source that states or demonstrates it |
 
 Use `scripts/scop_compare.py` for deterministic domain-lineage and quality
 comparisons when local execution and network access are available. The script
@@ -77,6 +83,9 @@ fails rather than inventing a comparison when required records are missing.
   biochemical function.
 - A shared fold or class indicates structural similarity. It does not by itself
   establish common ancestry.
+- Different superfamilies within a fold mean that SCOPe does not assert common
+  ancestry at the superfamily level. Say exactly that. Do not strengthen it to
+  "unrelated," "analogous," or "convergent" without independent evidence.
 - Protein and species levels are SCOPe hierarchy levels and must not be treated
   as equivalent to external taxonomy or sequence-database records.
 - An automated match is not automatically low quality, but it should be
@@ -112,11 +121,14 @@ Structure a biological answer around:
 1. **Verified SCOPe facts:** release, public identifiers, hierarchy, and
    annotations actually retrieved.
 2. **Interpretation:** the relationship justified by the deepest shared
-   homology-bearing level and any relevant structural evidence.
+   homology-bearing level and any structural evidence actually inspected.
 3. **Limits:** functions, mechanisms, histories, or rankings not established by
    the retrieved data.
 4. **Evidence:** concise release-scoped API paths used.
 
 Do not turn absence of a warning into positive evidence. Do not turn a protein
 name, shared ligand, motif, fold, or quality score into a stronger evolutionary
-claim than the hierarchy supports.
+claim than the hierarchy supports. If a question asks *why* a classification
+changed but the available API only shows that it changed, report the
+classification change and state that its sequence, structural, or literature
+rationale was not verified from the available evidence.

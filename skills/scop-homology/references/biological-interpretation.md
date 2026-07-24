@@ -43,6 +43,20 @@ oligomeric state, or interchangeable template from a superfamily assignment.
 Those conclusions require additional sequence, active-site, ligand,
 domain-architecture, genomic-context, or experimental evidence.
 
+Different superfamilies are also not a positive SCOPe assertion of analogy,
+convergence, independent origin, or absence of homology. Use the asymmetric
+statement: SCOPe supports shared fold-level structure but does not assert
+superfamily-level common ancestry. A stronger positive or negative
+evolutionary conclusion needs independent evidence.
+
+When explaining a proposed remote relationship, distinguish evidence that was
+actually inspected from evidence that would be needed. Relevant evidence can
+include a global structural alignment and matching topology, sequence
+correspondence at equivalent core positions, conserved motifs in equivalent
+structural contexts, compatible domain architecture and biological context,
+phylogenetic support, and experiments. Do not list these as observations
+unless the source or result was retrieved.
+
 ## Domain Boundaries And Modularity
 
 A domain need not be contiguous in sequence. Insertions and rearrangements can
@@ -98,8 +112,11 @@ For remote-homology benchmarks:
 
 - Separate training and test examples by family while keeping positives within
   a verified superfamily.
-- Use same-fold, different-superfamily examples as difficult structural
-  negatives only when annotations do not invalidate that interpretation.
+- Use same-fold, different-superfamily examples only as labeled operational
+  `SCOPe-negative` pairs, meaning no SCOPe superfamily-level homology assertion.
+  They are not proven biological nonhomologs. Preserve annotations and run
+  sensitivity analyses because future evidence or curation can reveal remote
+  relationships.
 - Remove sequence leakage with an appropriate ASTRAL nonredundant subset.
 - Preserve biologically meaningful diversity rather than selecting only the
   single highest-quality structure.
@@ -132,4 +149,5 @@ Separate four kinds of statement:
 
 Use qualified language for hypotheses. Use explicit abstention for unknown
 release-specific facts. Do not convert uncertainty into a confident database
-claim.
+claim. In particular, a retrieved classification change does not by itself
+retrieve the structural, sequence, or functional rationale for that change.
