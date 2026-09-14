@@ -1,0 +1,4 @@
+interface:
+  display_name: "AlphaFold SCOPe Evidence"
+  short_description: "Assess non-official evidence from AlphaFold-to-SCOPe hits"
+  default_prompt: "Use $alphafold-scope-homology to form a non-definitive SCOPe evidence hypothesis for regions of an AlphaFold model."

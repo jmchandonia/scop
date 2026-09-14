@@ -149,10 +149,10 @@ def identifier_path(release, identifier):
     encoded = quote(identifier, safe="._-")
     if identifier.isdigit():
         return f"/releases/{release}/sunids/{encoded}"
-    if identifier.startswith("d") and len(identifier) >= 6:
-        return f"/releases/{release}/sids/{encoded}"
     if SCCS_RE.fullmatch(identifier):
         return f"/releases/{release}/sccs/{encoded}"
+    if identifier.startswith("d") and len(identifier) >= 6:
+        return f"/releases/{release}/sids/{encoded}"
     raise ValueError(
         f"cannot infer identifier type for {identifier!r}; use a SID, SUNID, or SCCS"
     )
@@ -169,27 +169,46 @@ def node_level(node):
     return level.get("code") if isinstance(level, dict) else None
 
 
-def require_lineage(response, release, identifier):
+def require_node(response, release, identifier):
+    node = response.get("node")
+    if not isinstance(node, dict) or str(node.get("release")) != release:
+        raise RuntimeError(f"node missing or release mismatch for {identifier!r}")
+    if node_level(node) is None or type(node.get("sunid")) is not int:
+        raise RuntimeError(f"node identity missing for {identifier!r}")
+    return node
+
+
+def require_lineage(response, release, identifier, node):
     if str(response.get("release")) != release:
         raise RuntimeError(
             f"lineage for {identifier!r} reports release "
             f"{response.get('release')!r}, expected {release!r}"
         )
     parents = response.get("parents")
-    if not isinstance(parents, list) or not parents:
+    if not isinstance(parents, list) or (not parents and node_level(node) != "rt"):
         raise RuntimeError(f"lineage missing for {identifier!r} in release {release}")
-    if any(not isinstance(node, dict) for node in parents):
+    if any(
+        not isinstance(parent, dict)
+        or node_level(parent) is None
+        or type(parent.get("sunid")) is not int
+        or str(parent.get("release")) != release
+        for parent in parents
+    ):
         raise RuntimeError(f"lineage contains an invalid node for {identifier!r}")
+    if response.get("sunid") != node["sunid"]:
+        raise RuntimeError(f"lineage identity does not match node for {identifier!r}")
     return parents
 
 
 def fetch_domain(source, release, identifier, include_caveats):
     base = identifier_path(release, identifier)
+    node = require_node(source.get(base), release, identifier)
     lineage = source.get(f"{base}/parents")
     record = {
         "identifier": identifier,
         "release": release,
-        "parents": require_lineage(lineage, release, identifier),
+        "node": node,
+        "parents": require_lineage(lineage, release, identifier, node),
     }
     if include_caveats:
         record["annotations"] = source.get(f"{base}/annotations")
@@ -197,11 +216,16 @@ def fetch_domain(source, release, identifier, include_caveats):
     return record
 
 
+def full_lineage(record):
+    # The REST /parents endpoint excludes the requested node itself.
+    return record["parents"] + [record["node"]]
+
+
 def shared_nodes(records):
-    common = {node_key(node) for node in records[0]["parents"]}
+    common = {node_key(node) for node in full_lineage(records[0])}
     for record in records[1:]:
-        common.intersection_update(node_key(node) for node in record["parents"])
-    return [node for node in records[0]["parents"] if node_key(node) in common]
+        common.intersection_update(node_key(node) for node in full_lineage(record))
+    return [node for node in full_lineage(records[0]) if node_key(node) in common]
 
 
 def relationship_summary(shared):
@@ -253,7 +277,7 @@ def compare_history(args, source):
     levels = ("cl", "cf", "sf", "fa", "dm", "sp")
     classifications = []
     for record in records:
-        by_level = {node_level(node): node for node in record["parents"]}
+        by_level = {node_level(node): node for node in full_lineage(record)}
         classifications.append(
             {
                 "release": record["release"],
