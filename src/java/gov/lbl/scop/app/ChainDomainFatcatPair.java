@@ -1725,7 +1725,6 @@ public class ChainDomainFatcatPair {
         int segment_id = Integer.parseInt(args[1]);
 //        String domain = args[1];
 
-//        LocalSQL.connect("jdbc:mysql://doppelbock/scop?user=makelyan&password=masql");
         LocalSQL.connectRW();
         ChainDomainFatcatPairs.runComparisons(chain, segment_id);
 

@@ -120,6 +120,10 @@ public class Thumbnail {
         return file;
     }
 
+    final private static String quotePymolString(String value) {
+        return "\""+value.replace("\\", "\\\\").replace("\"", "\\\"")+"\"";
+    }
+
     /**
        Pymol cartoons break on multi-models, so eliminate all but 1st
        model.  Renumber monomers consecutively within each chain, and
@@ -949,7 +953,8 @@ public class Thumbnail {
         // create pymol script
         PrintfWriter outfile = new PrintfWriter(scriptFile.getPath(),
                                                 true);
-        outfile.printf("load %s\n",pdbFileName);
+        outfile.printf("cmd.load(%s, format=\"pdb\")\n",
+                       quotePymolString(pdbFileName));
         if (rotationAngle != 0.0)
             outfile.printf("turn z,%2.2f\n",rotationAngle);
         if (caOnly)
