@@ -242,6 +242,19 @@ evidence. If PAE or pTM is unavailable, do not infer relative placement of domai
 from pLDDT alone. Read `references/alphafold-caveats.md` when confidence materially
 affects the conclusion.
 
+### PDB-chain representative evidence
+
+When following a PDB-chain example through `get_scop_chain` or
+`get_scop_chain_hits`, inspect `cluster_representative` under `chain` or `subject`.
+Those tools return the requested chain's evidence; retrieve a different
+representative explicitly and label its matches accordingly. The member-to-
+representative `similarity` describes local SEQRES-minus-tags sequence identity
+and coverage, not FATCAT structural similarity or the historical node-specific
+chain-statistics fractions below. It is not evidence about the AlphaFold model.
+Its one-based inclusive sequence endpoints do not provide a residue mapping;
+do not transfer the representative's ranges or official classifications to the
+original chain or model. Null similarity means unavailable, not zero similarity.
+
 ### FATCAT and chain-statistics calibration
 
 Interpret FATCAT P-value, score, RMSD, aligned length, coverage, and competing

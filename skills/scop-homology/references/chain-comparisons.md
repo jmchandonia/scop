@@ -71,6 +71,43 @@ Historical sources:
    strong-match coverage rule, retrieve the matched SID's exact ASTRAL SEQRES
    sequence with `get_scop_sequence`. Do this only for the controlling hits.
 
+## Cluster Representatives
+
+The viewer can redirect a clustered PDB chain to its representative. REST and
+MCP deliberately retain the requested chain: its `domains`, sequence, coordinates,
+and hit arrays are not silently replaced. Inspect `chain.cluster_representative`
+in metadata and `subject.cluster_representative` in combined or split hit results.
+If it identifies a different chain (`is_requested_chain=false`), retrieve that
+identifier with `get_scop_chain_hits` or follow its release-scoped `hits_url`,
+`sequence_hits_url`, or `structure_hits_url`. Preserve both identifiers and name
+which chain owns each result. Empty original-chain FATCAT hits need not mean
+that the representative has no evidence. A null mapping means no mapping is
+available for that release; null `similarity` means unmeasured, not zero identity.
+Do not transfer the representative's official domains to the requested chain.
+
+For example, in release 2.08, 1ut5A maps to 5hmlA. Their `similarity` has 271
+identical residues in 272 alignment columns: 99.63% identity, with 93.47% member
+coverage and 100% representative coverage. The aligned sequence intervals are
+20–291 and 1–272, respectively. Hits fetched for 5hmlA are evidence calculated
+for 5hmlA, not direct comparisons for 1ut5A.
+
+These are new Smith–Waterman local sequence measurements (BLOSUM62; gap opening
+−10, extension −0.5; Biopython 1.85), not structural similarity or the original
+clustering BLAST statistic. Consequently some newly measured identities can be
+below the original 90% clustering threshold. `percent_identity` is 100 times
+`identical_residues / alignment_columns`, including internal gap columns and
+excluding unaligned termini; literal equal ambiguity symbols count as identical.
+Coverage is 100 times `(end - start + 1) / full_sequence_length` for each side.
+Check both coverages: high local identity need not cover the whole protein.
+
+`sequence_source=seqres_minus_tags` differs from the normal SEQRES sequence
+returned in chain metadata. Positions are **one-based inclusive positions in
+these sequences**, not PDB author residue identifiers. The six counts/endpoints
+do not encode internal gap positions or a residue-by-residue correspondence.
+Retrieve an appropriate alignment/mapping before projecting representative hit
+ranges, superpositions or domain hypotheses onto the original chain. Unaligned
+regions remain unsupported by the member–representative similarity summary.
+
 ## Coordinate And Alignment Checks
 
 For cross-stream regional agreement, retrieve a mapping between the exact

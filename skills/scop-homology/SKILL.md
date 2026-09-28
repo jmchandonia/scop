@@ -59,6 +59,12 @@ PDB-chain comparison workflow in
 `references/chain-comparisons.md`. Keep distinct aligned regions separate,
 check whether the chain already has classified domains, and retrieve lineage
 and caveat evidence for the representatives that control the interpretation.
+Inspect `chain.cluster_representative` (metadata) or
+`subject.cluster_representative` (hits). The API keeps results on the requested
+chain; when relevant, retrieve the representative explicitly and label its
+matches as representative evidence. Its local sequence identity and coverage do
+not transfer its classifications or coordinates to the requested chain. See the
+cluster section in `references/chain-comparisons.md`.
 The current FATCAT chain ranges use PDB numbering, while BLAST uses sequence
 positions. Require a verified mapping before combining their regional evidence.
 
