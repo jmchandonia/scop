@@ -85,6 +85,17 @@ that the representative has no evidence. A null mapping means no mapping is
 available for that release; null `similarity` means unmeasured, not zero identity.
 Do not transfer the representative's official domains to the requested chain.
 
+`mapping_source` says which grouping supplied the representative.
+`all_chain_population` means the release's all-PDB-chain set: every protein
+chain with coordinates processed up to a fixed cutoff after the release was
+frozen (for 2.08, 680,618 chains processed through 2026-09-21), clustered at
+90% sequence identity into 79,732 representatives, each compared with FATCAT
+against the 9,581 structurally representative domains. `population` then gives
+the build version, cutoff date, and the clustering identity used for the
+assignment (`identity_provenance=same_seq` for identical sequences).
+`release_cluster` means the older release-specific ASTRAL chain clusters, used
+for chains outside the all-chain set and for earlier releases.
+
 For example, in release 2.08, 1ut5A maps to 5hmlA. Their `similarity` has 271
 identical residues in 272 alignment columns: 99.63% identity, with 93.47% member
 coverage and 100% representative coverage. The aligned sequence intervals are
@@ -100,9 +111,11 @@ excluding unaligned termini; literal equal ambiguity symbols count as identical.
 Coverage is 100 times `(end - start + 1) / full_sequence_length` for each side.
 Check both coverages: high local identity need not cover the whole protein.
 
-`sequence_source=seqres_minus_tags` differs from the normal SEQRES sequence
-returned in chain metadata. Positions are **one-based inclusive positions in
-these sequences**, not PDB author residue identifiers. The six counts/endpoints
+`sequence_source` names the measured sequences: `seqres` (the normal SEQRES
+sequence) for all-chain population mappings, or `seqres_minus_tags` for legacy
+release clusters, which differs from the SEQRES sequence returned in chain
+metadata. Positions are **one-based inclusive positions in these sequences**,
+not PDB author residue identifiers. The six counts/endpoints
 do not encode internal gap positions or a residue-by-residue correspondence.
 Retrieve an appropriate alignment/mapping before projecting representative hit
 ranges, superpositions or domain hypotheses onto the original chain. Unaligned
