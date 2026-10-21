@@ -34,6 +34,48 @@ import java.util.Vector;
 */
 public class FreezeSPACI {
     /**
+       Add a missing immutable score using one exact PDB release.  Existing
+       public stable-release values are never updated.
+    */
+    final public static SPACI.SPACILine addSPACIFromPDBRelease(int pdbEntryID,
+                                                               int pdbReleaseID,
+                                                               int scopReleaseID)
+        throws Exception {
+        Statement stmt = LocalSQL.createStatement();
+        ResultSet rs = stmt.executeQuery("select e.code from pdb_entry e, pdb_release r " +
+                                         "where e.id="+pdbEntryID+" and r.id="+pdbReleaseID+
+                                         " and r.pdb_entry_id=e.id");
+        if (!rs.next()) {
+            rs.close();
+            stmt.close();
+            throw new Exception("PDB release "+pdbReleaseID+
+                                " does not belong to entry "+pdbEntryID);
+        }
+        String pdbCode = rs.getString(1);
+        rs.close();
+        if (pdbCode.startsWith("0")) {
+            stmt.close();
+            return null;
+        }
+
+        rs = stmt.executeQuery("select id from aerospaci where pdb_entry_id="+
+                               pdbEntryID+" and release_id="+scopReleaseID);
+        if (rs.next()) {
+            rs.close();
+            stmt.close();
+            return null;
+        }
+        rs.close();
+
+        SPACI.SPACILine s = new SPACI.SPACILine(pdbEntryID,scopReleaseID,pdbCode);
+        s.pdbReleaseID = pdbReleaseID;
+        s.lookupFromRelease(stmt);
+        s.store(stmt);
+        stmt.close();
+        return s;
+    }
+
+    /**
        adds pdb code to frozen SPACI for a SCOP release, if not
        already present.  Returns SPACI line.
     */

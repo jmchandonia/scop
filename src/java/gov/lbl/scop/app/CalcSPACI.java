@@ -261,7 +261,8 @@ public class CalcSPACI {
 	
         boolean hasValidWhatcheck = false;
         double[] whatcheck = new double[4];
-        if (rv != null) {
+        Arrays.fill(whatcheck,Double.NaN);
+        if ((rv != null) && (rv.length >= 5)) {
             if (!Double.isNaN(rv[0])) {
                 stmt.executeUpdate("update pdb_release set resolution="+
                                    rv[0]+
@@ -272,7 +273,7 @@ public class CalcSPACI {
             hasValidWhatcheck = true;
             for (int i=0; i<4; i++) {
                 whatcheck[i] = rv[i+1];
-                if (Double.isNaN(rv[i]))
+                if (Double.isNaN(rv[i+1]))
                     hasValidWhatcheck = false;
             }
         }
@@ -335,11 +336,12 @@ public class CalcSPACI {
 	
         boolean hasValidProcheck = false;
         int[] procheck = new int[3];
-        if (rv != null) {
+        Arrays.fill(procheck,-1);
+        if ((rv != null) && (rv.length >= 3)) {
             hasValidProcheck = true;
             for (int i=0; i<3; i++) {
                 procheck[i] = rv[i];
-                if (Double.isNaN(rv[i]))
+                if (rv[i] == -1)
                     hasValidProcheck = false;
             }
         }
@@ -404,6 +406,13 @@ public class CalcSPACI {
         int methodID = rs.getInt(13);
         if (rs.wasNull()) methodID = -1;
         rs.close();
+
+        // Invalid validator runs must not contribute default zero values to
+        // SPACI.  SPACI's documented missing-value behavior uses NaN/-1.
+        if (!hasValidProcheck)
+            Arrays.fill(procheck,-1);
+        if (!hasValidWhatcheck)
+            Arrays.fill(whatcheck,Double.NaN);
 	
         System.out.println("Calculating SPACI for "+pdbPath);
 		

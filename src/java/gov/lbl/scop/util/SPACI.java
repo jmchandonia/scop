@@ -281,7 +281,6 @@ public class SPACI {
             rFactor = rs.getDouble(2);
             if (rs.wasNull()) rFactor = Double.NaN;
 
-            // not actually used:
             boolean hasValidProcheck = (rs.getInt(3) == 1);
             boolean hasValidWhatcheck = (rs.getInt(4) == 1);
 
@@ -300,6 +299,14 @@ public class SPACI {
             if (rs.wasNull()) whatcheck[2] = Double.NaN;
             whatcheck[3] = rs.getDouble(11);
             if (rs.wasNull()) whatcheck[3] = Double.NaN;
+
+            // Validator output from a failed/incomplete run is not evidence.
+            // Use the documented missing-value sentinels for newly generated
+            // scores; existing public AEROSPACI rows remain untouched.
+            if (!hasValidProcheck)
+                java.util.Arrays.fill(procheck,-1);
+            if (!hasValidWhatcheck)
+                java.util.Arrays.fill(whatcheck,Double.NaN);
 
             int methodID = rs.getInt(12);
             if (rs.wasNull()) methodID = 0;
