@@ -1604,7 +1604,7 @@ public class ChainDomainFatcatPair {
         return false;
     }
 
-    private boolean isRetained() {
+    boolean isRetained() {
         // FATCAT can report a highly significant score for structures made
         // entirely of UNK residues, while emitting an all-gap alignment that
         // PostFATCAT cannot transform.  Such output is not a usable hit.
@@ -1830,11 +1830,16 @@ public class ChainDomainFatcatPair {
     }
 
     public void runComparison() throws Exception {
+        runComparison(true);
+    }
+
+    /** Run and archive one comparison; storeResult=false only rebuilds the archive. */
+    public void runComparison(boolean storeResult) throws Exception {
 
         this.compare();
         if (this.fcs!=null && this.fcs.run_id>0 && !isRetained()) {
             this.archiveRejectedAndClear();
-            this.storeSQL();
+            if (storeResult) this.storeSQL();
             return;
         }
         this.constructNewSeqs();
@@ -1842,7 +1847,7 @@ public class ChainDomainFatcatPair {
 
         if (this.fcs != null) {
             this.archiveAndClear();
-            this.storeSQL();
+            if (storeResult) this.storeSQL();
         }
 
 //        this.printSeqs();

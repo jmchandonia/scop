@@ -29,6 +29,8 @@ public class ChainDomainFatcatPairs {
     public String sourceChainPath;
     public String chainChecksum;
     public HashSet<Integer> completedNodes = new HashSet<>();
+    // nodes completed by this run -> retained; legacy nodes are never archived
+    public HashMap<Integer, Boolean> runCompletedNodes = new HashMap<>();
 
     public String chain; // 1u5ta
     public String chainFile; // path to the chain file
@@ -122,7 +124,11 @@ public class ChainDomainFatcatPairs {
             throw new Exception("did not successfuly copy to " + tempChainStr);
         }
 
-        this.SQLWriter = new BufferedWriter(new FileWriter(SQLDir + subdir + ".sql"));
+        // Expanded runs write a partial manifest and replace the previous one
+        // only when this attempt has statements to import, so a retry that
+        // just rebuilds archives keeps the manifest of record.
+        this.SQLWriter = new BufferedWriter(new FileWriter(SQLDir + subdir +
+            (run_id>0 ? ".sql.partial" : ".sql")));
         this.ErrorWriter = new BufferedWriter(new FileWriter(ErrorDir + subdir + ".txt"));
 
         this.destPathAln = AlnDir;  // original location of aln files (in /chain/chain-#/*)
@@ -397,7 +403,7 @@ public class ChainDomainFatcatPairs {
             Path targetDir = Paths.get(destPath);
 
             if (!Files.exists(zipFile)) {
-                return;
+                continue;
             }
 
             createDirectory(targetDir, "zip extraction target");
@@ -426,6 +432,32 @@ public class ChainDomainFatcatPairs {
 
             Files.delete(zipFile);
         }
+    }
+
+    public static boolean isReadableArchive(Path zipPath) {
+        try (java.util.zip.ZipFile z = new java.util.zip.ZipFile(zipPath.toFile())) {
+            return true;
+        } catch (IOException e) {
+            return false;
+        }
+    }
+
+    /** Delete archives that exist but cannot be read so they are rebuilt. */
+    public void discardUnreadableArchives() throws Exception {
+        for (String zipPath : new String[]{this.zipPathAln, this.zipPathMat}) {
+            Path zipFile = Paths.get(zipPath);
+            if (Files.exists(zipFile) && !isReadableArchive(zipFile)) {
+                logger.warning("discarding unreadable archive " + zipFile);
+                Files.delete(zipFile);
+            }
+        }
+    }
+
+    /** Whether a completed comparison's output is in the unzipped archive. */
+    private boolean isArchived(String domain, boolean retained) {
+        String prefix = this.chain + "-" + domain;
+        return Files.exists(Paths.get(this.AlnDir + prefix + ".aln")) &&
+            (!retained || Files.exists(Paths.get(this.MatrixDir + prefix + ".matrix")));
     }
 
     public static void getDomains() throws Exception {
@@ -549,8 +581,10 @@ public class ChainDomainFatcatPairs {
         if (Files.exists(zipFile) && run_id==0) {
             return;
         }
-        if (Files.exists(zipFile) && run_id>0)
+        if (run_id>0) {
+            discardUnreadableArchives();
             unzipDirs();
+        }
 
         int commit_interval = 250;
 
@@ -574,19 +608,36 @@ public class ChainDomainFatcatPairs {
 
         int i = 0;
         int num_errors = 0;
+        int num_rebuilt = 0;
         for (Integer node_id : domains.keySet()) {
             if (node_id % 2 == this.segment_id) {
-                if (run_id>0 && completedNodes.contains(node_id))
-                    continue;
+                // A comparison completed by this run whose output is missing
+                // from the archive (e.g. lost in a file server crash) is
+                // recomputed for the archive only; its results are already
+                // in the database.
+                boolean archiveOnly = false;
+                if (run_id>0 && completedNodes.contains(node_id)) {
+                    Boolean retained = runCompletedNodes.get(node_id);
+                    if (retained==null || isArchived(domains.get(node_id), retained))
+                        continue;
+                    archiveOnly = true;
+                }
                 if (i % commit_interval == 0) {
                     SQLWriter.write("COMMIT;\n");
                     SQLWriter.flush();
                 }
                 try {
                     System.out.println(node_id + " " + domains.get(node_id) + " " + i);
-                    logger.info("starting fc.runComparison for " + node_id + " " + domains.get(node_id) + " index =" + i);
+                    logger.info("starting fc.runComparison for " + node_id + " " + domains.get(node_id) + " index =" + i +
+                                (archiveOnly ? " (archive only)" : ""));
                     fc = new ChainDomainFatcatPair(node_id, this);
-                    fc.runComparison();
+                    fc.runComparison(!archiveOnly);
+                    if (archiveOnly) {
+                        num_rebuilt++;
+                        if (fc.isRetained() != runCompletedNodes.get(node_id))
+                            logger.warning("rebuilt comparison for node " + node_id + " " + domains.get(node_id) +
+                                           " disagrees with recorded retention status");
+                    }
 
                 } catch (Exception e) {
                     logger.log(Level.SEVERE,
@@ -612,7 +663,8 @@ public class ChainDomainFatcatPairs {
             this.SQLWriter.close();
 
             Path sqlPath=Paths.get(SQLDir + subdir + ".sql");
-            List<String> lines = Files.readAllLines(sqlPath);
+            Path writtenPath=Paths.get(SQLDir + subdir + (run_id>0 ? ".sql.partial" : ".sql"));
+            List<String> lines = Files.readAllLines(writtenPath);
             if (lines.isEmpty()) {
                 throw new RuntimeException("SQLWriter output file is empty");
             }
@@ -629,8 +681,19 @@ public class ChainDomainFatcatPairs {
             // incompatible with provenance-aware completion and idempotent
             // retries.  Use JobDaemon's existing connectRW() connection rather
             // than embedding another JDBC URL here.
-            if (run_id>0)
-                importSQLManifest(sqlPath);
+            if (run_id>0) {
+                List<String> statements=manifestStatements(writtenPath);
+                if (statements.isEmpty()) {
+                    Files.delete(writtenPath);
+                }
+                else {
+                    Files.move(writtenPath,sqlPath,StandardCopyOption.REPLACE_EXISTING,
+                               StandardCopyOption.ATOMIC_MOVE);
+                    importSQLManifest(sqlPath,statements);
+                }
+            }
+            if (num_rebuilt>0)
+                logger.info("rebuilt "+num_rebuilt+" archived comparisons");
 
         } catch (Exception e) {
             logger.severe(e.getMessage());
@@ -711,8 +774,8 @@ public class ChainDomainFatcatPairs {
 //        Files.delete(Paths.get(TempDir));
     }
 
-    /** Import one generated SQL manifest atomically for an expanded run. */
-    private void importSQLManifest(Path sqlPath) throws Exception {
+    /** Return the data statements of a generated SQL manifest. */
+    private static ArrayList<String> manifestStatements(Path sqlPath) throws Exception {
         String sql=new String(Files.readAllBytes(sqlPath),"UTF-8");
         ArrayList<String> statements=new ArrayList<String>();
         StringBuilder current=new StringBuilder();
@@ -744,18 +807,27 @@ public class ChainDomainFatcatPairs {
         if (current.toString().trim().length()>0)
             throw new Exception("unterminated SQL statement in "+sqlPath);
 
+        ArrayList<String> data=new ArrayList<String>();
+        for (String statement:statements) {
+            String normalized=statement.trim().toLowerCase();
+            if (normalized.startsWith("set autocommit=") ||
+                normalized.startsWith("set foreign_key_checks=") ||
+                normalized.startsWith("set unique_checks=") ||
+                normalized.equals("commit"))
+                continue;
+            data.add(statement);
+        }
+        return data;
+    }
+
+    /** Import one generated SQL manifest atomically for an expanded run. */
+    private void importSQLManifest(Path sqlPath, List<String> statements) throws Exception {
         Statement stmt=LocalSQL.createStatement();
         if (stmt==null) throw new Exception("could not create SQL import statement");
         int imported=0;
         LocalSQL.setAutoCommit(false);
         try {
             for (String statement:statements) {
-                String normalized=statement.trim().toLowerCase();
-                if (normalized.startsWith("set autocommit=") ||
-                    normalized.startsWith("set foreign_key_checks=") ||
-                    normalized.startsWith("set unique_checks=") ||
-                    normalized.equals("commit"))
-                    continue;
                 stmt.executeUpdate(statement);
                 imported++;
             }
@@ -775,11 +847,15 @@ public class ChainDomainFatcatPairs {
 
     private void loadCompleted() throws Exception {
         Statement stmt=LocalSQL.createStatement();
-        ResultSet rs=stmt.executeQuery("select node_id from " +
+        ResultSet rs=stmt.executeQuery("select node_id,status from " +
             "scop_node_fatcat_chain_completion where run_id="+run_id+
             " and chain_id="+chain_id+
             " and status in ('complete_retained','complete_rejected')");
-        while (rs.next()) completedNodes.add(rs.getInt(1));
+        while (rs.next()) {
+            completedNodes.add(rs.getInt(1));
+            runCompletedNodes.put(rs.getInt(1),
+                                  rs.getString(2).equals("complete_retained"));
+        }
         rs.close();
         // Legacy retained hits remain authoritative and must not be recomputed.
         // Low-quality legacy rows are intentionally absent after shadow swap;
@@ -1022,6 +1098,46 @@ public class ChainDomainFatcatPairs {
             " active_segments="+skippedActive);
     }
 
+    /**
+       Requeue finished segments of a run whose alignment or matrix archive
+       is missing or unreadable; the job rebuilds the archive without
+       re-importing results.
+    */
+    public static void queueArchiveRepairs(int populationID, int runID) throws Exception {
+        Statement stmt=LocalSQL.createStatement();
+        ArrayList<int[]> segments=new ArrayList<>();
+        ArrayList<String> sids=new ArrayList<>();
+        ResultSet rs=stmt.executeQuery(
+            "select distinct d.target_id,d.args,ac.sid from job_done d "+
+            "join astral_chain ac on ac.id=d.target_id "+
+            "where d.job_type_id=25 and d.args in ('0 "+populationID+" "+runID+"','1 "+
+            populationID+" "+runID+"') and not exists (select 1 from job j where "+
+            "j.job_type_id=25 and j.target_id=d.target_id and j.args=d.args)");
+        while (rs.next()) {
+            segments.add(new int[]{rs.getInt(1),
+                                   Integer.parseInt(rs.getString(2).split(" ")[0])});
+            sids.add(rs.getString(3));
+        }
+        rs.close();
+        int checked=0, queued=0;
+        for (int i=0;i<segments.size();i++) {
+            int chainID=segments.get(i)[0];
+            int segment=segments.get(i)[1];
+            String sid=sids.get(i);
+            String base=sid.substring(1,3)+"/"+sid+"/"+sid+"-"+segment;
+            Path aln=Paths.get(ChainDomainFatcatPair.ALIGNMENTS_DIR+base+".aln.zip");
+            Path mat=Paths.get(ChainDomainFatcatPair.MATRICES_DIR+base+".matrix.zip");
+            checked++;
+            if (isReadableArchive(aln) && isReadableArchive(mat))
+                continue;
+            System.out.println("damaged archive: "+sid+" segment "+segment);
+            if (LocalSQL.newJob(25,chainID,segment+" "+populationID+" "+runID,stmt)!=0)
+                queued++;
+        }
+        stmt.close();
+        System.out.println("archive segments checked="+checked+" repairs queued="+queued);
+    }
+
     public static void runJobsLocal() throws Exception {
         ArrayList<Integer> chainIDsDone = new ArrayList<>();
 
@@ -1049,11 +1165,13 @@ public class ChainDomainFatcatPairs {
                 adoptLegacyCoverage(Integer.parseInt(args[1]),Integer.parseInt(args[2])));
         else if (args.length==3 && args[0].equals("create-jobs"))
             createJobs(Integer.parseInt(args[1]),Integer.parseInt(args[2]));
+        else if (args.length==3 && args[0].equals("repair-archives"))
+            queueArchiveRepairs(Integer.parseInt(args[1]),Integer.parseInt(args[2]));
         else if (args.length==4 && args[0].equals("run"))
             runComparisons(Integer.parseInt(args[1]),Integer.parseInt(args[2]),
                            Integer.parseInt(args[3]),createRun(Integer.parseInt(args[3])));
         else
-            throw new Exception("Usage: ChainDomainFatcatPairs create-run population | adopt-legacy population run | create-jobs population run | run chain segment population");
+            throw new Exception("Usage: ChainDomainFatcatPairs create-run population | adopt-legacy population run | create-jobs population run | repair-archives population run | run chain segment population");
     }
 
 }
