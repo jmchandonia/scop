@@ -117,6 +117,7 @@ public class JobDaemon {
                     break;
                 case 5:
                     CalcSPACI.calcSPACI(targetID);
+                    StableChainFinalizer.queueIfInstalled(targetID);
                     break;
                 case 6:
                     MakeChainSeq.makeChainSeq(targetID);
@@ -179,8 +180,17 @@ public class JobDaemon {
                                                StringUtil.atoi(arg[0]));
                     break;
                 case 25:
-                    ChainDomainFatcatPairs.runComparisons(targetID,
-                                                          StringUtil.atoi(arg[0]));
+                    if (arg.length>=3)
+                        ChainDomainFatcatPairs.runComparisons(targetID,
+                            StringUtil.atoi(arg[0]),StringUtil.atoi(arg[1]),
+                            StringUtil.atoi(arg[2]));
+                    else
+                        ChainDomainFatcatPairs.runComparisons(targetID,
+                                                              StringUtil.atoi(arg[0]));
+                    break;
+                case 26:
+                    StableChainFinalizer.finalizePDBRelease(targetID,
+                                                            StringUtil.atoi(arg[0]));
                     break;
                 }
             } catch (Exception e) {

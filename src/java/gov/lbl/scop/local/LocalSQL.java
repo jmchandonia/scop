@@ -1020,6 +1020,7 @@ public class LocalSQL {
 	    case 11:
 	    case 12:
 	    case 20:
+	    case 26:
             priority = 3;
             break;
 	    case 16:
@@ -1036,6 +1037,7 @@ public class LocalSQL {
             break;
 	    case 8:
 	    case 24:
+	    case 25:
             priority = 6;
             break;
 	    default:

@@ -93,19 +93,6 @@ public class MakeNewRAF {
         }
 
         stmt.executeUpdate("update pdb_local set is_raf_calculated=2 where pdb_release_id="+pdbReleaseID);
-        // delete old versions of this raf not used before
-        // Delete astral_chain rows first (the children)
-        stmt.executeUpdate("delete a from astral_chain a " +
-                           "join raf r on (a.raf_id = r.id and r.raf_version_id=3 " +
-                           "and r.first_release_id is null and r.last_release_id is null) " +
-                           "join pdb_chain c on (c.id=r.pdb_chain_id and c.pdb_release_id=" + pdbReleaseID + ")");
-
-        // Then delete the raf rows (the parents)
-        stmt.executeUpdate("delete r from raf r " +
-                           "join pdb_chain c on (c.id=r.pdb_chain_id and c.pdb_release_id=" + pdbReleaseID + ") " +
-                           "where r.raf_version_id=3 " +
-                           "and r.first_release_id is null and r.last_release_id is null");
-
         System.out.println("making RAF for "+xml);
         System.out.flush();
 
@@ -142,13 +129,46 @@ public class MakeNewRAF {
                     rs.next();
                     int poly = rs.getInt(1);
                     if (poly==1) {
-                        stmt.executeUpdate("insert into raf values (null, 3, "+
-                                           pdbChainID+", null, null, \""+
-                                           line+"\")",
-                                           Statement.RETURN_GENERATED_KEYS);
-                        rs = stmt.getGeneratedKeys();
-                        rs.next();
-                        int rafID = rs.getInt(1);
+                        // A working RAF is an identity-bearing parent row.  Do
+                        // not delete/recreate it: stable-chain bindings and
+                        // astral_chain rows refer to this ID.
+                        rs = stmt.executeQuery("select id, line from raf where " +
+                                               "raf_version_id=3 and pdb_chain_id=" + pdbChainID +
+                                               " and first_release_id is null and last_release_id is null " +
+                                               "order by id");
+                        int rafID = 0;
+                        String oldLine = null;
+                        if (rs.next()) {
+                            rafID = rs.getInt(1);
+                            oldLine = rs.getString(2);
+                            if (rs.next()) {
+                                rs.close();
+                                throw new Exception("multiple working RAF rows for pdb_chain " + pdbChainID);
+                            }
+                        }
+                        rs.close();
+
+                        if (rafID == 0) {
+                            PreparedStatement insertRAF = LocalSQL.prepareStatement(
+                                "insert into raf (raf_version_id,pdb_chain_id,first_release_id,last_release_id,line) values (3,?,null,null,?)",
+                                Statement.RETURN_GENERATED_KEYS);
+                            insertRAF.setInt(1,pdbChainID);
+                            insertRAF.setString(2,line);
+                            insertRAF.executeUpdate();
+                            rs = insertRAF.getGeneratedKeys();
+                            rs.next();
+                            rafID = rs.getInt(1);
+                            rs.close();
+                            insertRAF.close();
+                        }
+                        else if (!line.equals(oldLine)) {
+                            PreparedStatement updateRAF = LocalSQL.prepareStatement(
+                                "update raf set line=? where id=?");
+                            updateRAF.setString(1,line);
+                            updateRAF.setInt(2,rafID);
+                            updateRAF.executeUpdate();
+                            updateRAF.close();
+                        }
 
                         // make job to calculate chain sequence
                         LocalSQL.newJob(6,rafID,null,stmt);

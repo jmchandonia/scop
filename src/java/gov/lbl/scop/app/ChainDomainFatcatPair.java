@@ -83,6 +83,7 @@ public class ChainDomainFatcatPair {
     boolean shortMatch;
     boolean hasAln;
     boolean hasMatrix;
+    boolean hasUsableTransform;
 
     String chain_alignment_start;
     Integer chain_alignment_length;
@@ -159,6 +160,7 @@ public class ChainDomainFatcatPair {
         this.identity = null;
         this.similarity = null;
         this.shortMatch = false;
+        this.hasUsableTransform = true;
 
         this.chain_alignment_length = 0;
         this.domain_alignment_length = 0;
@@ -239,6 +241,7 @@ public class ChainDomainFatcatPair {
         this.identity = null;
         this.similarity = null;
         this.shortMatch = false;
+        this.hasUsableTransform = true;
 
         this.chain_alignment_length = 0;
         this.domain_alignment_length = 0;
@@ -265,7 +268,7 @@ public class ChainDomainFatcatPair {
         Statement stmt = LocalSQL.createStatement();
         ResultSet rs = stmt.executeQuery("select astral_chain.sid, raf.line from astral_chain join raf on astral_chain.raf_id = raf.id where astral_chain.id=" + chain_id + " order by raf.raf_version_id desc");
         if (rs.next()) {
-            this.chain = rs.getString(1).toLowerCase();
+            this.chain = rs.getString(1);
             this.chainRafBody = RAF.getRAFBody(rs.getString(2));
             this.chain_start_index = RAF.getResID(this.chainRafBody, 0); // sourceType 2 = SEQRES, 1 = ATOM
             this.chain_end_index = RAF.getResID(this.chainRafBody, RAF.getSeqLength(this.chainRafBody) - 1);
@@ -570,6 +573,13 @@ public class ChainDomainFatcatPair {
         if (shortMatch) {
             return;
         }
+        // Expanded runs persist rejected comparisons in the completion table,
+        // not in the parent/gap/matrix result tables.  Their FATCAT summary is
+        // sufficient; avoid PostFATCAT and downstream reconstruction work that
+        // cannot affect the retention decision.
+        if (fcs!=null && fcs.run_id>0 && !isRetained()) {
+            return;
+        }
 
         if (matrixFile.exists()) {
             this.hasMatrix = true;
@@ -598,6 +608,19 @@ public class ChainDomainFatcatPair {
 
             // Read the matrix file
             if (!matrixFile.exists()) {
+                // Some very low-similarity FATCAT alignments pass the numeric
+                // cutoff but cannot be mapped back to residues by PostFATCAT
+                // (for example, "can not find residue"), so no transform can
+                // exist.  Expanded runs must not store a parent row without
+                // its required matrix, and retrying the identical input does
+                // not repair this deterministic output.  Preserve its FATCAT
+                // summary as a completed rejection instead.
+                if (fcs!=null && fcs.run_id>0) {
+                    hasUsableTransform=false;
+                    logger.warning("PostFATCAT produced no matrix; recording "+
+                                   chain+" x "+domain+" as unusable");
+                    return;
+                }
                 throw new Exception(matrixFile + " not generated\n" + String.join(" ", command2));
             }
             this.readMatrix(matrixFile);
@@ -987,7 +1010,22 @@ public class ChainDomainFatcatPair {
 
         int i = 0;
 
-        while (i < chainSeqAligned.length() || i < domainSeqAligned.length()) {
+        while (true) {
+            // The two independent RAF alignments need not have identical
+            // lengths, and the special-residue cases below insert columns as
+            // they are processed.  Normalize at every iteration so charAt()
+            // and insert() always address the same alignment column and so a
+            // shifted trailing residue is not silently skipped.
+            int currentLength=Math.max(sbChain.length(),sbDomain.length());
+            currentLength=Math.max(currentLength,sbChainRaf.length());
+            currentLength=Math.max(currentLength,sbDomainRaf.length());
+            currentLength=Math.max(currentLength,sbAln.length());
+            if (i>=currentLength) break;
+            while (sbChain.length()<currentLength) sbChain.append('=');
+            while (sbDomain.length()<currentLength) sbDomain.append('=');
+            while (sbChainRaf.length()<currentLength) sbChainRaf.append('=');
+            while (sbDomainRaf.length()<currentLength) sbDomainRaf.append('=');
+            while (sbAln.length()<currentLength) sbAln.append(' ');
 
             char c_raf_domain = sbDomainRaf.charAt(i);
             char c_scop_domain = sbDomain.charAt(i);
@@ -1148,6 +1186,17 @@ public class ChainDomainFatcatPair {
 //        print(sbDomain + "\n");
 //        print(sbDomainRaf + "\n");
 
+        // The two RAF-to-FATCAT alignments are built independently.  A
+        // trailing RAF-only residue can therefore leave one reconstructed
+        // side one (or more) columns longer than the other after the special
+        // residue insertions above.  Those columns are ordinary one-sided
+        // gaps; pad all three display strings before walking them in lockstep.
+        int middleLength = Math.max(sbChain.length(),
+                            Math.max(sbDomain.length(), sbAln.length()));
+        while (sbChain.length() < middleLength) sbChain.append('=');
+        while (sbDomain.length() < middleLength) sbDomain.append('=');
+        while (sbAln.length() < middleLength) sbAln.append(' ');
+
         // update indices after all the changes above
         for (int n = 0; n < sbChain.length(); n++) {
             char c_chain = sbChain.charAt(n);
@@ -1219,11 +1268,30 @@ public class ChainDomainFatcatPair {
             idx_chain++;
         }
 
-        this.chainSeq = chain_prefix + sbChain.toString() + chain_suffix;
-        this.alnSeq = aln_prefix + sbAln.toString() + aln_suffix;
-        this.domainSeq = domain_prefix + sbDomain.toString() + domain_suffix;
+        String rawChain = chain_prefix + sbChain.toString() + chain_suffix;
+        String rawAln = aln_prefix + sbAln.toString() + aln_suffix;
+        String rawDomain = domain_prefix + sbDomain.toString() + domain_suffix;
+        if (rawChain.length()!=rawAln.length() ||
+            rawAln.length()!=rawDomain.length())
+            throw new Exception("reconstructed alignment length mismatch for "+
+                                chain+" x "+domain);
 
-        assert chainSeq.length() == alnSeq.length() && alnSeq.length() == domainSeq.length();
+        // Padding and independent RAF alignments can introduce columns in
+        // which neither structure has a residue.  Such (=,=) columns convey
+        // no alignment or gap information and gapType deliberately has no
+        // category for them, so remove the entire display column.
+        StringBuilder cleanChain=new StringBuilder(rawChain.length());
+        StringBuilder cleanAln=new StringBuilder(rawAln.length());
+        StringBuilder cleanDomain=new StringBuilder(rawDomain.length());
+        for (int n=0;n<rawChain.length();n++) {
+            if (rawChain.charAt(n)=='=' && rawDomain.charAt(n)=='=') continue;
+            cleanChain.append(rawChain.charAt(n));
+            cleanAln.append(rawAln.charAt(n));
+            cleanDomain.append(rawDomain.charAt(n));
+        }
+        this.chainSeq=cleanChain.toString();
+        this.alnSeq=cleanAln.toString();
+        this.domainSeq=cleanDomain.toString();
 
     }
 
@@ -1508,16 +1576,70 @@ public class ChainDomainFatcatPair {
         }
     }
 
+    /** Archive only the FATCAT summary for an expanded-run rejected hit. */
+    private void archiveRejectedAndClear() throws Exception {
+        logger.info("archiveRejectedAndClear()");
+        Path oldAlnPath=Paths.get(this.tempDir+this.alignmentFile);
+        Path newAlnPath=Paths.get(fcs.AlnDir+this.alignmentFile);
+        Files.move(oldAlnPath,newAlnPath,StandardCopyOption.REPLACE_EXISTING);
+
+        Path chainPath=Paths.get(this.chainFile).toAbsolutePath().normalize();
+        Path loggerPath=fcs.logFile.toAbsolutePath().normalize();
+        try (DirectoryStream<Path> stream=Files.newDirectoryStream(Paths.get(fcs.TempDir))) {
+            for (Path path:stream) {
+                Path normalized=path.toAbsolutePath().normalize();
+                String name=path.getFileName().toString();
+                if (normalized.equals(chainPath) || normalized.equals(loggerPath) ||
+                    name.startsWith(".nfs"))
+                    continue;
+                if (Files.isRegularFile(path)) Files.delete(path);
+            }
+        }
+    }
+
+    private boolean hasAlignedResidues(String sequence) {
+        if (sequence==null) return false;
+        for (int i=0;i<sequence.length();i++)
+            if (Character.isLetter(sequence.charAt(i))) return true;
+        return false;
+    }
+
+    private boolean isRetained() {
+        // FATCAT can report a highly significant score for structures made
+        // entirely of UNK residues, while emitting an all-gap alignment that
+        // PostFATCAT cannot transform.  Such output is not a usable hit.
+        return p_val!=null && p_val<=0.05 && ini_rmsd!=null && ini_rmsd<4.0 &&
+               hasAlignedResidues(chainSeq) && hasAlignedResidues(domainSeq) &&
+               hasUsableTransform;
+    }
+
     public void storeSQL() throws Exception {
 
         java.util.function.Function<Integer, String> sqlInt =
                 v -> (v == null || v < 0) ? "NULL" : v.toString();
 
         java.util.function.Function<Double, String> sqlDouble =
-                v -> (v == null || v < 0) ? "NULL" : String.format("%.6f", v);
+                v -> (v == null || v < 0) ? "NULL" : Double.toString(v);
 
         java.util.function.Function<String, String> sqlString =
                 v -> (v == null || v.equals("NULL")) ? "NULL" : "'" + v + "'";
+
+        boolean retained=isRetained();
+        String chainSHA = (fcs==null ? null : fcs.chainChecksum);
+        String domainSHA = (fcs==null ? null :
+            MakeChainPDB.sha256(Paths.get(domainFile)));
+        if (fcs!=null && fcs.run_id>0 && !retained) {
+            SQLWriter.write("INSERT INTO scop_node_fatcat_chain_completion " +
+                "(run_id,chain_id,node_id,chain_coordinate_sha256,"+
+                "domain_coordinate_sha256,status,result_id,p_val,ini_rmsd,completed_at) VALUES ("+
+                fcs.run_id+","+chain_id+","+domain_id+",'"+chainSHA+"','"+
+                domainSHA+"','complete_rejected',NULL,"+sqlDouble.apply(p_val)+","+
+                sqlDouble.apply(ini_rmsd)+",NOW()) ON DUPLICATE KEY UPDATE " +
+                "status=VALUES(status),p_val=VALUES(p_val),ini_rmsd=VALUES(ini_rmsd),"+
+                "completed_at=VALUES(completed_at);\n");
+            SQLWriter.flush();
+            return;
+        }
 
         String stmt1 =
                 "INSERT INTO scop_node_fatcat_chain VALUES (" +
@@ -1597,7 +1719,17 @@ public class ChainDomainFatcatPair {
         sb.append(");");
         String stmt3 = sb.toString();
 
-        String sql = stmt1 + "\n" + auto_id + "\n" + stmt2 + "\n" + stmt3 + "\n";
+        String sql = stmt1 + "\n" + auto_id + "\n" +
+            (chainGaps.size()>0 ? stmt2+"\n" : "") + stmt3 + "\n";
+        if (fcs!=null && fcs.run_id>0)
+            sql += "INSERT INTO scop_node_fatcat_chain_completion " +
+                "(run_id,chain_id,node_id,chain_coordinate_sha256,"+
+                "domain_coordinate_sha256,status,result_id,p_val,ini_rmsd,completed_at) VALUES ("+
+                fcs.run_id+","+chain_id+","+domain_id+",'"+chainSHA+"','"+
+                domainSHA+"','complete_retained',@hit_id,"+sqlDouble.apply(p_val)+","+
+                sqlDouble.apply(ini_rmsd)+",NOW()) ON DUPLICATE KEY UPDATE " +
+                "status=VALUES(status),result_id=VALUES(result_id),p_val=VALUES(p_val),"+
+                "ini_rmsd=VALUES(ini_rmsd),completed_at=VALUES(completed_at);\n";
 
         SQLWriter.write(sql);
         SQLWriter.flush();
@@ -1700,6 +1832,11 @@ public class ChainDomainFatcatPair {
     public void runComparison() throws Exception {
 
         this.compare();
+        if (this.fcs!=null && this.fcs.run_id>0 && !isRetained()) {
+            this.archiveRejectedAndClear();
+            this.storeSQL();
+            return;
+        }
         this.constructNewSeqs();
         this.parseGaps();
 

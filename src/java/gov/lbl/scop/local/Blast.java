@@ -56,6 +56,9 @@ public class Blast extends Program {
     public File baseDir = null;
     
     public String programName() {
+        String configured = System.getProperty("scop.blast.blastpgp");
+        if (configured != null && configured.length() > 0)
+            return configured;
         if (version == null)
             return "blastpgp";
         else
@@ -165,9 +168,12 @@ public class Blast extends Program {
        Format a database
     */
     final public void formatDB(String fileName) {
-        String programName = "formatdb";
-        if (version != null)
-            programName += "-"+version;
+        String programName = System.getProperty("scop.blast.formatdb");
+        if (programName == null || programName.length() == 0) {
+            programName = "formatdb";
+            if (version != null)
+                programName += "-"+version;
+        }
         Program p = new Program(programName);
         String[] i = new String[4];
         i[0] = "-o";
@@ -191,6 +197,38 @@ public class Blast extends Program {
                                     int styleID2,
                                     int scopReleaseID,
                                     int minGapLength) throws Exception {
+        processOutputInternal(stmt,outFile,seqAlnFile,seqID1,sourceID,
+                              styleID1,styleID2,scopReleaseID,minGapLength,
+                              0,0,0);
+    }
+
+    /**
+       Process output into the isolated all-chain edge table while retaining
+       the exact legacy BLAST parser and percent-identity calculation.
+    */
+    final public int processOutputAllChains(Statement stmt,
+                                             File outFile,
+                                             File seqAlnFile,
+                                             int seqID1,
+                                             int populationID,
+                                             int methodID,
+                                             int databaseID) throws Exception {
+        return processOutputInternal(stmt,outFile,seqAlnFile,seqID1,2,1,1,0,0,
+                                     populationID,methodID,databaseID);
+    }
+
+    private int processOutputInternal(Statement stmt,
+                                      File outFile,
+                                      File seqAlnFile,
+                                      int seqID1,
+                                      int sourceID,
+                                      int styleID1,
+                                      int styleID2,
+                                      int scopReleaseID,
+                                      int minGapLength,
+                                      int populationID,
+                                      int methodID,
+                                      int databaseID) throws Exception {
 
         // read in the output
         if (!outFile.canRead())
@@ -211,6 +249,7 @@ public class Blast extends Program {
         int length2 = -1;
         String allQuery = "";
         String allHit = "";
+        int parsedHits = 0;
 		
         BufferedReader infile = IO.openReader(outFile.getPath());
         if (infile==null)
@@ -230,7 +269,7 @@ public class Blast extends Program {
                 infile.close();
                 if (infile2 != null)
                     infile2.close();
-                return;
+                return parsedHits;
             }
             int l = buffer.length();
 
@@ -242,7 +281,7 @@ public class Blast extends Program {
                 infile.close();
                 if (infile2 != null)
                     infile2.close();
-                return;
+                return parsedHits;
             }
             int p = buffer.indexOf(" letters)");
             if (p>0) {
@@ -456,22 +495,35 @@ public class Blast extends Program {
                     (length1 > 0) &&
                     (length2 > 0)) {
 
-                    stmt.executeUpdate("insert into astral_seq_blast values (NULL, "+
-                                       seqID1+", "+
-                                       seqID2+", "+
-                                       sourceID+", "+
-                                       styleID1+", "+
-                                       styleID2+", "+
-                                       (scopReleaseID==0 ? "null" : scopReleaseID)+", "+
-                                       log10E+", "+
-                                       pctID+", "+
-                                       start1+", "+
-                                       length1+", "+
-                                       start2+", "+
-                                       length2+")",
-                                       Statement.RETURN_GENERATED_KEYS);
+                    parsedHits++;
 
-                    if (minGapLength > 0) {
+                    if (populationID == 0) {
+                        stmt.executeUpdate("insert into astral_seq_blast values (NULL, "+
+                                           seqID1+", "+
+                                           seqID2+", "+
+                                           sourceID+", "+
+                                           styleID1+", "+
+                                           styleID2+", "+
+                                           (scopReleaseID==0 ? "null" : scopReleaseID)+", "+
+                                           log10E+", "+
+                                           pctID+", "+
+                                           start1+", "+
+                                           length1+", "+
+                                           start2+", "+
+                                           length2+")",
+                                           Statement.RETURN_GENERATED_KEYS);
+                    }
+                    else if (pctID >= 90.0) {
+                        stmt.executeUpdate("insert ignore into astral_chain_all_blast_edge "+
+                                           "(population_id,method_id,database_id,seq1_id,seq2_id,"+
+                                           "blast_log10_e,pct_identical,seq1_start,seq1_length,"+
+                                           "seq2_start,seq2_length) values ("+
+                                           populationID+","+methodID+","+databaseID+","+
+                                           seqID1+","+seqID2+","+log10E+","+pctID+","+
+                                           start1+","+length1+","+start2+","+length2+")");
+                    }
+
+                    if ((populationID == 0) && (minGapLength > 0)) {
                         ResultSet rs = stmt.getGeneratedKeys();
                         rs.next();
                         int hitID = rs.getInt(1);
@@ -527,6 +579,6 @@ public class Blast extends Program {
         infile.close();
         if (infile2 != null)
             infile2.close();
+        return parsedHits;
     }
 }
-

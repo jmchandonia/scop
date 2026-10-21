@@ -44,15 +44,14 @@ public class QueueDaemon {
     */
     final public static HashMap<String,Integer> HOST_JOBS = new HashMap<String,Integer>() {
         {
-            put("new-porter.jmcnet",new Integer(16));
-            put("new-stout.jmcnet",new Integer(16));
-            put("porter.jmcnet",new Integer(16));
+            put("new-porter.jmcnet",new Integer(24));
+            put("new-stout.jmcnet",new Integer(24));
+            put("porter.jmcnet",new Integer(32));
             put("stout.jmcnet",new Integer(16));
-            put("new-mead.jmcnet",new Integer(16));
-            put("node1.jmcnet",new Integer(16));
-            put("node2.jmcnet",new Integer(16));
-            put("node3.jmcnet",new Integer(16));
-            put("node6.jmcnet",new Integer(16));
+            put("node1.jmcnet",new Integer(8));
+            put("node2.jmcnet",new Integer(8));
+            put("node3.jmcnet",new Integer(8));
+            put("node6.jmcnet",new Integer(8));
         }
     };
 
