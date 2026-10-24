@@ -14,10 +14,3 @@ logs and the captured API traffic.
   `gpt-5.6-sol` judge's reports kept as `*_judge-gpt-5-6-sol.md`).
 - `alphafold-scope-homology/`: suite 1.18.4. Twelve questions on locating
   SCOPe-like regions in AlphaFold models, with the current-suite run.
-
-This public copy contains only the current suite of each benchmark and the runs
-scored against it. Earlier suites, their runs and development experiments are
-not included, so some links in the benchmark READMEs to earlier runs do not
-resolve here. The scripts were run from the maintainers' private checkout;
-their default paths (`/scratch/jmc/...`, `../../skill-sources/`) refer to that
-checkout and must be pointed at `../skills/` to rerun them.
