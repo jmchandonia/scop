@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/53068",
+    "canonical_url": "/?sunid=53068&ver=2.08",
+    "description": "Actin/HSP70",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/53067",
+      "sccs": "c.55.1",
+      "sid": null,
+      "sunid": 53067
+    },
+    "release": "2.08",
+    "sccs": "c.55.1.1",
+    "sid": null,
+    "sunid": 53068
+  }
+}

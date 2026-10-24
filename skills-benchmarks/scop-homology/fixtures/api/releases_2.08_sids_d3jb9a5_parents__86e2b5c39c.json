@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/53931",
+      "canonical_url": "/?sunid=53931&ver=2.08",
+      "description": "Alpha and beta proteins (a+b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "d",
+      "sid": null,
+      "sunid": 53931
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/345891",
+      "canonical_url": "/?sunid=345891&ver=2.08",
+      "description": "N-terminal domain of Prp8 / Spp42",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/53931",
+        "sccs": "d",
+        "sid": null,
+        "sunid": 53931
+      },
+      "release": "2.08",
+      "sccs": "d.394",
+      "sid": null,
+      "sunid": 345891
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/345924",
+      "canonical_url": "/?sunid=345924&ver=2.08",
+      "description": "N-terminal domain of Prp8 / Spp42",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/345891",
+        "sccs": "d.394",
+        "sid": null,
+        "sunid": 345891
+      },
+      "release": "2.08",
+      "sccs": "d.394.1",
+      "sid": null,
+      "sunid": 345924
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/345979",
+      "canonical_url": "/?sunid=345979&ver=2.08",
+      "description": "N-terminal domain of Prp8 / Spp42",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/345924",
+        "sccs": "d.394.1",
+        "sid": null,
+        "sunid": 345924
+      },
+      "release": "2.08",
+      "sccs": "d.394.1.1",
+      "sid": null,
+      "sunid": 345979
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/346113",
+      "canonical_url": "/?sunid=346113&ver=2.08",
+      "description": "Pre-mRNA splicing factor 8, Prp8 / Spp42",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/345979",
+        "sccs": "d.394.1.1",
+        "sid": null,
+        "sunid": 345979
+      },
+      "release": "2.08",
+      "sccs": "d.394.1.1",
+      "sid": null,
+      "sunid": 346113
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/346403",
+      "canonical_url": "/?sunid=346403&ver=2.08",
+      "description": "Schizosaccharomyces pombe 972h- [TaxId: 284812]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/346113",
+        "sccs": "d.394.1.1",
+        "sid": null,
+        "sunid": 346113
+      },
+      "release": "2.08",
+      "sccs": "d.394.1.1",
+      "sid": null,
+      "sunid": 346403
+    }
+  ],
+  "release": "2.08",
+  "sunid": 344796
+}

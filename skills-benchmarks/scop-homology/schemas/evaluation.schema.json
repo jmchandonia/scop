@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scop.berkeley.edu/schemas/benchmark-evaluation.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "question_id", "condition", "model", "biological_reasoning_score", "factual_support_score", "score", "rubric_notes", "evaluator", "timestamp"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "question_id": {"type": "string", "pattern": "^Q[0-9]{3}_[a-z0-9_]+$"},
+    "condition": {"enum": ["pretrained_only", "pretrained_api", "pretrained_skill", "pretrained_mcp", "pretrained_mcp_skill"]},
+    "model": {"type": "string", "minLength": 1},
+    "biological_reasoning_score": {
+      "type": ["integer", "null"],
+      "minimum": 0,
+      "maximum": 4,
+      "description": "Null only for questions in the api_conformance reporting group."
+    },
+    "factual_support_score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 4,
+      "multipleOf": 0.25,
+      "description": "Secondary gated score. Biological questions use min(0.75*biological+0.25*factual, factual gate); the factual gates for scores 0, 1, 2, 3, 4 are 1, 2, 3, 4, 4. API-conformance questions equal factual support."
+    },
+    "error_tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "description": "Machine-readable error labels emitted by the evaluator. Optional on legacy evaluations produced before structured tags were added.",
+      "items": {
+        "enum": [
+          "api_evidence_error",
+          "fabricated_annotation",
+          "fabricated_release_fact",
+          "fragment_similarity_omission",
+          "historical_release_omission",
+          "identifier_or_boundary_error",
+          "incomplete_answer",
+          "missing_annotation_caveat",
+          "missing_named_unsafe_transfer",
+          "missing_quality_context",
+          "missing_required_external_evidence",
+          "periodic_release_omission",
+          "quality_ranking_error",
+          "unsafe_function_transfer",
+          "unsupported_homology_claim",
+          "unsupported_nonhomology_claim",
+          "wrong_classification"
+        ]
+      }
+    },
+    "rubric_notes": {"type": "string", "minLength": 1},
+    "evaluator": {"type": "string", "minLength": 1},
+    "timestamp": {"type": "string", "format": "date-time"}
+  }
+}

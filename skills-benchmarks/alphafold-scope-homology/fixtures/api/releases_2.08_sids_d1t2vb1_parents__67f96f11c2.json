@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51349",
+      "canonical_url": "/?sunid=51349&ver=2.08",
+      "description": "Alpha and beta proteins (a/b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "c",
+      "sid": null,
+      "sunid": 51349
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52112",
+      "canonical_url": "/?sunid=52112&ver=2.08",
+      "description": "BRCT domain",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51349",
+        "sccs": "c",
+        "sid": null,
+        "sunid": 51349
+      },
+      "release": "2.08",
+      "sccs": "c.15",
+      "sid": null,
+      "sunid": 52112
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52113",
+      "canonical_url": "/?sunid=52113&ver=2.08",
+      "description": "BRCT domain",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52112",
+        "sccs": "c.15",
+        "sid": null,
+        "sunid": 52112
+      },
+      "release": "2.08",
+      "sccs": "c.15.1",
+      "sid": null,
+      "sunid": 52113
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/63955",
+      "canonical_url": "/?sunid=63955&ver=2.08",
+      "description": "BRCT domain",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52113",
+        "sccs": "c.15.1",
+        "sid": null,
+        "sunid": 52113
+      },
+      "release": "2.08",
+      "sccs": "c.15.1.3",
+      "sid": null,
+      "sunid": 63955
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/63956",
+      "canonical_url": "/?sunid=63956&ver=2.08",
+      "description": "Breast cancer associated protein, BRCA1",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/63955",
+        "sccs": "c.15.1.3",
+        "sid": null,
+        "sunid": 63955
+      },
+      "release": "2.08",
+      "sccs": "c.15.1.3",
+      "sid": null,
+      "sunid": 63956
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/63957",
+      "canonical_url": "/?sunid=63957&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/63956",
+        "sccs": "c.15.1.3",
+        "sid": null,
+        "sunid": 63956
+      },
+      "release": "2.08",
+      "sccs": "c.15.1.3",
+      "sid": null,
+      "sunid": 63957
+    }
+  ],
+  "release": "2.08",
+  "sunid": 99100
+}

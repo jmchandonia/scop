@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q025_classification_as_evolutionary_hypothesis",
+  "request_count": 5,
+  "response_body_count": 5,
+  "successful_response_count": 5,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

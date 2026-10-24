@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "complexed with EGF"
+    },
+    {
+      "description": "complexed with nag"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/86036",
+    "canonical_url": "/?sunid=86036&ver=2.08",
+    "description": "1nql A:481-614",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/419547",
+      "sccs": "g.3.9.1",
+      "sid": null,
+      "sunid": 419547
+    },
+    "release": "2.08",
+    "sccs": "g.3.9.1",
+    "sid": "d1nqla4",
+    "sunid": 86036
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

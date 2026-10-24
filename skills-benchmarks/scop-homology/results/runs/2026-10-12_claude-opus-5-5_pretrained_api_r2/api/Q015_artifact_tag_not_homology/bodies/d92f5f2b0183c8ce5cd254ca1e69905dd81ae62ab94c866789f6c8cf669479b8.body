@@ -1,0 +1,1 @@
+{"node":{"sunid":88543,"sid":null,"sccs":"b.1.1.1","description":"Immunoglobulin heavy chain variable domain, VH","level":{"code":"dm","name":"Protein","plural":"Proteins"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/88543","canonical_url":"/?sunid=88543&ver=2.08","parent":{"sunid":48727,"sid":null,"sccs":"b.1.1.1","api_url":"/api/v1/releases/2.08/sunids/48727"}}}

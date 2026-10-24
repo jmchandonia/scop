@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "canonical_url": "/?sunid=46456&ver=2.08",
+      "description": "All alpha proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47654",
+      "canonical_url": "/?sunid=47654&ver=2.08",
+      "description": "STAT-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46456",
+        "sccs": "a",
+        "sid": null,
+        "sunid": 46456
+      },
+      "release": "2.08",
+      "sccs": "a.47",
+      "sid": null,
+      "sunid": 47654
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47661",
+      "canonical_url": "/?sunid=47661&ver=2.08",
+      "description": "t-snare proteins",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47654",
+        "sccs": "a.47",
+        "sid": null,
+        "sunid": 47654
+      },
+      "release": "2.08",
+      "sccs": "a.47.2",
+      "sid": null,
+      "sunid": 47661
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47662",
+      "canonical_url": "/?sunid=47662&ver=2.08",
+      "description": "t-snare proteins",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47661",
+        "sccs": "a.47.2",
+        "sid": null,
+        "sunid": 47661
+      },
+      "release": "2.08",
+      "sccs": "a.47.2.1",
+      "sid": null,
+      "sunid": 47662
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47663",
+      "canonical_url": "/?sunid=47663&ver=2.08",
+      "description": "Syntaxin 1A N-terminal domain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47662",
+        "sccs": "a.47.2.1",
+        "sid": null,
+        "sunid": 47662
+      },
+      "release": "2.08",
+      "sccs": "a.47.2.1",
+      "sid": null,
+      "sunid": 47663
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47664",
+      "canonical_url": "/?sunid=47664&ver=2.08",
+      "description": "Norway rat (Rattus norvegicus) [TaxId: 10116]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47663",
+        "sccs": "a.47.2.1",
+        "sid": null,
+        "sunid": 47663
+      },
+      "release": "2.08",
+      "sccs": "a.47.2.1",
+      "sid": null,
+      "sunid": 47664
+    }
+  ],
+  "release": "2.08",
+  "sunid": 17772
+}

@@ -1,0 +1,28 @@
+{
+  "heterogeneity": [],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/45322",
+    "canonical_url": "/?sunid=45322&ver=2.08",
+    "description": "1rmd A:1-86",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/57855",
+      "sccs": "g.44.1.1",
+      "sid": null,
+      "sunid": 57855
+    },
+    "release": "2.08",
+    "sccs": "g.44.1.1",
+    "sid": "d1rmda2",
+    "sunid": 45322
+  },
+  "release": "2.08",
+  "repeat_family": null,
+  "warnings": []
+}

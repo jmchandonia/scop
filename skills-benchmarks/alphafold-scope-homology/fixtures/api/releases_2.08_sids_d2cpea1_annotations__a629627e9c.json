@@ -1,0 +1,32 @@
+{
+  "comments": [],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/130698",
+    "canonical_url": "/?sunid=130698&ver=2.08",
+    "description": "2cpe A:353-453",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/143341",
+      "sccs": "d.58.7.1",
+      "sid": null,
+      "sunid": 143341
+    },
+    "release": "2.08",
+    "sccs": "d.58.7.1",
+    "sid": "d2cpea1",
+    "sunid": 130698
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

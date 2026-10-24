@@ -1,0 +1,316 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 489,
+    "response_body_count": 471,
+    "stable_release_consistent": true,
+    "successful_response_count": 489,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "2c81cec3e78c86ab828fd469198e566a0227cfab2db9178ebdebbe4e9714b1a1",
+    "transient_error_count": 0,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-13T00:02:39Z",
+  "condition": "pretrained_mcp_skill",
+  "evaluation": {
+    "completed_at": "2026-10-22T06:42:00Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 51,
+    "rejected_references": [
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "mcp__scope__get_scop_service_info (current release 2.08)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "mcp__scope__get_scop_domains (includes parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "mcp__scope__get_scop_node (sunid 101386, includes homology, annotations)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__get_scop_service_info: /api/v1/releases/current (release 2.08 stable)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__search_scop: /api/v1/releases/2.08/search?q=hexokinase&limit=10 (hits c.55.1.3); q='Actin-like ATPase domain' and q='glycerol kinase' returned empty"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__resolve_scop_identifier: /api/v1/releases/2.08/resolve/c.55.1 (sunid 53067)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__list_scop_children: /api/v1/releases/2.08/sunids/53067/children?limit=20 (c.55.1.1, c.55.1.3, c.55.1.4 confirmed)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__get_scop_node: /api/v1/releases/2.08/sunids/53067/homology (homology_scope sf, no warnings)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__get_scop_node: /api/v1/releases/2.08/sunids/53068, /sunids/53083, /sunids/53089 with /parents and /homology (same lineage; homology_scope fa, no warnings)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "mcp__scope__get_scop_service_info (/api/v1/releases/current)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "mcp__scope__search_scop (/api/v1/releases/2.08/search?q=cupredoxin, q=ephrin, q=peptidylarginine+deiminase, q=plastocyanin)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "mcp__scope__get_scop_node (/api/v1/releases/2.08/sccs/b.6.1 and /parents; /sunids/49503 annotations and homology; /sunids/74874 annotations, homology, parents; /sunids/110107 annotations, homology, parents; /sunids/49504 annotations and homology)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "mcp__scope__list_scop_children (/api/v1/releases/2.08/sccs/b.6.1/children; /sunids/110108/children; /sunids/110109/children)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "mcp__scope__get_scop_domains (/api/v1/releases/2.08/sids/d1iuza_ and d1ikop_: parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "/api/v1/releases/2.08/search?q=ubiquitin"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "/api/v1/releases/2.08/search?q=UBX"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope__search_scop (/api/v1/releases/current; /api/v1/releases/2.08/search?q=KaiA, ornithine decarboxylase, receiver)"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope__get_scop_node (/api/v1/releases/2.08/sccs/c.23.1.1 and /parents; /api/v1/releases/2.08/sunids/52253 with /parents and /homology; /api/v1/releases/2.08/sunids/82346 with /parents and /homology)"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope__get_scop_domains (/api/v1/releases/2.08/sids/d1r8ja2 and d1m2ea_ with /parents, /annotations, /homology)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__search_scop (token search 'bulge', release 2.08)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__get_scop_node (sunid 310577, 310616, 51229; parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__list_scop_children (sunid 51229)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__get_scop_domains (d1vdza2, d3j9ta3; parents)"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "/api/v1/releases/2.08/sunids/81342 with /parents, /annotations, /homology"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "/api/v1/releases/2.08/sunids/103501 with /parents, /annotations, /homology"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "/api/v1/releases/2.08/sunids/81373 with /parents, /annotations, /homology"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "/api/v1/releases/2.08/sunids/56910 with /parents, /annotations, /homology"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "mcp__scope__get_scop_domains (release 2.08; sids d1s9za_, d1hqja_; includes parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "mcp__scope__compare_scop_domains (release 2.08; d1s9za_ vs d1hqja_)"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "/api/v1/releases/2.08/sunids/100905 (lowest shared node returned by compare)"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "mcp__scope__get_scop_pdb_entry: 2.08 1t1j chains; 2.08 1f8y chains; 1.69 1t1j chains; 1.69 1f8y chains"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "mcp__scope__get_scop_domains: 2.08 d1t1ja1 and d1f8ya_ with parents and annotations; 1.69 d1t1ja_ and d1f8ya_ with parents and annotations"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "/api/v1/releases/current (release 2.08 reported as current)"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_service_info (/api/v1/; /api/v1/releases/current)"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_chain (/api/v1/releases/1.75/chains/1accA; /api/v1/releases/2.08/chains/1accA)"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_pdb_entry (/api/v1/releases/1.75/pdb/1acc/domains and /chains; /api/v1/releases/2.08/pdb/1acc/domains and /chains)"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_domains (/api/v1/releases/1.75/sids/d1acca_ with parents, annotations, homology; /api/v1/releases/2.08/sids/d1acca1 and d1acca2 with parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__get_scop_pdb_entry (3jb9, domains and chains, release 2.08)"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__get_scop_chain (3jb9A)"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__get_scop_domains (d3jb9a1-a5; parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__list_scop_children (sunids 345891, 47371, 159638, 345968, 345981, 52980, 53098, 56672)"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "/api/v1/releases/2.08/sids/d3jb9a1 through d3jb9a5 (parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q020_syntaxin_fragment_reclassification",
+        "reference": "mcp__scope__get_scop_pdb_entry (1br0, 1ez3, 1dn1; domains and revisions)"
+      },
+      {
+        "question_id": "Q020_syntaxin_fragment_reclassification",
+        "reference": "mcp__scope__get_scop_domains (d1br0a_, d1ez3a_, d1ez3b_, d1ez3c_, d1dn1b_; parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q020_syntaxin_fragment_reclassification",
+        "reference": "mcp__scope__get_scop_sequence (d1br0a_, d1ez3a_, d1dn1b_)"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "/api/v1/releases/2.08/search?q=NAD(P)-binding&mode=auto&limit=20"
+      },
+      {
+        "question_id": "Q024_fibronectin_fragment_selection",
+        "reference": "mcp__scope__get_scop_domains (sids d1uc6a1, d1o5dt2; includes parents, annotations; compact)"
+      },
+      {
+        "question_id": "Q024_fibronectin_fragment_selection",
+        "reference": "mcp__scope__get_scop_domains (sids d1uc6a1, d1o5dt2; includes homology; compact)"
+      },
+      {
+        "question_id": "Q025_classification_as_evolutionary_hypothesis",
+        "reference": "Skill: scop-homology/SKILL.md (read)"
+      },
+      {
+        "question_id": "Q025_classification_as_evolutionary_hypothesis",
+        "reference": "MCP tool: mcp__scope__get_scop_service_info"
+      },
+      {
+        "question_id": "Q025_classification_as_evolutionary_hypothesis",
+        "reference": "REST path: /api/v1/releases/current"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "54c2632296e071d90da0ba44b8b393e38d526ab297347b166b32bffca929cb51",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [],
+    "logs_sha256": "bc5481c411c7669f0691f8fc1572b9e39b9f02ffb5333f133f4843b0c9e4210a",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": {
+    "command": "/scratch/jmc/scop-server/mcp/.venv/bin/scop-mcp",
+    "rest_base_url": "live_rest_capture_gateway",
+    "server": "scop-mcp",
+    "tool_call_count": 194,
+    "tools_used": [
+      "mcp__scope__compare_scop_domains",
+      "mcp__scope__get_scop_chain",
+      "mcp__scope__get_scop_chain_hits",
+      "mcp__scope__get_scop_domains",
+      "mcp__scope__get_scop_node",
+      "mcp__scope__get_scop_pdb_entry",
+      "mcp__scope__get_scop_sequence",
+      "mcp__scope__get_scop_service_info",
+      "mcp__scope__list_scop_children",
+      "mcp__scope__resolve_scop_identifier",
+      "mcp__scope__search_scop"
+    ],
+    "transport": "stdio"
+  },
+  "model": {
+    "name": "claude-haiku-5-5",
+    "parameters": {
+      "builtin_tools": "Read,Glob,Grep",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 3
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-haiku-5-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-12_claude-haiku-5-5_pretrained_mcp_skill_r3",
+  "skill": {
+    "commit": "991f3ebb722e0d8a138b5ebaca2f98520a37ef28",
+    "content_sha256": "fd2363d8499df5384773678d502a86b8f5dc6d4c41704e5150b0e4c333d09b50",
+    "path": "skills/scop-homology",
+    "repository": "git@github.com:jmchandonia/scop.git"
+  },
+  "started_at": "2026-10-12T23:58:09Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 502773,
+    "cache_read_input_tokens": 3544753,
+    "input_tokens": 244,
+    "output_tokens": 178499,
+    "session_seconds": 983.9,
+    "tool_calls": 242,
+    "total_cost_usd": 0.2775
+  }
+}

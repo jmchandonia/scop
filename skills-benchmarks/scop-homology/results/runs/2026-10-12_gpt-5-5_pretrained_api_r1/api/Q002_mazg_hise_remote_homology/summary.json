@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q002_mazg_hise_remote_homology",
+  "request_count": 21,
+  "response_body_count": 21,
+  "successful_response_count": 20,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

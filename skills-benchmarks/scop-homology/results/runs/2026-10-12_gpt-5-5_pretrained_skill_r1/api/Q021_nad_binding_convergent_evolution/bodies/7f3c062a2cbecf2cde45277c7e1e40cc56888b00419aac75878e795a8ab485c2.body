@@ -1,0 +1,1 @@
+{"node":{"sunid":82524,"sid":null,"sccs":"c.77.1.1","description":"NADP-dependent isocitrate dehydrogenase","level":{"code":"dm","name":"Protein","plural":"Proteins"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/82524","canonical_url":"/?sunid=82524&ver=2.08","parent":{"sunid":53660,"sid":null,"sccs":"c.77.1.1","api_url":"/api/v1/releases/2.08/sunids/53660"}}}

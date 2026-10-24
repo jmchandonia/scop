@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["run_id", "question_id", "score", "rubric_notes", "evaluator", "timestamp"],
+  "properties": {
+    "run_id": {"type": "string"},
+    "question_id": {"type": "string", "pattern": "^AFQ[0-9]{3}(?:_[a-z0-9_]+)?$"},
+    "score": {"type": "integer", "minimum": 0, "maximum": 4},
+    "criterion_scores": {
+      "type": "object", "additionalProperties": false,
+      "required": ["task_resolution", "scientific_correctness", "evidence_completeness", "calibration_and_caveats"],
+      "properties": {
+        "task_resolution": {"type": "integer", "minimum": 0, "maximum": 4},
+        "scientific_correctness": {"type": "integer", "minimum": 0, "maximum": 4},
+        "evidence_completeness": {"type": "integer", "minimum": 0, "maximum": 4},
+        "calibration_and_caveats": {"type": "integer", "minimum": 0, "maximum": 4}
+      }
+    },
+    "applied_penalties": {"type": "array", "items": {"type": "string", "minLength": 1}},
+    "rubric_notes": {"type": "string"},
+    "evaluator": {"type": "string"},
+    "timestamp": {"type": "string", "format": "date-time"}
+  }
+}

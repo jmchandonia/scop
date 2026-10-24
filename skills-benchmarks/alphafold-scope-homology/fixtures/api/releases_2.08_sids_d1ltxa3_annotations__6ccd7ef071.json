@@ -1,0 +1,36 @@
+{
+  "comments": [
+    {
+      "description": "complexed with cl, far, zn"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/84713",
+    "canonical_url": "/?sunid=84713&ver=2.08",
+    "description": "1ltx A:444-567",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/52064",
+      "sccs": "c.10.2.2",
+      "sid": null,
+      "sunid": 52064
+    },
+    "release": "2.08",
+    "sccs": "c.10.2.2",
+    "sid": "d1ltxa3",
+    "sunid": 84713
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

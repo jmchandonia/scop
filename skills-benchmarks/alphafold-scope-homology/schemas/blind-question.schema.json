@@ -1,0 +1,14 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "category", "difficulty", "model", "release", "prompt"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^AFQ[0-9]{3}(?:_[a-z0-9_]+)?$"},
+    "category": {"type": "string"},
+    "difficulty": {"type": "string"},
+    "model": {"type": "string"},
+    "release": {"type": "string"},
+    "prompt": {"type": "string"}
+  }
+}

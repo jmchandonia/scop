@@ -1,0 +1,1918 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 161,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 109,
+        "start": 262
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6snja_",
+        "comment": "automated match to d2lcwa_",
+        "description": "6snj A:",
+        "header": "d.58.7.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d6snja_",
+        "sunid": 395579
+      },
+      "domain_range": {
+        "end": 111,
+        "length": 109,
+        "start": 3
+      },
+      "kind": "sequence",
+      "log10_evalue": -58.25932762605813,
+      "percent_identity": 33.181126331811264
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 93,
+        "start": 278
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2lcwa_",
+        "comment": "automated match to d2cpea1",
+        "description": "2lcw A:",
+        "header": "d.58.7.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2lcwa_",
+        "sunid": 242846
+      },
+      "domain_range": {
+        "end": 93,
+        "length": 93,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -47.79786571453977,
+      "percent_identity": 29.33753943217666
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 89,
+        "start": 282
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2la6a1",
+        "comment": "automated match to d2cpea1",
+        "description": "2la6 A:11-99",
+        "header": "d.58.7.0 (A:11-99) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2la6a1",
+        "sunid": 242822
+      },
+      "domain_range": {
+        "end": 89,
+        "length": 89,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -45.388142065644075,
+      "percent_identity": 28.943089430894307
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 89,
+        "start": 282
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2mmya1",
+        "comment": "automated match to d2cpea1",
+        "description": "2mmy A:231-323",
+        "header": "d.58.7.0 (A:231-323) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2mmya1",
+        "sunid": 270275
+      },
+      "domain_range": {
+        "end": 89,
+        "length": 89,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -37.04288858961535,
+      "percent_identity": 24.232633279483036
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 90,
+        "start": 280
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2cpea1",
+        "comment": null,
+        "description": "2cpe A:353-453",
+        "header": "d.58.7.1 (A:353-453) RNA-binding protein EWS {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2cpea1",
+        "sunid": 130698
+      },
+      "domain_range": {
+        "end": 93,
+        "length": 90,
+        "start": 4
+      },
+      "kind": "sequence",
+      "log10_evalue": -29.55643888057014,
+      "percent_identity": 17.543859649122805
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2j0qd1",
+        "comment": "automatically matched to d1p27b_",
+        "description": "2j0q D:66-154",
+        "header": "d.58.7.1 (D:66-154) RNA-binding protein 8 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2j0qd1",
+        "sunid": 137909
+      },
+      "domain_range": {
+        "end": 83,
+        "length": 74,
+        "start": 10
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.201923635943537,
+      "percent_identity": 9.43089430894309
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2j0qg1",
+        "comment": "automatically matched to d1p27b_",
+        "description": "2j0q G:66-154",
+        "header": "d.58.7.1 (G:66-154) RNA-binding protein 8 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2j0qg1",
+        "sunid": 137911
+      },
+      "domain_range": {
+        "end": 83,
+        "length": 74,
+        "start": 10
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.201923635943537,
+      "percent_identity": 9.43089430894309
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2j0sd1",
+        "comment": "automatically matched to d1p27b_",
+        "description": "2j0s D:66-154",
+        "header": "d.58.7.1 (D:66-154) RNA-binding protein 8 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2j0sd1",
+        "sunid": 137916
+      },
+      "domain_range": {
+        "end": 83,
+        "length": 74,
+        "start": 10
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.201923635943537,
+      "percent_identity": 9.43089430894309
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2j0sd_",
+        "comment": "automated match to d1p27b_",
+        "description": "2j0s D:",
+        "header": "d.58.7.1 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2j0sd_",
+        "sunid": 137916
+      },
+      "domain_range": {
+        "end": 83,
+        "length": 74,
+        "start": 10
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.201923635943537,
+      "percent_identity": 9.43089430894309
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2hyib1",
+        "comment": "automatically matched to d1p27b_",
+        "description": "2hyi B:64-154",
+        "header": "d.58.7.1 (B:64-154) RNA-binding protein 8 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2hyib1",
+        "sunid": 136891
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 74,
+        "start": 12
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.107708876756288,
+      "percent_identity": 9.40032414910859
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2hyib_",
+        "comment": "automated match to d1p27b_",
+        "description": "2hyi B:",
+        "header": "d.58.7.1 (B:) RNA-binding protein 8 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2hyib_",
+        "sunid": 136891
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 74,
+        "start": 12
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.107708876756288,
+      "percent_identity": 9.40032414910859
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2hyih1",
+        "comment": "automatically matched to d1p27b_",
+        "description": "2hyi H:64-154",
+        "header": "d.58.7.1 (H:64-154) RNA-binding protein 8 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2hyih1",
+        "sunid": 136895
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 74,
+        "start": 12
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.107708876756288,
+      "percent_identity": 9.40032414910859
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2hyih_",
+        "comment": "automated match to d1p27b_",
+        "description": "2hyi H:",
+        "header": "d.58.7.1 (H:) RNA-binding protein 8 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2hyih_",
+        "sunid": 136895
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 74,
+        "start": 12
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.107708876756288,
+      "percent_identity": 9.40032414910859
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1p27b_",
+        "comment": null,
+        "description": "1p27 B:",
+        "header": "d.58.7.1 (B:) RNA-binding protein 8 {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1p27b_",
+        "sunid": 93908
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 74,
+        "start": 12
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.042483273977886,
+      "percent_identity": 9.385113268608414
+    },
+    {
+      "alphafold_range": {
+        "end": 368,
+        "length": 82,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1p27d_",
+        "comment": null,
+        "description": "1p27 D:",
+        "header": "d.58.7.1 (D:) RNA-binding protein 8 {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1p27d_",
+        "sunid": 93910
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 74,
+        "start": 12
+      },
+      "kind": "sequence",
+      "log10_evalue": -5.042483273977886,
+      "percent_identity": 9.385113268608414
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 84,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6q0vd1",
+        "comment": "automated match to d2mpua_",
+        "description": "6q0v D:250-327",
+        "header": "d.58.7.0 (D:250-327) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d6q0vd1",
+        "sunid": 376852
+      },
+      "domain_range": {
+        "end": 78,
+        "length": 76,
+        "start": 3
+      },
+      "kind": "sequence",
+      "log10_evalue": -4.368485381824394,
+      "percent_identity": 8.940397350993377
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 84,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6q0wd1",
+        "comment": "automated match to d2mpua_",
+        "description": "6q0w D:250-327",
+        "header": "d.58.7.0 (D:250-327) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d6q0wd1",
+        "sunid": 376881
+      },
+      "domain_range": {
+        "end": 78,
+        "length": 76,
+        "start": 3
+      },
+      "kind": "sequence",
+      "log10_evalue": -4.368485381824394,
+      "percent_identity": 8.940397350993377
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 84,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6q0rd1",
+        "comment": "automated match to d2mpua_",
+        "description": "6q0r D:250-329",
+        "header": "d.58.7.0 (D:250-329) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d6q0rd1",
+        "sunid": 376861
+      },
+      "domain_range": {
+        "end": 78,
+        "length": 76,
+        "start": 3
+      },
+      "kind": "sequence",
+      "log10_evalue": -4.296012490047447,
+      "percent_identity": 8.91089108910891
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 84,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6paid_",
+        "comment": "automated match to d2erra1",
+        "description": "6pai D:",
+        "header": "d.58.7.0 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d6paid_",
+        "sunid": 374512
+      },
+      "domain_range": {
+        "end": 80,
+        "length": 76,
+        "start": 5
+      },
+      "kind": "sequence",
+      "log10_evalue": -4.270646977965136,
+      "percent_identity": 8.91089108910891
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 84,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6ud7c_",
+        "comment": "automated match to d2x1ba_",
+        "description": "6ud7 C:",
+        "header": "d.58.7.0 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d6ud7c_",
+        "sunid": 378497
+      },
+      "domain_range": {
+        "end": 80,
+        "length": 76,
+        "start": 5
+      },
+      "kind": "sequence",
+      "log10_evalue": -4.216292308851937,
+      "percent_identity": 8.896210873146623
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 84,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6ue5c_",
+        "comment": "automated match to d2x1ba_",
+        "description": "6ue5 C:",
+        "header": "d.58.7.0 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d6ue5c_",
+        "sunid": 378487
+      },
+      "domain_range": {
+        "end": 80,
+        "length": 76,
+        "start": 5
+      },
+      "kind": "sequence",
+      "log10_evalue": -4.216292308851937,
+      "percent_identity": 8.896210873146623
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 86,
+        "start": 284
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2fc8a1",
+        "comment": "automated match to d1oo0b_",
+        "description": "2fc8 A:8-96",
+        "header": "d.58.7.0 (A:8-96) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2fc8a1",
+        "sunid": 241827
+      },
+      "domain_range": {
+        "end": 82,
+        "length": 75,
+        "start": 8
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.455326947175381,
+      "percent_identity": 9.105691056910569
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 84,
+        "start": 286
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6q2ia_",
+        "comment": "automated match to d1p1ta_",
+        "description": "6q2i A:",
+        "header": "d.58.7.1 (A:) Cleavage stimulation factor, 64 kda subunit {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d6q2ia_",
+        "sunid": 391243
+      },
+      "domain_range": {
+        "end": 92,
+        "length": 76,
+        "start": 17
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.9552639969567327,
+      "percent_identity": 8.227848101265822
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 83,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4egla2",
+        "comment": "automated match to d1fxla2",
+        "description": "4egl A:100-184",
+        "header": "d.58.7.0 (A:100-184) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d4egla2",
+        "sunid": 234389
+      },
+      "domain_range": {
+        "end": 83,
+        "length": 75,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.857425591350495,
+      "percent_identity": 8.538587848932677
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 84,
+        "start": 286
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1p1ta_",
+        "comment": "N-terminal RBD",
+        "description": "1p1t A:",
+        "header": "d.58.7.1 (A:) Cleavage stimulation factor, 64 kda subunit {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1p1ta_",
+        "sunid": 93899
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 76,
+        "start": 10
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.853801946185323,
+      "percent_identity": 8.253968253968253
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ha1_2",
+        "comment": null,
+        "description": "1ha1 99-180",
+        "header": "d.58.7.1 (99-180) Nuclear ribonucleoprotein A1, RNP A1, UP1 {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1ha1_2",
+        "sunid": 39148
+      },
+      "domain_range": {
+        "end": 59,
+        "length": 52,
+        "start": 8
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.6798670068282693,
+      "percent_identity": 7.894736842105263
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ha1a2",
+        "comment": null,
+        "description": "1ha1 A:99-180",
+        "header": "d.58.7.1 (A:99-180) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1ha1a2",
+        "sunid": 39148
+      },
+      "domain_range": {
+        "end": 59,
+        "length": 52,
+        "start": 8
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.6798670068282693,
+      "percent_identity": 7.894736842105263
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1up1_2",
+        "comment": null,
+        "description": "1up1 99-182",
+        "header": "d.58.7.1 (99-182) Nuclear ribonucleoprotein A1, RNP A1, UP1 {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1up1_2",
+        "sunid": 39150
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.611017758602161,
+      "percent_identity": 7.868852459016394
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1up1a2",
+        "comment": null,
+        "description": "1up1 A:99-182",
+        "header": "d.58.7.1 (A:99-182) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1up1a2",
+        "sunid": 39150
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.611017758602161,
+      "percent_identity": 7.868852459016394
+    },
+    {
+      "alphafold_range": {
+        "end": 366,
+        "length": 79,
+        "start": 288
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4c7qa1",
+        "comment": "automated match to d2cqba1",
+        "description": "4c7q A:1-85",
+        "header": "d.58.7.0 (A:1-85) automated matches {Tobacco (Nicotiana tabacum) [TaxId: 4097]}",
+        "sccs": "d.58.7.0",
+        "sid": "d4c7qa1",
+        "sunid": 251346
+      },
+      "domain_range": {
+        "end": 79,
+        "length": 71,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.5747813135079944,
+      "percent_identity": 8.8379705400982
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1l3ka2",
+        "comment": null,
+        "description": "1l3k A:103-181",
+        "header": "d.58.7.1 (A:103-181) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1l3ka2",
+        "sunid": 73540
+      },
+      "domain_range": {
+        "end": 56,
+        "length": 52,
+        "start": 5
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.495061131957252,
+      "percent_identity": 7.933884297520661
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1pgza2",
+        "comment": "complexed with 6mi",
+        "description": "1pgz A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1pgza2",
+        "sunid": 94698
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1po6a2",
+        "comment": "complexed with 6mi",
+        "description": "1po6 A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1po6a2",
+        "sunid": 94965
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1ka2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1k A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1ka2",
+        "sunid": 197540
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1la2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1l A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1la2",
+        "sunid": 197542
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1ma2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1m A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1ma2",
+        "sunid": 197544
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1na2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1n A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1na2",
+        "sunid": 197546
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1oa2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1o A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1oa2",
+        "sunid": 197548
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1pa2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1p A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1pa2",
+        "sunid": 197550
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1qa2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1q A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1qa2",
+        "sunid": 197552
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u1ra2",
+        "comment": "protein/DNA complex; protein/RNA complex",
+        "description": "1u1r A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1 (RNP A1, UP1) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1u1ra2",
+        "sunid": 197554
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2up1a2",
+        "comment": null,
+        "description": "2up1 A:99-190",
+        "header": "d.58.7.1 (A:99-190) Nuclear ribonucleoprotein A1, RNP A1, UP1 {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d2up1a2",
+        "sunid": 39152
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.426211884793151,
+      "percent_identity": 7.766990291262135
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 84,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2dnza1",
+        "comment": "automated match to d1x5sa1",
+        "description": "2dnz A:231-312",
+        "header": "d.58.7.1 (A:231-312) RNA binding protein 23 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2dnza1",
+        "sunid": 241635
+      },
+      "domain_range": {
+        "end": 76,
+        "length": 76,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.3464917040704307,
+      "percent_identity": 7.894736842105263
+    },
+    {
+      "alphafold_range": {
+        "end": 346,
+        "length": 60,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2lyva2",
+        "comment": "automated match to d1u1qa2",
+        "description": "2lyv A:99-196",
+        "header": "d.58.7.1 (A:99-196) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2lyva2",
+        "sunid": 243048
+      },
+      "domain_range": {
+        "end": 60,
+        "length": 52,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.2377823667210794,
+      "percent_identity": 7.6923076923076925
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 84,
+        "start": 286
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6tzea_",
+        "comment": "automated match to d1p1ta_",
+        "description": "6tze A:",
+        "header": "d.58.7.1 (A:) Cleavage stimulation factor, 64 kda subunit {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d6tzea_",
+        "sunid": 392171
+      },
+      "domain_range": {
+        "end": 92,
+        "length": 76,
+        "start": 17
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.103707516770635,
+      "percent_identity": 7.898894154818326
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 47,
+        "start": 324
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2mksa1",
+        "comment": "automated match to d2cqia1",
+        "description": "2mks A:3-92",
+        "header": "d.58.7.0 (A:3-92) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2mksa1",
+        "sunid": 243195
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 47,
+        "start": 39
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.7956977279253614,
+      "percent_identity": 7.142857142857142
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 47,
+        "start": 324
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2mb0b_",
+        "comment": "automated match to d2mksa_",
+        "description": "2mb0 B:",
+        "header": "d.58.7.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2mb0b_",
+        "sunid": 264385
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 47,
+        "start": 39
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.7196011910662286,
+      "percent_identity": 7.085346215780998
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 83,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ed5b2",
+        "comment": "automated match to d1fxla2",
+        "description": "4ed5 B:100-186",
+        "header": "d.58.7.0 (B:100-186) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d4ed5b2",
+        "sunid": 234387
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 77,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.6217627886600905,
+      "percent_identity": 8.482871125611746
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 83,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fxla1",
+        "comment": null,
+        "description": "1fxl A:37-118",
+        "header": "d.58.7.1 (A:37-118) Hu antigen D (Hud) {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1fxla1",
+        "sunid": 39183
+      },
+      "domain_range": {
+        "end": 79,
+        "length": 75,
+        "start": 5
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.527548029095926,
+      "percent_identity": 8.881578947368421
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 83,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1g2ea1",
+        "comment": null,
+        "description": "1g2e A:37-118",
+        "header": "d.58.7.1 (A:37-118) Hu antigen D (Hud) {Human (Homo sapiens)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1g2ea1",
+        "sunid": 39185
+      },
+      "domain_range": {
+        "end": 79,
+        "length": 75,
+        "start": 5
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.527548029095926,
+      "percent_identity": 8.881578947368421
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 83,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fnxh1",
+        "comment": "protein/RNA complex",
+        "description": "1fnx H:36-120",
+        "header": "d.58.7.1 (H:36-120) Hu antigen C (Huc) {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1fnxh1",
+        "sunid": 83253
+      },
+      "domain_range": {
+        "end": 80,
+        "length": 75,
+        "start": 6
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.509429805783002,
+      "percent_identity": 8.51063829787234
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 83,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1d8za_",
+        "comment": null,
+        "description": "1d8z A:",
+        "header": "d.58.7.1 (A:) Hu antigen C (Huc) {Mouse (Mus musculus)}",
+        "sccs": "d.58.7.1",
+        "sid": "d1d8za_",
+        "sunid": 39181
+      },
+      "domain_range": {
+        "end": 81,
+        "length": 75,
+        "start": 7
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.502182516506645,
+      "percent_identity": 8.455284552845528
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 83,
+        "start": 287
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ed5a2",
+        "comment": "automated match to d1fxla2",
+        "description": "4ed5 A:100-185",
+        "header": "d.58.7.0 (A:100-185) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d4ed5a2",
+        "sunid": 234388
+      },
+      "domain_range": {
+        "end": 85,
+        "length": 77,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.4442042025844266,
+      "percent_identity": 8.49673202614379
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 93,
+        "start": 278
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2dh7a1",
+        "comment": "automated match to d1wf2a_",
+        "description": "2dh7 A:89-180",
+        "header": "d.58.7.1 (A:89-180) Nucleolysin TIAR {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d2dh7a1",
+        "sunid": 241564
+      },
+      "domain_range": {
+        "end": 86,
+        "length": 85,
+        "start": 2
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.1651835698729318,
+      "percent_identity": 8.737864077669903
+    },
+    {
+      "alphafold_range": {
+        "end": 366,
+        "length": 85,
+        "start": 282
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5tbxb1",
+        "comment": "automated match to d2mb0b_",
+        "description": "5tbx B:2-92",
+        "header": "d.58.7.0 (B:2-92) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d5tbxb1",
+        "sunid": 332990
+      },
+      "domain_range": {
+        "end": 79,
+        "length": 77,
+        "start": 3
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.1651835698729318,
+      "percent_identity": 8.103727714748784
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 93,
+        "start": 278
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2dgoa1",
+        "comment": "automated match to d2dgua_",
+        "description": "2dgo A:70-171",
+        "header": "d.58.7.0 (A:70-171) automated matches {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2dgoa1",
+        "sunid": 264253
+      },
+      "domain_range": {
+        "end": 86,
+        "length": 85,
+        "start": 2
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.125323479376565,
+      "percent_identity": 8.598726114649681
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 93,
+        "start": 278
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2rnea1",
+        "comment": "automated match to d2dgua_",
+        "description": "2rne A:89-190",
+        "header": "d.58.7.0 (A:89-190) automated matches {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2rnea1",
+        "sunid": 264505
+      },
+      "domain_range": {
+        "end": 86,
+        "length": 85,
+        "start": 2
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.125323479376565,
+      "percent_identity": 8.598726114649681
+    },
+    {
+      "alphafold_range": {
+        "end": 366,
+        "length": 85,
+        "start": 282
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1x5sa1",
+        "comment": null,
+        "description": "1x5s A:8-96",
+        "header": "d.58.7.1 (A:8-96) Cold-inducible RNA-binding protein {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1x5sa1",
+        "sunid": 121719
+      },
+      "domain_range": {
+        "end": 79,
+        "length": 77,
+        "start": 3
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.0673451661872146,
+      "percent_identity": 8.130081300813007
+    },
+    {
+      "alphafold_range": {
+        "end": 369,
+        "length": 87,
+        "start": 283
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3md3a2",
+        "comment": "automated match to d1cvja1",
+        "description": "3md3 A:160-240",
+        "header": "d.58.7.0 (A:160-240) automated matches {Baker's yeast (Saccharomyces cerevisiae) [TaxId: 4932]}",
+        "sccs": "d.58.7.0",
+        "sid": "d3md3a2",
+        "sunid": 265067
+      },
+      "domain_range": {
+        "end": 79,
+        "length": 79,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.0347323646200355,
+      "percent_identity": 8.237232289950576
+    }
+  ],
+  "structure_hits": [
+    {
+      "alphafold_range": {
+        "end": 375,
+        "length": 97,
+        "start": 279
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2lcwa_",
+        "comment": "automated match to d2cpea1",
+        "description": "2lcw A:",
+        "header": "d.58.7.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2lcwa_",
+        "sunid": 242846
+      },
+      "domain_range": {
+        "end": 375,
+        "length": 97,
+        "start": 279
+      },
+      "identity": 100,
+      "kind": "structure",
+      "p_value": 0.0041,
+      "rmsd": 3.1,
+      "score": 252.7,
+      "similarity": 100,
+      "transform": [
+        [
+          0.666,
+          0.688,
+          -0.287,
+          -114.596
+        ],
+        [
+          -0.408,
+          0.659,
+          0.631,
+          67.512
+        ],
+        [
+          0.624,
+          -0.303,
+          0.72,
+          -99.176
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 371,
+        "length": 93,
+        "start": 279
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hl6a_",
+        "comment": null,
+        "description": "1hl6 A:",
+        "header": "d.58.7.1 (A:) RNA-binding protein 8 {Fruit fly (Drosophila melanogaster) [TaxId: 7227]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1hl6a_",
+        "sunid": 83609
+      },
+      "domain_range": {
+        "end": 151,
+        "length": 88,
+        "start": 64
+      },
+      "identity": 26.04,
+      "kind": "structure",
+      "p_value": 0.00412,
+      "rmsd": 2.45,
+      "score": 214.94,
+      "similarity": 39.58,
+      "transform": [
+        [
+          0.254,
+          -0.939,
+          -0.232,
+          44.481
+        ],
+        [
+          0.88,
+          0.324,
+          -0.348,
+          -46.753
+        ],
+        [
+          0.402,
+          -0.116,
+          0.908,
+          -53.697
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 86,
+        "start": 285
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2dnpa1",
+        "comment": "automated match to d1wf2a_",
+        "description": "2dnp A:77-153",
+        "header": "d.58.7.0 (A:77-153) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2dnpa1",
+        "sunid": 241630
+      },
+      "domain_range": {
+        "end": 148,
+        "length": 70,
+        "start": 79
+      },
+      "identity": 23.26,
+      "kind": "structure",
+      "p_value": 0.00656,
+      "rmsd": 2.33,
+      "score": 168.41,
+      "similarity": 36.05,
+      "transform": [
+        [
+          -0.871,
+          -0.453,
+          0.19,
+          -8.613
+        ],
+        [
+          -0.482,
+          0.863,
+          -0.153,
+          -1.11
+        ],
+        [
+          -0.095,
+          -0.225,
+          -0.97,
+          0.835
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 376,
+        "length": 103,
+        "start": 274
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1n54b_",
+        "comment": "protein/RNA complex; complexed with gol",
+        "description": "1n54 B:",
+        "header": "d.58.7.1 (B:) CBP20, 20KDa nuclear cap-binding protein {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1n54b_",
+        "sunid": 80006
+      },
+      "domain_range": {
+        "end": 123,
+        "length": 95,
+        "start": 29
+      },
+      "identity": 17.48,
+      "kind": "structure",
+      "p_value": 0.0102,
+      "rmsd": 1.27,
+      "score": 227.47,
+      "similarity": 34.95,
+      "transform": [
+        [
+          -0.097,
+          -0.067,
+          -0.993,
+          6.748
+        ],
+        [
+          -0.942,
+          0.329,
+          0.07,
+          -21.224
+        ],
+        [
+          0.322,
+          0.942,
+          -0.095,
+          -25.984
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 376,
+        "length": 103,
+        "start": 274
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1h2ux_",
+        "comment": "protein/RNA complex; complexed with 7mg, gdp",
+        "description": "1h2u X:",
+        "header": "d.58.7.1 (X:) CBP20, 20KDa nuclear cap-binding protein {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d1h2ux_",
+        "sunid": 76590
+      },
+      "domain_range": {
+        "end": 123,
+        "length": 95,
+        "start": 29
+      },
+      "identity": 17.48,
+      "kind": "structure",
+      "p_value": 0.0139,
+      "rmsd": 1.31,
+      "score": 229.24,
+      "similarity": 34.95,
+      "transform": [
+        [
+          0.114,
+          -0.971,
+          -0.212,
+          -18.997
+        ],
+        [
+          0.924,
+          0.026,
+          0.38,
+          -99.646
+        ],
+        [
+          -0.364,
+          -0.239,
+          0.9,
+          8.245
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 381,
+        "length": 103,
+        "start": 279
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3lqvb_",
+        "comment": "automated match to d2f9da1",
+        "description": "3lqv B:",
+        "header": "d.58.7.1 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.1",
+        "sid": "d3lqvb_",
+        "sunid": 180520
+      },
+      "domain_range": {
+        "end": 108,
+        "length": 96,
+        "start": 13
+      },
+      "identity": 20.56,
+      "kind": "structure",
+      "p_value": 0.0245,
+      "rmsd": 1.96,
+      "score": 197.84,
+      "similarity": 35.51,
+      "transform": [
+        [
+          0.456,
+          -0.815,
+          0.358,
+          0.821
+        ],
+        [
+          -0.871,
+          -0.491,
+          -0.007,
+          15.372
+        ],
+        [
+          0.181,
+          -0.309,
+          -0.934,
+          45.098
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 373,
+        "length": 94,
+        "start": 280
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2mqma_",
+        "comment": "automated match to d2e5ia_",
+        "description": "2mqm A:",
+        "header": "d.58.7.0 (A:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "d.58.7.0",
+        "sid": "d2mqma_",
+        "sunid": 272200
+      },
+      "domain_range": {
+        "end": 269,
+        "length": 85,
+        "start": 185
+      },
+      "identity": 15.31,
+      "kind": "structure",
+      "p_value": 0.0397,
+      "rmsd": 3.59,
+      "score": 173.32,
+      "similarity": 32.65,
+      "transform": [
+        [
+          -0.132,
+          -0.889,
+          0.439,
+          8.628
+        ],
+        [
+          0.332,
+          0.378,
+          0.864,
+          11.83
+        ],
+        [
+          -0.934,
+          0.26,
+          0.245,
+          42.958
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 87,
+        "start": 284
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1jmta_",
+        "comment": "heterodimer with a fragment U2AF65 subunit; chain B",
+        "description": "1jmt A:",
+        "header": "d.58.7.3 (A:) U2AF35 (35 KDa subunit) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.58.7.3",
+        "sid": "d1jmta_",
+        "sunid": 63180
+      },
+      "domain_range": {
+        "end": 146,
+        "length": 104,
+        "start": 43
+      },
+      "identity": 14.95,
+      "kind": "structure",
+      "p_value": 0.0418,
+      "rmsd": 1.56,
+      "score": 147.76,
+      "similarity": 29.91,
+      "transform": [
+        [
+          -0.846,
+          0.456,
+          0.276,
+          -18.542
+        ],
+        [
+          -0.483,
+          -0.875,
+          -0.034,
+          16.647
+        ],
+        [
+          0.226,
+          -0.162,
+          0.961,
+          -20.263
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 370,
+        "length": 94,
+        "start": 277
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3tp2a2",
+        "comment": "automated match to d3u1ma2",
+        "description": "3tp2 A:127-227",
+        "header": "d.58.7.1 (A:127-227) Pre-mRNA splicing factor Cwc2 / Cwf2 / Prp3, RRM domain {Baker's yeast (Saccharomyces cerevisiae) [TaxId: 559292]}",
+        "sccs": "d.58.7.1",
+        "sid": "d3tp2a2",
+        "sunid": 345006
+      },
+      "domain_range": {
+        "end": 227,
+        "length": 101,
+        "start": 127
+      },
+      "identity": 13.91,
+      "kind": "structure",
+      "p_value": 0.043,
+      "rmsd": 1.68,
+      "score": 154.91,
+      "similarity": 24.35,
+      "transform": [
+        [
+          -0.035,
+          -0.937,
+          -0.348,
+          36.759
+        ],
+        [
+          -0.652,
+          0.285,
+          -0.703,
+          36.179
+        ],
+        [
+          0.758,
+          0.203,
+          -0.62,
+          -15.879
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-P35637-F1",
+    "kind": "alphafold",
+    "name": "AF-P35637-F1",
+    "uniprot_accession": "P35637",
+    "description": "RNA-binding protein FUS",
+    "global_plddt": 53.98,
+    "sequence_length": 526
+  }
+}

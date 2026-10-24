@@ -1,0 +1,1 @@
+{"type":"about:blank","title":"stable_snapshot_not_available","status":422,"detail":"stable-only API views are not implemented yet; request the stable version without -stable to get the current public periodic update"}

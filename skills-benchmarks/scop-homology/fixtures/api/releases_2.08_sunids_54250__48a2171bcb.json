@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/54250",
+    "canonical_url": "/?sunid=54250&ver=2.08",
+    "description": "UBX domain",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/54236",
+      "sccs": "d.15.1",
+      "sid": null,
+      "sunid": 54236
+    },
+    "release": "2.08",
+    "sccs": "d.15.1.2",
+    "sid": null,
+    "sunid": 54250
+  }
+}

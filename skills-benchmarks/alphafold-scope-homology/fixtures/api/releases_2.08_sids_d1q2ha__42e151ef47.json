@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/104498",
+    "canonical_url": "/?sunid=104498&ver=2.08",
+    "description": "1q2h A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/109808",
+      "sccs": "a.34.4.1",
+      "sid": null,
+      "sunid": 109808
+    },
+    "release": "2.08",
+    "sccs": "a.34.4.1",
+    "sid": "d1q2ha_",
+    "sunid": 104498
+  }
+}

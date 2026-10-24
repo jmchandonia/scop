@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/53089",
+    "canonical_url": "/?sunid=53089&ver=2.08",
+    "description": "Glycerol kinase",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/53067",
+      "sccs": "c.55.1",
+      "sid": null,
+      "sunid": 53067
+    },
+    "release": "2.08",
+    "sccs": "c.55.1.4",
+    "sid": null,
+    "sunid": 53089
+  }
+}

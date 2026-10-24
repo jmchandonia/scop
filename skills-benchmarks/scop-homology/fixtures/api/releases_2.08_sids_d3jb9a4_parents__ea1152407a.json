@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "canonical_url": "/?sunid=46456&ver=2.08",
+      "description": "All alpha proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47363",
+      "canonical_url": "/?sunid=47363&ver=2.08",
+      "description": "Bromodomain-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46456",
+        "sccs": "a",
+        "sid": null,
+        "sunid": 46456
+      },
+      "release": "2.08",
+      "sccs": "a.29",
+      "sid": null,
+      "sunid": 47363
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47370",
+      "canonical_url": "/?sunid=47370&ver=2.08",
+      "description": "Bromodomain",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47363",
+        "sccs": "a.29",
+        "sid": null,
+        "sunid": 47363
+      },
+      "release": "2.08",
+      "sccs": "a.29.2",
+      "sid": null,
+      "sunid": 47370
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47371",
+      "canonical_url": "/?sunid=47371&ver=2.08",
+      "description": "Bromodomain",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47370",
+        "sccs": "a.29.2",
+        "sid": null,
+        "sunid": 47370
+      },
+      "release": "2.08",
+      "sccs": "a.29.2.1",
+      "sid": null,
+      "sunid": 47371
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/346022",
+      "canonical_url": "/?sunid=346022&ver=2.08",
+      "description": "Pre-mRNA splicing factor 8, Prp8 / Spp42",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47371",
+        "sccs": "a.29.2.1",
+        "sid": null,
+        "sunid": 47371
+      },
+      "release": "2.08",
+      "sccs": "a.29.2.1",
+      "sid": null,
+      "sunid": 346022
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/346175",
+      "canonical_url": "/?sunid=346175&ver=2.08",
+      "description": "Schizosaccharomyces pombe 972h- [TaxId: 284812]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/346022",
+        "sccs": "a.29.2.1",
+        "sid": null,
+        "sunid": 346022
+      },
+      "release": "2.08",
+      "sccs": "a.29.2.1",
+      "sid": null,
+      "sunid": 346175
+    }
+  ],
+  "release": "2.08",
+  "sunid": 344795
+}

@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "canonical_url": "/?sunid=46456&ver=2.08",
+      "description": "All alpha proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47143",
+      "canonical_url": "/?sunid=47143&ver=2.08",
+      "description": "Open three-helical up-and-down bundle",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46456",
+        "sccs": "a",
+        "sid": null,
+        "sunid": 46456
+      },
+      "release": "2.08",
+      "sccs": "a.23",
+      "sid": null,
+      "sunid": 47143
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/158388",
+      "canonical_url": "/?sunid=158388&ver=2.08",
+      "description": "YvfG-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47143",
+        "sccs": "a.23",
+        "sid": null,
+        "sunid": 47143
+      },
+      "release": "2.08",
+      "sccs": "a.23.7",
+      "sid": null,
+      "sunid": 158388
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/158389",
+      "canonical_url": "/?sunid=158389&ver=2.08",
+      "description": "YvfG-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/158388",
+        "sccs": "a.23.7",
+        "sid": null,
+        "sunid": 158388
+      },
+      "release": "2.08",
+      "sccs": "a.23.7.1",
+      "sid": null,
+      "sunid": 158389
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/158390",
+      "canonical_url": "/?sunid=158390&ver=2.08",
+      "description": "Hypothetical protein YvfG",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/158389",
+        "sccs": "a.23.7.1",
+        "sid": null,
+        "sunid": 158389
+      },
+      "release": "2.08",
+      "sccs": "a.23.7.1",
+      "sid": null,
+      "sunid": 158390
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/158391",
+      "canonical_url": "/?sunid=158391&ver=2.08",
+      "description": "Bacillus subtilis [TaxId: 1423]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/158390",
+        "sccs": "a.23.7.1",
+        "sid": null,
+        "sunid": 158390
+      },
+      "release": "2.08",
+      "sccs": "a.23.7.1",
+      "sid": null,
+      "sunid": 158391
+    }
+  ],
+  "release": "2.08",
+  "sunid": 148189
+}

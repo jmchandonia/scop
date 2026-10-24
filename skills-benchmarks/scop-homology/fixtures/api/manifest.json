@@ -1,0 +1,543 @@
+{
+  "base_url": "https://scop.berkeley.edu",
+  "benchmark_id": "scop-homology",
+  "entries": [
+    {
+      "content_type": "application/json",
+      "file": "releases_1.69_sids_d1f8ya__parents__094e4d05d2.json",
+      "path": "/api/v1/releases/1.69/sids/d1f8ya_/parents",
+      "sha256": "b3236eab8e7cb33cee200ad642fac4484b37737252677838d5134b46c6e785c0",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_1.69_sids_d1t1ja__parents__b1c1150320.json",
+      "path": "/api/v1/releases/1.69/sids/d1t1ja_/parents",
+      "sha256": "91c1bdadf48c197be1b6d7cbdb410d3f7577bc60e6180c969afa9e9dcd359a24",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_1.75_pdb_1acc_domains__55ad635f7b.json",
+      "path": "/api/v1/releases/1.75/pdb/1acc/domains",
+      "sha256": "4bfaccc3028da60d5dc5734662939349debabebbde19df56802e2d571ca2d694",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_1.75_sids_d1acca__parents__1a81c38004.json",
+      "path": "/api/v1/releases/1.75/sids/d1acca_/parents",
+      "sha256": "d17d14469611903bbd741a7375f61b5ad16ff2aeb19245782e6a4fd0a997d9b5",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.04_pdb_1acc_domains__3bb72ecd41.json",
+      "path": "/api/v1/releases/2.04/pdb/1acc/domains",
+      "sha256": "d35a42ae41b03c0c060358c9328fe6f3cdbb60878e48559b0081da501c11eed1",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.04_sids_d1acca1_parents__f66e8a3088.json",
+      "path": "/api/v1/releases/2.04/sids/d1acca1/parents",
+      "sha256": "962e2829b93009e1113464c1d8fd01a31497f16e09f3f7b1ebc9fd44231e3ddf",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.04_sids_d1acca2_parents__c7c0f2a798.json",
+      "path": "/api/v1/releases/2.04/sids/d1acca2/parents",
+      "sha256": "fb0a6e985460745ea507d215eace10b3627f935e91c1592da4ca7206187e4be8",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.04_sids_d1dlca1_parents__bb2e37f3b8.json",
+      "path": "/api/v1/releases/2.04/sids/d1dlca1/parents",
+      "sha256": "e9435ffaa55e7a55bcda7ecb50d65f0a6ba9a03d138cfd60391d3293010443fa",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.04_sids_d1nqda__parents__f36201c58e.json",
+      "path": "/api/v1/releases/2.04/sids/d1nqda_/parents",
+      "sha256": "aee93d3134b35db4b5950d2493a524d3f912eabee07512284d7561b97843fd34",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_pdb_1a14_domains__79b6ceeb6d.json",
+      "path": "/api/v1/releases/2.08/pdb/1a14/domains",
+      "sha256": "ee53a4376bd990c16b7723dcdb2328ade44c049817e7091a0e85e8c56513b4ec",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_pdb_1acc_domains__94fc849582.json",
+      "path": "/api/v1/releases/2.08/pdb/1acc/domains",
+      "sha256": "c0362a7e5e5b4493248804260f2f1cb4233a96c39e1892a74fda091b2d101dea",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_pdb_1br0_domains__42ca50e6be.json",
+      "path": "/api/v1/releases/2.08/pdb/1br0/domains",
+      "sha256": "e2c5ede67304f9bed669e69cb2a5016ae29a2bb2a72e53c25550494539b61512",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_pdb_1dn1_domains__8475a1aebe.json",
+      "path": "/api/v1/releases/2.08/pdb/1dn1/domains",
+      "sha256": "112c2fbb0accfc1a725f9a962cdbf3d4c6dbf81c20498286b31dc72692a7007a",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_pdb_1ez3_domains__438482dea0.json",
+      "path": "/api/v1/releases/2.08/pdb/1ez3/domains",
+      "sha256": "16031be1458bf4b101b75929ae8fae9b7c7af31be249285e7facbc1cab42eaa8",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_pdb_1t1j_domains__73a24578e7.json",
+      "path": "/api/v1/releases/2.08/pdb/1t1j/domains",
+      "sha256": "ffaf6fd23e369af0b2cccf001e4a4f3250b487bb609a97cb2fecf766d33882b4",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_pdb_3jb9_domains__4fa0058380.json",
+      "path": "/api/v1/releases/2.08/pdb/3jb9/domains",
+      "sha256": "c7967dca3663b5475c9b36b4a0ce00acf52458fb4dd36aaf5211d5fcd56b0e29",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sccs_a.22.1__477f3e18a8.json",
+      "path": "/api/v1/releases/2.08/sccs/a.22.1",
+      "sha256": "f9d32d36e0851ff72c64a29f38984be1c5ee93e04870247267abbe9e08d2708b",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sccs_b.84.5__072fa8cd78.json",
+      "path": "/api/v1/releases/2.08/sccs/b.84.5",
+      "sha256": "f9c0b1d7ceecfa3473d615805553165efd87c8e7827eb8853d32686a8ecaa397",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sccs_b.84.5_children_limit_50__cd123f16dd.json",
+      "path": "/api/v1/releases/2.08/sccs/b.84.5/children?limit=50",
+      "sha256": "6abb669adaddc6c5b8fcd70eb2780b6001631325d45fb4a49810ed3e90244614",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sccs_b.84_children_limit_20__d1ef2d590b.json",
+      "path": "/api/v1/releases/2.08/sccs/b.84/children?limit=20",
+      "sha256": "98dad97eb714e012ff050834086351342c72348f7e38ce198ac31ccb1e8e36d5",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sccs_f.21_children_limit_50__c8cd91e4ca.json",
+      "path": "/api/v1/releases/2.08/sccs/f.21/children?limit=50",
+      "sha256": "03394e73de633e34af57265f668af08b4bf320bed739029188d8315405a27dd5",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1a14h2_parents__1b16c9e7db.json",
+      "path": "/api/v1/releases/2.08/sids/d1a14h2/parents",
+      "sha256": "1fb763c0db96eba32ff5fe3ec14f932306bfc49547e3a76a59f408f116bb897d",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1br0a__parents__265d1aae4f.json",
+      "path": "/api/v1/releases/2.08/sids/d1br0a_/parents",
+      "sha256": "8bc289863aea68fb33b4de554cb57606b627f4a11a4cadad20d477a6e3cae75a",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1dlca1_parents__d08b5f7c0d.json",
+      "path": "/api/v1/releases/2.08/sids/d1dlca1/parents",
+      "sha256": "1142c60d7e182637fb44c1e473ac812a8f8f3803a65f6b29b0192826bd066576",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1dn1b__parents__738fc1a396.json",
+      "path": "/api/v1/releases/2.08/sids/d1dn1b_/parents",
+      "sha256": "296752de1633b93d6e4818aa077904fa0329ea7ae40d8ddb1b13d79071ebac6a",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1f8ya__parents__f6c8caed7e.json",
+      "path": "/api/v1/releases/2.08/sids/d1f8ya_/parents",
+      "sha256": "bf744117fd3752ebf5189efc123815ac1f69e6eaf66962c5b8dfbff7dd301351",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1hqja__parents__c55ace5121.json",
+      "path": "/api/v1/releases/2.08/sids/d1hqja_/parents",
+      "sha256": "29cf7675aa142182867ec28d97b54f97d9dc46720af8b9bd728b3d29fe789bd4",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1nqda__parents__9614c9e903.json",
+      "path": "/api/v1/releases/2.08/sids/d1nqda_/parents",
+      "sha256": "5c6b3e990c7b510f3d45edd4c57961cde7d525714de633d24ab0bb7841ad64ab",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1o5dt2_annotations__a6bbbc73e6.json",
+      "path": "/api/v1/releases/2.08/sids/d1o5dt2/annotations",
+      "sha256": "e7e85e3e84ea48c08d1b5aa14e16e4b6459c68430f480839537bd99c723357f8",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1o5dt2_parents__18eadc1dc7.json",
+      "path": "/api/v1/releases/2.08/sids/d1o5dt2/parents",
+      "sha256": "6e9b1e2a2aca0b4b141fd808f0d01341b0a6cc7b216fe6756db05372946bbc23",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1p7jd__parents__b89c9bd521.json",
+      "path": "/api/v1/releases/2.08/sids/d1p7jd_/parents",
+      "sha256": "a3ee6ce578bbb360453025009bb791979b88e08ea70c16abbb5b5840cf45ee22",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1s9za__parents__d22a61c9e5.json",
+      "path": "/api/v1/releases/2.08/sids/d1s9za_/parents",
+      "sha256": "c2b99f104fcb5a04c9196aad43de65581e8b92acf0e94ebda2599951d651d904",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1t1ja1_parents__484d2a272c.json",
+      "path": "/api/v1/releases/2.08/sids/d1t1ja1/parents",
+      "sha256": "134f15786f0a2c26c26219a5f42237160b4ea62926f8e0a125649913e8c0a56b",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1uc6a1_parents__8c20eaaa8f.json",
+      "path": "/api/v1/releases/2.08/sids/d1uc6a1/parents",
+      "sha256": "f65d6fc92eb68768fe3f7b405fdd1dd7d432910b9f13675c54b33ac3092111ad",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1vmga__parents__1c8d7d6ce7.json",
+      "path": "/api/v1/releases/2.08/sids/d1vmga_/parents",
+      "sha256": "630e2e239a973405472c02fa447db4c7eaf3c5059f120b1560ec2b088aab9b0d",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1y6xa1_parents__40604652f9.json",
+      "path": "/api/v1/releases/2.08/sids/d1y6xa1/parents",
+      "sha256": "82b4ac3b50646f3e46f2c6224c0765cc4914387219fdda9bb649a9309628e5a3",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1ztra1_annotations__cae0ad56e0.json",
+      "path": "/api/v1/releases/2.08/sids/d1ztra1/annotations",
+      "sha256": "2bfa0e9e67de55bc70fe8dc026aac366fb2bf148e6cd50b70f51ada407c91460",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1ztra1_homology__eda607d5bf.json",
+      "path": "/api/v1/releases/2.08/sids/d1ztra1/homology",
+      "sha256": "6bd41b27c87dc9fcce43b1556328c29dac7c26161b8f4b7e0b9dcff8fb29a4ef",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d1ztra1_parents__7b4ad3f990.json",
+      "path": "/api/v1/releases/2.08/sids/d1ztra1/parents",
+      "sha256": "b5c3ce68d99d87c72765310bd69f9536d9732a7745f918e446c976fa4f525205",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d2kq5a__annotations__44b232b005.json",
+      "path": "/api/v1/releases/2.08/sids/d2kq5a_/annotations",
+      "sha256": "598b7282d247fa394a3378784454d4838d9444ac1f999b35ad90e45406640270",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d2kq5a__homology__92d3a67104.json",
+      "path": "/api/v1/releases/2.08/sids/d2kq5a_/homology",
+      "sha256": "9a01a566417ba9201390eca59a76887880070968ba3bd263e8d9eb4dee3187fd",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d2kq5a__parents__7637af5113.json",
+      "path": "/api/v1/releases/2.08/sids/d2kq5a_/parents",
+      "sha256": "a8416a7474112b1d14c40223aff824672bc679c56c0cee6d82d1373c2856303d",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d3jb9a1_parents__9bffffce35.json",
+      "path": "/api/v1/releases/2.08/sids/d3jb9a1/parents",
+      "sha256": "2a775bb3045963212fd99c2ac97b4b770284c026918d81ce1f79074d1a2785b8",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d3jb9a2_parents__dd19dd6dcc.json",
+      "path": "/api/v1/releases/2.08/sids/d3jb9a2/parents",
+      "sha256": "dd8a62d08f3e77f122ec330990d4d820a69c83b65d76f80889d1710022962051",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d3jb9a3_parents__6e0d27eae9.json",
+      "path": "/api/v1/releases/2.08/sids/d3jb9a3/parents",
+      "sha256": "612f6bab67d7fd5e2b7e2a5433e105193e0f7429b9823aa139c50b9a880e85c7",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d3jb9a4_parents__ea1152407a.json",
+      "path": "/api/v1/releases/2.08/sids/d3jb9a4/parents",
+      "sha256": "9a0b7e125f2b7b3116f8e0e2c4485e8585a5c909b57715b0eb9055c198540070",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d3jb9a5_parents__86e2b5c39c.json",
+      "path": "/api/v1/releases/2.08/sids/d3jb9a5/parents",
+      "sha256": "b1cfb3c972751d8124f20c306e3aca0666445d514b931542464e78a7208299b9",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d3v6pa__homology__0bb8303d3b.json",
+      "path": "/api/v1/releases/2.08/sids/d3v6pa_/homology",
+      "sha256": "7b31e6ec61fc5cb9f26138d465d02db65d905e80b950040d3bf37e631116b14d",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d3v6pa__parents__ee2f590c1e.json",
+      "path": "/api/v1/releases/2.08/sids/d3v6pa_/parents",
+      "sha256": "50195218ef8eb1625173f7a29773557a0464a04152f19595736c4453ec75b136",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d4cj9a__homology__c8512c75b3.json",
+      "path": "/api/v1/releases/2.08/sids/d4cj9a_/homology",
+      "sha256": "098c8323670e3a3097c6c7f60cfad14b076a5978c507ddf82e5dd1c71d063d47",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sids_d4cj9a__parents__c618c9aed5.json",
+      "path": "/api/v1/releases/2.08/sids/d4cj9a_/parents",
+      "sha256": "7283e755022caff85b2d82e5fd524a3c2f0b0a57d986ca1462876b40e0fe4e2c",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_100905_annotations__e4147761f7.json",
+      "path": "/api/v1/releases/2.08/sunids/100905/annotations",
+      "sha256": "ed212946aa0ded2cef2f180a6ae1b224fd73114c5030b4c3cb038f76b6ab244d",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_100951__56fbde5825.json",
+      "path": "/api/v1/releases/2.08/sunids/100951",
+      "sha256": "e6b2cccb766388adedaa7e423e8effe0245f3e125f69eb364fe8923ca26d8e6b",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_110107__40cf314348.json",
+      "path": "/api/v1/releases/2.08/sunids/110107",
+      "sha256": "3e2db028bee82b88fc170ab6e396f6f992629ac33dc9f262d164b5a84db385c7",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_47113_children_limit_30__21f6b7d779.json",
+      "path": "/api/v1/releases/2.08/sunids/47113/children?limit=30",
+      "sha256": "40baef19319e76850b56cae0060cd4e4814d75896c87b58775c23a4e5fc82a7c",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_47241__c882495a9e.json",
+      "path": "/api/v1/releases/2.08/sunids/47241",
+      "sha256": "fc5ec75d906ca9de26197f7a20988b571bcfd02656aa6d9087586d73b004bb9d",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_47253__d9a8aabb09.json",
+      "path": "/api/v1/releases/2.08/sunids/47253",
+      "sha256": "4771d5e67d38db4bd742423cf35f65a7191983e78d9fe34bff764afcc50b3bb6",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_49504__c5dbc28f5b.json",
+      "path": "/api/v1/releases/2.08/sunids/49504",
+      "sha256": "f96029e8e382a078e23e7b99d84ed9534cfc182d9cfe2153a626184eefb85019",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_51736__927f9f2628.json",
+      "path": "/api/v1/releases/2.08/sunids/51736",
+      "sha256": "2dab9ea2f3b7bb80f75653c932105b6c51212e3151f3b81d08255377118ab58a",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_51900__0cb1770525.json",
+      "path": "/api/v1/releases/2.08/sunids/51900",
+      "sha256": "2dde9873e96bc8f066284599c1832e350b36baa5166e2574b5c470d29abb6146",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_52173__3c704b2c0f.json",
+      "path": "/api/v1/releases/2.08/sunids/52173",
+      "sha256": "f1e5441b7741582e996aa6eaa9b9f05dba5f1fd221da9d61d307f357ab7c4947",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_52252__635cea32c3.json",
+      "path": "/api/v1/releases/2.08/sunids/52252",
+      "sha256": "918e066e04ff6c2a5bbcf038fd18da46a12103cef7734ccbf938db5961e0a46f",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_53068__85b0d96d8c.json",
+      "path": "/api/v1/releases/2.08/sunids/53068",
+      "sha256": "146b0dad95e28801d06145c0514ceb02bd7c12e4b8658019c0b258c06bf0b7ac",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_53083__6d0bb2b5c5.json",
+      "path": "/api/v1/releases/2.08/sunids/53083",
+      "sha256": "2be1139d0c528e0e4985fa0542a94ff4b5665a78e7b0652cd087cc0369a85a2e",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_53089__0bba4caef2.json",
+      "path": "/api/v1/releases/2.08/sunids/53089",
+      "sha256": "4c749010950ebf4f1785c19d43bdc934a87350da4440b4fd30ef259339d0e382",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_54237__22ae85e8d9.json",
+      "path": "/api/v1/releases/2.08/sunids/54237",
+      "sha256": "43197f2c35fc705636c8ad8633c36759f4aa61eb38993d383bd35928a4f2402d",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_54250__48a2171bcb.json",
+      "path": "/api/v1/releases/2.08/sunids/54250",
+      "sha256": "9508afdcb74c1435d6f323188b7feb492ac71d3e6fea28e98f96dd2d754f1abf",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_54263__869c0f29bb.json",
+      "path": "/api/v1/releases/2.08/sunids/54263",
+      "sha256": "629d5f063be30c867332a081907a5fd5924781a55a94ea783707a72f9297f432",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_56112__2788c059f8.json",
+      "path": "/api/v1/releases/2.08/sunids/56112",
+      "sha256": "20d39788d1a9780d7dcb6cac8773c0f6855384f780f420e5586820a6d0c547a6",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_56171__f781b44298.json",
+      "path": "/api/v1/releases/2.08/sunids/56171",
+      "sha256": "9a73cae847fe1ea3d2f4b19705463e2e1b329badf8004ae21b664687b4769bc8",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_63944__72239af715.json",
+      "path": "/api/v1/releases/2.08/sunids/63944",
+      "sha256": "c35c82f624385b9ba22fd606a5757f1a9a85cec465e9cb2081006e88d90d79ea",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_64411__fe2cb7ec76.json",
+      "path": "/api/v1/releases/2.08/sunids/64411",
+      "sha256": "28ba880c4b940b8fc20b6b387f5ae9a9b9b6d47ae134d93776e34e78895eccb1",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_74874__542e655662.json",
+      "path": "/api/v1/releases/2.08/sunids/74874",
+      "sha256": "d38676fddc76705ec1977e25a177a4197430cd4f7e382db506be9d85473dc6d1",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_82344__704e8794ef.json",
+      "path": "/api/v1/releases/2.08/sunids/82344",
+      "sha256": "41c9416729e7b55e5166f4f1ad1c962514026d9ddee98f8be3894e780322a4ca",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_2.08_sunids_88854__44239dc339.json",
+      "path": "/api/v1/releases/2.08/sunids/88854",
+      "sha256": "759ebccec4203b3a075e8529940d161d8bd7172ee2a550319d0556b00a7aa3f8",
+      "status": 200
+    },
+    {
+      "content_type": "application/json",
+      "file": "releases_current__044e528fc7.json",
+      "path": "/api/v1/releases/current",
+      "sha256": "53f3cec748e1563fbc3b820da319a41905148e35d8b88d4890d8111befa6819a",
+      "status": 200
+    }
+  ],
+  "fetched_at": "2026-07-23T22:22:38+00:00",
+  "openapi_path": "../../php/api/v1/openapi.yaml",
+  "openapi_sha256": "a88804c053e52cf12ed95ccbebadc0b97246ab359e288d07576f566c9a747a18",
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "suite_version": "4.0.0"
+}

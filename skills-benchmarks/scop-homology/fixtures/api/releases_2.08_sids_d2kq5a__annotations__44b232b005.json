@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "description": "single repeat"
+    }
+  ],
+  "inconsistencies": [
+    {
+      "abbreviation": "re",
+      "description": "applies to all domains of a family if the common domain is composed of a different number of small repeating units"
+    }
+  ],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/264989",
+    "canonical_url": "/?sunid=264989&ver=2.08",
+    "description": "2kq5 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/267704",
+      "sccs": "a.298.1.1",
+      "sid": null,
+      "sunid": 267704
+    },
+    "release": "2.08",
+    "sccs": "a.298.1.1",
+    "sid": "d2kq5a_",
+    "sunid": 264989
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1a14h1",
+      "chain": "H",
+      "description": "1a14 H:9-111",
+      "sccs": "b.1.1.1",
+      "sid": "d1a14h1",
+      "sunid": 20061
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1a14h2",
+      "chain": "H",
+      "description": "1a14 H:1-8",
+      "sccs": "l.1.1.1",
+      "sid": "d1a14h2",
+      "sunid": 343393
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1a14l_",
+      "chain": "L",
+      "description": "1a14 L:",
+      "sccs": "b.1.1.1",
+      "sid": "d1a14l_",
+      "sunid": 20060
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1a14n_",
+      "chain": "N",
+      "description": "1a14 N:",
+      "sccs": "b.68.1.1",
+      "sid": "d1a14n_",
+      "sunid": 27580
+    }
+  ],
+  "pdb_code": "1a14",
+  "release": "2.08"
+}

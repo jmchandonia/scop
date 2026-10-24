@@ -1,0 +1,28 @@
+{
+  "heterogeneity": [],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/264295",
+    "canonical_url": "/?sunid=264295&ver=2.08",
+    "description": "2gwo C:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/187400",
+      "sccs": "c.45.1.0",
+      "sid": null,
+      "sunid": 187400
+    },
+    "release": "2.08",
+    "sccs": "c.45.1.0",
+    "sid": "d2gwoc_",
+    "sunid": 264295
+  },
+  "release": "2.08",
+  "repeat_family": null,
+  "warnings": []
+}

@@ -1,0 +1,1 @@
+{"node":{"sunid":419100,"sid":null,"sccs":"d.15.15.1","description":"Phosphoinositide 3-kinase (PI3K) alpha","level":{"code":"dm","name":"Protein","plural":"Proteins"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/419100","canonical_url":"/?sunid=419100&ver=2.08","parent":{"sunid":418797,"sid":null,"sccs":"d.15.15.1","api_url":"/api/v1/releases/2.08/sunids/418797"}}}

@@ -1,0 +1,153 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1jm7a_"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=struct&hit=d1t2vb1"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://scop.berkeley.edu/sunid=63955&ver=2.08"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1/hits?limit=100"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P38398-F1",
+      "question_id": "AFQ008",
+      "question_sha256": "6cb1a888dddb3bd24bf32c01ab9f9373318959da200430bf1b2fae8d3ce9fe88",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [],
+    "observed_benchmarks": [],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P38398-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [],
+    "required_benchmarks": [],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P38398-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1jm7a_"
+      ],
+      [
+        "2.08",
+        "d1oqaa1"
+      ],
+      [
+        "2.08",
+        "d1t2vb1"
+      ],
+      [
+        "2.08",
+        "d2y43a_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 97.995,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 124544,
+      "input_tokens": 147248,
+      "output_tokens": 4654,
+      "reasoning_output_tokens": 1651
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**Conclusion**\nThe low global pLDDT for AF-P38398-F1, UniProt P38398, release 2.08, does not by itself make all retrieved SCOPe matches unreliable. The whole model is low-confidence overall, with global pLDDT 41.68 and 80.30% of residues below 50 pLDDT, but the matched intervals are local high-confidence islands: approximately residues 1-103, 1645-1757, and 1755-1863 have medians of 87.76, 94.87, and 91.74, respectively.\n\nThe retrieved evidence therefore favors treating the local sequence/structure matches as region-specific evidence, while keeping boundaries approximate and avoiding whole-chain or function claims. The BRCT-region structural evidence is more geometry-dependent and locally well supported; the N-terminal RING/U-box evidence is sequence-only in the returned hit set and is not strengthened by a returned FATCAT hit.\n\n**What can be said at each level**\n\nRegion 1-103, overlapping automated subrange 14-86:\n\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established from these hits; retrieved reference annotations mention Zn and a BARD1 RING-domain heterodimer context, but that does not transfer function or assembly state to the target. | E2, E4 |\n| Family | A RING finger domain, C3HC4 family candidate is favored by the best sequence hit to d1jm7a_ over residues 1-103, but family placement is qualified because no returned structure hit supports this region and d2y43a_ is an automated-match family over the nested 14-86 interval. | E2, E4 |\n| Superfamily | The evidence is consistent with a RING/U-box superfamily signal, because d1jm7a_ and d2y43a_ share g.44.1 lineage. | E2, E4 |\n| Fold | The retrieved lineages point to the RING/U-box fold, but this is not a whole-chain fold claim. | E2, E4 |\n\nRegions 1645-1757 and 1755-1863, with overlap 1755-1757:\n\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established from the BRCT matches; a BRCT family label is not a direct target-function annotation. | E3, E4 |\n| Family | The evidence supports a strong chance of a BRCT domain family relationship for approximately residues 1645-1757 and 1755-1863, because sequence evidence covers both adjacent BRCT-like intervals and the 1648-1757 interval also has a strong local structural match. This is still not an official classification or exact boundary. | E1, E3, E4 |\n| Superfamily | The same evidence supports at least the BRCT superfamily signal for those local intervals; the two BRCT sequence groups are regionally adjacent and overlap at residues 1755-1757. | E3, E4 |\n| Fold | The FATCAT structural hit for 1648-1757 supports local BRCT-domain structural similarity, but FATCAT P-values are structural-match measures and not direct probabilities of homology. | E3, E5 |\n\n**Evidence considered**\n- **E1** \u2014 Whole-model confidence is poor, but the matched intervals are not: whole model mean 41.29, median 30.66, bands >=90: 200 residues, 70-<90: 125, 50-<70: 42, <50: 1496. Local bands are much stronger: 1-103 median 87.76 with 27/64/9/3 residues across the four bands; 14-86 median 88.54 with 24/45/4/0; 1645-1757 median 94.87 with 104/5/1/3; 1648-1757 median 94.92 with 104/5/1/0; 1755-1863 median 91.74 with 62/38/6/3. This directly answers the tested proposition: global low confidence does not uniformly apply to the matched local regions. Source: [AlphaFold confidence data](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1)\n- **E2** \u2014 N-terminal sequence evidence covers residues 1-103 and nested 14-86. d1jm7a_ ranks 24, covers 103/1863 residues = 5.53% of the full model, has log10 E-value -54.89 and 10.48% identity; d2y43a_ ranks 57, covers 73/1863 = 3.92%, has log10 E-value -2.99 and 2.25% identity. These support a local RING/U-box signal rather than a whole-model conclusion. Source: [d1jm7a_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1jm7a_)\n- **E3** \u2014 BRCT-region evidence is concentrated in two adjacent C-terminal intervals. d1t2vb1 sequence rank 27 covers residues 1646-1757, 112/1863 = 6.01%, log10 E-value -51.72, identity 9.92%; the same representative is the only returned structure hit, rank 1 over residues 1648-1757, 110/1863 = 5.90%, FATCAT P-value 0.00361, score 311.1, RMSD 0.38. d1oqaa1 sequence rank 1 covers residues 1755-1863, 109/1863 = 5.85%, log10 E-value -64.21, identity 11.05%. The material envelope for these BRCT signals is approximately 1645-1863, with overlap at 1755-1757. Source: [d1t2vb1 structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=struct&hit=d1t2vb1)\n- **E4** \u2014 Retrieved lineages support the named local interpretations: d1jm7a_ is RING/U-box fold g.44, superfamily g.44.1, family g.44.1.1; d2y43a_ is also RING/U-box superfamily g.44.1 but its family is automated matches g.44.1.0. d1t2vb1 and d1oqaa1 both trace through BRCT fold c.15, superfamily c.15.1, family c.15.1.3. Source: [BRCT family node](https://scop.berkeley.edu/sunid=63955&ver=2.08)\n- **E5** \u2014 Search composition is not a single independent pile of confirmations: sequence results have 59 raw hits condensed into 4 overlap-SCCS groups; structure results have 1 raw hit in 1 group. The BRCT sequence evidence is numerous but regionally grouped, with 27 raw hits in the 1755-1863 group and 26 in the 1645-1757 group, while the N-terminal RING/U-box sequence evidence has 4 raw hits in the d1jm7a_ group and 2 in the automated d2y43a_ group. Source: [hit summary](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1/hits?limit=100)\n\n**Caveats by evidence item**\n- **E1** \u2014 pLDDT supports local coordinate confidence, not homology, function, or exact domain boundaries. The high-pLDDT clusters are fragmented in all matched regions and should not be used as boundary criteria. PAE, pTM, MSA depth, and template-dependence information were not returned, so relative domain placement and independence of sequence/template effects remain unresolved.\n- **E2** \u2014 The N-terminal conclusion is based on returned sequence hits only; no structure hit was returned for this interval. d1jm7a_ carries insertion/extension heterogeneity and partner/Zn context annotations, and d2y43a_ is an automated-match family, so these are caveats on family specificity and function transfer.\n- **E3** \u2014 The BRCT regions are local, partial model intervals, not whole-chain evidence. The two BRCT envelopes overlap at 1755-1757, so their approximate boundaries should not be treated as curated non-overlapping domains.\n- **E4** \u2014 Lineage labels establish the retrieved SCOPe representatives' classifications, not an official target classification. Automated or placeholder family information supports only the non-automated higher lineage unless independently discriminated.\n- **E5** \u2014 Redundant raw hits are correlated by overlapping SCCS grouping and should not be counted as independent observations. The current FATCAT benchmark applicability for d1t2vb1 is outside benchmark filters: observed P-value 0.00361 exceeds the prespecified maximum 0.0001, and length-match inputs are missing; no reassuring chain-benchmark fraction or denominator is applicable.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "MCP mcp__scop_local.get_alphafold_hits(model=AF-P38398-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "MCP mcp__scop_local.get_alphafold_decision_evidence(model=AF-P38398-F1, release=2.08, regions=1-103,14-86,1645-1757,1648-1757,1755-1863, sids=d1oqaa1,d1t2vb1,d1jm7a_,d2y43a_, calibration_requests=null)"
+    ],
+    "input_attestation": {
+      "model": "AF-P38398-F1",
+      "question_id": "AFQ008",
+      "question_sha256": "6cb1a888dddb3bd24bf32c01ab9f9373318959da200430bf1b2fae8d3ce9fe88",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ008",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:40:10Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

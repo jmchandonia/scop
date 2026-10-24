@@ -1,0 +1,77 @@
+{
+  "api_access": null,
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-12T23:18:15Z",
+  "condition": "pretrained_only",
+  "evaluation": {
+    "completed_at": "2026-10-14T22:38:27Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 2,
+    "rejected_references": [
+      {
+        "question_id": "Q015_artifact_tag_not_homology",
+        "reference": "question prompt (SCOPe 2.08 domain boundaries for d1a14h1/d1a14h2)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "question prompt (SCOPe sids d1p7jd_, d1ztra1, sccs a.4.1.1, hf annotation)"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "44066f2ff114329117edd1249cdf6e1e149329207bad60c6fa2339da2801b4e5",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "f72e55cfea2fef29fb43ca9f3df63212f1ef6580a7dce9b16111e460be2cb152",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-opus-5-5",
+    "parameters": {
+      "builtin_tools": "",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 2
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-opus-5,claude-opus-5-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-12_claude-opus-5-5_pretrained_only_r2",
+  "skill": null,
+  "started_at": "2026-10-12T23:14:57Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 20673,
+    "cache_read_input_tokens": 91439,
+    "input_tokens": 54,
+    "output_tokens": 64235,
+    "session_seconds": 734.0,
+    "tool_calls": 26,
+    "total_cost_usd": 1.5413
+  }
+}

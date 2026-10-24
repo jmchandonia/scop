@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/382498",
+    "canonical_url": "/?sunid=382498&ver=2.08",
+    "description": "6uzt A:206-499",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/187400",
+      "sccs": "c.45.1.0",
+      "sid": null,
+      "sunid": 187400
+    },
+    "release": "2.08",
+    "sccs": "c.45.1.0",
+    "sid": "d6uzta1",
+    "sunid": 382498
+  }
+}

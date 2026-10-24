@@ -1,0 +1,2531 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 531,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [
+    {
+      "alphafold_range": {
+        "end": 297,
+        "length": 204,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2feja_",
+        "comment": "automated match to d3igla_",
+        "description": "2fej A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2feja_",
+        "sunid": 133349
+      },
+      "domain_range": {
+        "end": 204,
+        "length": 204,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -120.9710741613434,
+      "percent_identity": 68.34170854271356
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 200,
+        "start": 91
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2xwrb_",
+        "comment": "automated match to d1gzha_",
+        "description": "2xwr B:",
+        "header": "b.2.5.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2xwrb_",
+        "sunid": 170448
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -118.50337220017957,
+      "percent_identity": 67.45362563237775
+    },
+    {
+      "alphafold_range": {
+        "end": 293,
+        "length": 200,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3igla_",
+        "comment": "automated match to d1gzha_",
+        "description": "3igl A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3igla_",
+        "sunid": 178311
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -118.22435156726706,
+      "percent_identity": 67.45362563237775
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 200,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3kmda_",
+        "comment": "automated match to d1gzha_",
+        "description": "3kmd A:",
+        "header": "b.2.5.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3kmda_",
+        "sunid": 179438
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -118.1410077415066,
+      "percent_identity": 67.45362563237775
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 200,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3kmdb_",
+        "comment": "automated match to d1gzha_",
+        "description": "3kmd B:",
+        "header": "b.2.5.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3kmdb_",
+        "sunid": 179439
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -118.1410077415066,
+      "percent_identity": 67.45362563237775
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 200,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3kmdc_",
+        "comment": "automated match to d1gzha_",
+        "description": "3kmd C:",
+        "header": "b.2.5.2 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3kmdc_",
+        "sunid": 179440
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -118.1410077415066,
+      "percent_identity": 67.45362563237775
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 200,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3kmdd_",
+        "comment": "automated match to d1gzha_",
+        "description": "3kmd D:",
+        "header": "b.2.5.2 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3kmdd_",
+        "sunid": 179441
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -118.1410077415066,
+      "percent_identity": 67.45362563237775
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 199,
+        "start": 91
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2xwra_",
+        "comment": "automated match to d1gzha_",
+        "description": "2xwr A:",
+        "header": "b.2.5.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2xwra_",
+        "sunid": 170447
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.85836346682734,
+      "percent_identity": 67.22972972972973
+    },
+    {
+      "alphafold_range": {
+        "end": 293,
+        "length": 199,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ahia_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ahi A:",
+        "header": "b.2.5.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ahia_",
+        "sunid": 126756
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.79313786324145,
+      "percent_identity": 67.22972972972973
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 199,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0a_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ac0 A:",
+        "header": "b.2.5.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0a_",
+        "sunid": 126539
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.52498816281367,
+      "percent_identity": 67.22972972972973
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 199,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2atab_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ata B:",
+        "header": "b.2.5.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2atab_",
+        "sunid": 127286
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.52498816281367,
+      "percent_identity": 67.22972972972973
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 199,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4xr8c_",
+        "comment": "automated match to d1ycsa_",
+        "description": "4xr8 C:",
+        "header": "b.2.5.2 (C:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4xr8c_",
+        "sunid": 311849
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.52498816281367,
+      "percent_identity": 67.22972972972973
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 199,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4xr8d_",
+        "comment": "automated match to d1ycsa_",
+        "description": "4xr8 D:",
+        "header": "b.2.5.2 (D:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4xr8d_",
+        "sunid": 311729
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.52498816281367,
+      "percent_identity": 67.22972972972973
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 199,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4qo1b_",
+        "comment": "automated match to d2feja_",
+        "description": "4qo1 B:",
+        "header": "b.2.5.2 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4qo1b_",
+        "sunid": 260757
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.4597625603341,
+      "percent_identity": 67.22972972972973
+    },
+    {
+      "alphafold_range": {
+        "end": 293,
+        "length": 198,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0d_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ac0 D:",
+        "header": "b.2.5.2 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0d_",
+        "sunid": 126542
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.29307490902619,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 198,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2adya_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ady A:",
+        "header": "b.2.5.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2adya_",
+        "sunid": 126597
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.13001090292835,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 198,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3kz8a_",
+        "comment": "automated match to d1gzha_",
+        "description": "3kz8 A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3kz8a_",
+        "sunid": 179824
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.13001090292835,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 198,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3kz8b_",
+        "comment": "automated match to d1gzha_",
+        "description": "3kz8 B:",
+        "header": "b.2.5.2 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3kz8b_",
+        "sunid": 179825
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.13001090292835,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 199,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2pcxa1",
+        "comment": "automated match to d1gzha_",
+        "description": "2pcx A:94-292",
+        "header": "b.2.5.2 (A:94-292) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2pcxa1",
+        "sunid": 167134
+      },
+      "domain_range": {
+        "end": 199,
+        "length": 199,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.05391436644418,
+      "percent_identity": 66.8918918918919
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 198,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0b_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ac0 B:",
+        "header": "b.2.5.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0b_",
+        "sunid": 126540
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.01767792083903,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 198,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2adyb_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ady B:",
+        "header": "b.2.5.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2adyb_",
+        "sunid": 126598
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.01767792083903,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 198,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ahib_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ahi B:",
+        "header": "b.2.5.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ahib_",
+        "sunid": 126757
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.01767792083903,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 198,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2atad_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ata D:",
+        "header": "b.2.5.2 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2atad_",
+        "sunid": 127288
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -117.01767792083903,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lm2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l M:92-289",
+        "header": "b.2.5.2 (M:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lm2",
+        "sunid": 135959
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1ln2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l N:92-289",
+        "header": "b.2.5.2 (N:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1ln2",
+        "sunid": 135960
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lo2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l O:92-289",
+        "header": "b.2.5.2 (O:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lo2",
+        "sunid": 135961
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lp2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l P:92-289",
+        "header": "b.2.5.2 (P:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lp2",
+        "sunid": 135962
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lq2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l Q:92-289",
+        "header": "b.2.5.2 (Q:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lq2",
+        "sunid": 135963
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lr2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l R:92-289",
+        "header": "b.2.5.2 (R:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lr2",
+        "sunid": 135964
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1ls2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l S:92-289",
+        "header": "b.2.5.2 (S:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1ls2",
+        "sunid": 135965
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lt2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l T:92-289",
+        "header": "b.2.5.2 (T:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lt2",
+        "sunid": 135966
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lu2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l U:92-289",
+        "header": "b.2.5.2 (U:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lu2",
+        "sunid": 135967
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lv2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l V:92-289",
+        "header": "b.2.5.2 (V:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lv2",
+        "sunid": 135968
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lw2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l W:92-289",
+        "header": "b.2.5.2 (W:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lw2",
+        "sunid": 135969
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 198,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lx2",
+        "comment": "automated match to d3kmda_",
+        "description": "2h1l X:92-289",
+        "header": "b.2.5.2 (X:92-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lx2",
+        "sunid": 135970
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.83649569167603,
+      "percent_identity": 67.00507614213198
+    },
+    {
+      "alphafold_range": {
+        "end": 293,
+        "length": 200,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3igka_",
+        "comment": "automated match to d1gzha_",
+        "description": "3igk A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3igka_",
+        "sunid": 178310
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.74228093445666,
+      "percent_identity": 66.77908937605397
+    },
+    {
+      "alphafold_range": {
+        "end": 293,
+        "length": 200,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ibwa_",
+        "comment": "automated match to d2ahia_",
+        "description": "4ibw A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4ibwa_",
+        "sunid": 223115
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.70604448686672,
+      "percent_identity": 66.77908937605397
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 203,
+        "start": 90
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6sl6a_",
+        "comment": "automated match to d2feja_",
+        "description": "6sl6 A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d6sl6a_",
+        "sunid": 382187
+      },
+      "domain_range": {
+        "end": 204,
+        "length": 203,
+        "start": 2
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.65531346280127,
+      "percent_identity": 66.33165829145729
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 197,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ataa_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ata A:",
+        "header": "b.2.5.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ataa_",
+        "sunid": 127285
+      },
+      "domain_range": {
+        "end": 197,
+        "length": 197,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.63357159591482,
+      "percent_identity": 66.77966101694915
+    },
+    {
+      "alphafold_range": {
+        "end": 293,
+        "length": 200,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ibva_",
+        "comment": "automated match to d2ahia_",
+        "description": "4ibv A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4ibva_",
+        "sunid": 223114
+      },
+      "domain_range": {
+        "end": 200,
+        "length": 200,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.62270066235746,
+      "percent_identity": 66.77908937605397
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 198,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gzha_",
+        "comment": null,
+        "description": "1gzh A:",
+        "header": "b.2.5.1 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1gzha_",
+        "sunid": 70807
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.61907701744265,
+      "percent_identity": 66.66666666666666
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 198,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3d07b_",
+        "comment": "automated match to d1gzha_",
+        "description": "3d07 B:",
+        "header": "b.2.5.2 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3d07b_",
+        "sunid": 173591
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.43427114355978,
+      "percent_identity": 66.66666666666666
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 198,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ijta_",
+        "comment": "automated match to d2ahia_",
+        "description": "4ijt A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4ijta_",
+        "sunid": 223231
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -116.27845442565975,
+      "percent_identity": 66.66666666666666
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 196,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ahid_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ahi D:",
+        "header": "b.2.5.2 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ahid_",
+        "sunid": 126759
+      },
+      "domain_range": {
+        "end": 196,
+        "length": 196,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.96682099417214,
+      "percent_identity": 66.553480475382
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 196,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2atac_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ata C:",
+        "header": "b.2.5.2 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2atac_",
+        "sunid": 127287
+      },
+      "domain_range": {
+        "end": 196,
+        "length": 196,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.96682099417214,
+      "percent_identity": 66.553480475382
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 196,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gzhc_",
+        "comment": null,
+        "description": "1gzh C:",
+        "header": "b.2.5.1 (C:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1gzhc_",
+        "sunid": 70810
+      },
+      "domain_range": {
+        "end": 196,
+        "length": 196,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.79650969845484,
+      "percent_identity": 66.553480475382
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 196,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1tsra_",
+        "comment": null,
+        "description": "1tsr A:",
+        "header": "b.2.5.1 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1tsra_",
+        "sunid": 22437
+      },
+      "domain_range": {
+        "end": 196,
+        "length": 196,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.70954222678358,
+      "percent_identity": 66.553480475382
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 196,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1tupa_",
+        "comment": null,
+        "description": "1tup A:",
+        "header": "b.2.5.1 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1tupa_",
+        "sunid": 22434
+      },
+      "domain_range": {
+        "end": 196,
+        "length": 196,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.70954222678358,
+      "percent_identity": 66.553480475382
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 196,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d7dhyb_",
+        "comment": "automated match to d3igla_",
+        "description": "7dhy B:",
+        "header": "b.2.5.2 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d7dhyb_",
+        "sunid": 398922
+      },
+      "domain_range": {
+        "end": 196,
+        "length": 196,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.34717776800288,
+      "percent_identity": 66.21392190152801
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 195,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0c_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ac0 C:",
+        "header": "b.2.5.2 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0c_",
+        "sunid": 126541
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.28557580991682,
+      "percent_identity": 66.3265306122449
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 195,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2feja1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2fej A:96-290",
+        "header": "b.2.5.2 (A:96-290) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2feja1",
+        "sunid": 133349
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.28557580991682,
+      "percent_identity": 66.3265306122449
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 195,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2mejb_",
+        "comment": "automated match to d2feja_",
+        "description": "2mej B:",
+        "header": "b.2.5.2 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2mejb_",
+        "sunid": 256423
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.28557580991682,
+      "percent_identity": 66.3265306122449
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 195,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1kzya_",
+        "comment": null,
+        "description": "1kzy A:",
+        "header": "b.2.5.1 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1kzya_",
+        "sunid": 73381
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.24209207505483,
+      "percent_identity": 66.3265306122449
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 195,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1kzyb_",
+        "comment": null,
+        "description": "1kzy B:",
+        "header": "b.2.5.1 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1kzyb_",
+        "sunid": 73382
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.24209207505483,
+      "percent_identity": 66.3265306122449
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 195,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1tsrc_",
+        "comment": null,
+        "description": "1tsr C:",
+        "header": "b.2.5.1 (C:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1tsrc_",
+        "sunid": 22439
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.24209207505483,
+      "percent_identity": 66.3265306122449
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 195,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1tupc_",
+        "comment": null,
+        "description": "1tup C:",
+        "header": "b.2.5.1 (C:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1tupc_",
+        "sunid": 22436
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.24209207505483,
+      "percent_identity": 66.3265306122449
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 198,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ibub_",
+        "comment": "automated match to d2ahia_",
+        "description": "4ibu B:",
+        "header": "b.2.5.2 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4ibub_",
+        "sunid": 223111
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -115.20585562946803,
+      "percent_identity": 66.32825719120136
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 197,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ibya_",
+        "comment": "automated match to d2ahia_",
+        "description": "4iby A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4ibya_",
+        "sunid": 223116
+      },
+      "domain_range": {
+        "end": 197,
+        "length": 197,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.96307144505849,
+      "percent_identity": 66.10169491525424
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 197,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3d0ab_",
+        "comment": "automated match to d1gzha_",
+        "description": "3d0a B:",
+        "header": "b.2.5.2 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d3d0ab_",
+        "sunid": 173595
+      },
+      "domain_range": {
+        "end": 197,
+        "length": 197,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.93045864382685,
+      "percent_identity": 66.10169491525424
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1tsrb_",
+        "comment": null,
+        "description": "1tsr B:",
+        "header": "b.2.5.1 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1tsrb_",
+        "sunid": 22438
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1tupb_",
+        "comment": null,
+        "description": "1tup B:",
+        "header": "b.2.5.1 (B:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens)}",
+        "sccs": "b.2.5.1",
+        "sid": "d1tupb_",
+        "sunid": 22435
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0a1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ac0 A:96-289",
+        "header": "b.2.5.2 (A:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0a1",
+        "sunid": 126539
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0b1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ac0 B:96-289",
+        "header": "b.2.5.2 (B:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0b1",
+        "sunid": 126540
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0c1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ac0 C:96-289",
+        "header": "b.2.5.2 (C:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0c1",
+        "sunid": 126541
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ac0d1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ac0 D:96-289",
+        "header": "b.2.5.2 (D:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ac0d1",
+        "sunid": 126542
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2adya1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ady A:96-289",
+        "header": "b.2.5.2 (A:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2adya1",
+        "sunid": 126597
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2adyb1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ady B:96-289",
+        "header": "b.2.5.2 (B:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2adyb1",
+        "sunid": 126598
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ahia1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ahi A:96-289",
+        "header": "b.2.5.2 (A:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ahia1",
+        "sunid": 126756
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ahib1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ahi B:96-289",
+        "header": "b.2.5.2 (B:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ahib1",
+        "sunid": 126757
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ahid1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ahi D:96-289",
+        "header": "b.2.5.2 (D:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ahid1",
+        "sunid": 126759
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ataa1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ata A:96-289",
+        "header": "b.2.5.2 (A:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ataa1",
+        "sunid": 127285
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2atab1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ata B:96-289",
+        "header": "b.2.5.2 (B:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2atab1",
+        "sunid": 127286
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2atac1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ata C:96-289",
+        "header": "b.2.5.2 (C:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2atac1",
+        "sunid": 127287
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2atad1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ata D:96-289",
+        "header": "b.2.5.2 (D:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2atad1",
+        "sunid": 127288
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lm1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l M:96-289",
+        "header": "b.2.5.2 (M:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lm1",
+        "sunid": 135959
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1ln1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l N:96-289",
+        "header": "b.2.5.2 (N:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1ln1",
+        "sunid": 135960
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lo1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l O:96-289",
+        "header": "b.2.5.2 (O:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lo1",
+        "sunid": 135961
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lp1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l P:96-289",
+        "header": "b.2.5.2 (P:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lp1",
+        "sunid": 135962
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lq1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l Q:96-289",
+        "header": "b.2.5.2 (Q:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lq1",
+        "sunid": 135963
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lr1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l R:96-289",
+        "header": "b.2.5.2 (R:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lr1",
+        "sunid": 135964
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1ls1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l S:96-289",
+        "header": "b.2.5.2 (S:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1ls1",
+        "sunid": 135965
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lt1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l T:96-289",
+        "header": "b.2.5.2 (T:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lt1",
+        "sunid": 135966
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lu1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l U:96-289",
+        "header": "b.2.5.2 (U:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lu1",
+        "sunid": 135967
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lv1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l V:96-289",
+        "header": "b.2.5.2 (V:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lv1",
+        "sunid": 135968
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lw1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l W:96-289",
+        "header": "b.2.5.2 (W:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lw1",
+        "sunid": 135969
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2h1lx1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2h1l X:96-289",
+        "header": "b.2.5.2 (X:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2h1lx1",
+        "sunid": 135970
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocja1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ocj A:96-289",
+        "header": "b.2.5.2 (A:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocja1",
+        "sunid": 139008
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocja_",
+        "comment": "automated match to d3igla_",
+        "description": "2ocj A:",
+        "header": "b.2.5.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocja_",
+        "sunid": 139008
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocjb1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ocj B:96-289",
+        "header": "b.2.5.2 (B:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocjb1",
+        "sunid": 139009
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocjb_",
+        "comment": "automated match to d3igla_",
+        "description": "2ocj B:",
+        "header": "b.2.5.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocjb_",
+        "sunid": 139009
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocjc1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ocj C:96-289",
+        "header": "b.2.5.2 (C:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocjc1",
+        "sunid": 139010
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocjc_",
+        "comment": "automated match to d3igla_",
+        "description": "2ocj C:",
+        "header": "b.2.5.2 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocjc_",
+        "sunid": 139010
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocjd1",
+        "comment": "automatically matched to d1uola_",
+        "description": "2ocj D:96-289",
+        "header": "b.2.5.2 (D:96-289) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocjd1",
+        "sunid": 139011
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ocjd_",
+        "comment": "automated match to d3igla_",
+        "description": "2ocj D:",
+        "header": "b.2.5.2 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ocjd_",
+        "sunid": 139011
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ybgc_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ybg C:",
+        "header": "b.2.5.2 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ybgc_",
+        "sunid": 170726
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 194,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ybgd_",
+        "comment": "automated match to d1gzha_",
+        "description": "2ybg D:",
+        "header": "b.2.5.2 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2ybgd_",
+        "sunid": 170727
+      },
+      "domain_range": {
+        "end": 194,
+        "length": 194,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.81450201624548,
+      "percent_identity": 66.09880749574106
+    },
+    {
+      "alphafold_range": {
+        "end": 290,
+        "length": 197,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ibtc_",
+        "comment": "automated match to d2ahia_",
+        "description": "4ibt C:",
+        "header": "b.2.5.2 (C:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4ibtc_",
+        "sunid": 223108
+      },
+      "domain_range": {
+        "end": 197,
+        "length": 197,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.79276014736627,
+      "percent_identity": 66.10169491525424
+    },
+    {
+      "alphafold_range": {
+        "end": 292,
+        "length": 197,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ibua_",
+        "comment": "automated match to d2ahia_",
+        "description": "4ibu A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4ibua_",
+        "sunid": 223110
+      },
+      "domain_range": {
+        "end": 197,
+        "length": 197,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.76739463576202,
+      "percent_identity": 66.10169491525424
+    },
+    {
+      "alphafold_range": {
+        "end": 291,
+        "length": 198,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4lofa_",
+        "comment": "complexed with zn; mutant",
+        "description": "4lof A:",
+        "header": "b.2.5.2 (A:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d4lofa_",
+        "sunid": 224730
+      },
+      "domain_range": {
+        "end": 198,
+        "length": 198,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.73478183348456,
+      "percent_identity": 65.98984771573603
+    },
+    {
+      "alphafold_range": {
+        "end": 289,
+        "length": 195,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2qxac_",
+        "comment": "automated match to d1gzha_",
+        "description": "2qxa C:",
+        "header": "b.2.5.2 (C:) p53 tumor suppressor, DNA-binding domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.2.5.2",
+        "sid": "d2qxac_",
+        "sunid": 167855
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 195,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -114.6115779175816,
+      "percent_identity": 65.98639455782312
+    }
+  ],
+  "structure_hits": [
+    {
+      "alphafold_range": {
+        "end": 276,
+        "length": 171,
+        "start": 106
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u8ca2",
+        "comment": "complexed with ca, nag",
+        "description": "1u8c A:599-737",
+        "header": "b.1.15.1 (A:599-737) Thigh, calf-1 and calf-2 domains of integrin alpha {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.1.15.1",
+        "sid": "d1u8ca2",
+        "sunid": 113117
+      },
+      "domain_range": {
+        "end": 737,
+        "length": 135,
+        "start": 603
+      },
+      "identity": 4.47,
+      "kind": "structure",
+      "p_value": 0.0493,
+      "rmsd": 2.78,
+      "score": 129.7,
+      "similarity": 12.85,
+      "transform": [
+        [
+          0.882,
+          -0.184,
+          0.435,
+          35.144
+        ],
+        [
+          -0.436,
+          -0.67,
+          0.601,
+          -6.995
+        ],
+        [
+          0.18,
+          -0.72,
+          -0.67,
+          59.918
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 276,
+        "length": 171,
+        "start": 106
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4mmya3",
+        "comment": "automated match to d1m1xa2",
+        "description": "4mmy A:599-737",
+        "header": "b.1.15.0 (A:599-737) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.1.15.0",
+        "sid": "d4mmya3",
+        "sunid": 266745
+      },
+      "domain_range": {
+        "end": 737,
+        "length": 135,
+        "start": 603
+      },
+      "identity": 4.37,
+      "kind": "structure",
+      "p_value": 0.0495,
+      "rmsd": 2.49,
+      "score": 128.78,
+      "similarity": 12.02,
+      "transform": [
+        [
+          0.874,
+          -0.167,
+          0.455,
+          33.705
+        ],
+        [
+          -0.44,
+          -0.671,
+          0.598,
+          -7.046
+        ],
+        [
+          0.205,
+          -0.723,
+          -0.66,
+          60.795
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-P04637-F1",
+    "kind": "alphafold",
+    "name": "AF-P04637-F1",
+    "uniprot_accession": "P04637",
+    "description": "Cellular tumor antigen p53",
+    "global_plddt": 75.13,
+    "sequence_length": 393
+  }
+}

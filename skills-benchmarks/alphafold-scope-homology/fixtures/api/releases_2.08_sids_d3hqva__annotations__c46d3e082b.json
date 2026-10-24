@@ -1,0 +1,32 @@
+{
+  "comments": [],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/177784",
+    "canonical_url": "/?sunid=177784&ver=2.08",
+    "description": "3hqv A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/144300",
+      "sccs": "i.25.1.1",
+      "sid": null,
+      "sunid": 144300
+    },
+    "release": "2.08",
+    "sccs": "i.25.1.1",
+    "sid": "d3hqva_",
+    "sunid": 177784
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

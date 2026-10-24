@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/58788",
+      "canonical_url": "/?sunid=58788&ver=2.08",
+      "description": "Designed proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "k",
+      "sid": null,
+      "sunid": 58788
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/100903",
+      "canonical_url": "/?sunid=100903&ver=2.08",
+      "description": "Designed trimeric coiled-coil",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/58788",
+        "sccs": "k",
+        "sid": null,
+        "sunid": 58788
+      },
+      "release": "2.08",
+      "sccs": "k.40",
+      "sid": null,
+      "sunid": 100903
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/100904",
+      "canonical_url": "/?sunid=100904&ver=2.08",
+      "description": "Designed trimeric coiled-coil",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/100903",
+        "sccs": "k.40",
+        "sid": null,
+        "sunid": 100903
+      },
+      "release": "2.08",
+      "sccs": "k.40.1",
+      "sid": null,
+      "sunid": 100904
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/100905",
+      "canonical_url": "/?sunid=100905&ver=2.08",
+      "description": "Designed trimeric coiled-coil",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/100904",
+        "sccs": "k.40.1",
+        "sid": null,
+        "sunid": 100904
+      },
+      "release": "2.08",
+      "sccs": "k.40.1.1",
+      "sid": null,
+      "sunid": 100905
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/100906",
+      "canonical_url": "/?sunid=100906&ver=2.08",
+      "description": "Unnamed design-1",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/100905",
+        "sccs": "k.40.1.1",
+        "sid": null,
+        "sunid": 100905
+      },
+      "release": "2.08",
+      "sccs": "k.40.1.1",
+      "sid": null,
+      "sunid": 100906
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/64668",
+      "canonical_url": "/?sunid=64668&ver=2.08",
+      "description": "Synthetic",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/100906",
+        "sccs": "k.40.1.1",
+        "sid": null,
+        "sunid": 100906
+      },
+      "release": "2.08",
+      "sccs": "k.40.1.1",
+      "sid": null,
+      "sunid": 64668
+    }
+  ],
+  "release": "2.08",
+  "sunid": 61142
+}

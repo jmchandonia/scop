@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51349",
+      "canonical_url": "/?sunid=51349&ver=2.08",
+      "description": "Alpha and beta proteins (a/b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "c",
+      "sid": null,
+      "sunid": 51349
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/53447",
+      "canonical_url": "/?sunid=53447&ver=2.08",
+      "description": "Nucleotide-diphospho-sugar transferases",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51349",
+        "sccs": "c",
+        "sid": null,
+        "sunid": 51349
+      },
+      "release": "2.08",
+      "sccs": "c.68",
+      "sid": null,
+      "sunid": 53447
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/53448",
+      "canonical_url": "/?sunid=53448&ver=2.08",
+      "description": "Nucleotide-diphospho-sugar transferases",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/53447",
+        "sccs": "c.68",
+        "sid": null,
+        "sunid": 53447
+      },
+      "release": "2.08",
+      "sccs": "c.68.1",
+      "sid": null,
+      "sunid": 53448
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/191551",
+      "canonical_url": "/?sunid=191551&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/53448",
+        "sccs": "c.68.1",
+        "sid": null,
+        "sunid": 53448
+      },
+      "release": "2.08",
+      "sccs": "c.68.1.0",
+      "sid": null,
+      "sunid": 191551
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/190951",
+      "canonical_url": "/?sunid=190951&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/191551",
+        "sccs": "c.68.1.0",
+        "sid": null,
+        "sunid": 191551
+      },
+      "release": "2.08",
+      "sccs": "c.68.1.0",
+      "sid": null,
+      "sunid": 190951
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/234046",
+      "canonical_url": "/?sunid=234046&ver=2.08",
+      "description": "Escherichia coli K-12 [TaxId: 83333]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/190951",
+        "sccs": "c.68.1.0",
+        "sid": null,
+        "sunid": 190951
+      },
+      "release": "2.08",
+      "sccs": "c.68.1.0",
+      "sid": null,
+      "sunid": 234046
+    }
+  ],
+  "release": "2.08",
+  "sunid": 234047
+}

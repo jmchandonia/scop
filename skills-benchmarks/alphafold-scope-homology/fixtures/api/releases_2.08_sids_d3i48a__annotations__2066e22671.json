@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d1zwxa1"
+    },
+    {
+      "description": "complexed with mg, po4; mutant"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/211464",
+    "canonical_url": "/?sunid=211464&ver=2.08",
+    "description": "3i48 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/225915",
+      "sccs": "d.151.1.0",
+      "sid": null,
+      "sunid": 225915
+    },
+    "release": "2.08",
+    "sccs": "d.151.1.0",
+    "sid": "d3i48a_",
+    "sunid": 211464
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

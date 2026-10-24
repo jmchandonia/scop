@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q023_homeodomain_heterogeneous_fold",
+  "request_count": 34,
+  "response_body_count": 33,
+  "successful_response_count": 31,
+  "transient_error_count": 1,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

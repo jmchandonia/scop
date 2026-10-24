@@ -1,0 +1,1 @@
+{"node":{"sunid":103303,"sid":null,"sccs":"d.144.1.6","description":"Klebsiella pneumoniae [TaxId: 573]","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/103303","canonical_url":"/?sunid=103303&ver=2.08","parent":{"sunid":103302,"sid":null,"sccs":"d.144.1.6","api_url":"/api/v1/releases/2.08/sunids/103302"}}}

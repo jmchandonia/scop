@@ -1,0 +1,92 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 611,
+    "response_body_count": 598,
+    "stable_release_consistent": true,
+    "successful_response_count": 597,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "a158a7d868db8bb01717df4a205c2bea164e24cf058935a8e4e88f61831fbc4e",
+    "transient_error_count": 0,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-13T23:24:08Z",
+  "condition": "pretrained_skill",
+  "evaluation": {
+    "completed_at": "2026-10-14T22:38:14Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 0,
+    "rejected_references": []
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "4ab5614d419d62abd96f7b8a41def0980ce843a8c9fa237f54a41286edc98aee",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [],
+    "logs_sha256": "1873f37daaec14338a1237ec50e7d980af8f704d54722cd35d09ebaa64313256",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-fable-5-1",
+    "parameters": {
+      "builtin_tools": "Bash,Read,Glob,Grep",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 1
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1,claude-opus-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-13_claude-fable-5-1_pretrained_skill_r1",
+  "skill": {
+    "commit": "991f3ebb722e0d8a138b5ebaca2f98520a37ef28",
+    "content_sha256": "fd2363d8499df5384773678d502a86b8f5dc6d4c41704e5150b0e4c333d09b50",
+    "path": "skills/scop-homology",
+    "repository": "git@github.com:jmchandonia/scop.git"
+  },
+  "started_at": "2026-10-13T23:14:44Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 653642,
+    "cache_read_input_tokens": 2431137,
+    "input_tokens": 3443,
+    "output_tokens": 140712,
+    "session_seconds": 2138.9,
+    "tool_calls": 157,
+    "total_cost_usd": 19.7544
+  }
+}

@@ -1,0 +1,1 @@
+{"release":"1.71","pdb_code":"1dn1","domains":[{"sid":"d1dn1a_","sunid":43357,"sccs":"e.25.1.1","description":"1dn1 A:","chain":"A","api_url":"/api/v1/releases/1.71/sids/d1dn1a_"},{"sid":"d1dn1b_","sunid":17771,"sccs":"a.47.2.1","description":"1dn1 B:","chain":"B","api_url":"/api/v1/releases/1.71/sids/d1dn1b_"}]}

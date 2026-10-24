@@ -1,0 +1,3023 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 312,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1d5ra2",
+        "comment": null,
+        "description": "1d5r A:14-187",
+        "header": "c.45.1.3 (A:14-187) Phoshphoinositide phosphatase Pten (Pten tumor suppressor), N-terminal domain {Human (Homo sapiens)}",
+        "sccs": "c.45.1.3",
+        "sid": "d1d5ra2",
+        "sunid": 32697
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5buga1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bug A:14-187",
+        "header": "c.45.1.1 (A:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5buga1",
+        "sunid": 277815
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bugb1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bug B:14-187",
+        "header": "c.45.1.1 (B:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bugb1",
+        "sunid": 277813
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bugc1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bug C:14-187",
+        "header": "c.45.1.1 (C:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bugc1",
+        "sunid": 277814
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bugd1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bug D:14-187",
+        "header": "c.45.1.1 (D:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bugd1",
+        "sunid": 277819
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxa1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzx A:14-187",
+        "header": "c.45.1.1 (A:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzxa1",
+        "sunid": 277824
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxb1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzx B:14-187",
+        "header": "c.45.1.1 (B:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzxb1",
+        "sunid": 277821
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxc1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzx C:14-187",
+        "header": "c.45.1.1 (C:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzxc1",
+        "sunid": 277827
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxd1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzx D:14-187",
+        "header": "c.45.1.1 (D:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzxd1",
+        "sunid": 277823
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzza1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzz A:14-187",
+        "header": "c.45.1.1 (A:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzza1",
+        "sunid": 277829
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzzb1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzz B:14-187",
+        "header": "c.45.1.1 (B:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzzb1",
+        "sunid": 277831
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzzc1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzz C:14-187",
+        "header": "c.45.1.1 (C:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzzc1",
+        "sunid": 277833
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 174,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzzd1",
+        "comment": "automated match to d1d5ra2",
+        "description": "5bzz D:14-187",
+        "header": "c.45.1.1 (D:14-187) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bzzd1",
+        "sunid": 277834
+      },
+      "domain_range": {
+        "end": 174,
+        "length": 174,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -101.47429793536034,
+      "percent_identity": 60.31195840554593
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5buga2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bug A:188-351",
+        "header": "b.7.1.1 (A:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5buga2",
+        "sunid": 277818
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bugb2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bug B:188-351",
+        "header": "b.7.1.1 (B:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bugb2",
+        "sunid": 277817
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bugc2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bug C:188-351",
+        "header": "b.7.1.1 (C:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bugc2",
+        "sunid": 277816
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bugd2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bug D:188-351",
+        "header": "b.7.1.1 (D:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bugd2",
+        "sunid": 277820
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxa2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzx A:188-351",
+        "header": "b.7.1.1 (A:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzxa2",
+        "sunid": 277826
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxb2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzx B:188-351",
+        "header": "b.7.1.1 (B:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzxb2",
+        "sunid": 277822
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxc2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzx C:188-351",
+        "header": "b.7.1.1 (C:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzxc2",
+        "sunid": 277828
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzxd2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzx D:188-351",
+        "header": "b.7.1.1 (D:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzxd2",
+        "sunid": 277825
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzza2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzz A:188-351",
+        "header": "b.7.1.1 (A:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzza2",
+        "sunid": 277830
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzzb2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzz B:188-351",
+        "header": "b.7.1.1 (B:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzzb2",
+        "sunid": 277832
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzzc2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzz C:188-351",
+        "header": "b.7.1.1 (C:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzzc2",
+        "sunid": 277836
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bzzd2",
+        "comment": "automated match to d1d5ra1",
+        "description": "5bzz D:188-351",
+        "header": "b.7.1.1 (D:188-351) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "b.7.1.1",
+        "sid": "d5bzzd2",
+        "sunid": 277837
+      },
+      "domain_range": {
+        "end": 140,
+        "length": 140,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -65.74878598946165,
+      "percent_identity": 46.77716390423573
+    },
+    {
+      "alphafold_range": {
+        "end": 351,
+        "length": 164,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1d5ra1",
+        "comment": null,
+        "description": "1d5r A:188-351",
+        "header": "b.7.1.1 (A:188-351) Pten tumor suppressor (Phoshphoinositide phosphatase), N-terminal domain {Human (Homo sapiens)}",
+        "sccs": "b.7.1.1",
+        "sid": "d1d5ra1",
+        "sunid": 23181
+      },
+      "domain_range": {
+        "end": 133,
+        "length": 133,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -60.11764230472111,
+      "percent_identity": 44.776119402985074
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 84,
+        "start": 76
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5k22a_",
+        "comment": "automated match to d2mbca_",
+        "description": "5k22 A:",
+        "header": "c.45.1.1 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5k22a_",
+        "sunid": 323982
+      },
+      "domain_range": {
+        "end": 134,
+        "length": 85,
+        "start": 50
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.98014042238734,
+      "percent_identity": 9.30232558139535
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1rxda_",
+        "comment": null,
+        "description": "1rxd A:",
+        "header": "c.45.1.1 (A:) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-1}",
+        "sccs": "c.45.1.1",
+        "sid": "d1rxda_",
+        "sunid": 111959
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1rxdb_",
+        "comment": null,
+        "description": "1rxd B:",
+        "header": "c.45.1.1 (B:) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-1}",
+        "sccs": "c.45.1.1",
+        "sid": "d1rxdb_",
+        "sunid": 111960
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1rxdc_",
+        "comment": "Structural genomics target",
+        "description": "1rxd C:",
+        "header": "c.45.1.1 (C:) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-1}",
+        "sccs": "c.45.1.1",
+        "sid": "d1rxdc_",
+        "sunid": 111961
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1zcka_",
+        "comment": "automated match to d1rxda_",
+        "description": "1zck A:",
+        "header": "c.45.1.1 (A:) Protein tyrosine phosphatase type IVa {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1zcka_",
+        "sunid": 162442
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1zckb_",
+        "comment": "automated match to d1rxda_",
+        "description": "1zck B:",
+        "header": "c.45.1.1 (B:) Protein tyrosine phosphatase type IVa {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1zckb_",
+        "sunid": 162443
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1zckc_",
+        "comment": "automated match to d1rxda_",
+        "description": "1zck C:",
+        "header": "c.45.1.1 (C:) Protein tyrosine phosphatase type IVa {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1zckc_",
+        "sunid": 162444
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3rz2a_",
+        "comment": "automated match to d1v3aa_",
+        "description": "3rz2 A:",
+        "header": "c.45.1.1 (A:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.1",
+        "sid": "d3rz2a_",
+        "sunid": 216127
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3rz2b_",
+        "comment": "automated match to d1v3aa_",
+        "description": "3rz2 B:",
+        "header": "c.45.1.1 (B:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.1",
+        "sid": "d3rz2b_",
+        "sunid": 216128
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.759098100554098,
+      "percent_identity": 11.531531531531531
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5bx1a_",
+        "comment": "automated match to d2mbca_",
+        "description": "5bx1 A:",
+        "header": "c.45.1.1 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5bx1a_",
+        "sunid": 327295
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.751850811306852,
+      "percent_identity": 11.510791366906476
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5cjkb_",
+        "comment": "automated match to d2mbca_",
+        "description": "5cjk B:",
+        "header": "c.45.1.1 (B:) automated matches {Mus musculus [TaxId: 10090]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5cjkb_",
+        "sunid": 321216
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.7337325872336873,
+      "percent_identity": 11.573236889692586
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5mmzb_",
+        "comment": "automated match to d2mbca_",
+        "description": "5mmz B:",
+        "header": "c.45.1.1 (B:) automated matches {Mus musculus [TaxId: 10090]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5mmzb_",
+        "sunid": 327479
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.7337325872336873,
+      "percent_identity": 11.573236889692586
+    },
+    {
+      "alphafold_range": {
+        "end": 189,
+        "length": 132,
+        "start": 58
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1v3aa_",
+        "comment": null,
+        "description": "1v3a A:",
+        "header": "c.45.1.1 (A:) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-3}",
+        "sccs": "c.45.1.1",
+        "sid": "d1v3aa_",
+        "sunid": 113499
+      },
+      "domain_range": {
+        "end": 161,
+        "length": 126,
+        "start": 36
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.7228616556595444,
+      "percent_identity": 11.327433628318584
+    },
+    {
+      "alphafold_range": {
+        "end": 189,
+        "length": 132,
+        "start": 58
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2mbca_",
+        "comment": "automated match to d1v3aa_",
+        "description": "2mbc A:",
+        "header": "c.45.1.1 (A:) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-3 [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d2mbca_",
+        "sunid": 243160
+      },
+      "domain_range": {
+        "end": 161,
+        "length": 126,
+        "start": 36
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.7228616556595444,
+      "percent_identity": 11.327433628318584
+    },
+    {
+      "alphafold_range": {
+        "end": 189,
+        "length": 105,
+        "start": 85
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1r6ha1",
+        "comment": null,
+        "description": "1r6h A:4-172",
+        "header": "c.45.1.1 (A:4-172) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-3 [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1r6ha1",
+        "sunid": 97150
+      },
+      "domain_range": {
+        "end": 161,
+        "length": 97,
+        "start": 65
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.588786805434257,
+      "percent_identity": 8.741258741258742
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 84,
+        "start": 76
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5k23a_",
+        "comment": "automated match to d2mbca_",
+        "description": "5k23 A:",
+        "header": "c.45.1.1 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5k23a_",
+        "sunid": 324107
+      },
+      "domain_range": {
+        "end": 134,
+        "length": 85,
+        "start": 50
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.2083041226390137,
+      "percent_identity": 9.30232558139535
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 84,
+        "start": 76
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5k24a_",
+        "comment": "automated match to d2mbca_",
+        "description": "5k24 A:",
+        "header": "c.45.1.1 (A:) automated matches {Mus musculus [TaxId: 10090]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5k24a_",
+        "sunid": 324072
+      },
+      "domain_range": {
+        "end": 132,
+        "length": 85,
+        "start": 48
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.201056833892654,
+      "percent_identity": 9.36936936936937
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 84,
+        "start": 76
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5k25a1",
+        "comment": "automated match to d2mbca_",
+        "description": "5k25 A:1-155",
+        "header": "c.45.1.1 (A:1-155) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5k25a1",
+        "sunid": 323975
+      },
+      "domain_range": {
+        "end": 134,
+        "length": 85,
+        "start": 50
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.201056833892654,
+      "percent_identity": 9.31899641577061
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 84,
+        "start": 76
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5k24b_",
+        "comment": "automated match to d2mbca_",
+        "description": "5k24 B:",
+        "header": "c.45.1.1 (B:) automated matches {Mus musculus [TaxId: 10090]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5k24b_",
+        "sunid": 324082
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 85,
+        "start": 46
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.1793149663626945,
+      "percent_identity": 9.420289855072465
+    },
+    {
+      "alphafold_range": {
+        "end": 149,
+        "length": 126,
+        "start": 24
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ohca2",
+        "comment": null,
+        "description": "1ohc A:199-380",
+        "header": "c.45.1.1 (A:199-380) Proline directed phosphatase CDC14b2 {Human (Homo sapiens)}",
+        "sccs": "c.45.1.1",
+        "sid": "d1ohca2",
+        "sunid": 87010
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 125,
+        "start": 17
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.034369182951991,
+      "percent_identity": 12.307692307692308
+    },
+    {
+      "alphafold_range": {
+        "end": 149,
+        "length": 126,
+        "start": 24
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ohda2",
+        "comment": "complexed with wo4",
+        "description": "1ohd A:199-379",
+        "header": "c.45.1.1 (A:199-379) Proline directed phosphatase CDC14b2 {Human (Homo sapiens)}",
+        "sccs": "c.45.1.1",
+        "sid": "d1ohda2",
+        "sunid": 87012
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 125,
+        "start": 17
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.0017563814896846,
+      "percent_identity": 12.32876712328767
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xm2a_",
+        "comment": "automated match to d1rxda_",
+        "description": "1xm2 A:",
+        "header": "c.45.1.1 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1xm2a_",
+        "sunid": 162083
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.7009938824863315,
+      "percent_identity": 11.231884057971014
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xm2b_",
+        "comment": "automated match to d1rxda_",
+        "description": "1xm2 B:",
+        "header": "c.45.1.1 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1xm2b_",
+        "sunid": 162084
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.7009938824863315,
+      "percent_identity": 11.231884057971014
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xm2c_",
+        "comment": "automated match to d1rxda_",
+        "description": "1xm2 C:",
+        "header": "c.45.1.1 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1xm2c_",
+        "sunid": 162085
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.7009938824863315,
+      "percent_identity": 11.231884057971014
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xm2d_",
+        "comment": "automated match to d1rxda_",
+        "description": "1xm2 D:",
+        "header": "c.45.1.1 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1xm2d_",
+        "sunid": 162086
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.7009938824863315,
+      "percent_identity": 11.231884057971014
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xm2e_",
+        "comment": "automated match to d1rxda_",
+        "description": "1xm2 E:",
+        "header": "c.45.1.1 (E:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1xm2e_",
+        "sunid": 162087
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.7009938824863315,
+      "percent_identity": 11.231884057971014
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xm2f_",
+        "comment": "automated match to d1rxda_",
+        "description": "1xm2 F:",
+        "header": "c.45.1.1 (F:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1xm2f_",
+        "sunid": 162088
+      },
+      "domain_range": {
+        "end": 130,
+        "length": 93,
+        "start": 38
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.7009938824863315,
+      "percent_identity": 11.231884057971014
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1zcla_",
+        "comment": "automated match to d1v3aa_",
+        "description": "1zcl A:",
+        "header": "c.45.1.1 (A:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1zcla_",
+        "sunid": 203315
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.6864993038119582,
+      "percent_identity": 11.17117117117117
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1zclb_",
+        "comment": "automated match to d1v3aa_",
+        "description": "1zcl B:",
+        "header": "c.45.1.1 (B:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1zclb_",
+        "sunid": 203316
+      },
+      "domain_range": {
+        "end": 129,
+        "length": 93,
+        "start": 37
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.6864993038119582,
+      "percent_identity": 11.17117117117117
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 102,
+        "start": 58
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5tsrc_",
+        "comment": "automated match to d2mbca_",
+        "description": "5tsr C:",
+        "header": "c.45.1.1 (C:) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-3 [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5tsrc_",
+        "sunid": 329677
+      },
+      "domain_range": {
+        "end": 133,
+        "length": 102,
+        "start": 32
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.56691903288041,
+      "percent_identity": 9.694793536804308
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 102,
+        "start": 58
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5tsra_",
+        "comment": "automated match to d2mbca_",
+        "description": "5tsr A:",
+        "header": "c.45.1.1 (A:) Protein tyrosine phosphatase type IVa {Human (Homo sapiens), pr-3 [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d5tsra_",
+        "sunid": 329680
+      },
+      "domain_range": {
+        "end": 133,
+        "length": 102,
+        "start": 32
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.54880080980357,
+      "percent_identity": 9.67741935483871
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 93,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wusb_",
+        "comment": "automated match to d2mbca_",
+        "description": "6wus B:",
+        "header": "c.45.1.1 (B:) automated matches {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "c.45.1.1",
+        "sid": "d6wusb_",
+        "sunid": 388714
+      },
+      "domain_range": {
+        "end": 131,
+        "length": 93,
+        "start": 39
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.32775848919813,
+      "percent_identity": 11.191335740072201
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 66,
+        "start": 121
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1yfoa_",
+        "comment": null,
+        "description": "1yfo A:",
+        "header": "c.45.1.2 (A:) Tyrosine phosphatase {Mouse (Mus musculus)}",
+        "sccs": "c.45.1.2",
+        "sid": "d1yfoa_",
+        "sunid": 32681
+      },
+      "domain_range": {
+        "end": 278,
+        "length": 65,
+        "start": 214
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.316887555810606,
+      "percent_identity": 7.038123167155426
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 66,
+        "start": 121
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1yfob_",
+        "comment": null,
+        "description": "1yfo B:",
+        "header": "c.45.1.2 (B:) Tyrosine phosphatase {Mouse (Mus musculus)}",
+        "sccs": "c.45.1.2",
+        "sid": "d1yfob_",
+        "sunid": 32682
+      },
+      "domain_range": {
+        "end": 278,
+        "length": 65,
+        "start": 214
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.316887555810606,
+      "percent_identity": 7.038123167155426
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4bpca1",
+        "comment": "automated match to d1lara1",
+        "description": "4bpc A:1368-1688",
+        "header": "c.45.1.2 (A:1368-1688) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d4bpca1",
+        "sunid": 234274
+      },
+      "domain_range": {
+        "end": 280,
+        "length": 130,
+        "start": 151
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.2842747539866934,
+      "percent_identity": 9.392265193370166
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 66,
+        "start": 121
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6uzta1",
+        "comment": "automated match to d3qcka_",
+        "description": "6uzt A:206-499",
+        "header": "c.45.1.0 (A:206-499) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d6uzta1",
+        "sunid": 382498
+      },
+      "domain_range": {
+        "end": 289,
+        "length": 65,
+        "start": 225
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.200930928758652,
+      "percent_identity": 6.886657101865136
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 66,
+        "start": 121
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6uztb1",
+        "comment": "automated match to d3qcka_",
+        "description": "6uzt B:207-499",
+        "header": "c.45.1.0 (B:207-499) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d6uztb1",
+        "sunid": 382461
+      },
+      "domain_range": {
+        "end": 286,
+        "length": 65,
+        "start": 222
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.153823549007262,
+      "percent_identity": 6.9164265129683
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 97,
+        "start": 44
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1g4us2",
+        "comment": null,
+        "description": "1g4u S:297-539",
+        "header": "c.45.1.2 (S:297-539) SptP tyrosine phosphatase, catalytic domain {Salmonella typhimurium}",
+        "sccs": "c.45.1.2",
+        "sid": "d1g4us2",
+        "sunid": 32691
+      },
+      "domain_range": {
+        "end": 201,
+        "length": 101,
+        "start": 101
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.1212107476833033,
+      "percent_identity": 9.287925696594428
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 97,
+        "start": 44
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1g4wr2",
+        "comment": null,
+        "description": "1g4w R:297-539",
+        "header": "c.45.1.2 (R:297-539) SptP tyrosine phosphatase, catalytic domain {Salmonella typhimurium}",
+        "sccs": "c.45.1.2",
+        "sid": "d1g4wr2",
+        "sunid": 32692
+      },
+      "domain_range": {
+        "end": 201,
+        "length": 101,
+        "start": 101
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.1212107476833033,
+      "percent_identity": 9.287925696594428
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6kr4a1",
+        "comment": "automated match to d2fh7a1",
+        "description": "6kr4 A:1332-1650",
+        "header": "c.45.1.2 (A:1332-1650) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d6kr4a1",
+        "sunid": 378988
+      },
+      "domain_range": {
+        "end": 275,
+        "length": 130,
+        "start": 146
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.0596087897385047,
+      "percent_identity": 9.97229916897507
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6kr4b1",
+        "comment": "automated match to d2fh7a1",
+        "description": "6kr4 B:1332-1650",
+        "header": "c.45.1.2 (B:1332-1650) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d6kr4b1",
+        "sunid": 379023
+      },
+      "domain_range": {
+        "end": 275,
+        "length": 130,
+        "start": 146
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.0596087897385047,
+      "percent_identity": 9.97229916897507
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1lara1",
+        "comment": null,
+        "description": "1lar A:1307-1623",
+        "header": "c.45.1.2 (A:1307-1623) RPTP Lar {Human (Homo sapiens)}",
+        "sccs": "c.45.1.2",
+        "sid": "d1lara1",
+        "sunid": 32693
+      },
+      "domain_range": {
+        "end": 274,
+        "length": 130,
+        "start": 145
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.04149056705504,
+      "percent_identity": 10
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6kr4d1",
+        "comment": "automated match to d2fh7a1",
+        "description": "6kr4 D:1332-1647",
+        "header": "c.45.1.2 (D:1332-1647) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d6kr4d1",
+        "sunid": 378981
+      },
+      "domain_range": {
+        "end": 275,
+        "length": 130,
+        "start": 146
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.9943831892735489,
+      "percent_identity": 10.013908205841446
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6kr4c1",
+        "comment": "automated match to d2fh7a1",
+        "description": "6kr4 C:1332-1652",
+        "header": "c.45.1.2 (C:1332-1652) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d6kr4c1",
+        "sunid": 378985
+      },
+      "domain_range": {
+        "end": 275,
+        "length": 130,
+        "start": 146
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.9726413231093485,
+      "percent_identity": 9.94475138121547
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1larb1",
+        "comment": null,
+        "description": "1lar B:1340-1623",
+        "header": "c.45.1.2 (B:1340-1623) RPTP Lar {Human (Homo sapiens)}",
+        "sccs": "c.45.1.2",
+        "sid": "d1larb1",
+        "sunid": 32695
+      },
+      "domain_range": {
+        "end": 241,
+        "length": 130,
+        "start": 112
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.9110393648440613,
+      "percent_identity": 10.480349344978166
+    },
+    {
+      "alphafold_range": {
+        "end": 149,
+        "length": 126,
+        "start": 24
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ohea2",
+        "comment": "complexed with ace, sep",
+        "description": "1ohe A:199-380",
+        "header": "c.45.1.1 (A:199-380) Proline directed phosphatase CDC14b2 {Human (Homo sapiens)}",
+        "sccs": "c.45.1.1",
+        "sid": "d1ohea2",
+        "sunid": 87014
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 125,
+        "start": 17
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.9074157199317803,
+      "percent_identity": 11.965811965811966
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 84,
+        "start": 76
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wura1",
+        "comment": "automated match to d2mbca_",
+        "description": "6wur A:1-154",
+        "header": "c.45.1.1 (A:1-154) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d6wura1",
+        "sunid": 388765
+      },
+      "domain_range": {
+        "end": 134,
+        "length": 85,
+        "start": 50
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.7371044226309333,
+      "percent_identity": 8.976660682226212
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2nv5a_",
+        "comment": "automated match to d2ooqb_",
+        "description": "2nv5 A:",
+        "header": "c.45.1.0 (A:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2nv5a_",
+        "sunid": 205182
+      },
+      "domain_range": {
+        "end": 279,
+        "length": 130,
+        "start": 150
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.5885349943878726,
+      "percent_identity": 10.204081632653061
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2nv5b_",
+        "comment": "automated match to d2ooqb_",
+        "description": "2nv5 B:",
+        "header": "c.45.1.0 (B:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2nv5b_",
+        "sunid": 205183
+      },
+      "domain_range": {
+        "end": 279,
+        "length": 130,
+        "start": 150
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.5885349943878726,
+      "percent_identity": 10.204081632653061
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2nv5c_",
+        "comment": "automated match to d2ooqb_",
+        "description": "2nv5 C:",
+        "header": "c.45.1.0 (C:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2nv5c_",
+        "sunid": 205184
+      },
+      "domain_range": {
+        "end": 279,
+        "length": 130,
+        "start": 150
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.5885349943878726,
+      "percent_identity": 10.204081632653061
+    },
+    {
+      "alphafold_range": {
+        "end": 176,
+        "length": 63,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2qctb_",
+        "comment": "automated match to d3h2xa_",
+        "description": "2qct B:",
+        "header": "c.45.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2qctb_",
+        "sunid": 231197
+      },
+      "domain_range": {
+        "end": 274,
+        "length": 67,
+        "start": 208
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.4182236994081414,
+      "percent_identity": 7.55813953488372
+    },
+    {
+      "alphafold_range": {
+        "end": 176,
+        "length": 63,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2qcta_",
+        "comment": "automated match to d3h2xa_",
+        "description": "2qct A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2qcta_",
+        "sunid": 231198
+      },
+      "domain_range": {
+        "end": 271,
+        "length": 67,
+        "start": 205
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.4073527656331457,
+      "percent_identity": 7.591240875912408
+    },
+    {
+      "alphafold_range": {
+        "end": 176,
+        "length": 63,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2p6xb_",
+        "comment": "automated match to d2h04a_",
+        "description": "2p6x B:",
+        "header": "c.45.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2p6xb_",
+        "sunid": 205453
+      },
+      "domain_range": {
+        "end": 281,
+        "length": 67,
+        "start": 215
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.3638690297130935,
+      "percent_identity": 7.439198855507868
+    },
+    {
+      "alphafold_range": {
+        "end": 176,
+        "length": 63,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2p6xa1",
+        "comment": "automated match to d2p6xb_",
+        "description": "2p6x A:1-302",
+        "header": "c.45.1.0 (A:1-302) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2p6xa1",
+        "sunid": 231137
+      },
+      "domain_range": {
+        "end": 282,
+        "length": 67,
+        "start": 216
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.338503518343118,
+      "percent_identity": 7.386363636363637
+    },
+    {
+      "alphafold_range": {
+        "end": 176,
+        "length": 63,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3h2xa_",
+        "comment": "automated match to d2h02b_",
+        "description": "3h2x A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d3h2xa_",
+        "sunid": 210809
+      },
+      "domain_range": {
+        "end": 283,
+        "length": 67,
+        "start": 217
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.327632584304692,
+      "percent_identity": 7.375886524822695
+    },
+    {
+      "alphafold_range": {
+        "end": 176,
+        "length": 63,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4j51a_",
+        "comment": "automated match to d4j51b_",
+        "description": "4j51 A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d4j51a_",
+        "sunid": 240281
+      },
+      "domain_range": {
+        "end": 282,
+        "length": 67,
+        "start": 216
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.3095143616014795,
+      "percent_identity": 7.375886524822695
+    },
+    {
+      "alphafold_range": {
+        "end": 176,
+        "length": 63,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4j51b_",
+        "comment": "automated match to d3h2xa_",
+        "description": "4j51 B:",
+        "header": "c.45.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d4j51b_",
+        "sunid": 234925
+      },
+      "domain_range": {
+        "end": 282,
+        "length": 67,
+        "start": 216
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.3095143616014795,
+      "percent_identity": 7.375886524822695
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2fh7a1",
+        "comment": "automated match to d1lara1",
+        "description": "2fh7 A:1367-1688",
+        "header": "c.45.1.2 (A:1367-1688) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d2fh7a1",
+        "sunid": 230732
+      },
+      "domain_range": {
+        "end": 281,
+        "length": 130,
+        "start": 152
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.2624069816048973,
+      "percent_identity": 9.379310344827587
+    },
+    {
+      "alphafold_range": {
+        "end": 183,
+        "length": 130,
+        "start": 54
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3sr9a1",
+        "comment": "automated match to d1lara1",
+        "description": "3sr9 A:1326-1647",
+        "header": "c.45.1.2 (A:1326-1647) automated matches {Mus musculus [TaxId: 10090]}",
+        "sccs": "c.45.1.2",
+        "sid": "d3sr9a1",
+        "sunid": 233618
+      },
+      "domain_range": {
+        "end": 281,
+        "length": 130,
+        "start": 152
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.2515360479097541,
+      "percent_identity": 9.379310344827587
+    },
+    {
+      "alphafold_range": {
+        "end": 160,
+        "length": 47,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6d4fa_",
+        "comment": "automated match to d3b7oa_",
+        "description": "6d4f A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d6d4fa_",
+        "sunid": 358904
+      },
+      "domain_range": {
+        "end": 239,
+        "length": 45,
+        "start": 195
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.1500739993006608,
+      "percent_identity": 5.357142857142857
+    },
+    {
+      "alphafold_range": {
+        "end": 160,
+        "length": 47,
+        "start": 114
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6d3fa_",
+        "comment": "automated match to d3b7oa_",
+        "description": "6d3f A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d6d3fa_",
+        "sunid": 358824
+      },
+      "domain_range": {
+        "end": 240,
+        "length": 45,
+        "start": 196
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.146450355118576,
+      "percent_identity": 5.3097345132743365
+    },
+    {
+      "alphafold_range": {
+        "end": 160,
+        "length": 48,
+        "start": 113
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6d3fb_",
+        "comment": "automated match to d3b7oa_",
+        "description": "6d3f B:",
+        "header": "c.45.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d6d3fb_",
+        "sunid": 358825
+      },
+      "domain_range": {
+        "end": 240,
+        "length": 46,
+        "start": 195
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.1210848429596485,
+      "percent_identity": 5.365126676602086
+    },
+    {
+      "alphafold_range": {
+        "end": 196,
+        "length": 77,
+        "start": 120
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4az1a_",
+        "comment": "automated match to d3m4ub_",
+        "description": "4az1 A:",
+        "header": "c.45.1.0 (A:) automated matches {Trypanosoma cruzi [TaxId: 5693]}",
+        "sccs": "c.45.1.0",
+        "sid": "d4az1a_",
+        "sunid": 265907
+      },
+      "domain_range": {
+        "end": 294,
+        "length": 79,
+        "start": 216
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.1174611982954579,
+      "percent_identity": 6.599713055954089
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 66,
+        "start": 121
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6d4db_",
+        "comment": "automated match to d1yfoa_",
+        "description": "6d4d B:",
+        "header": "c.45.1.2 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d6d4db_",
+        "sunid": 358935
+      },
+      "domain_range": {
+        "end": 279,
+        "length": 65,
+        "start": 215
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.1065902644894843,
+      "percent_identity": 5.555555555555555
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 66,
+        "start": 121
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6d4da_",
+        "comment": "automated match to d1yfoa_",
+        "description": "6d4d A:",
+        "header": "c.45.1.2 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.2",
+        "sid": "d6d4da_",
+        "sunid": 358899
+      },
+      "domain_range": {
+        "end": 281,
+        "length": 65,
+        "start": 217
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.0776011078848313,
+      "percent_identity": 5.539358600583091
+    },
+    {
+      "alphafold_range": {
+        "end": 199,
+        "length": 78,
+        "start": 122
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5hdea_",
+        "comment": "automated match to d4j51a_",
+        "description": "5hde A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d5hdea_",
+        "sunid": 328808
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 70,
+        "start": 228
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.0631065295067597,
+      "percent_identity": 7.681365576102419
+    },
+    {
+      "alphafold_range": {
+        "end": 199,
+        "length": 78,
+        "start": 122
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5j8ra_",
+        "comment": "automated match to d4j51a_",
+        "description": "5j8r A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d5j8ra_",
+        "sunid": 316327
+      },
+      "domain_range": {
+        "end": 295,
+        "length": 70,
+        "start": 226
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.0449883064937353,
+      "percent_identity": 7.725321888412018
+    },
+    {
+      "alphafold_range": {
+        "end": 199,
+        "length": 78,
+        "start": 122
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5j8rb_",
+        "comment": "automated match to d4j51a_",
+        "description": "5j8r B:",
+        "header": "c.45.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d5j8rb_",
+        "sunid": 316318
+      },
+      "domain_range": {
+        "end": 292,
+        "length": 70,
+        "start": 223
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.034117372791652,
+      "percent_identity": 7.758620689655173
+    }
+  ],
+  "structure_hits": [
+    {
+      "alphafold_range": {
+        "end": 189,
+        "length": 186,
+        "start": 4
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fq1a_",
+        "comment": "complexed with atp, mg",
+        "description": "1fq1 A:",
+        "header": "c.45.1.1 (A:) Kinase associated phosphatase (kap) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1fq1a_",
+        "sunid": 59982
+      },
+      "domain_range": {
+        "end": 203,
+        "length": 183,
+        "start": 21
+      },
+      "identity": 14.29,
+      "kind": "structure",
+      "p_value": 0.000028,
+      "rmsd": 2.25,
+      "score": 294.26,
+      "similarity": 27.59,
+      "transform": [
+        [
+          -0.752,
+          -0.349,
+          0.559,
+          -10.679
+        ],
+        [
+          0.641,
+          -0.584,
+          0.499,
+          34.725
+        ],
+        [
+          0.152,
+          0.733,
+          0.663,
+          -70.845
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 176,
+        "start": 11
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2gwoc_",
+        "comment": "automated match to d2y96a_",
+        "description": "2gwo C:",
+        "header": "c.45.1.0 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2gwoc_",
+        "sunid": 264295
+      },
+      "domain_range": {
+        "end": 195,
+        "length": 156,
+        "start": 40
+      },
+      "identity": 10.38,
+      "kind": "structure",
+      "p_value": 0.000068,
+      "rmsd": 2.3,
+      "score": 254.84,
+      "similarity": 20.77,
+      "transform": [
+        [
+          -0.579,
+          -0.207,
+          -0.788,
+          41.924
+        ],
+        [
+          0.529,
+          -0.831,
+          -0.171,
+          20.924
+        ],
+        [
+          -0.62,
+          -0.516,
+          0.591,
+          16.64
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 187,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1p15b_",
+        "comment": "D2 domain",
+        "description": "1p15 B:",
+        "header": "c.45.1.2 (B:) Protein-tyrosine phosphatase alpha {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "c.45.1.2",
+        "sid": "d1p15b_",
+        "sunid": 93895
+      },
+      "domain_range": {
+        "end": 788,
+        "length": 241,
+        "start": 548
+      },
+      "identity": 11.51,
+      "kind": "structure",
+      "p_value": 0.000092,
+      "rmsd": 3.05,
+      "score": 269.65,
+      "similarity": 20.63,
+      "transform": [
+        [
+          0.385,
+          -0.829,
+          0.405,
+          23.495
+        ],
+        [
+          0.548,
+          0.559,
+          0.622,
+          -43.309
+        ],
+        [
+          -0.742,
+          -0.017,
+          0.67,
+          -23.377
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 181,
+        "length": 177,
+        "start": 5
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2c46a1",
+        "comment": "automated match to d1i9ta_",
+        "description": "2c46 A:1-199",
+        "header": "c.45.1.1 (A:1-199) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d2c46a1",
+        "sunid": 241407
+      },
+      "domain_range": {
+        "end": 179,
+        "length": 171,
+        "start": 9
+      },
+      "identity": 11.76,
+      "kind": "structure",
+      "p_value": 0.000099,
+      "rmsd": 3.29,
+      "score": 278.29,
+      "similarity": 27.27,
+      "transform": [
+        [
+          -0.825,
+          -0.063,
+          -0.561,
+          -17.783
+        ],
+        [
+          -0.376,
+          -0.68,
+          0.629,
+          -35.954
+        ],
+        [
+          -0.421,
+          0.73,
+          0.538,
+          27.994
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 182,
+        "length": 159,
+        "start": 24
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4yr8b_",
+        "comment": "automated match to d4jmka_",
+        "description": "4yr8 B:",
+        "header": "c.45.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d4yr8b_",
+        "sunid": 312402
+      },
+      "domain_range": {
+        "end": 298,
+        "length": 141,
+        "start": 158
+      },
+      "identity": 13.75,
+      "kind": "structure",
+      "p_value": 0.000101,
+      "rmsd": 1.43,
+      "score": 230.83,
+      "similarity": 27.5,
+      "transform": [
+        [
+          0.893,
+          -0.419,
+          -0.161,
+          61.059
+        ],
+        [
+          0.398,
+          0.572,
+          0.717,
+          -25.026
+        ],
+        [
+          -0.209,
+          -0.705,
+          0.678,
+          -35.11
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 178,
+        "start": 10
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2y96a_",
+        "comment": "automated match to d1vhra_",
+        "description": "2y96 A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2y96a_",
+        "sunid": 244711
+      },
+      "domain_range": {
+        "end": 205,
+        "length": 159,
+        "start": 47
+      },
+      "identity": 11.35,
+      "kind": "structure",
+      "p_value": 0.000169,
+      "rmsd": 2.35,
+      "score": 270.99,
+      "similarity": 25.41,
+      "transform": [
+        [
+          -0.162,
+          0.987,
+          -0.019,
+          41.947
+        ],
+        [
+          -0.897,
+          -0.155,
+          -0.415,
+          -24.858
+        ],
+        [
+          -0.412,
+          -0.05,
+          0.91,
+          -15.206
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 188,
+        "length": 188,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3sr9a1",
+        "comment": "automated match to d1lara1",
+        "description": "3sr9 A:1326-1647",
+        "header": "c.45.1.2 (A:1326-1647) automated matches {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "c.45.1.2",
+        "sid": "d3sr9a1",
+        "sunid": 233618
+      },
+      "domain_range": {
+        "end": 1613,
+        "length": 241,
+        "start": 1373
+      },
+      "identity": 10.63,
+      "kind": "structure",
+      "p_value": 0.000644,
+      "rmsd": 3.33,
+      "score": 263.41,
+      "similarity": 18.5,
+      "transform": [
+        [
+          0.249,
+          -0.668,
+          -0.701,
+          5.581
+        ],
+        [
+          -0.704,
+          -0.622,
+          0.343,
+          -17.081
+        ],
+        [
+          -0.666,
+          0.408,
+          -0.625,
+          -26.011
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 184,
+        "length": 184,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2nlka2",
+        "comment": "automated match to d1lara2",
+        "description": "2nlk A:1168-1412",
+        "header": "c.45.1.0 (A:1168-1412) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2nlka2",
+        "sunid": 264418
+      },
+      "domain_range": {
+        "end": 1412,
+        "length": 240,
+        "start": 1173
+      },
+      "identity": 10.04,
+      "kind": "structure",
+      "p_value": 0.000726,
+      "rmsd": 3.97,
+      "score": 242.91,
+      "similarity": 19.67,
+      "transform": [
+        [
+          0.91,
+          -0.092,
+          -0.403,
+          -17.694
+        ],
+        [
+          0.259,
+          -0.634,
+          0.729,
+          -56.488
+        ],
+        [
+          -0.323,
+          -0.768,
+          -0.553,
+          12.93
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 192,
+        "length": 192,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2nlka1",
+        "comment": "automated match to d1lara1",
+        "description": "2nlk A:827-1160",
+        "header": "c.45.1.0 (A:827-1160) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d2nlka1",
+        "sunid": 264417
+      },
+      "domain_range": {
+        "end": 1160,
+        "length": 289,
+        "start": 872
+      },
+      "identity": 8.9,
+      "kind": "structure",
+      "p_value": 0.000875,
+      "rmsd": 3.71,
+      "score": 247.49,
+      "similarity": 16.1,
+      "transform": [
+        [
+          0.628,
+          0.053,
+          0.776,
+          -66.678
+        ],
+        [
+          -0.166,
+          -0.966,
+          0.201,
+          7.019
+        ],
+        [
+          0.76,
+          -0.255,
+          -0.598,
+          1.382
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 187,
+        "length": 187,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3o4ta_",
+        "comment": "automated match to d1jlna_",
+        "description": "3o4t A:",
+        "header": "c.45.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d3o4ta_",
+        "sunid": 182795
+      },
+      "domain_range": {
+        "end": 334,
+        "length": 239,
+        "start": 96
+      },
+      "identity": 10.74,
+      "kind": "structure",
+      "p_value": 0.00106,
+      "rmsd": 3.09,
+      "score": 241.83,
+      "similarity": 21.07,
+      "transform": [
+        [
+          -0.299,
+          0.023,
+          0.954,
+          13.763
+        ],
+        [
+          0.827,
+          0.504,
+          0.247,
+          10.885
+        ],
+        [
+          -0.475,
+          0.863,
+          -0.17,
+          -33.109
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 161,
+        "length": 138,
+        "start": 24
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4hrfd1",
+        "comment": "automated match to d4d3qb_",
+        "description": "4hrf D:61-209",
+        "header": "c.45.1.0 (D:61-209) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.0",
+        "sid": "d4hrfd1",
+        "sunid": 307528
+      },
+      "domain_range": {
+        "end": 188,
+        "length": 128,
+        "start": 61
+      },
+      "identity": 11.89,
+      "kind": "structure",
+      "p_value": 0.00155,
+      "rmsd": 2.49,
+      "score": 194.89,
+      "similarity": 23.78,
+      "transform": [
+        [
+          0.347,
+          -0.826,
+          -0.444,
+          -22.984
+        ],
+        [
+          0.389,
+          0.557,
+          -0.734,
+          -3.283
+        ],
+        [
+          0.854,
+          0.082,
+          0.514,
+          8.88
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 188,
+        "length": 180,
+        "start": 9
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ohda1",
+        "comment": "complexed with wo4",
+        "description": "1ohd A:42-198",
+        "header": "c.45.1.1 (A:42-198) Proline directed phosphatase CDC14b2 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1ohda1",
+        "sunid": 87011
+      },
+      "domain_range": {
+        "end": 196,
+        "length": 155,
+        "start": 42
+      },
+      "identity": 6.44,
+      "kind": "structure",
+      "p_value": 0.00214,
+      "rmsd": 2.81,
+      "score": 205.8,
+      "similarity": 18.32,
+      "transform": [
+        [
+          -0.319,
+          -0.821,
+          0.472,
+          -8.097
+        ],
+        [
+          -0.933,
+          0.184,
+          -0.31,
+          39.68
+        ],
+        [
+          0.168,
+          -0.54,
+          -0.825,
+          20.087
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 185,
+        "length": 162,
+        "start": 24
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1m3ga_",
+        "comment": null,
+        "description": "1m3g A:",
+        "header": "c.45.1.1 (A:) Mapk phosphatase {Human (Homo sapiens), pac-1 [TaxId: 9606]}",
+        "sccs": "c.45.1.1",
+        "sid": "d1m3ga_",
+        "sunid": 84783
+      },
+      "domain_range": {
+        "end": 314,
+        "length": 143,
+        "start": 172
+      },
+      "identity": 12.8,
+      "kind": "structure",
+      "p_value": 0.00841,
+      "rmsd": 2.36,
+      "score": 173.91,
+      "similarity": 27.44,
+      "transform": [
+        [
+          -0.859,
+          -0.498,
+          -0.117,
+          1.593
+        ],
+        [
+          -0.451,
+          0.845,
+          -0.287,
+          4.456
+        ],
+        [
+          0.242,
+          -0.194,
+          -0.951,
+          -11.224
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 144,
+        "length": 132,
+        "start": 13
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4hv4a3",
+        "comment": "automated match to d1gqya2",
+        "description": "4hv4 A:323-483",
+        "header": "c.59.1.0 (A:323-483) automated matches {Yersinia pestis [TaxId: 214092]}",
+        "sccs": "c.59.1.0",
+        "sid": "d4hv4a3",
+        "sunid": 252520
+      },
+      "domain_range": {
+        "end": 481,
+        "length": 159,
+        "start": 323
+      },
+      "identity": 5.06,
+      "kind": "structure",
+      "p_value": 0.0392,
+      "rmsd": 3.36,
+      "score": 151.24,
+      "similarity": 15.73,
+      "transform": [
+        [
+          0.911,
+          0.043,
+          -0.409,
+          -3.582
+        ],
+        [
+          -0.297,
+          0.758,
+          -0.581,
+          -23.859
+        ],
+        [
+          0.285,
+          0.651,
+          0.703,
+          -44.343
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-P60484-F1",
+    "kind": "alphafold",
+    "name": "AF-P60484-F1",
+    "uniprot_accession": "P60484",
+    "description": "Phosphatidylinositol 3,4,5-trisphosphate 3-phosphatase and dual-specificity protein phosphatase PTEN",
+    "global_plddt": 83.97,
+    "sequence_length": 403
+  }
+}

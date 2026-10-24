@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d1v5ha_"
+    },
+    {
+      "description": "complexed with acy, hem"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/203945",
+    "canonical_url": "/?sunid=203945&ver=2.08",
+    "description": "2dc3 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/109627",
+      "sccs": "a.1.1.2",
+      "sid": null,
+      "sunid": 109627
+    },
+    "release": "2.08",
+    "sccs": "a.1.1.2",
+    "sid": "d2dc3a_",
+    "sunid": 203945
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

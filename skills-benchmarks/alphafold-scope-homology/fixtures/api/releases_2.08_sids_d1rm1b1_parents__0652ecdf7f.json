@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "canonical_url": "/?sunid=46456&ver=2.08",
+      "description": "All alpha proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47395",
+      "canonical_url": "/?sunid=47395&ver=2.08",
+      "description": "Transcription factor IIA (TFIIA), alpha-helical domain",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46456",
+        "sccs": "a",
+        "sid": null,
+        "sunid": 46456
+      },
+      "release": "2.08",
+      "sccs": "a.32",
+      "sid": null,
+      "sunid": 47395
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47396",
+      "canonical_url": "/?sunid=47396&ver=2.08",
+      "description": "Transcription factor IIA (TFIIA), alpha-helical domain",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47395",
+        "sccs": "a.32",
+        "sid": null,
+        "sunid": 47395
+      },
+      "release": "2.08",
+      "sccs": "a.32.1",
+      "sid": null,
+      "sunid": 47396
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47397",
+      "canonical_url": "/?sunid=47397&ver=2.08",
+      "description": "Transcription factor IIA (TFIIA), alpha-helical domain",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47396",
+        "sccs": "a.32.1",
+        "sid": null,
+        "sunid": 47396
+      },
+      "release": "2.08",
+      "sccs": "a.32.1.1",
+      "sid": null,
+      "sunid": 47397
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/88835",
+      "canonical_url": "/?sunid=88835&ver=2.08",
+      "description": "Small chain TOA2, N-terminal domain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47397",
+        "sccs": "a.32.1.1",
+        "sid": null,
+        "sunid": 47397
+      },
+      "release": "2.08",
+      "sccs": "a.32.1.1",
+      "sid": null,
+      "sunid": 88835
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/88836",
+      "canonical_url": "/?sunid=88836&ver=2.08",
+      "description": "Baker's yeast (Saccharomyces cerevisiae) [TaxId: 4932]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/88835",
+        "sccs": "a.32.1.1",
+        "sid": null,
+        "sunid": 88835
+      },
+      "release": "2.08",
+      "sccs": "a.32.1.1",
+      "sid": null,
+      "sunid": 88836
+    }
+  ],
+  "release": "2.08",
+  "sunid": 118780
+}

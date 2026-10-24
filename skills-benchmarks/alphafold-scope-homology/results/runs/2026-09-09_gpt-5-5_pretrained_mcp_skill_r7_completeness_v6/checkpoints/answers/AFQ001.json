@@ -1,0 +1,191 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1/hits?limit=100"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=seq&hit=d1bz1a_",
+            "https://scop.berkeley.edu/sunid=46463&ver=2.08"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2dc3a_",
+            "https://scop.berkeley.edu/sunid=46463&ver=2.08"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2wtha_",
+            "https://scop.berkeley.edu/sunid=46458&ver=2.08"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1"
+          ]
+        },
+        {
+          "id": "E6",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/46463/fatcat-chain-benchmark?minimum_supporting_hits=2"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P69905-F1",
+      "question_id": "AFQ001",
+      "question_sha256": "1c28a5b9e840d50aa90a7f8f67e5b427a2d4a7607736352c612ae0e5f4f3c4b8",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [
+      [
+        "2.08",
+        2,
+        1
+      ]
+    ],
+    "observed_benchmarks": [
+      [
+        "2.08",
+        46463,
+        2
+      ]
+    ],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P69905-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [
+      [
+        "2.08",
+        2,
+        1
+      ]
+    ],
+    "required_benchmarks": [
+      [
+        "2.08",
+        46463,
+        2
+      ]
+    ],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P69905-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1bz1a_"
+      ],
+      [
+        "2.08",
+        "d1s56b_"
+      ],
+      [
+        "2.08",
+        "d2dc3a_"
+      ],
+      [
+        "2.08",
+        "d2wtha_"
+      ],
+      [
+        "2.08",
+        "d2xkha_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 79.502,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 77696,
+      "input_tokens": 108126,
+      "output_tokens": 3640,
+      "reasoning_output_tokens": 818
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n### 1. Conclusion\nAF-P69905-F1, UniProt P69905, release 2.08, has evidence consistent with one SCOPe-like domain spanning approximately residues 1-142. The evidence supports a strong chance of a Globins family-level relationship, a.1.1.2 / SUNID 46463, across the full model, controlled mainly by a full-length exact sequence hit plus full-length high-significance structural agreement; this remains an evidence hypothesis, not an official boundary or classification.\n\n### 2. What can be said at each level\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established by this assessment. Reference annotations mention heme/ligand complexes, but those do not transfer exact function, ligand state, or assembly context to AF-P69905-F1. | E2, E3 |\n| Family | Strongest supported level is a Globins family hypothesis, a.1.1.2 / SUNID 46463. The sequence hit d1bz1a_ covers 142/142 model residues, 100.0%, with 100% identity and log10 E-value -77.63; the top FATCAT hit d2dc3a_ is also a.1.1.2 and covers 142/142, 100.0%, with P=2.12e-14, score 347.69, RMSD 1.68. | E1, E2, E3, E5 |\n| Superfamily | The retrieved material representatives agree at Globin-like superfamily, a.1.1 / SUNID 46458. Competing same-superfamily families occur among lower-ranked structural hits, but they are weaker and do not outweigh the exact sequence hit. | E3, E4 |\n| Fold | The structural evidence is consistent with the Globin-like fold, a.1 / SUNID 46457, over essentially the same full-model envelope. Fold similarity alone would not establish homology, but here it is not the controlling limit because sequence evidence is much stronger. | E2, E3 |\n\n### 3. Evidence considered\n- **E1** \u2014 Sequence provenance is available for the exact UniProt-linked model: UniProt accession P69905, query sequence available, stored BLAST results available with 4,366 stored rows; the public filtered sequence stream returned 100 raw hits grouped into one SCCS group, all a.1.1.2, with d1bz1a_ as representative. This supports a single full-model Globins-family signal rather than a fragmented or empty sequence result. Source: [AlphaFold hit summary](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1/hits?limit=100)\n- **E2** \u2014 The controlling sequence representative d1bz1a_ aligns to model residues 1-142, giving 142/142 model coverage = 100.0%, with rank 1, 100% identity, and log10 E-value -77.63. Its retrieved lineage is Globins family a.1.1.2 / SUNID 46463 under Globin-like superfamily a.1.1 and Globin-like fold a.1. Source: [d1bz1a_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=seq&hit=d1bz1a_); lineage: [Globins SUNID 46463](https://scop.berkeley.edu/sunid=46463&ver=2.08)\n- **E3** \u2014 The top structural representative d2dc3a_ aligns over model residues 1-142, giving 142/142 model coverage = 100.0%, with rank 1, P=2.12e-14, FATCAT score 347.69, RMSD 1.68, 27.81% identity, and Globins family lineage a.1.1.2 / SUNID 46463. It overlaps the same 1-142 envelope as E2. Source: [d2dc3a_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2dc3a_); lineage: [Globins SUNID 46463](https://scop.berkeley.edu/sunid=46463&ver=2.08)\n- **E4** \u2014 Material alternatives in the structural stream remain mostly within the same Globin-like superfamily: d2wtha_ rank 3 covers residues 2-142, 141/142 = 99.3%, P=3.99e-11, RMSD 2.51, family a.1.1.0 automated matches; d2xkha_ rank 4 covers 19-138, 120/142 = 84.51%, P=6.5e-8, RMSD 2.18, neural globin family a.1.1.4; d1s56b_ rank 5 covers 9-139, 131/142 = 92.25%, P=7.01e-7, RMSD 2.94, truncated hemoglobin family a.1.1.1. These are overlapping same-superfamily alternatives, not stronger family-level contrasts. Source: [d2wtha_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2wtha_); node: [Globin-like superfamily SUNID 46458](https://scop.berkeley.edu/sunid=46458&ver=2.08)\n- **E5** \u2014 Local confidence over the controlling 1-142 envelope is high: median pLDDT 98.55, mean 98.05, bands 141 residues >=90, 0 residues 70-<90, 1 residue 50-<70, 0 residues <50, no sustained <70 or <50 stretches, and one high-pLDDT cluster from residues 2-142. This makes the full-length FATCAT geometry more interpretable, but pLDDT is not homology evidence and does not define the boundary. Source: [AlphaFold model and confidence data](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1)\n- **E6** \u2014 The requested FATCAT chain-benchmark calibration for minimum_supporting_hits=2 at the retained family level resolves to Globins, a.1.1.2 / SUNID 46463: fraction 1.0, denominator 19, derived count 19/19, requested_level family, resolved_node SUNID 46463. This is historical calibration context only, not target homology evidence or a probability. Source: [Globins FATCAT chain benchmark](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/46463/fatcat-chain-benchmark?minimum_supporting_hits=2)\n\n### 4. Caveats by evidence item\n- **E1** \u2014 The compact hit call returned enough evidence for this basic regional question, but raw sequence rows are redundant: 100 raw hits collapse to one overlap-SCCS group, so they should not be counted as 100 independent observations.\n- **E2** \u2014 The sequence hit is near-exact and full-length, but it still supports only a non-official relationship hypothesis for the target; it does not establish exact SCOPe curation boundaries or function.\n- **E3** \u2014 d2dc3a_ carries an automated-match comment, so its family label alone would not independently prove family placement. Its current chain-benchmark applicability is uncertain_missing_filter_inputs because alignment_length/component_length inputs are missing, despite the P-value passing 0.0001; therefore the high node calibration fraction in E6 is not used as reassurance for this current hit.\n- **E4** \u2014 Lower-ranked structural alternatives overlap the same model envelope and include automated or different same-superfamily families. They create family-label caution, but their weaker metrics and absence of a competing sequence signal leave the full-length a.1.1.2 sequence hit controlling.\n- **E5** \u2014 PAE/pTM and partner or assembly context were not retrieved here; pLDDT supports local geometry over the matched single-chain model but cannot establish inter-domain placement, oligomeric state, or evolutionary relationship.\n- **E6** \u2014 The benchmark is biased historical context with prespecified threshold minimum_supporting_hits=2, not independent evidence for AF-P69905-F1. It is applicable as a returned node calibration, but current-hit benchmark applicability for the top FATCAT alignment is uncertain as noted in E3.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "get_alphafold_hits(model=AF-P69905-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "get_alphafold_decision_evidence(model=AF-P69905-F1, release=2.08, regions=[1-142], sids=[d1bz1a_, d2dc3a_, d2wtha_, d2xkha_, d1s56b_], calibration_requests=[{sid=d1bz1a_, level=family, minimum_supporting_hits=2}])"
+    ],
+    "input_attestation": {
+      "model": "AF-P69905-F1",
+      "question_id": "AFQ001",
+      "question_sha256": "1c28a5b9e840d50aa90a7f8f67e5b427a2d4a7607736352c612ae0e5f4f3c4b8",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ001",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:36:55Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

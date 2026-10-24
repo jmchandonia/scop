@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/53931",
+      "canonical_url": "/?sunid=53931&ver=2.08",
+      "description": "Alpha and beta proteins (a+b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "d",
+      "sid": null,
+      "sunid": 53931
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/54861",
+      "canonical_url": "/?sunid=54861&ver=2.08",
+      "description": "Ferredoxin-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/53931",
+        "sccs": "d",
+        "sid": null,
+        "sunid": 53931
+      },
+      "release": "2.08",
+      "sccs": "d.58",
+      "sid": null,
+      "sunid": 54861
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/54928",
+      "canonical_url": "/?sunid=54928&ver=2.08",
+      "description": "RNA-binding domain, RBD, aka RNA recognition motif (RRM)",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/54861",
+        "sccs": "d.58",
+        "sid": null,
+        "sunid": 54861
+      },
+      "release": "2.08",
+      "sccs": "d.58.7",
+      "sid": null,
+      "sunid": 54928
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/191529",
+      "canonical_url": "/?sunid=191529&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/54928",
+        "sccs": "d.58.7",
+        "sid": null,
+        "sunid": 54928
+      },
+      "release": "2.08",
+      "sccs": "d.58.7.0",
+      "sid": null,
+      "sunid": 191529
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/190896",
+      "canonical_url": "/?sunid=190896&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/191529",
+        "sccs": "d.58.7.0",
+        "sid": null,
+        "sunid": 191529
+      },
+      "release": "2.08",
+      "sccs": "d.58.7.0",
+      "sid": null,
+      "sunid": 190896
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/188315",
+      "canonical_url": "/?sunid=188315&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/190896",
+        "sccs": "d.58.7.0",
+        "sid": null,
+        "sunid": 190896
+      },
+      "release": "2.08",
+      "sccs": "d.58.7.0",
+      "sid": null,
+      "sunid": 188315
+    }
+  ],
+  "release": "2.08",
+  "sunid": 395579
+}

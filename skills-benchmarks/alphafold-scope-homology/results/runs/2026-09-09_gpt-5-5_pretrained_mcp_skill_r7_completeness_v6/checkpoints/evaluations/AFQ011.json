@@ -1,0 +1,27 @@
+{
+  "performance": {
+    "duration_seconds": 24.316,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 10624,
+      "input_tokens": 18594,
+      "output_tokens": 577,
+      "reasoning_output_tokens": 245
+    }
+  },
+  "record": {
+    "applied_penalties": [],
+    "criterion_scores": {
+      "calibration_and_caveats": 4,
+      "evidence_completeness": 4,
+      "scientific_correctness": 4,
+      "task_resolution": 4
+    },
+    "evaluator": "gpt-5.6-sol",
+    "question_id": "AFQ011",
+    "rubric_notes": "The candidate fully resolves the question with a non-official, non-definitive regional hypothesis. It identifies the approximately 279/280\u2013370 RRM-like core within a broader approximately 262\u2013381 envelope, contrasts low global confidence with substantially stronger but mixed local confidence, reports all four regional pLDDT bands, and explicitly notes six fragmented high-pLDDT clusters rather than a uniformly very-high-confidence block. It integrates exact model/UniProt and stored-sequence provenance, sequence representatives, FATCAT representatives and metrics, family-discordant but superfamily-consistent lineages, SCOPe release 2.08, and the threshold-5 RRM-superfamily benchmark (1.0, 46/46). The benchmark is correctly treated solely as historical calibration and the answer explicitly states that neither pLDDT nor FATCAT similarity nor the benchmark establishes homology, exact boundaries, family, or function. The one-residue difference from the draft gold\u2019s 262\u2013382 envelope and associated 120-versus-121 residue accounting is presented as an approximate, evidence-supported envelope and does not materially contradict the tested proposition. The six cluster coordinates are not enumerated, but their fragmented topology and interpretive consequence are clearly supplied, so this is not a material completeness omission. No definitive classification language, mandatory penalty, or score cap applies.",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "score": 4,
+    "timestamp": "2026-09-10T00:43:11Z"
+  }
+}

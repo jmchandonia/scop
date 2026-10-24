@@ -1,0 +1,27 @@
+{
+  "performance": {
+    "duration_seconds": 26.429,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 19992,
+      "output_tokens": 659,
+      "reasoning_output_tokens": 319
+    }
+  },
+  "record": {
+    "applied_penalties": [],
+    "criterion_scores": {
+      "calibration_and_caveats": 4,
+      "evidence_completeness": 4,
+      "scientific_correctness": 4,
+      "task_resolution": 4
+    },
+    "evaluator": "gpt-5.6-sol",
+    "question_id": "AFQ009",
+    "rubric_notes": "The candidate fully resolves the regional question: it identifies the N-terminal RING/U-box candidate and two distinct C-terminal BRCT-like candidates, gives defensible approximate intervals and coverage, distinguishes sequence-only support from BRCT1 sequence-plus-FATCAT convergence, reports region-specific pLDDT distributions, and keeps the low-confidence middle unresolved rather than extending terminal hypotheses through it. It reports AF-P38398-F1/P38398, SCOPe release 2.08, controlling and representative SIDs, lineage identifiers, hit statistics, and exact-sequence/BLAST provenance. The prespecified BRCT-family minimum_supporting_hits=2 benchmark is correctly reported as no_observations and is explicitly not treated as positive evidence; the FATCAT match fraction is not used as homology evidence. Calibration is appropriately cautious throughout, including explicit non-official and non-definitive framing, approximate-boundary language, and warnings that pLDDT and structural similarity do not establish ancestry. It uses d2y43a_ rather than discussing the gold's weak d1rmda2 secondary hit, but d1jm7a_ remains correctly controlling and the alternative weak N-terminal representative provides scientifically compatible lineage context, so this does not materially contradict the case or warrant a deduction under the non-exhaustive-reference rule. No mandatory penalty applies, and the deterministic contract reports no hard-audit issue.",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "score": 4,
+    "timestamp": "2026-09-10T00:43:00Z"
+  }
+}

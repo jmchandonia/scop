@@ -1,0 +1,1 @@
+{"node":{"sunid":102789,"sid":null,"sccs":"d.15.1.6","description":"Mouse (Mus musculus) [TaxId: 10090]","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/102789","canonical_url":"/?sunid=102789&ver=2.08","parent":{"sunid":102788,"sid":null,"sccs":"d.15.1.6","api_url":"/api/v1/releases/2.08/sunids/102788"}}}

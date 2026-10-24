@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/49504",
+    "canonical_url": "/?sunid=49504&ver=2.08",
+    "description": "Plastocyanin/azurin-like",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/49503",
+      "sccs": "b.6.1",
+      "sid": null,
+      "sunid": 49503
+    },
+    "release": "2.08",
+    "sccs": "b.6.1.1",
+    "sid": null,
+    "sunid": 49504
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "api_access": null,
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-13T23:44:59Z",
+  "condition": "pretrained_only",
+  "evaluation": {
+    "completed_at": "2026-10-14T22:38:14Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 14,
+    "rejected_references": [
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "SCOPe hierarchy: class a, fold a.204, superfamily a.204.1 (All-alpha NTP pyrophosphatases), families a.204.1.1 MazG-like and a.204.1.3 HisE-like"
+      },
+      {
+        "question_id": "Q004_ferritin_like_functional_divergence",
+        "reference": "SCOPe hierarchy: class a, fold a.25 Ferritin-like, superfamily a.25.1, families a.25.1.1 Ferritin, a.25.1.2 Ribonucleotide reductase-like, a.25.1.3 Manganese catalase (SCOPe 2.07/2.08, consistent with SCOP 1.75)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "SCOPe/SCOP 1.75 hierarchy: class b, fold b.6 Cupredoxin-like, superfamily b.6.1 Cupredoxins, families b.6.1.1 Plastocyanin/azurin-like, b.6.1.4 Ephrin ectodomain, b.6.1.5 Peptidylarginine deiminase Pad4 N-terminal domain"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "SCOPe classification of other PAD4 domains (b.1.18 E set domains middle domain; d.166.1 pentein catalytic domain)"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "SCOP 1.75 / SCOPe hierarchy: class d, fold d.15 beta-Grasp (ubiquitin-like), superfamily d.15.1 Ubiquitin-like, families d.15.1.1 Ubiquitin-related, d.15.1.2 UBX domain, d.15.1.5 Ras-binding domain RBD"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "question text from questions_blind.jsonl (Q006) as supplied in the prompt"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "SCOPe fold f.21 Heme-binding four-helical bundle with superfamilies f.21.1, f.21.2, f.21.3 (SCOP 1.75 lineage inherited by SCOPe 2.07/2.08)"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "SCOPe hierarchy: fold c.2 / superfamily c.2.1 / families c.2.1.1, c.2.1.8, c.2.1.9 (from pretrained knowledge)"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "Andreeva et al. 2008 NAR 36:D419 (SCOP 1.75 paper) as recalled"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "SCOP 1.69/1.75 and SCOPe 2.08 hierarchy as recalled"
+      },
+      {
+        "question_id": "Q015_artifact_tag_not_homology",
+        "reference": "question record for Q015 from questions_blind.jsonl"
+      },
+      {
+        "question_id": "Q018_tal_effector_repeat_lengths",
+        "reference": "question record supplied verbatim in the task prompt"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "question prompt from questions_blind.jsonl (Q021_nad_binding_convergent_evolution)"
+      },
+      {
+        "question_id": "Q024_fibronectin_fragment_selection",
+        "reference": "question record supplied from questions_blind.jsonl"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "44066f2ff114329117edd1249cdf6e1e149329207bad60c6fa2339da2801b4e5",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "4bf958e0f166bc6b93948fca3a58a70c21afaa5ed98754740d6dbbc8d2ef9713",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-fable-5-1",
+    "parameters": {
+      "builtin_tools": "",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 2
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1,claude-opus-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-13_claude-fable-5-1_pretrained_only_r2",
+  "skill": null,
+  "started_at": "2026-10-13T23:37:07Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 78180,
+    "cache_read_input_tokens": 145630,
+    "input_tokens": 66,
+    "output_tokens": 122360,
+    "session_seconds": 1765.1,
+    "tool_calls": 31,
+    "total_cost_usd": 7.1011
+  }
+}

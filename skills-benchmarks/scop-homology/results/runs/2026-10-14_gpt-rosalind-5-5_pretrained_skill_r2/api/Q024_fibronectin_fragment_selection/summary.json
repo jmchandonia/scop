@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q024_fibronectin_fragment_selection",
+  "request_count": 13,
+  "response_body_count": 13,
+  "successful_response_count": 13,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

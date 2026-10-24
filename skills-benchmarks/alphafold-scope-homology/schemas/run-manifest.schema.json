@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["run_id", "benchmark_id", "suite_version", "condition", "model", "questions_sha256", "started_at", "completed_at"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "benchmark_id": {"const": "alphafold-scope-homology"},
+    "suite_version": {"type": "string"},
+    "condition": {"enum": ["pretrained_only", "pretrained_api", "pretrained_skill", "pretrained_mcp_skill"]},
+    "model": {"type": "object"},
+    "questions_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "blind_questions_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "fixture_manifest_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "gold_answers_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "rubric_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "skill_sha256": {"type": ["string", "null"], "pattern": "^[a-f0-9]{64}$"},
+    "skill_tree_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "mcp_source_tree_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "runner_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "answers_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "evaluation_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": "string", "format": "date-time"}
+  }
+}

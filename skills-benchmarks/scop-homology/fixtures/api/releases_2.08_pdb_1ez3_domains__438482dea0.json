@@ -1,0 +1,30 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1ez3a_",
+      "chain": "A",
+      "description": "1ez3 A:",
+      "sccs": "a.47.2.1",
+      "sid": "d1ez3a_",
+      "sunid": 17768
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1ez3b_",
+      "chain": "B",
+      "description": "1ez3 B:",
+      "sccs": "a.47.2.1",
+      "sid": "d1ez3b_",
+      "sunid": 17769
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1ez3c_",
+      "chain": "C",
+      "description": "1ez3 C:",
+      "sccs": "a.47.2.1",
+      "sid": "d1ez3c_",
+      "sunid": 17770
+    }
+  ],
+  "pdb_code": "1ez3",
+  "release": "2.08"
+}

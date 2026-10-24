@@ -1,0 +1,1 @@
+{"node":{"sunid":190541,"sid":null,"sccs":"d.15.1.5","description":"automated matches","level":{"code":"dm","name":"Protein","plural":"Proteins"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/190541","canonical_url":"/?sunid=190541&ver=2.08","parent":{"sunid":54263,"sid":null,"sccs":"d.15.1.5","api_url":"/api/v1/releases/2.08/sunids/54263"}}}

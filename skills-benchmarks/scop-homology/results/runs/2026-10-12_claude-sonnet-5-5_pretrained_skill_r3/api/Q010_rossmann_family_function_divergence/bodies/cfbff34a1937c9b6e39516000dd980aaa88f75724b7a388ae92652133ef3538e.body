@@ -1,0 +1,1 @@
+{"node":{"sunid":51848,"sid":null,"sccs":"c.2.1.5","description":"LDH N-terminal domain-like","level":{"code":"fa","name":"Family","plural":"Families"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/51848","canonical_url":"/?sunid=51848&ver=2.08","parent":{"sunid":51735,"sid":null,"sccs":"c.2.1","api_url":"/api/v1/releases/2.08/sunids/51735"}}}

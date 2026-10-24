@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d1kr7a_"
+    },
+    {
+      "description": "complexed with hem, oxy, so4, xe; mutant"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/170180",
+    "canonical_url": "/?sunid=170180&ver=2.08",
+    "description": "2xkh A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/189562",
+      "sccs": "a.1.1.4",
+      "sid": null,
+      "sunid": 189562
+    },
+    "release": "2.08",
+    "sccs": "a.1.1.4",
+    "sid": "d2xkha_",
+    "sunid": 170180
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

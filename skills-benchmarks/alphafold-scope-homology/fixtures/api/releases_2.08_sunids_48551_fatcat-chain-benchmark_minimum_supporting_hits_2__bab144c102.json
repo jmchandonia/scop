@@ -1,0 +1,48 @@
+{
+  "applicable": true,
+  "available_minimum_supporting_hits": [],
+  "benchmark": null,
+  "classification_level": "fold",
+  "method": {
+    "ambiguous_assignments_count_as_non_matches": true,
+    "assignment_ambiguity_margin": 0.05,
+    "benchmark_version": 3,
+    "default_minimum_supporting_hits": 2,
+    "interpretation": "Benchmark classification consistency for filtered chain-to-domain FATCAT alignments; not homology evidence or a probability that a current hit is correct.",
+    "length_match_definition": "min(alignment_length, component_length) / max(alignment_length, component_length)",
+    "maximum_fatcat_p_value": 0.0001,
+    "minimum_length_match": 0.8,
+    "representative_chain_sequence_identity_percent": 90,
+    "same_pdb_chain_hits_excluded": true,
+    "source_release_id": 19,
+    "support_threshold_interpretation": "Minimum number of classification-consistent supporting hits required when constructing each benchmark case.",
+    "supported_minimum_supporting_hits": [
+      2,
+      3,
+      5
+    ]
+  },
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/48551",
+    "canonical_url": "/?sunid=48551&ver=2.08",
+    "description": "Serum albumin-like",
+    "level": {
+      "code": "cf",
+      "name": "Fold",
+      "plural": "Folds"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    "release": "2.08",
+    "sccs": "a.126",
+    "sid": null,
+    "sunid": 48551
+  },
+  "release": "2.08",
+  "requested_minimum_supporting_hits": 2,
+  "status": "no_observations"
+}

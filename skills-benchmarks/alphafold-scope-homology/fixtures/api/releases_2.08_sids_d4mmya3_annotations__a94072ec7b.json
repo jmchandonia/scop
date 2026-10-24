@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d1m1xa2"
+    },
+    {
+      "description": "complexed with mn, nag"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/266745",
+    "canonical_url": "/?sunid=266745&ver=2.08",
+    "description": "4mmy A:599-737",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/233858",
+      "sccs": "b.1.15.0",
+      "sid": null,
+      "sunid": 233858
+    },
+    "release": "2.08",
+    "sccs": "b.1.15.0",
+    "sid": "d4mmya3",
+    "sunid": 266745
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

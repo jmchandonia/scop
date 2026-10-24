@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "canonical_url": "/?sunid=46456&ver=2.08",
+      "description": "All alpha proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46457",
+      "canonical_url": "/?sunid=46457&ver=2.08",
+      "description": "Globin-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46456",
+        "sccs": "a",
+        "sid": null,
+        "sunid": 46456
+      },
+      "release": "2.08",
+      "sccs": "a.1",
+      "sid": null,
+      "sunid": 46457
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46458",
+      "canonical_url": "/?sunid=46458&ver=2.08",
+      "description": "Globin-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46457",
+        "sccs": "a.1",
+        "sid": null,
+        "sunid": 46457
+      },
+      "release": "2.08",
+      "sccs": "a.1.1",
+      "sid": null,
+      "sunid": 46458
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46459",
+      "canonical_url": "/?sunid=46459&ver=2.08",
+      "description": "Truncated hemoglobin",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46458",
+        "sccs": "a.1.1",
+        "sid": null,
+        "sunid": 46458
+      },
+      "release": "2.08",
+      "sccs": "a.1.1.1",
+      "sid": null,
+      "sunid": 46459
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46460",
+      "canonical_url": "/?sunid=46460&ver=2.08",
+      "description": "Protozoan/bacterial hemoglobin",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46459",
+        "sccs": "a.1.1.1",
+        "sid": null,
+        "sunid": 46459
+      },
+      "release": "2.08",
+      "sccs": "a.1.1.1",
+      "sid": null,
+      "sunid": 46460
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/63437",
+      "canonical_url": "/?sunid=63437&ver=2.08",
+      "description": "Mycobacterium tuberculosis, HbN [TaxId: 1773]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46460",
+        "sccs": "a.1.1.1",
+        "sid": null,
+        "sunid": 46460
+      },
+      "release": "2.08",
+      "sccs": "a.1.1.1",
+      "sid": null,
+      "sunid": 63437
+    }
+  ],
+  "release": "2.08",
+  "sunid": 105261
+}

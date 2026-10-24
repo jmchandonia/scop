@@ -1,0 +1,36 @@
+{
+  "comments": [
+    {
+      "description": "not a true family"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/100905",
+    "canonical_url": "/?sunid=100905&ver=2.08",
+    "description": "Designed trimeric coiled-coil",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/100904",
+      "sccs": "k.40.1",
+      "sid": null,
+      "sunid": 100904
+    },
+    "release": "2.08",
+    "sccs": "k.40.1.1",
+    "sid": null,
+    "sunid": 100905
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

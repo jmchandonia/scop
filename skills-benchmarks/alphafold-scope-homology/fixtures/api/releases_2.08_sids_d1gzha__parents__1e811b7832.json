@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/48724",
+      "canonical_url": "/?sunid=48724&ver=2.08",
+      "description": "All beta proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "b",
+      "sid": null,
+      "sunid": 48724
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/49379",
+      "canonical_url": "/?sunid=49379&ver=2.08",
+      "description": "Common fold of diphtheria toxin/transcription factors/cytochrome f",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/48724",
+        "sccs": "b",
+        "sid": null,
+        "sunid": 48724
+      },
+      "release": "2.08",
+      "sccs": "b.2",
+      "sid": null,
+      "sunid": 49379
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/49417",
+      "canonical_url": "/?sunid=49417&ver=2.08",
+      "description": "p53-like transcription factors",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/49379",
+        "sccs": "b.2",
+        "sid": null,
+        "sunid": 49379
+      },
+      "release": "2.08",
+      "sccs": "b.2.5",
+      "sid": null,
+      "sunid": 49417
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/81314",
+      "canonical_url": "/?sunid=81314&ver=2.08",
+      "description": "p53 DNA-binding domain-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/49417",
+        "sccs": "b.2.5",
+        "sid": null,
+        "sunid": 49417
+      },
+      "release": "2.08",
+      "sccs": "b.2.5.2",
+      "sid": null,
+      "sunid": 81314
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/49419",
+      "canonical_url": "/?sunid=49419&ver=2.08",
+      "description": "p53 tumor suppressor, DNA-binding domain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/81314",
+        "sccs": "b.2.5.2",
+        "sid": null,
+        "sunid": 81314
+      },
+      "release": "2.08",
+      "sccs": "b.2.5.2",
+      "sid": null,
+      "sunid": 49419
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/49420",
+      "canonical_url": "/?sunid=49420&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/49419",
+        "sccs": "b.2.5.2",
+        "sid": null,
+        "sunid": 49419
+      },
+      "release": "2.08",
+      "sccs": "b.2.5.2",
+      "sid": null,
+      "sunid": 49420
+    }
+  ],
+  "release": "2.08",
+  "sunid": 70807
+}

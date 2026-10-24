@@ -1,0 +1,1 @@
+{"node":{"sunid":50091,"sid":null,"sccs":"b.34.4.1","description":"R67 dihydrofolate reductase","level":{"code":"fa","name":"Family","plural":"Families"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/50091","canonical_url":"/?sunid=50091&ver=2.08","parent":{"sunid":50090,"sid":null,"sccs":"b.34.4","api_url":"/api/v1/releases/2.08/sunids/50090"}}}

@@ -1,0 +1,14 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/1.75/sids/d1acca_",
+      "chain": "A",
+      "description": "1acc A:",
+      "sccs": "f.11.1.1",
+      "sid": "d1acca_",
+      "sunid": 43828
+    }
+  ],
+  "pdb_code": "1acc",
+  "release": "1.75"
+}

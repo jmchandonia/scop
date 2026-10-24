@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "canonical_url": "/?sunid=46456&ver=2.08",
+      "description": "All alpha proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/101385",
+      "canonical_url": "/?sunid=101385&ver=2.08",
+      "description": "all-alpha NTP pyrophosphatases",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46456",
+        "sccs": "a",
+        "sid": null,
+        "sunid": 46456
+      },
+      "release": "2.08",
+      "sccs": "a.204",
+      "sid": null,
+      "sunid": 101385
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/101386",
+      "canonical_url": "/?sunid=101386&ver=2.08",
+      "description": "all-alpha NTP pyrophosphatases",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/101385",
+        "sccs": "a.204",
+        "sid": null,
+        "sunid": 101385
+      },
+      "release": "2.08",
+      "sccs": "a.204.1",
+      "sid": null,
+      "sunid": 101386
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/140797",
+      "canonical_url": "/?sunid=140797&ver=2.08",
+      "description": "HisE-like (PRA-PH)",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/101386",
+        "sccs": "a.204.1",
+        "sid": null,
+        "sunid": 101386
+      },
+      "release": "2.08",
+      "sccs": "a.204.1.4",
+      "sid": null,
+      "sunid": 140797
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/140798",
+      "canonical_url": "/?sunid=140798&ver=2.08",
+      "description": "Phosphoribosyl-ATP pyrophosphatase HisE",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/140797",
+        "sccs": "a.204.1.4",
+        "sid": null,
+        "sunid": 140797
+      },
+      "release": "2.08",
+      "sccs": "a.204.1.4",
+      "sid": null,
+      "sunid": 140798
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/140801",
+      "canonical_url": "/?sunid=140801&ver=2.08",
+      "description": "Mycobacterium tuberculosis [TaxId: 1773]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/140798",
+        "sccs": "a.204.1.4",
+        "sid": null,
+        "sunid": 140798
+      },
+      "release": "2.08",
+      "sccs": "a.204.1.4",
+      "sid": null,
+      "sunid": 140801
+    }
+  ],
+  "release": "2.08",
+  "sunid": 122676
+}

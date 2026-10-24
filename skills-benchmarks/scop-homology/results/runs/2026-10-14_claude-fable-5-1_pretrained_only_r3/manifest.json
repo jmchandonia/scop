@@ -1,0 +1,105 @@
+{
+  "api_access": null,
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-14T00:29:35Z",
+  "condition": "pretrained_only",
+  "evaluation": {
+    "completed_at": "2026-10-14T22:38:14Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 9,
+    "rejected_references": [
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "SCOPe classification hierarchy (fold c.55, superfamily c.55.1 and its families)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "Bork, Sander & Valencia 1992 PNAS actin/hexokinase/Hsp70 ATPase motif analysis (recalled)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "SCOP 1.75 / SCOPe 2.0x hierarchy as remembered: fold b.6 Cupredoxin-like, superfamily b.6.1 Cupredoxins (families b.6.1.1 plastocyanin/azurin-like, b.6.1.2 CcO subunit II periplasmic domain, b.6.1.3 multidomain cupredoxins, ephrin ectodomain family), superfamily b.6.2 PAD4 N-terminal domain"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "SCOP/SCOPe fold b.84 barrel-sandwich hybrid definitions and superfamily descriptions (b.84.1, b.84.2, b.84.3, A-subunit bulge domain superfamily)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "SCOP classification of A/V-ATPase A subunit and F1 alpha/beta subunit domains (b.49.1, c.37.1, a.69.1)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "PDB 1vdz Pyrococcus horikoshii A-ATPase A subunit structure"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "Andreeva et al. 2008 NAR SCOP paper (recalled from pretrained knowledge)"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "SCOP 1.69 / 1.73 / 1.75 and SCOPe lineage for c.23.12 (recalled from pretrained knowledge)"
+      },
+      {
+        "question_id": "Q015_artifact_tag_not_homology",
+        "reference": "question record from questions_blind.jsonl (Q015_artifact_tag_not_homology)"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "44066f2ff114329117edd1249cdf6e1e149329207bad60c6fa2339da2801b4e5",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "63bbd55338e6e212726b67a175b61d9e5c87808a02d0b256b07ded1eb86e0a7d",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-fable-5-1",
+    "parameters": {
+      "builtin_tools": "",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 3
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1,claude-opus-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-14_claude-fable-5-1_pretrained_only_r3",
+  "skill": null,
+  "started_at": "2026-10-14T00:22:22Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 21725,
+    "cache_read_input_tokens": 168421,
+    "input_tokens": 60,
+    "output_tokens": 109747,
+    "session_seconds": 1589.4,
+    "tool_calls": 27,
+    "total_cost_usd": 5.5015
+  }
+}

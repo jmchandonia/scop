@@ -1,0 +1,155 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d1d5ra2"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d5buga2"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://scop.berkeley.edu/sunid=49562&ver=2.08",
+            "https://scop.berkeley.edu/sunid=52799&ver=2.08"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1fq1a_"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P60484-F1/hits?limit=100"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P60484-F1",
+      "question_id": "AFQ006",
+      "question_sha256": "52d9f1bb3f03eba15bad04bad5c8aa80a966bd4f2322f6eee1822c4913d00398",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [],
+    "observed_benchmarks": [],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P60484-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_hits",
+      "get_scop_domains"
+    ],
+    "required_benchmark_counts": [],
+    "required_benchmarks": [],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P60484-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1d5ra2"
+      ],
+      [
+        "2.08",
+        "d5buga2"
+      ]
+    ],
+    "successful_call_count": 3,
+    "total_call_count": 3,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_hits",
+      "get_scop_domains"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 2,
+    "duration_seconds": 165.513,
+    "mcp_call_count": 6,
+    "rejected_attempts": [
+      {
+        "attempt": 1,
+        "issues": [
+          "scop_local calls used REST evidence absent from the parity-checked fixture manifest: ['http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1d5ra1', 'http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1d5ra1/annotations', 'http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1d5ra1/homology', 'http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1d5ra1/parents']"
+        ]
+      }
+    ],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 268160,
+      "input_tokens": 342421,
+      "output_tokens": 7414,
+      "reasoning_output_tokens": 2286
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**Conclusion**\nNo. Inspecting only the first 10 sequence hits for AF-P60484-F1 / UniProt P60484 in SCOPe 2.08 recovers only the N-terminal signal at approximately residues 14-187. Raising the bounded hit limit exposes a second supported sequence-hit region at approximately residues 188-351, first appearing at sequence rank 14, so the first-10 window is pagination-sensitive and incomplete for supported regional signals.\n\n**What can be said at each level**\n\nRegion approximately 14-187:\n\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | Target function is not established by this benchmark evidence; reference descriptions mention PTEN/phosphatase context only. | E1, E3 |\n| Family | The sequence window strongly favors a phosphatase-related SCOPe lineage for this N-terminal region, but this narrow pagination question does not establish an official target family placement. | E1, E3 |\n| Superfamily | Retrieved lineage for the shortlisted representative passes through c.45.1, `(Phosphotyrosine protein) phosphatases II`, SUNID 52799. | E3 |\n| Fold | Structure hits also concentrate over roughly residues 1-192 in c.45-related groups; this supports a regional structural signal for the N-terminal region, not an official homology determination. | E4 |\n\nRegion approximately 188-351:\n\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | Target function is not established; the retrieved domain comments/labels are reference context only. | E2, E3 |\n| Family | The broader sequence-hit window reveals a b.7.1.1 / PLC-like candidate region, first at rank 14, but the representative is an automated match, so the evidence is best treated as a supported regional hypothesis rather than a definitive family conclusion. | E2, E3 |\n| Superfamily | Retrieved lineage for d5buga2 passes through b.7.1, C2 domain superfamily, SUNID 49562. | E3 |\n| Fold | The region is consistent with a C2 domain-like fold signal in the sequence evidence; no separate structure-hit support for this region was retrieved in the bounded hit summary. | E2, E4 |\n\n**Evidence considered**\n- **E1** \u2014 The raw first-10 sequence ranks all cover the same N-terminal interval, residues 14-187: rank 1 d1d5ra2 and ranks 2-10 automated d5bug/d5bzx chain variants all align 174 residues, 174/403 = 43.18% model coverage, with log10 E-value -101.4743 and 60.31% identity. This first-10 window therefore repeats the same regional signal and does not expose the 188-351 region. Source: [d1d5ra2 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d1d5ra2)\n- **E2** \u2014 With limit 100, the compact and raw sequence evidence show a second group, b.7.1.1, first at rank 14 with d5buga2 over residues 188-351. The representative aligns 164 residues, 164/403 = 40.69% model coverage, with log10 E-value -65.7488 and 46.78% identity; the group has 13 raw hits with envelope 188-351. This is the material region hidden by the first-10 window. Source: [d5buga2 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d5buga2)\n- **E3** \u2014 The shortlisted SCOPe domain lookups give release-2.08 lineage for d1d5ra2 through fold c.45 SUNID 52798, superfamily c.45.1 SUNID 52799, family c.45.1.1 SUNID 52800; d5buga2 passes through fold b.7 SUNID 49561, superfamily b.7.1 SUNID 49562, family b.7.1.1 SUNID 49563. These lineages show that the broader window adds a different SCOPe branch and adjacent region, not just more redundant N-terminal hits. Source: [c.45.1 node](https://scop.berkeley.edu/sunid=52799&ver=2.08), [b.7.1 node](https://scop.berkeley.edu/sunid=49562&ver=2.08)\n- **E4** \u2014 The compact structure stream contains only N-terminal/overlapping structural groups: c.45.1.1 rank 1 over residues 4-189, score 294.26, RMSD 2.25, P-value 0.000028; c.45.1.0 rank 2 over 11-186; c.45.1.2 rank 3 over 1-187; and a weaker c.59.1.0 hit over 13-144. This corroborates an N-terminal structural signal but does not recover the 188-351 b.7 region in the structure stream. Source: [d1fq1a_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1fq1a_)\n- **E5** \u2014 Search provenance: sequence evidence is available for the exact UniProt-linked sequence; UniProt ID and sequence ID are available, stored BLAST status is `stored_blast_results_available`, with 312 stored BLAST rows, 94 raw public sequence hits returned under limit 100, and 5 overlap-SCCS sequence groups. Source: [AlphaFold hits API](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P60484-F1/hits?limit=100)\n\n**Caveats by evidence item**\n- **E1** \u2014 The first-10 sequence window is dominated by correlated same-range hits: ranks 2-10 are automated matches over the same 14-187 interval, so the window is not region-diverse.\n- **E2** \u2014 The 188-351 signal begins only at rank 14 and is represented by automated matches plus d1d5ra1 within the broader group; this supports pagination sensitivity but should not be treated as an official target family assignment.\n- **E3** \u2014 Lineage is for retrieved SCOPe representatives, not a curated SCOPe classification of AF-P60484-F1. The two material envelopes are adjacent, approximately 14-187 and 188-351, with no residue overlap in the representative sequence ranges.\n- **E4** \u2014 Structure-hit benchmark applicability for leading N-terminal FATCAT hits is `uncertain_missing_filter_inputs` because length-match inputs are missing; later weaker hits are outside the P-value benchmark filter. No benchmark calibration was requested by the question, and no local confidence or PAE evidence was retrieved because confidence cannot change this pagination answer.\n- **E5** \u2014 Limit 100 still bounds the public hit list and does not prove exhaustive absence of additional weak or filtered regions; it is sufficient for the asked contrast because the decision-changing second region appears within that bounded window.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "read alphafold-scope-homology/SKILL.md and questions_blind.jsonl from workspace; sha256sum computed locally",
+      "get_alphafold_hits(model=AF-P60484-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "get_alphafold_hits(model=AF-P60484-F1, release=2.08, limit=100, compact=false, include_transforms=false)",
+      "get_scop_domains(sids=[d1d5ra2,d5buga2], release=2.08, includes=[parents,annotations,homology], compact=true)"
+    ],
+    "input_attestation": {
+      "model": "AF-P60484-F1",
+      "question_id": "AFQ006",
+      "question_sha256": "52d9f1bb3f03eba15bad04bad5c8aa80a966bd4f2322f6eee1822c4913d00398",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ006",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:39:51Z"
+  },
+  "used_tools": [
+    "get_alphafold_hits",
+    "get_scop_domains"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "applicable": true,
+  "available_minimum_supporting_hits": [
+    2,
+    3
+  ],
+  "benchmark": {
+    "benchmark_match_fraction": 1,
+    "classification_level": "superfamily",
+    "classification_name": "L domain-like",
+    "classification_sccs": "c.10.2",
+    "classification_sunid": 52058,
+    "minimum_supporting_hits": 3,
+    "n_benchmark_cases": 14
+  },
+  "classification_level": "superfamily",
+  "method": {
+    "ambiguous_assignments_count_as_non_matches": true,
+    "assignment_ambiguity_margin": 0.05,
+    "benchmark_version": 3,
+    "default_minimum_supporting_hits": 2,
+    "interpretation": "Benchmark classification consistency for filtered chain-to-domain FATCAT alignments; not homology evidence or a probability that a current hit is correct.",
+    "length_match_definition": "min(alignment_length, component_length) / max(alignment_length, component_length)",
+    "maximum_fatcat_p_value": 0.0001,
+    "minimum_length_match": 0.8,
+    "representative_chain_sequence_identity_percent": 90,
+    "same_pdb_chain_hits_excluded": true,
+    "source_release_id": 19,
+    "support_threshold_interpretation": "Minimum number of classification-consistent supporting hits required when constructing each benchmark case.",
+    "supported_minimum_supporting_hits": [
+      2,
+      3,
+      5
+    ]
+  },
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/52058",
+    "canonical_url": "/?sunid=52058&ver=2.08",
+    "description": "L domain-like",
+    "level": {
+      "code": "sf",
+      "name": "Superfamily",
+      "plural": "Superfamilies"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/52046",
+      "sccs": "c.10",
+      "sid": null,
+      "sunid": 52046
+    },
+    "release": "2.08",
+    "sccs": "c.10.2",
+    "sid": null,
+    "sunid": 52058
+  },
+  "release": "2.08",
+  "requested_minimum_supporting_hits": 3,
+  "status": "available"
+}

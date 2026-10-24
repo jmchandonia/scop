@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d2axti1"
+    },
+    {
+      "description": "complexed with bcr, bct, ca, cl, cla, dgd, fe2, gol, hec, hem, htg, lhg, lmg, lmt, mg, oex, pho, pl9, sqd, unl"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/345656",
+    "canonical_url": "/?sunid=345656&ver=2.08",
+    "description": "5gti I:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/224950",
+      "sccs": "f.23.37.1",
+      "sid": null,
+      "sunid": 224950
+    },
+    "release": "2.08",
+    "sccs": "f.23.37.1",
+    "sid": "d5gtii_",
+    "sunid": 345656
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

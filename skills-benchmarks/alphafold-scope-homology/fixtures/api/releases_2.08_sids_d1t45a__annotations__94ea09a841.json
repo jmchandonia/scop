@@ -1,0 +1,32 @@
+{
+  "comments": [],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/106396",
+    "canonical_url": "/?sunid=106396&ver=2.08",
+    "description": "1t45 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/103297",
+      "sccs": "d.144.1.7",
+      "sid": null,
+      "sunid": 103297
+    },
+    "release": "2.08",
+    "sccs": "d.144.1.7",
+    "sid": "d1t45a_",
+    "sunid": 106396
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

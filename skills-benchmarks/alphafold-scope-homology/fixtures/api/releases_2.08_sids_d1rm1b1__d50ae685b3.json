@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/118780",
+    "canonical_url": "/?sunid=118780&ver=2.08",
+    "description": "1rm1 B:4-54",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/88836",
+      "sccs": "a.32.1.1",
+      "sid": null,
+      "sunid": 88836
+    },
+    "release": "2.08",
+    "sccs": "a.32.1.1",
+    "sid": "d1rm1b1",
+    "sunid": 118780
+  }
+}

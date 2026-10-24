@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/48724",
+      "canonical_url": "/?sunid=48724&ver=2.08",
+      "description": "All beta proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "b",
+      "sid": null,
+      "sunid": 48724
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51315",
+      "canonical_url": "/?sunid=51315&ver=2.08",
+      "description": "Mss4-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/48724",
+        "sccs": "b",
+        "sid": null,
+        "sunid": 48724
+      },
+      "release": "2.08",
+      "sccs": "b.88",
+      "sid": null,
+      "sunid": 51315
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51316",
+      "canonical_url": "/?sunid=51316&ver=2.08",
+      "description": "Mss4-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51315",
+        "sccs": "b.88",
+        "sid": null,
+        "sunid": 51315
+      },
+      "release": "2.08",
+      "sccs": "b.88.1",
+      "sid": null,
+      "sunid": 51316
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/267622",
+      "canonical_url": "/?sunid=267622&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51316",
+        "sccs": "b.88.1",
+        "sid": null,
+        "sunid": 51316
+      },
+      "release": "2.08",
+      "sccs": "b.88.1.0",
+      "sid": null,
+      "sunid": 267622
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/267669",
+      "canonical_url": "/?sunid=267669&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/267622",
+        "sccs": "b.88.1.0",
+        "sid": null,
+        "sunid": 267622
+      },
+      "release": "2.08",
+      "sccs": "b.88.1.0",
+      "sid": null,
+      "sunid": 267669
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/267792",
+      "canonical_url": "/?sunid=267792&ver=2.08",
+      "description": "Nematode (Caenorhabditis elegans) [TaxId: 6239]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/267669",
+        "sccs": "b.88.1.0",
+        "sid": null,
+        "sunid": 267669
+      },
+      "release": "2.08",
+      "sccs": "b.88.1.0",
+      "sid": null,
+      "sunid": 267792
+    }
+  ],
+  "release": "2.08",
+  "sunid": 264361
+}

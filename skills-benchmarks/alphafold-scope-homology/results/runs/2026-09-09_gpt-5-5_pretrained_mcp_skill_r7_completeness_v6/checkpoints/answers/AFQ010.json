@@ -1,0 +1,161 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P02452-F1&mode=seq&hit=d3hqva_"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P02452-F1&mode=seq&hit=d1u5ma1"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1/hits?limit=100"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1",
+            "https://scop.berkeley.edu/sunid=144298&ver=2.08"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1",
+            "https://scop.berkeley.edu/sunid=118264&ver=2.08"
+          ]
+        },
+        {
+          "id": "E6",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1"
+          ]
+        },
+        {
+          "id": "E7",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1/hits?limit=100"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P02452-F1",
+      "question_id": "AFQ010",
+      "question_sha256": "446c341f15d919cd9400e2e07b2d4890ecf175ecab116877a368018b871e20dd",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [],
+    "observed_benchmarks": [],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P02452-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [],
+    "required_benchmarks": [],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P02452-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1u5ma1"
+      ],
+      [
+        "2.08",
+        "d3hqva_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 88.218,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 87296,
+      "input_tokens": 125405,
+      "output_tokens": 4182,
+      "reasoning_output_tokens": 1007
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**Conclusion**\nNo. For AF-P02452-F1, UniProt P02452, release 2.08, the retrieved evidence supports only two sequence-hit envelopes, approximately residues 39-96 and 957-1117; it does not justify concluding that the remaining approximately 1,245/1,464 residues have no structural relationships or domains. The absence of returned FATCAT hits is negative retrieved evidence from this run, but the long unhit middle is very low-confidence and the C-terminal unhit region has fragmented high-pLDDT clusters, so \u201cno FATCAT hits\u201d is not evidence of absence.\n\n**What can be said at each level**\n\nRegion 39-96:\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established from this evidence; the retrieved representative\u2019s VWC label is reference context only. | E2, E5 |\n| Family | A VWC-domain family candidate is favored by one sequence hit, but without FATCAT support it is not family-confirmed. | E2, E5 |\n| Superfamily | FnI-like/VWC superfamily context is consistent with the sequence hit, with the same no-structure-hit limitation. | E2, E5 |\n| Fold | No structural relationship is established by returned FATCAT evidence for this region. | E3, E5 |\n\nRegion 957-1117:\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established; collagen-fibre reference classification alone does not transfer function. | E1, E4 |\n| Family | Collagen fibre family candidate is supported by a significant sequence-hit group, but the three raw hits are redundant by overlap-SCCS grouping and there are no returned FATCAT hits. | E1, E4 |\n| Superfamily | Collagen fibre superfamily context is consistent with the sequence group, but confidence is low and structural corroboration is absent. | E1, E4 |\n| Fold | No structural relationship is established by returned FATCAT evidence for this region. | E3, E4 |\n\nRemaining ranges 1-38, 97-956, and 1118-1464:\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Not established by retrieved evidence. | E3, E6 |\n| Family | Not established by retrieved sequence/FATCAT evidence; this is not evidence that no family-level relationship exists. | E3, E6 |\n| Superfamily | Not established by retrieved evidence. | E3, E6 |\n| Fold | Not established by returned FATCAT evidence; confidence patterns, especially high-pLDDT clusters in 1118-1464, prevent treating the unhit remainder as proven domain-free. | E3, E6 |\n\n**Evidence considered**\n- **E1** \u2014 Sequence-hit stream has 4 raw hits but 2 reported overlap-SCCS groups. The collagen fibre group has representative d3hqva_, rank 1, SCCS i.25.1.1, residues 957-1117 aligned to 795-955, 161/1464 model residues = 11.0%, log10 E-value -33.19, identity 7.23%, and group size 3. This supports a collagen-fibre candidate over 957-1117 but the group is correlated, not three independent regional observations. Source: [d3hqva_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P02452-F1&mode=seq&hit=d3hqva_)\n- **E2** \u2014 The second sequence group is d1u5ma1, rank 3, SCCS g.27.1.2, residues 39-96 aligned to 5-62, 58/1464 model residues = 3.96%, log10 E-value -19.06, identity 5.22%, group size 1. This supports a separate N-terminal VWC/FnI-like candidate over 39-96. Source: [d1u5ma1 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P02452-F1&mode=seq&hit=d1u5ma1)\n- **E3** \u2014 The structure-hit stream returned 0 raw FATCAT hits and 0 reported groups at limit 100. This means no returned FATCAT evidence supports a structural relationship, but it does not prove absence of structural relationships or domains outside the sequence-hit regions. Source: [hit summary](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1/hits?limit=100)\n- **E4** \u2014 d3hqva_ lineage is Low resolution protein structures class i, Collagen fibre fold i.25/SUNID 144296, superfamily i.25.1/SUNID 144297, family i.25.1.1/SUNID 144298. The matched model region has low confidence: median pLDDT 43.87, bands 0.0% >=90, 0.0% 70-<90, 18.63% 50-<70, 81.37% <50, with a sustained <70 stretch spanning 947-1127. This weakens any structure-dependent interpretation for 957-1117. Sources: [family node](https://scop.berkeley.edu/sunid=144298&ver=2.08), [confidence/provenance](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1)\n- **E5** \u2014 d1u5ma1 lineage is Small proteins class g, FnI-like domain fold g.27/SUNID 57602, superfamily g.27.1/SUNID 57603, VWC domain family g.27.1.2/SUNID 118264. The matched model region has local median pLDDT 82.0, bands 13.79% >=90, 70.69% 70-<90, 15.52% 50-<70, 0.0% <50, with lower-confidence flanks. This makes the local geometry more interpretable than the collagen-fibre interval, but there is still no FATCAT corroboration. Sources: [family node](https://scop.berkeley.edu/sunid=118264&ver=2.08), [confidence/provenance](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1)\n- **E6** \u2014 Whole-model confidence is mixed and mostly low: global pLDDT 54.69; whole-model median 44.5 with bands 15.03% >=90, 4.99% 70-<90, 13.52% 50-<70, 66.46% <50. The unhit intervals cover 1-38, 97-956, and 1118-1464, together 1,245/1,464 residues = 85.04%; 97-956 is very low confidence, but 1118-1464 has median pLDDT 93.38 and multiple high-pLDDT clusters. This combination leaves unreturned domains or relationships unresolved, not excluded. Source: [confidence/provenance](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1)\n- **E7** \u2014 Sequence provenance is available for the exact UniProt-linked sequence: UniProt accession P02452 is available, sequence_id is available, source is af_model.uniprot_id, stored BLAST status is stored_blast_results_available, stored BLAST row count is 45, with 4 qualifying raw sequence hits and 2 compact returned groups. This supports treating the four sequence hits as filtered/redundancy-collapsed evidence rather than as a missing-query failure. Source: [hit summary](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P02452-F1/hits?limit=100)\n\n**Caveats by evidence item**\n- **E1** \u2014 The three collagen-fibre raw hits are grouped by exact SCCS and overlapping query range; they should not be counted as independent support. Coverage is local, 161/1464 residues, and no exact domain boundary is inferred.\n- **E2** \u2014 The N-terminal hit is short, 58/1464 residues, and sequence-only. The representative carries a \u201csplice isoform 2\u201d comment, which is reference annotation, not a target-function statement.\n- **E3** \u2014 Empty FATCAT results are a retrieval result, not a proof of no structural relationship. No FATCAT score, RMSD, chain-benchmark applicability, or calibration exists to interpret for this target because there are no returned structure hits; no calibration threshold was prescribed.\n- **E4** \u2014 The 957-1117 region is dominated by pLDDT <50, so predicted geometry is weak evidence even if a structural comparison had been returned. Missing PAE/pTM prevents assessing domain packing or relative placement from pLDDT alone.\n- **E5** \u2014 The 39-96 region has moderate-to-high local confidence but low-confidence flanks, so boundaries remain approximate and confidence does not upgrade sequence evidence to a structural or official classification claim.\n- **E6** \u2014 The unhit remainder includes both very low-confidence sequence and a high-confidence C-terminal region with fragmented high-pLDDT clusters. pLDDT clusters do not define a fold or boundary, but they make a blanket \u201cno domains in the rest\u201d conclusion especially unsupported.\n- **E7** \u2014 AlphaFold sequence/template dependence and stored BLAST filtering can correlate sequence and predicted-structure evidence; no target function, ligand state, assembly context, exact homology, or official SCOPe classification is established.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "mcp__scop_local.get_alphafold_hits(model=AF-P02452-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "mcp__scop_local.get_alphafold_decision_evidence(model=AF-P02452-F1, release=2.08, regions=1-38;39-96;97-956;957-1117;1118-1464, sids=d3hqva_;d1u5ma1, calibration_requests=null)"
+    ],
+    "input_attestation": {
+      "model": "AF-P02452-F1",
+      "question_id": "AFQ010",
+      "question_sha256": "446c341f15d919cd9400e2e07b2d4890ecf175ecab116877a368018b871e20dd",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ010",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:41:09Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

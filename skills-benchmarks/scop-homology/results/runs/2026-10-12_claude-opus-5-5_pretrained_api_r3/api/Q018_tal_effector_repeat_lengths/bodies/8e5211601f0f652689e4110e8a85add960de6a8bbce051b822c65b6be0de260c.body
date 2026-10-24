@@ -1,0 +1,1 @@
+{"type":"about:blank","title":"invalid_release","status":400,"detail":"release must be a public SCOP/SCOPe version, stable label, or periodic update label"}

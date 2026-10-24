@@ -1,0 +1,29 @@
+{
+  "blind_questions_sha256": "c875a5af63ce15cb0fb26a88808d39be2cf1a1895c553363af92236a13c14508",
+  "condition": "pretrained_mcp_skill",
+  "evaluation_reasoning_effort": "low",
+  "evaluator_model": "gpt-5.6-sol",
+  "fixture_manifest_sha256": "3aa661ac938778ca91a78918fbbcf7fca8d348cf4bc0da097fdfa2708c45d725",
+  "fixture_parity": {
+    "checked_entries": 355,
+    "rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "status": "passed"
+  },
+  "gold_answers_sha256": "060d2fe22aa1ae9ad53c19a1107e06fea3e4b87cb3dd03df0e6ea71257d23be6",
+  "harness_version": "2.9.6",
+  "max_mcp_calls": 8,
+  "mcp_source_tree_sha256": "6c88b20380ff4528cac5782e5ac197354f67798f57e17c829d25bfc1a34139d9",
+  "mcp_url": "http://127.0.0.1:8000/mcp",
+  "model": "gpt-5.5",
+  "preflight_jobs": 16,
+  "questions_sha256": "c871da45c549e510ab45e6e0b839d35f087d2b4083b0d086d6082e5c47103e5b",
+  "reasoning_effort": "medium",
+  "rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+  "rubric_sha256": "e6cc4c53ca0667ff8a983d70a2fbf95fcc20b5d2eb473f8a77d79b01b9c00af5",
+  "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+  "runner_sha256": "dc26c15bf7390b96b6cdbccf891450b3ad06ff2f0b1202b763f2fe38b7ea77b1",
+  "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7",
+  "skill_tree_sha256": "f21d9d480bc0685a77a66f96943f5b7989e05217be0ced6b8a0c4f31880ac575",
+  "started_at": "2026-09-10T00:35:35Z",
+  "suite_version": "1.18.4"
+}

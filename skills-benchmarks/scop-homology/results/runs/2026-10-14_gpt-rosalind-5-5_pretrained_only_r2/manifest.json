@@ -1,0 +1,58 @@
+{
+  "api_access": null,
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-14T23:29:29Z",
+  "condition": "pretrained_only",
+  "evaluation": {
+    "completed_at": "2026-10-23T04:09:36Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 0,
+    "rejected_references": []
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "44066f2ff114329117edd1249cdf6e1e149329207bad60c6fa2339da2801b4e5",
+    "name": "codex-cli-isolated",
+    "version": "4.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "fresh_auth_only_per_question",
+    "event_log_format": "codex_exec_jsonl",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "93d5b5ca1881ca87d4537f09fc4d553ca35b11e96afcbcce1e03206841adec73",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "gpt-rosalind-5.5",
+    "parameters": {
+      "question_batching": "one_question_per_session",
+      "reasoning_effort": "high",
+      "replicate": 2
+    },
+    "provider": "openai",
+    "snapshot": "gpt-rosalind-5.5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-14_gpt-rosalind-5-5_pretrained_only_r2",
+  "skill": null,
+  "started_at": "2026-10-14T23:23:44Z",
+  "suite_version": "4.3.0"
+}

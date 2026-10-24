@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56992",
+      "canonical_url": "/?sunid=56992&ver=2.08",
+      "description": "Small proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "g",
+      "sid": null,
+      "sunid": 56992
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57015",
+      "canonical_url": "/?sunid=57015&ver=2.08",
+      "description": "Knottins (small inhibitors, toxins, lectins)",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56992",
+        "sccs": "g",
+        "sid": null,
+        "sunid": 56992
+      },
+      "release": "2.08",
+      "sccs": "g.3",
+      "sid": null,
+      "sunid": 57015
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57184",
+      "canonical_url": "/?sunid=57184&ver=2.08",
+      "description": "Growth factor receptor domain",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57015",
+        "sccs": "g.3",
+        "sid": null,
+        "sunid": 57015
+      },
+      "release": "2.08",
+      "sccs": "g.3.9",
+      "sid": null,
+      "sunid": 57184
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57185",
+      "canonical_url": "/?sunid=57185&ver=2.08",
+      "description": "Growth factor receptor domain",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57184",
+        "sccs": "g.3.9",
+        "sid": null,
+        "sunid": 57184
+      },
+      "release": "2.08",
+      "sccs": "g.3.9.1",
+      "sid": null,
+      "sunid": 57185
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/82889",
+      "canonical_url": "/?sunid=82889&ver=2.08",
+      "description": "Protooncoprotein Her2 extracellular domain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57185",
+        "sccs": "g.3.9.1",
+        "sid": null,
+        "sunid": 57185
+      },
+      "release": "2.08",
+      "sccs": "g.3.9.1",
+      "sid": null,
+      "sunid": 82889
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/82890",
+      "canonical_url": "/?sunid=82890&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/82889",
+        "sccs": "g.3.9.1",
+        "sid": null,
+        "sunid": 82889
+      },
+      "release": "2.08",
+      "sccs": "g.3.9.1",
+      "sid": null,
+      "sunid": 82890
+    }
+  ],
+  "release": "2.08",
+  "sunid": 98618
+}

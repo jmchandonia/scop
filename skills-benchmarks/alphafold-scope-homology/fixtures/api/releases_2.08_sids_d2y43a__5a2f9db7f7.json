@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/170589",
+    "canonical_url": "/?sunid=170589&ver=2.08",
+    "description": "2y43 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/189860",
+      "sccs": "g.44.1.0",
+      "sid": null,
+      "sunid": 189860
+    },
+    "release": "2.08",
+    "sccs": "g.44.1.0",
+    "sid": "d2y43a_",
+    "sunid": 170589
+  }
+}

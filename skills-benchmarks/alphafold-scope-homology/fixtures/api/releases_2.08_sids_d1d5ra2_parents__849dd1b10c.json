@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51349",
+      "canonical_url": "/?sunid=51349&ver=2.08",
+      "description": "Alpha and beta proteins (a/b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "c",
+      "sid": null,
+      "sunid": 51349
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52798",
+      "canonical_url": "/?sunid=52798&ver=2.08",
+      "description": "(Phosphotyrosine protein) phosphatases II",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51349",
+        "sccs": "c",
+        "sid": null,
+        "sunid": 51349
+      },
+      "release": "2.08",
+      "sccs": "c.45",
+      "sid": null,
+      "sunid": 52798
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52799",
+      "canonical_url": "/?sunid=52799&ver=2.08",
+      "description": "(Phosphotyrosine protein) phosphatases II",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52798",
+        "sccs": "c.45",
+        "sid": null,
+        "sunid": 52798
+      },
+      "release": "2.08",
+      "sccs": "c.45.1",
+      "sid": null,
+      "sunid": 52799
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52800",
+      "canonical_url": "/?sunid=52800&ver=2.08",
+      "description": "Dual specificity phosphatase-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52799",
+        "sccs": "c.45.1",
+        "sid": null,
+        "sunid": 52799
+      },
+      "release": "2.08",
+      "sccs": "c.45.1.1",
+      "sid": null,
+      "sunid": 52800
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52818",
+      "canonical_url": "/?sunid=52818&ver=2.08",
+      "description": "Phoshphoinositide phosphatase Pten (Pten tumor suppressor), N-terminal domain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52800",
+        "sccs": "c.45.1.1",
+        "sid": null,
+        "sunid": 52800
+      },
+      "release": "2.08",
+      "sccs": "c.45.1.1",
+      "sid": null,
+      "sunid": 52818
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52819",
+      "canonical_url": "/?sunid=52819&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52818",
+        "sccs": "c.45.1.1",
+        "sid": null,
+        "sunid": 52818
+      },
+      "release": "2.08",
+      "sccs": "c.45.1.1",
+      "sid": null,
+      "sunid": 52819
+    }
+  ],
+  "release": "2.08",
+  "sunid": 32697
+}

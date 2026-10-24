@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/104021",
+    "canonical_url": "/?sunid=104021&ver=2.08",
+    "description": "1oqa A:2-110",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/63957",
+      "sccs": "c.15.1.3",
+      "sid": null,
+      "sunid": 63957
+    },
+    "release": "2.08",
+    "sccs": "c.15.1.3",
+    "sid": "d1oqaa1",
+    "sunid": 104021
+  }
+}

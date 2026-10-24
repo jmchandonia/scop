@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56992",
+      "canonical_url": "/?sunid=56992&ver=2.08",
+      "description": "Small proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "g",
+      "sid": null,
+      "sunid": 56992
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57849",
+      "canonical_url": "/?sunid=57849&ver=2.08",
+      "description": "RING/U-box",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56992",
+        "sccs": "g",
+        "sid": null,
+        "sunid": 56992
+      },
+      "release": "2.08",
+      "sccs": "g.44",
+      "sid": null,
+      "sunid": 57849
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57850",
+      "canonical_url": "/?sunid=57850&ver=2.08",
+      "description": "RING/U-box",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57849",
+        "sccs": "g.44",
+        "sid": null,
+        "sunid": 57849
+      },
+      "release": "2.08",
+      "sccs": "g.44.1",
+      "sid": null,
+      "sunid": 57850
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57851",
+      "canonical_url": "/?sunid=57851&ver=2.08",
+      "description": "RING finger domain, C3HC4",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57850",
+        "sccs": "g.44.1",
+        "sid": null,
+        "sunid": 57850
+      },
+      "release": "2.08",
+      "sccs": "g.44.1.1",
+      "sid": null,
+      "sunid": 57851
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/69968",
+      "canonical_url": "/?sunid=69968&ver=2.08",
+      "description": "brca1 RING domain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57851",
+        "sccs": "g.44.1.1",
+        "sid": null,
+        "sunid": 57851
+      },
+      "release": "2.08",
+      "sccs": "g.44.1.1",
+      "sid": null,
+      "sunid": 69968
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/69969",
+      "canonical_url": "/?sunid=69969&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/69968",
+        "sccs": "g.44.1.1",
+        "sid": null,
+        "sunid": 69968
+      },
+      "release": "2.08",
+      "sccs": "g.44.1.1",
+      "sid": null,
+      "sunid": 69969
+    }
+  ],
+  "release": "2.08",
+  "sunid": 66880
+}

@@ -1,0 +1,38 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1t1ja1",
+      "chain": "A",
+      "description": "1t1j A:1-118",
+      "sccs": "c.23.14.2",
+      "sid": "d1t1ja1",
+      "sunid": 106249
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1t1ja2",
+      "chain": "A",
+      "description": "1t1j A:0-0",
+      "sccs": "l.1.1.1",
+      "sid": "d1t1ja2",
+      "sunid": 282689
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1t1jb1",
+      "chain": "B",
+      "description": "1t1j B:1-118",
+      "sccs": "c.23.14.2",
+      "sid": "d1t1jb1",
+      "sunid": 106250
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1t1jb2",
+      "chain": "B",
+      "description": "1t1j B:-6-0",
+      "sccs": "l.1.1.1",
+      "sid": "d1t1jb2",
+      "sunid": 282690
+    }
+  ],
+  "pdb_code": "1t1j",
+  "release": "2.08"
+}

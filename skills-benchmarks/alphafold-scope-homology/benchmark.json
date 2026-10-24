@@ -1,0 +1,15 @@
+{
+  "benchmark_id": "alphafold-scope-homology",
+  "suite_version": "1.18.4",
+  "description": "Benchmark for non-official, non-definitive region-specific AlphaFold-to-SCOPe evidence hypotheses using exact sequence provenance, sequence and FATCAT hits, lineage, annotation, homology-warning, node-specific benchmark, and local-pLDDT evidence.",
+  "questions": "questions.jsonl",
+  "blind_questions": "inputs/questions_blind.jsonl",
+  "evidence_plan": "evidence-plan.json",
+  "fixture_manifest": "fixtures/api/manifest.json",
+  "evidence_summary": "gold/evidence-summary.json",
+  "gold_answers": "gold/answers.jsonl",
+  "rubric": "rubric.md",
+  "skill": "https://github.com/SCOPe-knowledgebase/scop/blob/7c31030079bc1864a7f72eac0f5e53bbed1321e4/skills/alphafold-scope-homology/SKILL.md",
+  "skill_source_manifest": "../../skill-sources/public-skills.json",
+  "conditions": ["pretrained_only", "pretrained_api", "pretrained_skill", "pretrained_mcp_skill"]
+}

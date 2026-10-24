@@ -1,0 +1,1 @@
+{"node":{"sunid":54256,"sid":null,"sccs":"d.15.1.4","description":"First domain of FERM","level":{"code":"fa","name":"Family","plural":"Families"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/54256","canonical_url":"/?sunid=54256&ver=2.08","parent":{"sunid":54236,"sid":null,"sccs":"d.15.1","api_url":"/api/v1/releases/2.08/sunids/54236"}}}

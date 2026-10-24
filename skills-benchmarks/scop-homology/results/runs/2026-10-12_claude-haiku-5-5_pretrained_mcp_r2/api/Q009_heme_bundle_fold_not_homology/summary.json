@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q009_heme_bundle_fold_not_homology",
+  "request_count": 42,
+  "response_body_count": 40,
+  "successful_response_count": 41,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

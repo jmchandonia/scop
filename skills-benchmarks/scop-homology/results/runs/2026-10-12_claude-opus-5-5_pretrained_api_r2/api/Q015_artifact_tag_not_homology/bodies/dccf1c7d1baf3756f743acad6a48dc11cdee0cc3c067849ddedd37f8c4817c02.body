@@ -1,0 +1,1 @@
+{"node":{"sunid":48727,"sid":null,"sccs":"b.1.1.1","description":"V set domains (antibody variable domain-like)","level":{"code":"fa","name":"Family","plural":"Families"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/48727","canonical_url":"/?sunid=48727&ver=2.08","parent":{"sunid":48726,"sid":null,"sccs":"b.1.1","api_url":"/api/v1/releases/2.08/sunids/48726"}}}

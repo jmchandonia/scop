@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scop.berkeley.edu/schemas/benchmark-api-trace.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["format", "sequence", "label", "started_at", "completed_at", "duration_ms", "method", "request", "response", "transient", "error"],
+  "properties": {
+    "format": {"const": "scop-live-http-v1"},
+    "sequence": {"type": "integer", "minimum": 1},
+    "label": {"type": "string", "minLength": 1},
+    "started_at": {"type": "string", "format": "date-time"},
+    "completed_at": {"type": "string", "format": "date-time"},
+    "duration_ms": {"type": "number", "minimum": 0},
+    "method": {"type": "string", "minLength": 1},
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path_query", "upstream_url", "headers"],
+      "properties": {
+        "path_query": {"type": "string", "pattern": "^/[^#]*$"},
+        "upstream_url": {"type": ["string", "null"], "format": "uri"},
+        "headers": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        }
+      }
+    },
+    "response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "headers", "body_sha256", "body_file", "body_bytes"],
+      "properties": {
+        "status": {"type": "integer", "minimum": 100, "maximum": 599},
+        "headers": {
+          "type": "object",
+          "additionalProperties": {"type": "string"}
+        },
+        "body_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "body_file": {"type": "string", "pattern": "^bodies/[a-f0-9]{64}\\.body$"},
+        "body_bytes": {"type": "integer", "minimum": 0}
+      }
+    },
+    "transient": {"type": "boolean"},
+    "error": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["category", "message"],
+      "properties": {
+        "category": {"type": "string", "minLength": 1},
+        "message": {"type": "string"}
+      }
+    }
+  }
+}

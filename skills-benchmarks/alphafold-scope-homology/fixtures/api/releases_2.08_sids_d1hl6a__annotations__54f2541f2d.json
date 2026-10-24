@@ -1,0 +1,32 @@
+{
+  "comments": [],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/83609",
+    "canonical_url": "/?sunid=83609&ver=2.08",
+    "description": "1hl6 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/89939",
+      "sccs": "d.58.7.1",
+      "sid": null,
+      "sunid": 89939
+    },
+    "release": "2.08",
+    "sccs": "d.58.7.1",
+    "sid": "d1hl6a_",
+    "sunid": 83609
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

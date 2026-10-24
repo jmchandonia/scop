@@ -1,0 +1,101 @@
+{
+  "api_access": null,
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-13T00:10:25Z",
+  "condition": "pretrained_only",
+  "evaluation": {
+    "completed_at": "2026-10-14T22:38:14Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 8,
+    "rejected_references": [
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "SCOPe classification hierarchy (class c, fold c.55 Ribonuclease H-like motif, superfamily c.55.1 Actin-like ATPase domain, families c.55.1.1 Actin/HSP70, c.55.1.3 Glycerol kinase, c.55.1.4 Hexokinase)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "Bork, Sander & Valencia 1992 sugar kinase/Hsp70/actin superfamily (recalled from pretrained knowledge)"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "SCOPe classification: fold b.6 Cupredoxin-like, superfamily b.6.1 Cupredoxins, family b.6.1.1 Plastocyanin/azurin-like, Ephrin ectodomain family, PAD4 N-terminal domain family (inherited from SCOP 1.75)"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "SCOPe fold d.15 beta-grasp (ubiquitin-like), superfamily d.15.1 Ubiquitin-like, families d.15.1.1 Ubiquitin-related, d.15.1.2 UBX domain, d.15.1.5 Ras-binding domain (SCOPe 2.07/2.08 hierarchy)"
+      },
+      {
+        "question_id": "Q015_artifact_tag_not_homology",
+        "reference": "question record for Q015 from questions_blind.jsonl (provided in prompt)"
+      },
+      {
+        "question_id": "Q018_tal_effector_repeat_lengths",
+        "reference": "SCOPe hierarchy conventions: class/fold/superfamily/family evidence levels, sid and sunid naming, whole-chain domain suffix"
+      },
+      {
+        "question_id": "Q025_classification_as_evolutionary_hypothesis",
+        "reference": "SCOP/SCOPe hierarchy definitions (class, fold, superfamily, family) from Murzin et al. 1995 and SCOPe release documentation"
+      },
+      {
+        "question_id": "Q026_protein_kinase_like_function_transfer",
+        "reference": "SCOPe classification hierarchy (class d, fold d.144, superfamily d.144.1 and its families) from pretrained knowledge"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "44066f2ff114329117edd1249cdf6e1e149329207bad60c6fa2339da2801b4e5",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "b60c71ab8e11d8400351842356ab471f1e5980d434f8be5f78507db58b97c8d9",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-fable-5-1",
+    "parameters": {
+      "builtin_tools": "",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 1
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1,claude-opus-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-13_claude-fable-5-1_pretrained_only_r1",
+  "skill": null,
+  "started_at": "2026-10-13T00:03:07Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 68470,
+    "cache_read_input_tokens": 126347,
+    "input_tokens": 62,
+    "output_tokens": 114263,
+    "session_seconds": 1661.0,
+    "tool_calls": 28,
+    "total_cost_usd": 6.5665
+  }
+}

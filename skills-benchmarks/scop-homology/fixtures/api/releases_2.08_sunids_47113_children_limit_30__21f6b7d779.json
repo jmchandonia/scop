@@ -1,0 +1,128 @@
+{
+  "children": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47114",
+      "canonical_url": "/?sunid=47114&ver=2.08",
+      "description": "Nucleosome core histones",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47113",
+        "sccs": "a.22.1",
+        "sid": null,
+        "sunid": 47113
+      },
+      "release": "2.08",
+      "sccs": "a.22.1.1",
+      "sid": null,
+      "sunid": 47114
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47129",
+      "canonical_url": "/?sunid=47129&ver=2.08",
+      "description": "Archaeal histone",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47113",
+        "sccs": "a.22.1",
+        "sid": null,
+        "sunid": 47113
+      },
+      "release": "2.08",
+      "sccs": "a.22.1.2",
+      "sid": null,
+      "sunid": 47129
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/47134",
+      "canonical_url": "/?sunid=47134&ver=2.08",
+      "description": "TBP-associated factors, TAFs",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47113",
+        "sccs": "a.22.1",
+        "sid": null,
+        "sunid": 47113
+      },
+      "release": "2.08",
+      "sccs": "a.22.1.3",
+      "sid": null,
+      "sunid": 47134
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/101318",
+      "canonical_url": "/?sunid=101318&ver=2.08",
+      "description": "Bacterial histone-fold protein",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47113",
+        "sccs": "a.22.1",
+        "sid": null,
+        "sunid": 47113
+      },
+      "release": "2.08",
+      "sccs": "a.22.1.4",
+      "sid": null,
+      "sunid": 101318
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/238448",
+      "canonical_url": "/?sunid=238448&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/47113",
+        "sccs": "a.22.1",
+        "sid": null,
+        "sunid": 47113
+      },
+      "release": "2.08",
+      "sccs": "a.22.1.0",
+      "sid": null,
+      "sunid": 238448
+    }
+  ],
+  "limit": 30,
+  "next_cursor": null,
+  "parent": {
+    "api_url": "/api/v1/releases/2.08/sunids/47113",
+    "canonical_url": "/?sunid=47113&ver=2.08",
+    "description": "Histone-fold",
+    "level": {
+      "code": "sf",
+      "name": "Superfamily",
+      "plural": "Superfamilies"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/47112",
+      "sccs": "a.22",
+      "sid": null,
+      "sunid": 47112
+    },
+    "release": "2.08",
+    "sccs": "a.22.1",
+    "sid": null,
+    "sunid": 47113
+  },
+  "release": "2.08",
+  "sort": "database"
+}

@@ -1,0 +1,161 @@
+{
+  "release": "2.08",
+  "hit_limit": 100,
+  "models": {
+    "AF-P69905-F1": [
+      "d1bz1a_", "d2dc3a_", "d4aa7a1", "d2kwba1", "d1ma9a3", "d1q2ha_",
+      "d1rm1b1", "d1s56b_", "d2js1a2", "d2wtha_", "d2xkha_", "d3dknc1",
+      "d4ddja_", "d5gtii_", "d5yghb_"
+    ],
+    "AF-P04637-F1": ["d2feja_", "d1u8ca2", "d4mmya3", "d1gzha_"],
+    "AF-P00533-F1": [
+      "d3u7ua3", "d1m6bb1", "d3be1a2", "d1nqla4", "d5x2ab_", "d1t45a_",
+      "d1m17a_", "d1s78a3", "d2jiub_", "d2wela_", "d3be1a4"
+    ],
+    "AF-P60484-F1": [
+      "d1d5ra2", "d5buga1", "d5buga2", "d1fq1a_", "d1p15b_", "d1yfoa_",
+      "d2gwoc_", "d4hv4a3", "d6uzta1"
+    ],
+    "AF-P38398-F1": ["d1jm7a_", "d1rmda2", "d1oqaa1", "d1t2vb1", "d2y43a_"],
+    "AF-P02452-F1": ["d3hqva_", "d1u5ma1"],
+    "AF-P35637-F1": ["d6snja_", "d2lcwa_", "d1hl6a_", "d1jmta_", "d2cpea1"],
+    "AF-Q96LI5-F1": [
+      "d1ltxa3", "d3i48a_", "d1wdub_", "d1h6ua2", "d1ogqa_", "d2ifga3",
+      "d2uyrx_", "d4p91a_"
+    ]
+  },
+  "domain_subresources": ["parents", "annotations", "homology"],
+  "benchmark_threshold_sensitivity": {
+    "AFQ008": {
+      "model": "AF-P38398-F1",
+      "minimum_supporting_hits": [2, 3, 5]
+    }
+  },
+  "benchmark_nodes": {
+    "AF-P69905-F1": [
+      {"sunid": 46457, "minimum_supporting_hits": 2},
+      {"sunid": 46458, "minimum_supporting_hits": 2},
+      {"sunid": 46459, "minimum_supporting_hits": 2},
+      {"sunid": 46463, "minimum_supporting_hits": 2},
+      {"sunid": 47143, "minimum_supporting_hits": 2},
+      {"sunid": 47395, "minimum_supporting_hits": 2},
+      {"sunid": 47396, "minimum_supporting_hits": 2},
+      {"sunid": 47397, "minimum_supporting_hits": 2},
+      {"sunid": 47405, "minimum_supporting_hits": 2},
+      {"sunid": 47861, "minimum_supporting_hits": 2},
+      {"sunid": 47862, "minimum_supporting_hits": 2},
+      {"sunid": 47863, "minimum_supporting_hits": 2},
+      {"sunid": 48551, "minimum_supporting_hits": 2},
+      {"sunid": 48552, "minimum_supporting_hits": 2},
+      {"sunid": 48553, "minimum_supporting_hits": 2},
+      {"sunid": 74660, "minimum_supporting_hits": 2},
+      {"sunid": 81334, "minimum_supporting_hits": 2},
+      {"sunid": 81407, "minimum_supporting_hits": 2},
+      {"sunid": 101256, "minimum_supporting_hits": 2},
+      {"sunid": 101257, "minimum_supporting_hits": 2},
+      {"sunid": 109805, "minimum_supporting_hits": 2},
+      {"sunid": 109806, "minimum_supporting_hits": 2},
+      {"sunid": 158388, "minimum_supporting_hits": 2},
+      {"sunid": 158389, "minimum_supporting_hits": 2},
+      {"sunid": 161041, "minimum_supporting_hits": 2},
+      {"sunid": 161042, "minimum_supporting_hits": 2},
+      {"sunid": 191420, "minimum_supporting_hits": 2},
+      {"sunid": 267595, "minimum_supporting_hits": 2},
+      {"sunid": 267608, "minimum_supporting_hits": 2},
+      {"sunid": 348805, "minimum_supporting_hits": 2}
+    ],
+    "AF-P00533-F1": [
+      {"sunid": 52046, "minimum_supporting_hits": 2},
+      {"sunid": 52058, "minimum_supporting_hits": 2},
+      {"sunid": 52071, "minimum_supporting_hits": 2},
+      {"sunid": 56111, "minimum_supporting_hits": 2},
+      {"sunid": 56112, "minimum_supporting_hits": 2},
+      {"sunid": 57015, "minimum_supporting_hits": 2},
+      {"sunid": 57184, "minimum_supporting_hits": 2},
+      {"sunid": 57185, "minimum_supporting_hits": 2},
+      {"sunid": 88854, "minimum_supporting_hits": 2},
+      {"sunid": 191359, "minimum_supporting_hits": 2},
+      {"sunid": 191489, "minimum_supporting_hits": 2},
+      {"sunid": 232406, "minimum_supporting_hits": 2},
+      {"sunid": 52046, "minimum_supporting_hits": 5},
+      {"sunid": 52058, "minimum_supporting_hits": 5},
+      {"sunid": 52071, "minimum_supporting_hits": 5},
+      {"sunid": 56111, "minimum_supporting_hits": 5},
+      {"sunid": 56112, "minimum_supporting_hits": 5},
+      {"sunid": 57015, "minimum_supporting_hits": 5},
+      {"sunid": 57184, "minimum_supporting_hits": 5},
+      {"sunid": 57185, "minimum_supporting_hits": 5},
+      {"sunid": 88854, "minimum_supporting_hits": 5},
+      {"sunid": 191359, "minimum_supporting_hits": 5},
+      {"sunid": 191489, "minimum_supporting_hits": 5},
+      {"sunid": 232406, "minimum_supporting_hits": 5}
+    ],
+    "AF-P60484-F1": [
+      {"sunid": 49561, "minimum_supporting_hits": 5},
+      {"sunid": 49562, "minimum_supporting_hits": 5},
+      {"sunid": 49563, "minimum_supporting_hits": 5},
+      {"sunid": 52798, "minimum_supporting_hits": 5},
+      {"sunid": 52799, "minimum_supporting_hits": 5},
+      {"sunid": 52800, "minimum_supporting_hits": 5},
+      {"sunid": 52805, "minimum_supporting_hits": 5},
+      {"sunid": 53243, "minimum_supporting_hits": 5},
+      {"sunid": 53244, "minimum_supporting_hits": 5},
+      {"sunid": 191381, "minimum_supporting_hits": 5},
+      {"sunid": 254241, "minimum_supporting_hits": 5}
+    ],
+    "AF-P38398-F1": [
+      {"sunid": 52112, "minimum_supporting_hits": 2},
+      {"sunid": 52113, "minimum_supporting_hits": 2},
+      {"sunid": 57849, "minimum_supporting_hits": 2},
+      {"sunid": 57850, "minimum_supporting_hits": 2},
+      {"sunid": 57851, "minimum_supporting_hits": 2},
+      {"sunid": 63955, "minimum_supporting_hits": 2},
+      {"sunid": 191345, "minimum_supporting_hits": 2},
+      {"sunid": 52112, "minimum_supporting_hits": 3},
+      {"sunid": 52113, "minimum_supporting_hits": 3},
+      {"sunid": 57849, "minimum_supporting_hits": 3},
+      {"sunid": 57850, "minimum_supporting_hits": 3},
+      {"sunid": 57851, "minimum_supporting_hits": 3},
+      {"sunid": 63955, "minimum_supporting_hits": 3},
+      {"sunid": 191345, "minimum_supporting_hits": 3},
+      {"sunid": 52112, "minimum_supporting_hits": 5},
+      {"sunid": 52113, "minimum_supporting_hits": 5},
+      {"sunid": 57849, "minimum_supporting_hits": 5},
+      {"sunid": 57850, "minimum_supporting_hits": 5},
+      {"sunid": 57851, "minimum_supporting_hits": 5},
+      {"sunid": 63955, "minimum_supporting_hits": 5},
+      {"sunid": 191345, "minimum_supporting_hits": 5}
+    ],
+    "AF-P35637-F1": [
+      {"sunid": 54861, "minimum_supporting_hits": 5},
+      {"sunid": 54928, "minimum_supporting_hits": 5},
+      {"sunid": 54929, "minimum_supporting_hits": 5},
+      {"sunid": 64276, "minimum_supporting_hits": 5},
+      {"sunid": 191529, "minimum_supporting_hits": 5}
+    ],
+    "AF-Q96LI5-F1": [
+      {"sunid": 52046, "minimum_supporting_hits": 3},
+      {"sunid": 52058, "minimum_supporting_hits": 3},
+      {"sunid": 52059, "minimum_supporting_hits": 3},
+      {"sunid": 52062, "minimum_supporting_hits": 3},
+      {"sunid": 56218, "minimum_supporting_hits": 3},
+      {"sunid": 56219, "minimum_supporting_hits": 3},
+      {"sunid": 56220, "minimum_supporting_hits": 3},
+      {"sunid": 75142, "minimum_supporting_hits": 3},
+      {"sunid": 89569, "minimum_supporting_hits": 3},
+      {"sunid": 143902, "minimum_supporting_hits": 3},
+      {"sunid": 191468, "minimum_supporting_hits": 3},
+      {"sunid": 191489, "minimum_supporting_hits": 3}
+    ]
+  },
+  "candidate_regions": {
+    "AF-P69905-F1": [[1, 142]],
+    "AF-P04637-F1": [[106, 276]],
+    "AF-P00533-F1": [[27, 186], [182, 337], [340, 505], [505, 638], [667, 1035]],
+    "AF-P60484-F1": [[14, 187], [188, 351]],
+    "AF-P38398-F1": [[1, 103], [1646, 1757], [1755, 1863]],
+    "AF-P02452-F1": [[39, 96], [957, 1117]],
+    "AF-P35637-F1": [[262, 382]],
+    "AF-Q96LI5-F1": [[37, 156], [186, 539]]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q005_cupredoxin_function_transfer",
+  "request_count": 11,
+  "response_body_count": 10,
+  "successful_response_count": 9,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

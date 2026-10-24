@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "heterodimer with a fragment U2AF65 subunit; chain B"
+    },
+    {
+      "description": "complexed with hez"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/63180",
+    "canonical_url": "/?sunid=63180&ver=2.08",
+    "description": "1jmt A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/64278",
+      "sccs": "d.58.7.3",
+      "sid": null,
+      "sunid": 64278
+    },
+    "release": "2.08",
+    "sccs": "d.58.7.3",
+    "sid": "d1jmta_",
+    "sunid": 63180
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

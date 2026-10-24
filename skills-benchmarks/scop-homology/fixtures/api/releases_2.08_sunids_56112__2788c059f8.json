@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/56112",
+    "canonical_url": "/?sunid=56112&ver=2.08",
+    "description": "Protein kinase-like (PK-like)",
+    "level": {
+      "code": "sf",
+      "name": "Superfamily",
+      "plural": "Superfamilies"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/56111",
+      "sccs": "d.144",
+      "sid": null,
+      "sunid": 56111
+    },
+    "release": "2.08",
+    "sccs": "d.144.1",
+    "sid": null,
+    "sunid": 56112
+  }
+}

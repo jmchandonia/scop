@@ -1,0 +1,160 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=seq&hit=d2feja_"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=seq&hit=d1gzha_"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=struct&hit=d1u8ca2"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=struct&hit=d4mmya3"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P04637-F1"
+          ]
+        },
+        {
+          "id": "E6",
+          "unreturned_urls": [],
+          "urls": [
+            "https://scop.berkeley.edu/sunid=49417&ver=2.08"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P04637-F1",
+      "question_id": "AFQ003",
+      "question_sha256": "0861098f6d713c7ce726afb9b854ec7910e877112a034ea63b3d43bb3a0b123a",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [],
+    "observed_benchmarks": [],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P04637-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [],
+    "required_benchmarks": [],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P04637-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1gzha_"
+      ],
+      [
+        "2.08",
+        "d1u8ca2"
+      ],
+      [
+        "2.08",
+        "d2feja_"
+      ],
+      [
+        "2.08",
+        "d4mmya3"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 90.527,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 147456,
+      "input_tokens": 188811,
+      "output_tokens": 4100,
+      "reasoning_output_tokens": 992
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**1. Conclusion**\nThe returned FATCAT hits do not justify an integrin-homology hypothesis for AF-P04637-F1, UniProt P04637, SCOPe 2.08. They align a high-confidence local region, approximately residues 106-276, to integrin-domain representatives, but the matches are weak and outside the FATCAT chain-benchmark filters, while the same broader region has much stronger sequence evidence to p53-like transcription-factor DNA-binding domains over approximately residues 90-297 (E1-E4).\n\n**2. What can be said at each level**\n\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | Target function is not established from these SCOPe hits. The model metadata names P04637 as cellular tumor antigen p53, but reference-domain ligands or family names do not transfer exact function, ligand state, or binding chemistry to the AlphaFold region. | E1, E5 |\n| Family | The integrin family interpretation is not established. The only integrin-family FATCAT hit is d1u8ca2, b.1.15.1/SUNID 69180, with rank 1, P=0.0493, 4.47% identity, score 129.7, RMSD 2.78 over 171/393 residues; d4mmya3 is an automated-match family b.1.15.0/SUNID 233856, not family-discriminating support. Strong sequence evidence instead favors p53 DNA-binding domain-like family b.2.5.2/SUNID 81314. | E1, E2, E3, E4 |\n| Superfamily | An integrin-domains superfamily hypothesis, b.1.15/SUNID 69179, is not supported strongly enough by the retrieved evidence. The integrin FATCAT hits share the 106-276 envelope, but they conflict with much stronger sequence evidence to p53-like transcription factors b.2.5/SUNID 49417 across the overlapping 90-297 envelope. | E1, E2, E3, E4 |\n| Fold | The integrin hits show weak structural similarity to immunoglobulin-like beta-sandwich b.1/SUNID 48725, but this should be treated as architecture-level similarity, not evidence sufficient for an integrin-homology hypothesis. The competing sequence-supported fold is b.2/SUNID 49379. | E1, E2, E3, E4 |\n\n**3. Evidence considered**\n- **E1** \u2014 The compact hit set for AF-P04637-F1 reports sequence provenance as available: UniProt-linked sequence present, stored BLAST results available, and 531 stored BLAST rows for release 2.08. The top returned sequence hit is d2feja_, rank 1, b.2.5.2, model range 94-297, 204/393 residues = 51.91% model coverage, 68.34% identity, log10(E)=-120.97; its SCCS group contains 90 raw hits with envelope 90-297. This is much stronger than the integrin FATCAT signal over the overlapping region. Source: [sequence hit d2feja_](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=seq&hit=d2feja_)\n- **E2** \u2014 The second compact sequence representative, d1gzha_, is also p53 DNA-binding domain-like b.2.5.2, rank 41, model range 95-292, 198/393 residues = 50.38% model coverage, 66.67% identity, log10(E)=-116.62; its group contains 10 raw hits with envelope 94-292. This is correlated same-family sequence support, not independent proof, but it reinforces that the retrieved sequence evidence is p53-like rather than integrin-like. Source: [sequence hit d1gzha_](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=seq&hit=d1gzha_)\n- **E3** \u2014 The strongest integrin FATCAT hit, d1u8ca2, aligns residues 106-276, 171/393 = 43.51% model coverage, to integrin domains b.1.15.1; metrics are rank 1, P=0.0493, score 129.7, RMSD 2.78, identity 4.47%. Its lineage is all-beta b/SUNID 48724, immunoglobulin-like beta-sandwich fold b.1/SUNID 48725, integrin domains superfamily b.1.15/SUNID 69179, integrin domains family b.1.15.1/SUNID 69180. Source: [structure hit d1u8ca2](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=struct&hit=d1u8ca2)\n- **E4** \u2014 The second integrin-stream FATCAT hit, d4mmya3, has the same 106-276 envelope, 171/393 = 43.51% model coverage, rank 2, P=0.0495, score 128.78, RMSD 2.49, identity 4.37%. It agrees at integrin-domains superfamily b.1.15/SUNID 69179 but its family is automated matches b.1.15.0/SUNID 233856, so it does not independently confirm an integrin family-level hypothesis. Source: [structure hit d4mmya3](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P04637-F1&mode=struct&hit=d4mmya3)\n- **E5** \u2014 Local confidence makes the 106-276 structural geometry interpretable but does not rescue the weak FATCAT evidence: for residues 106-276, median pLDDT is 96.64 with bands 158 >=90, 9 from 70-<90, 4 from 50-<70, 0 <50; for the broader 90-297 sequence envelope, median pLDDT is 96.45 with bands 181 >=90, 12 from 70-<90, 12 from 50-<70, 3 <50. The high-confidence clusters are fragmented, and the broader envelope has low-confidence stretches at 80-95 and 293-307, so boundaries remain approximate. Source: [AlphaFold evidence API](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P04637-F1)\n- **E6** \u2014 The retrieved lineages place d2feja_ and d1gzha_ in p53-like transcription factors b.2.5/SUNID 49417 and p53 DNA-binding domain-like b.2.5.2/SUNID 81314, whereas d1u8ca2 and d4mmya3 are in integrin domains b.1.15/SUNID 69179. This is a direct competing-lineage contrast over overlapping model ranges, not a case where integrin is the only available explanation. Source: [p53-like superfamily node](https://scop.berkeley.edu/sunid=49417&ver=2.08)\n\n**4. Caveats by evidence item**\n- **E1/E2** \u2014 The 100 sequence hits collapse into two same-family SCCS groups, so the raw count is redundant and should not be treated as 100 independent observations. Still, the E-values, identity, and aligned extent are far stronger than the FATCAT-only integrin evidence.\n- **E3/E4** \u2014 Both integrin FATCAT hits are outside benchmark filters: the exact prespecified P-value threshold is P <= 1e-4, but the observed P-values are 0.0493 and 0.0495; length-match applicability is also uncertain because alignment_length and component_length inputs are missing. No benchmark fraction is applicable, and no minimum_supporting_hits threshold was provided, so no calibration request was made.\n- **E4** \u2014 d4mmya3 has an automated-match family label. Under the decision rules, that supports only the non-automated higher lineage context and cannot independently establish family-level evidence for the target.\n- **E5** \u2014 pLDDT supports local geometry only. PAE/pTM and partner-context evidence were not retrieved, so these data cannot establish domain packing, exact boundaries, biological assembly context, or function.\n- **E6** \u2014 The regions overlap substantially: the integrin FATCAT envelope 106-276 lies inside the broader sequence-supported envelope 90-297. This overlap is why the stronger sequence-supported p53-like signal controls the integrin-homology question rather than leaving two separate regional hypotheses.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "get_alphafold_hits(model=AF-P04637-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "get_alphafold_decision_evidence(model=AF-P04637-F1, release=2.08, regions=[90-297,106-276], sids=[d2feja_,d1gzha_,d1u8ca2,d4mmya3], calibration_requests=null)"
+    ],
+    "input_attestation": {
+      "model": "AF-P04637-F1",
+      "question_id": "AFQ003",
+      "question_sha256": "0861098f6d713c7ce726afb9b854ec7910e877112a034ea63b3d43bb3a0b123a",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ003",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:37:06Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

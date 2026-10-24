@@ -1,0 +1,153 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 545,
+    "response_body_count": 429,
+    "stable_release_consistent": true,
+    "successful_response_count": 433,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "f696f27f1cf05d3c22de5e3a244e5afe083aec07d450075670bd73a0dd105f89",
+    "transient_error_count": 11,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-12T23:03:48Z",
+  "condition": "pretrained_api",
+  "evaluation": {
+    "completed_at": "2026-10-22T06:42:00Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 15,
+    "rejected_references": [
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/ (200, service root; current_release 2.08)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases (200)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/current (200; version 2.08)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08 (200)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/search?q=bulge (200; hits for b.84.5, b.84.5.1, sunids 310706/310707, domains d1vdza2/d3a5ca3)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/search?query=bulge (200; same result set, probe)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/sunids/51229 (200; fold b.84 Barrel-sandwich hybrid)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/sunids/51229/children (200; b.84.1-b.84.5 siblings)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/sunids/310577 (200; superfamily b.84.5)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/sunids/310577/children (200; family b.84.5.1)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/sunids/310616 (200; family b.84.5.1)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/sunids/310707 (200; A1 bulge protein)"
+      },
+      {
+        "question_id": "Q019_stable_periodic_release_semantics",
+        "reference": "/api/v1/releases/current (HTTP 200)"
+      },
+      {
+        "question_id": "Q019_stable_periodic_release_semantics",
+        "reference": "/api/v1/releases (HTTP 200)"
+      },
+      {
+        "question_id": "Q019_stable_periodic_release_semantics",
+        "reference": "/api/v1/openapi.yaml (HTTP 200; getCurrentRelease and periodic-update description)"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "4d7b20161f134a43ac21512a4cbfe868d0986bed753d213934a72c14aaa954c6",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "4f3115467edcfde314dbec0f5b4c54d26b72fbfa73bb6a447a7f9b15605a5f37",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-haiku-5-5",
+    "parameters": {
+      "builtin_tools": "Bash,Read,Glob,Grep",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 1
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-haiku-5-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-12_claude-haiku-5-5_pretrained_api_r1",
+  "skill": null,
+  "started_at": "2026-10-12T22:56:25Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 377014,
+    "cache_read_input_tokens": 2449719,
+    "input_tokens": 364,
+    "output_tokens": 210438,
+    "session_seconds": 1667.2,
+    "tool_calls": 188,
+    "total_cost_usd": 0.2052
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "comments": [],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/137337",
+    "canonical_url": "/?sunid=137337&ver=2.08",
+    "description": "2ifg A:36-191",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/141993",
+      "sccs": "c.10.2.7",
+      "sid": null,
+      "sunid": 141993
+    },
+    "release": "2.08",
+    "sccs": "c.10.2.7",
+    "sid": "d2ifga3",
+    "sunid": 137337
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

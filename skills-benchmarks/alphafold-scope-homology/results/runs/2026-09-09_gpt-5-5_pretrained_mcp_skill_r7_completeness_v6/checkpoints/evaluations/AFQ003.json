@@ -1,0 +1,27 @@
+{
+  "performance": {
+    "duration_seconds": 23.147,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 17729,
+      "output_tokens": 561,
+      "reasoning_output_tokens": 334
+    }
+  },
+  "record": {
+    "applied_penalties": [],
+    "criterion_scores": {
+      "calibration_and_caveats": 4,
+      "evidence_completeness": 4,
+      "scientific_correctness": 4,
+      "task_resolution": 4
+    },
+    "evaluator": "gpt-5.6-sol",
+    "question_id": "AFQ003",
+    "rubric_notes": "The answer fully resolves the question while maintaining the required non-official, non-definitive boundary. It identifies both borderline, correlated FATCAT matches over residues 106\u2013276, reports their 171/393 (43.51%) coverage and detailed metrics, contrasts them with much stronger overlapping p53-like sequence evidence over approximately 94\u2013297, provides representative SIDs and SCOPe 2.08 lineage information, notes automated-match qualifications, and correctly treats high local pLDDT as support for geometric interpretability rather than ancestry. It also explains why the integrin evidence is not favored without claiming that integrin homology is impossible. The extra benchmark-filter discussion is not required by the deterministic contract, but it does not claim a required benchmark is missing and does not materially contradict the supplied evidence. No mandatory penalty applies.",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "score": 4,
+    "timestamp": "2026-09-10T00:42:13Z"
+  }
+}

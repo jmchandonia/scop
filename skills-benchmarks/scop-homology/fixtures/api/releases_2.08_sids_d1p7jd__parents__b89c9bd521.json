@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46456",
+      "canonical_url": "/?sunid=46456&ver=2.08",
+      "description": "All alpha proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "a",
+      "sid": null,
+      "sunid": 46456
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46688",
+      "canonical_url": "/?sunid=46688&ver=2.08",
+      "description": "DNA/RNA-binding 3-helical bundle",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46456",
+        "sccs": "a",
+        "sid": null,
+        "sunid": 46456
+      },
+      "release": "2.08",
+      "sccs": "a.4",
+      "sid": null,
+      "sunid": 46688
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46689",
+      "canonical_url": "/?sunid=46689&ver=2.08",
+      "description": "Homeodomain-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46688",
+        "sccs": "a.4",
+        "sid": null,
+        "sunid": 46688
+      },
+      "release": "2.08",
+      "sccs": "a.4.1",
+      "sid": null,
+      "sunid": 46689
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46690",
+      "canonical_url": "/?sunid=46690&ver=2.08",
+      "description": "Homeodomain",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46689",
+        "sccs": "a.4.1",
+        "sid": null,
+        "sunid": 46689
+      },
+      "release": "2.08",
+      "sccs": "a.4.1.1",
+      "sid": null,
+      "sunid": 46690
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46691",
+      "canonical_url": "/?sunid=46691&ver=2.08",
+      "description": "Engrailed Homeodomain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46690",
+        "sccs": "a.4.1.1",
+        "sid": null,
+        "sunid": 46690
+      },
+      "release": "2.08",
+      "sccs": "a.4.1.1",
+      "sid": null,
+      "sunid": 46691
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/46692",
+      "canonical_url": "/?sunid=46692&ver=2.08",
+      "description": "Fruit fly (Drosophila melanogaster) [TaxId: 7227]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/46691",
+        "sccs": "a.4.1.1",
+        "sid": null,
+        "sunid": 46691
+      },
+      "release": "2.08",
+      "sccs": "a.4.1.1",
+      "sid": null,
+      "sunid": 46692
+    }
+  ],
+  "release": "2.08",
+  "sunid": 94286
+}

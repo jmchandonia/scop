@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q019_stable_periodic_release_semantics",
+  "request_count": 3,
+  "response_body_count": 3,
+  "successful_response_count": 3,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

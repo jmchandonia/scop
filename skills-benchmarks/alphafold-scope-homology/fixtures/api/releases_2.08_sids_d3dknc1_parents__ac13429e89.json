@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56835",
+      "canonical_url": "/?sunid=56835&ver=2.08",
+      "description": "Membrane and cell surface proteins and peptides",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "f",
+      "sid": null,
+      "sunid": 56835
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/81334",
+      "canonical_url": "/?sunid=81334&ver=2.08",
+      "description": "Transmembrane helix hairpin",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56835",
+        "sccs": "f",
+        "sid": null,
+        "sunid": 56835
+      },
+      "release": "2.08",
+      "sccs": "f.17",
+      "sid": null,
+      "sunid": 81334
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/267595",
+      "canonical_url": "/?sunid=267595&ver=2.08",
+      "description": "Sec-beta or SecG subunit of protein translocation channel",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/81334",
+        "sccs": "f.17",
+        "sid": null,
+        "sunid": 81334
+      },
+      "release": "2.08",
+      "sccs": "f.17.6",
+      "sid": null,
+      "sunid": 267595
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/267608",
+      "canonical_url": "/?sunid=267608&ver=2.08",
+      "description": "Sec-beta subunit",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/267595",
+        "sccs": "f.17.6",
+        "sid": null,
+        "sunid": 267595
+      },
+      "release": "2.08",
+      "sccs": "f.17.6.1",
+      "sid": null,
+      "sunid": 267608
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/267634",
+      "canonical_url": "/?sunid=267634&ver=2.08",
+      "description": "Sec-beta subunit",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/267608",
+        "sccs": "f.17.6.1",
+        "sid": null,
+        "sunid": 267608
+      },
+      "release": "2.08",
+      "sccs": "f.17.6.1",
+      "sid": null,
+      "sunid": 267634
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/267694",
+      "canonical_url": "/?sunid=267694&ver=2.08",
+      "description": "Dog (Canis familiaris) [TaxId: 9615]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/267634",
+        "sccs": "f.17.6.1",
+        "sid": null,
+        "sunid": 267634
+      },
+      "release": "2.08",
+      "sccs": "f.17.6.1",
+      "sid": null,
+      "sunid": 267694
+    }
+  ],
+  "release": "2.08",
+  "sunid": 157761
+}

@@ -1,0 +1,1 @@
+{"node":{"sunid":53065,"sid":null,"sccs":"c.54.1.1","description":"Escherichia coli [TaxId: 562]","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/53065","canonical_url":"/?sunid=53065&ver=2.08","parent":{"sunid":53064,"sid":null,"sccs":"c.54.1.1","api_url":"/api/v1/releases/2.08/sunids/53064"}}}

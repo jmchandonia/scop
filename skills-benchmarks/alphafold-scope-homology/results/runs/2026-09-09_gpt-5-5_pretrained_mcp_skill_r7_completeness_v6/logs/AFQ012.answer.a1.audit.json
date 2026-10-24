@@ -1,0 +1,165 @@
+{
+  "attempt": 1,
+  "citation_audit": {
+    "issues": [],
+    "items": [
+      {
+        "id": "E1",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1"
+        ]
+      },
+      {
+        "id": "E2",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=seq&hit=d6snja_"
+        ]
+      },
+      {
+        "id": "E3",
+        "unreturned_urls": [],
+        "urls": [
+          "https://scop.berkeley.edu/sunid=54928&ver=2.08"
+        ]
+      },
+      {
+        "id": "E4",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d2lcwa_"
+        ]
+      },
+      {
+        "id": "E5",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1"
+        ]
+      },
+      {
+        "id": "E6",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1jmta_/annotations"
+        ]
+      },
+      {
+        "id": "E7",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/54928/fatcat-chain-benchmark?minimum_supporting_hits=5"
+        ]
+      }
+    ]
+  },
+  "definitive_claim_matches": [],
+  "duration_seconds": 100.13,
+  "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+  "failed_call_count": 0,
+  "forbidden_events": [],
+  "foreign_mcp_calls": [],
+  "input_attestation": {
+    "model": "AF-P35637-F1",
+    "question_id": "AFQ012",
+    "question_sha256": "6a1314799a979f436a59ea180c3ca41c245c28a51819fabf42e7d0752e25c2c5",
+    "release": "2.08",
+    "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+  },
+  "issues": [],
+  "max_mcp_calls": 8,
+  "missing_benchmark_counts": [],
+  "missing_benchmarks": [],
+  "missing_hits": [],
+  "missing_representative_calls": [],
+  "missing_source_urls": [],
+  "missing_tools": [],
+  "observed_benchmark_counts": [
+    [
+      "2.08",
+      5,
+      1
+    ]
+  ],
+  "observed_benchmarks": [
+    [
+      "2.08",
+      54928,
+      5
+    ]
+  ],
+  "observed_hits": [
+    [
+      "2.08",
+      "AF-P35637-F1",
+      100
+    ]
+  ],
+  "off_target_calls": [],
+  "reported_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ],
+  "required_benchmark_counts": [
+    [
+      "2.08",
+      5,
+      1
+    ]
+  ],
+  "required_benchmarks": [
+    [
+      "2.08",
+      54928,
+      5
+    ]
+  ],
+  "required_hits": [
+    [
+      "2.08",
+      "AF-P35637-F1",
+      100
+    ]
+  ],
+  "required_representatives": [
+    [
+      "2.08",
+      "d1hl6a_"
+    ],
+    [
+      "2.08",
+      "d1jmta_"
+    ],
+    [
+      "2.08",
+      "d2cpea1"
+    ],
+    [
+      "2.08",
+      "d2lcwa_"
+    ],
+    [
+      "2.08",
+      "d6snja_"
+    ]
+  ],
+  "successful_call_count": 2,
+  "total_call_count": 2,
+  "uncalled_reported_tools": [],
+  "unfrozen_source_urls": [],
+  "unreported_required_tools": [],
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 116352,
+    "input_tokens": 156875,
+    "output_tokens": 4443,
+    "reasoning_output_tokens": 992
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ],
+  "wrong_release_calls": [],
+  "wrong_source_urls": []
+}

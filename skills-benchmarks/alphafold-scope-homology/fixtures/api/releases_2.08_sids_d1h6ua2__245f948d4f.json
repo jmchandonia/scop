@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/65689",
+    "canonical_url": "/?sunid=65689&ver=2.08",
+    "description": "1h6u A:36-262",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/69432",
+      "sccs": "c.10.2.1",
+      "sid": null,
+      "sunid": 69432
+    },
+    "release": "2.08",
+    "sccs": "c.10.2.1",
+    "sid": "d1h6ua2",
+    "sunid": 65689
+  }
+}

@@ -1,0 +1,267 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 366,
+    "response_body_count": 330,
+    "stable_release_consistent": true,
+    "successful_response_count": 359,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "5d4757afd8999a290f0d1e2bfe8dc1deed1d26f784197d1ca4f1caab2f911833",
+    "transient_error_count": 1,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-12T23:34:32Z",
+  "condition": "pretrained_mcp",
+  "evaluation": {
+    "completed_at": "2026-10-22T06:42:00Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 39,
+    "rejected_references": [
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "mcp__scope__search_scop: /api/v1/releases/2.08/search?q=histone&mode=auto&limit=20"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "mcp__scope__get_scop_service_info: /api/v1/releases/current"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "mcp__scope__get_scop_node (sunid 47113, parents): /api/v1/releases/2.08/sunids/47113 and /api/v1/releases/2.08/sunids/47113/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "mcp__scope__list_scop_children: /api/v1/releases/2.08/sunids/47113/children"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "mcp__scope__list_scop_children: /api/v1/releases/2.08/sunids/47114/children"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "mcp__scope__list_scop_children: /api/v1/releases/2.08/sunids/47134/children"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "mcp__scope__list_scop_children: /api/v1/releases/2.08/sunids/101318/children"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "mcp__scope__get_scop_domains (2.08; parents, annotations, homology for d1vmga_ and d1y6xa1)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "mcp__scope__compare_scop_domains (2.08; lowest shared node = superfamily a.204.1, sunid 101386)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__search_scop (no matching results returned for the name query, so no classification was taken from it)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__get_scop_node (c.55.1, sccs; /api/v1/releases/2.08/sccs/c.55.1 and /api/v1/releases/2.08/sccs/c.55.1/parents)"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "mcp__scope__list_scop_children (c.55.1 children; /api/v1/releases/2.08/sccs/c.55.1/children?limit=20)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__search_scop (token query 'bulge', release 2.08)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__get_scop_node (sunid 310577 with parents)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__get_scop_node (sunid 310616 with parents)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__get_scop_node (sunid 51229 with annotations)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__list_scop_children (sunid 51229 children)"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "mcp__scope__get_scop_domains (d1vdza2, d3j9ta3 with parents and annotations)"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "mcp__scope__get_scop_node (sccs c.2.1, parents: SCOP root > c > c.2)"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "mcp__scope__list_scop_children (sccs c.2.1, release 2.08: c.2.1.1, c.2.1.8, c.2.1.9 listed as children of c.2.1)"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "mcp__scope__search_scop (name and token queries; returned no hits, not relied on for conclusions)"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "mcp__scope__compare_scop_domains (release 2.08; lowest_shared_node k.40.1.1 family, sunid 100905)"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "mcp__scope__get_scop_domains (release 2.08; parents, annotations, homology for d1s9za_ and d1hqja_)"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "/api/v1/releases/2.08/search?q=PA1492"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_service_info (current release 2.08)"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_chain 1accA release 2.08: /api/v1/releases/2.08/chains/1accA"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_chain 1accA release 1.75: /api/v1/releases/1.75/chains/1accA"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_pdb_entry 1acc release 2.08 domains: /api/v1/releases/2.08/pdb/1acc/domains"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_domains d1acca1, d1acca2 parents release 2.08: /api/v1/releases/2.08/sids/d1acca1/parents, /api/v1/releases/2.08/sids/d1acca2/parents"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope__get_scop_domains d1acca_ parents release 1.75: /api/v1/releases/1.75/sids/d1acca_/parents"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__get_scop_pdb_entry: /api/v1/releases/2.08/pdb/3jb9/domains and /api/v1/releases/2.08/pdb/3jb9/chains (five chain-A Prp8 domains d3jb9a1-a5)"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__search_scop: /api/v1/releases/2.08/search?q=Prp8 (Prp8 family labels)"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a1, d3jb9a2, d3jb9a3, d3jb9a4, d3jb9a5 with /parents, /annotations, /homology"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope__list_scop_children: /api/v1/releases/2.08/sunids/345891/children (fold d.394 has one superfamily, d.394.1)"
+      },
+      {
+        "question_id": "Q018_tal_effector_repeat_lengths",
+        "reference": "mcp__scope__get_scop_domains (release 2.08; includes parents, annotations)"
+      },
+      {
+        "question_id": "Q018_tal_effector_repeat_lengths",
+        "reference": "mcp__scope__get_scop_node (sccs a.298.1.1; includes parents)"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "mcp__scope__search_scop (no hits; not relied on for facts)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "mcp__scope__get_scop_domains (release 2.08; sids d1p7jd_ and d1ztra1; includes parents, annotations, homology)"
+      },
+      {
+        "question_id": "Q026_protein_kinase_like_function_transfer",
+        "reference": "/api/v1/releases/2.08/search?q=aminoglycoside+phosphotransferase"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "98c566e4c79d9a9b7172117ebc806446553be19918b7bead87622e2e55bdac06",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "d23f915ccd025830a0f4bcc1a2f05b83a15d18cadb605f5f09fbee585ec91c87",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": {
+    "command": "/scratch/jmc/scop-server/mcp/.venv/bin/scop-mcp",
+    "rest_base_url": "live_rest_capture_gateway",
+    "server": "scop-mcp",
+    "tool_call_count": 155,
+    "tools_used": [
+      "mcp__scope__compare_scop_domains",
+      "mcp__scope__get_scop_chain",
+      "mcp__scope__get_scop_chain_hits",
+      "mcp__scope__get_scop_domains",
+      "mcp__scope__get_scop_node",
+      "mcp__scope__get_scop_pdb_entry",
+      "mcp__scope__get_scop_service_info",
+      "mcp__scope__list_scop_children",
+      "mcp__scope__resolve_scop_identifier",
+      "mcp__scope__search_scop"
+    ],
+    "transport": "stdio"
+  },
+  "model": {
+    "name": "claude-haiku-5-5",
+    "parameters": {
+      "builtin_tools": "",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 2
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-haiku-5-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-12_claude-haiku-5-5_pretrained_mcp_r2",
+  "skill": null,
+  "started_at": "2026-10-12T23:31:17Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 288153,
+    "cache_read_input_tokens": 2207985,
+    "input_tokens": 180,
+    "output_tokens": 111151,
+    "session_seconds": 697.0,
+    "tool_calls": 179,
+    "total_cost_usd": 0.1353
+  }
+}

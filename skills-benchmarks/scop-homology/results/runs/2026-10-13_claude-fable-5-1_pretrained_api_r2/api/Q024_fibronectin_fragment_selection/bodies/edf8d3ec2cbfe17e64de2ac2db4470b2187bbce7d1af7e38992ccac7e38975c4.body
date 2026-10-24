@@ -1,0 +1,1 @@
+{"node":{"sunid":188282,"sid":null,"sccs":"b.1.2.1","description":"Human (Homo sapiens) [TaxId: 9606]","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/188282","canonical_url":"/?sunid=188282&ver=2.08","parent":{"sunid":190888,"sid":null,"sccs":"b.1.2.1","api_url":"/api/v1/releases/2.08/sunids/190888"}}}

@@ -1,0 +1,140 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 306,
+    "response_body_count": 297,
+    "stable_release_consistent": true,
+    "successful_response_count": 302,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "79ed788296393cf143e5971c3238e7fc437de15d7aff2e8de21d8f4508ff67a7",
+    "transient_error_count": 0,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-12T23:27:05Z",
+  "condition": "pretrained_mcp_skill",
+  "evaluation": {
+    "completed_at": "2026-10-22T06:37:16Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 8,
+    "rejected_references": [
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "Read scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "Read scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "Read scop-homology/references/biological-interpretation.md"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/search?q=barrel-sandwich+hybrid"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "/api/v1/releases/2.08/search?q=V1+ATP+synthase+bulge"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "mcp__scope__compare_scop_domains (failed with 404 for d1t1ja_ in 2.08, not relied on)"
+      },
+      {
+        "question_id": "Q026_protein_kinase_like_function_transfer",
+        "reference": "Read: scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q026_protein_kinase_like_function_transfer",
+        "reference": "Read: scop-homology/references/biological-interpretation.md"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "54c2632296e071d90da0ba44b8b393e38d526ab297347b166b32bffca929cb51",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [],
+    "logs_sha256": "5b083a56ceee9fcb75702334729b3f5f9c2f6703a506fc4ed119739e443444ea",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": {
+    "command": "/scratch/jmc/scop-server/mcp/.venv/bin/scop-mcp",
+    "rest_base_url": "live_rest_capture_gateway",
+    "server": "scop-mcp",
+    "tool_call_count": 94,
+    "tools_used": [
+      "mcp__scope__compare_scop_domains",
+      "mcp__scope__get_scop_domains",
+      "mcp__scope__get_scop_node",
+      "mcp__scope__get_scop_pdb_entry",
+      "mcp__scope__get_scop_service_info",
+      "mcp__scope__list_scop_children",
+      "mcp__scope__search_scop"
+    ],
+    "transport": "stdio"
+  },
+  "model": {
+    "name": "claude-sonnet-5-5",
+    "parameters": {
+      "builtin_tools": "Read,Glob,Grep",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 2
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-sonnet-5-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-12_claude-sonnet-5-5_pretrained_mcp_skill_r2",
+  "skill": {
+    "commit": "991f3ebb722e0d8a138b5ebaca2f98520a37ef28",
+    "content_sha256": "fd2363d8499df5384773678d502a86b8f5dc6d4c41704e5150b0e4c333d09b50",
+    "path": "skills/scop-homology",
+    "repository": "git@github.com:jmchandonia/scop.git"
+  },
+  "started_at": "2026-10-12T23:24:34Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 324890,
+    "cache_read_input_tokens": 2093588,
+    "input_tokens": 170,
+    "output_tokens": 49642,
+    "session_seconds": 505.7,
+    "tool_calls": 150,
+    "total_cost_usd": 2.0057
+  }
+}

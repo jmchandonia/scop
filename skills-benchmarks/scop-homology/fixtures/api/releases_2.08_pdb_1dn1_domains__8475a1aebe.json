@@ -1,0 +1,22 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1dn1a_",
+      "chain": "A",
+      "description": "1dn1 A:",
+      "sccs": "e.25.1.1",
+      "sid": "d1dn1a_",
+      "sunid": 302343
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1dn1b_",
+      "chain": "B",
+      "description": "1dn1 B:",
+      "sccs": "a.47.2.1",
+      "sid": "d1dn1b_",
+      "sunid": 302344
+    }
+  ],
+  "pdb_code": "1dn1",
+  "release": "2.08"
+}

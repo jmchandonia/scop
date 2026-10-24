@@ -1,0 +1,88 @@
+{
+  "children": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/81342",
+      "canonical_url": "/?sunid=81342&ver=2.08",
+      "description": "Transmembrane di-heme cytochromes",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/81344",
+        "sccs": "f.21",
+        "sid": null,
+        "sunid": 81344
+      },
+      "release": "2.08",
+      "sccs": "f.21.1",
+      "sid": null,
+      "sunid": 81342
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/81343",
+      "canonical_url": "/?sunid=81343&ver=2.08",
+      "description": "Fumarate reductase respiratory complex transmembrane subunits",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/81344",
+        "sccs": "f.21",
+        "sid": null,
+        "sunid": 81344
+      },
+      "release": "2.08",
+      "sccs": "f.21.2",
+      "sid": null,
+      "sunid": 81343
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/103501",
+      "canonical_url": "/?sunid=103501&ver=2.08",
+      "description": "Respiratory nitrate reductase 1 gamma chain",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/81344",
+        "sccs": "f.21",
+        "sid": null,
+        "sunid": 81344
+      },
+      "release": "2.08",
+      "sccs": "f.21.3",
+      "sid": null,
+      "sunid": 103501
+    }
+  ],
+  "limit": 50,
+  "next_cursor": null,
+  "parent": {
+    "api_url": "/api/v1/releases/2.08/sunids/81344",
+    "canonical_url": "/?sunid=81344&ver=2.08",
+    "description": "Heme-binding four-helical bundle",
+    "level": {
+      "code": "cf",
+      "name": "Fold",
+      "plural": "Folds"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/56835",
+      "sccs": "f",
+      "sid": null,
+      "sunid": 56835
+    },
+    "release": "2.08",
+    "sccs": "f.21",
+    "sid": null,
+    "sunid": 81344
+  },
+  "release": "2.08",
+  "sort": "database"
+}

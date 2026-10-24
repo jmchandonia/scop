@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q020_syntaxin_fragment_reclassification",
+  "request_count": 33,
+  "response_body_count": 30,
+  "successful_response_count": 33,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

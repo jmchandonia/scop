@@ -1,0 +1,185 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 441,
+    "response_body_count": 394,
+    "stable_release_consistent": true,
+    "successful_response_count": 392,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "6d9dcd06f82662dfeb94d894b8bc9200998153c5b68d2e2701334de6a64ffddb",
+    "transient_error_count": 5,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-12T23:47:18Z",
+  "condition": "pretrained_api",
+  "evaluation": {
+    "completed_at": "2026-10-22T06:42:00Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 23,
+    "rejected_references": [
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/ (200): release discovery; current_release = 2.08"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/resolve/d1vmga_ (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/resolve/d1y6xa1 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/113676 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/122676 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/116994 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/116993 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/116995 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/140801 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/140798 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/140797 (200)"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "/api/v1/releases/2.08/sunids/101386 (200)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/ (200; current_release 2.08)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/openapi.yaml (200; annotation schema)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/releases/2.08/resolve/d1p7jd_ (200)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/releases/2.08/resolve/d1ztra1 (200)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/releases/2.08/sunids/94286 (200)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/releases/2.08/sunids/125655 (200)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/releases/2.08/sunids/46692 (200)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/releases/2.08/sids/d1p7jd_/annotations (200)"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "/api/v1/releases/2.08/sids/d1ztra1/annotations (200)"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "4d7b20161f134a43ac21512a4cbfe868d0986bed753d213934a72c14aaa954c6",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "530bdd92fae40fe5e5df7fec6555ba3070f4956ddc613a5a974fb5e3d09b32f9",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-haiku-5-5",
+    "parameters": {
+      "builtin_tools": "Bash,Read,Glob,Grep",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 3
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-haiku-5-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-12_claude-haiku-5-5_pretrained_api_r3",
+  "skill": null,
+  "started_at": "2026-10-12T23:40:58Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 304632,
+    "cache_read_input_tokens": 2415187,
+    "input_tokens": 368,
+    "output_tokens": 199664,
+    "session_seconds": 1381.6,
+    "tool_calls": 195,
+    "total_cost_usd": 0.1849
+  }
+}

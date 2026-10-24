@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "description": "complexed with cr9"
+    }
+  ],
+  "inconsistencies": [
+    {
+      "abbreviation": "fr",
+      "description": "fragment; missing more than one-third of the common structure and/or sequence"
+    }
+  ],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/103884",
+    "canonical_url": "/?sunid=103884&ver=2.08",
+    "description": "1o5d T:107-205",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/49268",
+      "sccs": "b.1.2.1",
+      "sid": null,
+      "sunid": 49268
+    },
+    "release": "2.08",
+    "sccs": "b.1.2.1",
+    "sid": "d1o5dt2",
+    "sunid": 103884
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

@@ -1,0 +1,1 @@
+{"type":"about:blank","title":"invalid_identifier","status":400,"detail":"chain must be a four-character PDB code followed by one chain character"}

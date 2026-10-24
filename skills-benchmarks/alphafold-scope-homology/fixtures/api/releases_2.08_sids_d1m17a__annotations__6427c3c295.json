@@ -1,0 +1,36 @@
+{
+  "comments": [
+    {
+      "description": "complexed with aq4"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/78370",
+    "canonical_url": "/?sunid=78370&ver=2.08",
+    "description": "1m17 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/82796",
+      "sccs": "d.144.1.7",
+      "sid": null,
+      "sunid": 82796
+    },
+    "release": "2.08",
+    "sccs": "d.144.1.7",
+    "sid": "d1m17a_",
+    "sunid": 78370
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

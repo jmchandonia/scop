@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/196036",
+    "canonical_url": "/?sunid=196036&ver=2.08",
+    "description": "4ddj A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/89078",
+      "sccs": "a.64.1.1",
+      "sid": null,
+      "sunid": 89078
+    },
+    "release": "2.08",
+    "sccs": "a.64.1.1",
+    "sid": "d4ddja_",
+    "sunid": 196036
+  }
+}

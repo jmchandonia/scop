@@ -1,0 +1,68 @@
+{
+  "api_access": null,
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-12T23:20:08Z",
+  "condition": "pretrained_only",
+  "evaluation": {
+    "completed_at": "2026-10-22T06:42:00Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 0,
+    "rejected_references": []
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "44066f2ff114329117edd1249cdf6e1e149329207bad60c6fa2339da2801b4e5",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "11ef24ccfefd4f69fe7412ef3dd86d1389058e7da721f4deb63dba20f508aa9b",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-haiku-5-5",
+    "parameters": {
+      "builtin_tools": "",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 2
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-haiku-5-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-12_claude-haiku-5-5_pretrained_only_r2",
+  "skill": null,
+  "started_at": "2026-10-12T23:18:20Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 9180,
+    "cache_read_input_tokens": 107442,
+    "input_tokens": 48,
+    "output_tokens": 72912,
+    "session_seconds": 392.6,
+    "tool_calls": 24,
+    "total_cost_usd": 0.0394
+  }
+}

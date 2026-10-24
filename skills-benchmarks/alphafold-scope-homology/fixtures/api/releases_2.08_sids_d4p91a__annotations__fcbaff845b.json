@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d4p8sa_"
+    },
+    {
+      "description": "complexed with nag"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/257448",
+    "canonical_url": "/?sunid=257448&ver=2.08",
+    "description": "4p91 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/238487",
+      "sccs": "c.10.2.0",
+      "sid": null,
+      "sunid": 238487
+    },
+    "release": "2.08",
+    "sccs": "c.10.2.0",
+    "sid": "d4p91a_",
+    "sunid": 257448
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

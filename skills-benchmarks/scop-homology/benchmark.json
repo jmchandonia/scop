@@ -1,0 +1,73 @@
+{
+  "benchmark_id": "scop-homology",
+  "suite_version": "4.3.0",
+  "compatible_result_suite_versions": [],
+  "description": "SCOPe benchmark for biologically meaningful structural classification, evolutionary inference, domain interpretation, dataset design, and supporting API evidence.",
+  "questions": "questions.jsonl",
+  "blind_questions": "inputs/questions_blind.jsonl",
+  "rubric": "rubric.md",
+  "fixture_manifest": "fixtures/api/manifest.json",
+  "live_api": {
+    "base_url": "https://scop.berkeley.edu/api/v1",
+    "openapi": "../../php/api/v1/openapi.yaml",
+    "capture_format": "scop-live-http-v1"
+  },
+  "conditions": [
+    {
+      "id": "pretrained_only",
+      "description": "Pretrained model only; no skill, API, fixtures, or MCP tools.",
+      "skill": false,
+      "data_access": "none"
+    },
+    {
+      "id": "pretrained_api",
+      "description": "Pretrained model with captured access to the live SCOPe REST API; no skill or MCP tools.",
+      "skill": false,
+      "data_access": "live_rest_capture"
+    },
+    {
+      "id": "pretrained_skill",
+      "description": "Pretrained model with captured access to the same live SCOPe REST API plus the public scop-homology skill; no MCP tools.",
+      "skill": true,
+      "data_access": "live_rest_capture"
+    },
+    {
+      "id": "pretrained_mcp",
+      "description": "Pretrained model with the SCOPe MCP server (stdio) as its only route to SCOPe data; the server's REST traffic is captured; no shell, skill, or direct REST access.",
+      "skill": false,
+      "data_access": "live_rest_capture"
+    },
+    {
+      "id": "pretrained_mcp_skill",
+      "description": "Pretrained model with the SCOPe MCP server (stdio) plus the public scop-homology skill read from the workspace; no shell or direct REST access.",
+      "skill": true,
+      "data_access": "live_rest_capture"
+    }
+  ],
+  "tracks": {
+    "conformance": "API-literacy controls reported separately from biological performance.",
+    "held_out": "Biological cases whose named entities and answer-bearing identifiers are absent from the public skill and references."
+  },
+  "reporting_groups": {
+    "biological": {
+      "description": "Primary benchmark questions reported on separate biological-reasoning and factual-support axes; the secondary gated score prevents unsupported claims from being hidden by strong prose.",
+      "exclude_question_ids": [
+        "Q019_stable_periodic_release_semantics"
+      ]
+    },
+    "api_conformance": {
+      "description": "Release and identifier literacy reported separately from the primary biological benchmark.",
+      "question_ids": [
+        "Q019_stable_periodic_release_semantics"
+      ]
+    }
+  },
+  "schemas": {
+    "question": "schemas/question.schema.json",
+    "blind_question": "schemas/blind-question.schema.json",
+    "run_manifest": "schemas/run-manifest.schema.json",
+    "answer": "schemas/answer.schema.json",
+    "evaluation": "schemas/evaluation.schema.json",
+    "api_trace": "schemas/api-trace.schema.json"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/32681",
+    "canonical_url": "/?sunid=32681&ver=2.08",
+    "description": "1yfo A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/52809",
+      "sccs": "c.45.1.2",
+      "sid": null,
+      "sunid": 52809
+    },
+    "release": "2.08",
+    "sccs": "c.45.1.2",
+    "sid": "d1yfoa_",
+    "sunid": 32681
+  }
+}

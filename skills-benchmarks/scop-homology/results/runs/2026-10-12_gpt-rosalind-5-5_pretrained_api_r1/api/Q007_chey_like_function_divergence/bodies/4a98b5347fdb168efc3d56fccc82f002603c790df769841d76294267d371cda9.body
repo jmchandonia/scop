@@ -1,0 +1,1 @@
+{"node":{"sunid":55904,"sid":null,"sccs":"d.125.1","description":"Ornithine decarboxylase C-terminal domain","level":{"code":"sf","name":"Superfamily","plural":"Superfamilies"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/55904","canonical_url":"/?sunid=55904&ver=2.08","parent":{"sunid":55903,"sid":null,"sccs":"d.125","api_url":"/api/v1/releases/2.08/sunids/55903"}}}

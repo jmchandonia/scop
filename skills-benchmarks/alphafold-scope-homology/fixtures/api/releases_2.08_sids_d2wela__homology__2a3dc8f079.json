@@ -1,0 +1,28 @@
+{
+  "heterogeneity": [],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/198491",
+    "canonical_url": "/?sunid=198491&ver=2.08",
+    "description": "2wel A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/187294",
+      "sccs": "d.144.1.0",
+      "sid": null,
+      "sunid": 187294
+    },
+    "release": "2.08",
+    "sccs": "d.144.1.0",
+    "sid": "d2wela_",
+    "sunid": 198491
+  },
+  "release": "2.08",
+  "repeat_family": null,
+  "warnings": []
+}

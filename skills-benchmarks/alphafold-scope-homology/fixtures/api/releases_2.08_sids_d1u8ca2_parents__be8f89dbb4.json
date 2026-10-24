@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/48724",
+      "canonical_url": "/?sunid=48724&ver=2.08",
+      "description": "All beta proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "b",
+      "sid": null,
+      "sunid": 48724
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/48725",
+      "canonical_url": "/?sunid=48725&ver=2.08",
+      "description": "Immunoglobulin-like beta-sandwich",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/48724",
+        "sccs": "b",
+        "sid": null,
+        "sunid": 48724
+      },
+      "release": "2.08",
+      "sccs": "b.1",
+      "sid": null,
+      "sunid": 48725
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/69179",
+      "canonical_url": "/?sunid=69179&ver=2.08",
+      "description": "Integrin domains",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/48725",
+        "sccs": "b.1",
+        "sid": null,
+        "sunid": 48725
+      },
+      "release": "2.08",
+      "sccs": "b.1.15",
+      "sid": null,
+      "sunid": 69179
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/69180",
+      "canonical_url": "/?sunid=69180&ver=2.08",
+      "description": "Integrin domains",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/69179",
+        "sccs": "b.1.15",
+        "sid": null,
+        "sunid": 69179
+      },
+      "release": "2.08",
+      "sccs": "b.1.15.1",
+      "sid": null,
+      "sunid": 69180
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/69181",
+      "canonical_url": "/?sunid=69181&ver=2.08",
+      "description": "Thigh, calf-1 and calf-2 domains of integrin alpha",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/69180",
+        "sccs": "b.1.15.1",
+        "sid": null,
+        "sunid": 69180
+      },
+      "release": "2.08",
+      "sccs": "b.1.15.1",
+      "sid": null,
+      "sunid": 69181
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/69182",
+      "canonical_url": "/?sunid=69182&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/69181",
+        "sccs": "b.1.15.1",
+        "sid": null,
+        "sunid": 69181
+      },
+      "release": "2.08",
+      "sccs": "b.1.15.1",
+      "sid": null,
+      "sunid": 69182
+    }
+  ],
+  "release": "2.08",
+  "sunid": 113117
+}

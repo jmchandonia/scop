@@ -1,0 +1,1 @@
+{"node":{"sunid":100902,"sid":null,"sccs":"k.3.1.1","description":"Synthetic (contains biological sequence)","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/100902","canonical_url":"/?sunid=100902&ver=2.08","parent":{"sunid":58808,"sid":null,"sccs":"k.3.1.1","api_url":"/api/v1/releases/2.08/sunids/58808"}}}

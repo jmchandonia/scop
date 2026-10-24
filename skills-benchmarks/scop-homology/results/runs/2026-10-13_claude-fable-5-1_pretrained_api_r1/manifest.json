@@ -1,0 +1,105 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 717,
+    "response_body_count": 668,
+    "stable_release_consistent": true,
+    "successful_response_count": 674,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "31019368025b23fcd95c9b492ccac3316430be0d6183fcac822efda3691f355e",
+    "transient_error_count": 0,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-13T23:14:44Z",
+  "condition": "pretrained_api",
+  "evaluation": {
+    "completed_at": "2026-10-14T22:38:14Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 3,
+    "rejected_references": [
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "Andreeva et al. 2008 Nucleic Acids Res (SCOP 1.75 paper), pretrained knowledge"
+      },
+      {
+        "question_id": "Q015_artifact_tag_not_homology",
+        "reference": "SCOPe 2.08 artifact class conventions (pretrained knowledge)"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "SCOPe curator comment on family b.18.1.36 citing PubMed 17977833"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "4d7b20161f134a43ac21512a4cbfe868d0986bed753d213934a72c14aaa954c6",
+    "name": "claude-code-cli-isolated",
+    "version": "1.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "not_applicable",
+    "event_log_format": "claude_stream_json",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "20ea09b8ed3587263428dd400356e2201cf139c360b771cb614f349795632480",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": null,
+  "model": {
+    "name": "claude-fable-5-1",
+    "parameters": {
+      "builtin_tools": "Bash,Read,Glob,Grep",
+      "effort": "high",
+      "question_batching": "one_question_per_session",
+      "replicate": 1
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1,claude-opus-5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-13_claude-fable-5-1_pretrained_api_r1",
+  "skill": null,
+  "started_at": "2026-10-13T00:10:25Z",
+  "suite_version": "4.3.0",
+  "usage": {
+    "cache_creation_input_tokens": 500993,
+    "cache_read_input_tokens": 3194391,
+    "input_tokens": 4572,
+    "output_tokens": 164747,
+    "session_seconds": 115690.8,
+    "tool_calls": 198,
+    "total_cost_usd": 18.0326
+  }
+}

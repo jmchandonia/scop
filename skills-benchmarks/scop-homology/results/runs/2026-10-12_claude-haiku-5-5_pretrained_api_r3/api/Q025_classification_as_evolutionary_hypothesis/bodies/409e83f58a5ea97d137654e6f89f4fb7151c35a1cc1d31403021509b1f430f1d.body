@@ -1,0 +1,1 @@
+{"kind":"node","matched_by":"sccs","node":{"sunid":51350,"sid":null,"sccs":"c.1","description":"TIM beta/alpha-barrel","level":{"code":"cf","name":"Fold","plural":"Folds"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/51350","canonical_url":"/?sunid=51350&ver=2.08","parent":{"sunid":51349,"sid":null,"sccs":"c","api_url":"/api/v1/releases/2.08/sunids/51349"}}}

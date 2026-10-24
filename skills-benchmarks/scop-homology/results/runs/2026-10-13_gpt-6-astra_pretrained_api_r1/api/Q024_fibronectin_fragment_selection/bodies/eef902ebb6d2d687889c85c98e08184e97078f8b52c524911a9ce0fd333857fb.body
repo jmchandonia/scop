@@ -1,0 +1,1861 @@
+openapi: 3.1.0
+info:
+  title: SCOPe REST API
+  version: v1
+  description: >
+    Read-only JSON API for low-cost SCOP/ASTRAL/SCOPe lookups, release-scoped
+    hierarchy traversal, indexed search, static-download manifests, and
+    paginated collections. Biological data endpoints are release-scoped for
+    data selection. Base releases such as 2.08 can receive periodic updates;
+    dated selectors do not promise immutable archived snapshots.
+    The site's /.well-known/api-catalog provides machine-readable discovery;
+    HTTP Link headers advertise the api-catalog and service-desc relations.
+servers:
+  - url: https://scop.berkeley.edu/api/v1
+tags:
+  - {name: metadata}
+  - {name: search}
+  - {name: releases}
+  - {name: nodes}
+  - {name: pdb}
+  - {name: sequences}
+  - {name: astral}
+  - {name: downloads}
+paths:
+  /:
+    get:
+      tags: [metadata]
+      operationId: getServiceIndex
+      summary: Service metadata and canonical endpoint hints
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ServiceIndex'}
+  /openapi.yaml:
+    get:
+      tags: [metadata]
+      operationId: getOpenApiYaml
+      summary: OpenAPI document
+      responses:
+        '200': {description: OK}
+  /levels:
+    get:
+      tags: [metadata]
+      operationId: listLevels
+      summary: SCOP hierarchy levels
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/LevelsResponse'}
+  /releases:
+    get:
+      tags: [releases]
+      operationId: listReleases
+      summary: List public SCOP/SCOPe releases
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ReleasesResponse'}
+  /releases/current:
+    get:
+      tags: [releases]
+      operationId: getCurrentRelease
+      summary: Current public release, including latest periodic update label where applicable
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Release'}
+  /releases/{release}:
+    get:
+      tags: [releases]
+      operationId: getRelease
+      summary: Public release metadata and current periodic update label
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/Release'}
+  /search:
+    get:
+      tags: [search]
+      operationId: searchCurrentRelease
+      summary: Indexed discovery search in the current release
+      description: >
+        Uses materialized API search tables. This endpoint does not run broad
+        MySQL full-text or leading-wildcard searches. Use it for discovery,
+        then fetch exact release-scoped node/PDB endpoints for interpretation.
+      parameters:
+        - {$ref: '#/components/parameters/searchQuery'}
+        - {$ref: '#/components/parameters/searchMode'}
+        - {$ref: '#/components/parameters/limit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/SearchOk'}
+        '400': {$ref: '#/components/responses/Problem'}
+        '422': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /downloads:
+    get:
+      tags: [downloads]
+      operationId: listCurrentDownloads
+      summary: Static download manifest for the current release
+      responses:
+        '200': {$ref: '#/components/responses/DownloadsOk'}
+  /releases/{release}/root:
+    get:
+      tags: [nodes]
+      operationId: getReleaseRoot
+      summary: Root node for a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200': {$ref: '#/components/responses/NodeOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/search:
+    get:
+      tags: [search]
+      operationId: searchRelease
+      summary: Indexed discovery search in a specific release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/searchQuery'}
+        - {$ref: '#/components/parameters/searchMode'}
+        - {$ref: '#/components/parameters/limit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/SearchOk'}
+        '400': {$ref: '#/components/responses/Problem'}
+        '422': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/resolve/{identifier}:
+    get:
+      tags: [nodes]
+      operationId: resolveIdentifier
+      summary: Resolve a public SCOPe identifier in a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - name: identifier
+          in: path
+          required: true
+          schema: {type: string}
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: {$ref: '#/components/schemas/ResolveResponse'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/sunids/{sunid}:
+    get:
+      tags: [nodes]
+      operationId: getNodeBySunid
+      summary: Node by public SUNID
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sunid'}
+      responses:
+        '200': {$ref: '#/components/responses/NodeOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/sunids/{sunid}/parents:
+    get:
+      tags: [nodes]
+      operationId: getSunidParents
+      summary: Node parent lineage
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sunid'}
+      responses:
+        '200': {$ref: '#/components/responses/LineageOk'}
+  /releases/{release}/sunids/{sunid}/children:
+    get:
+      tags: [nodes]
+      operationId: getSunidChildren
+      summary: Seek-paginated child nodes
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sunid'}
+        - {$ref: '#/components/parameters/limit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/ChildrenOk'}
+  /releases/{release}/sunids/{sunid}/annotations:
+    get:
+      tags: [nodes]
+      operationId: getSunidAnnotations
+      summary: Comments, inconsistencies, repeats, and xrefs
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sunid'}
+      responses:
+        '200': {$ref: '#/components/responses/AnnotationsOk'}
+  /releases/{release}/sunids/{sunid}/images:
+    get:
+      tags: [nodes]
+      operationId: getSunidImages
+      summary: Thumbnail and larger static images for a node
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sunid'}
+      responses:
+        '200': {$ref: '#/components/responses/ImagesOk'}
+  /releases/{release}/sunids/{sunid}/homology:
+    get:
+      tags: [nodes]
+      operationId: getSunidHomology
+      summary: Homology scope and warnings for a node
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sunid'}
+      responses:
+        '200': {$ref: '#/components/responses/HomologyOk'}
+  /releases/{release}/sunids/{sunid}/fatcat-chain-statistics:
+    get:
+      tags: [nodes]
+      operationId: getSunidFatcatChainStatistics
+      summary: Node-specific FATCAT chain-statistics classification consistency
+      description: >
+        Returns the classification match fraction and observation count for a
+        family, superfamily, or fold SUNID. These are stored historical
+        classification-consistency aggregates, not evidence of homology or the
+        probability that a current hit is correct. Provenance fields are omitted
+        pending a better provenance implementation. No provenance metadata table
+        is required. The release parameter selects the classification context.
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sunid'}
+        - {$ref: '#/components/parameters/statisticsMinimumSupportingHits'}
+      responses:
+        '200': {$ref: '#/components/responses/FatcatChainStatisticsOk'}
+        '400': {$ref: '#/components/responses/Problem'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/sids/{sid}:
+    get:
+      tags: [nodes]
+      operationId: getNodeBySid
+      summary: Node by public SCOPe domain identifier
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sid'}
+      responses:
+        '200': {$ref: '#/components/responses/NodeOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/sids/{sid}/parents:
+    get:
+      tags: [nodes]
+      operationId: getSidParents
+      summary: Node parent lineage for a SID
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sid'}
+      responses:
+        '200': {$ref: '#/components/responses/LineageOk'}
+  /releases/{release}/sids/{sid}/annotations:
+    get:
+      tags: [nodes]
+      operationId: getSidAnnotations
+      summary: Comments, inconsistencies, repeats, and xrefs for a SID
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sid'}
+      responses:
+        '200': {$ref: '#/components/responses/AnnotationsOk'}
+  /releases/{release}/sids/{sid}/images:
+    get:
+      tags: [nodes]
+      operationId: getSidImages
+      summary: Thumbnail and larger static images for a SID
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sid'}
+      responses:
+        '200': {$ref: '#/components/responses/ImagesOk'}
+  /releases/{release}/sids/{sid}/homology:
+    get:
+      tags: [nodes]
+      operationId: getSidHomology
+      summary: Homology scope and warnings for a SID
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sid'}
+      responses:
+        '200': {$ref: '#/components/responses/HomologyOk'}
+  /releases/{release}/sids/{sid}/alphafold-structure-matches:
+    get:
+      tags: [nodes, alphafold, hits]
+      operationId: listDomainAlphaFoldStructureMatches
+      summary: Cursor-paginated AlphaFold models with FATCAT structure matches to a SCOPe domain
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sid'}
+        - {$ref: '#/components/parameters/hitLimit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/DomainAlphaFoldStructureMatchesOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/sccs/{sccs}:
+    get:
+      tags: [nodes]
+      operationId: getNodeBySccs
+      summary: Node by public SCCS classification
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sccs'}
+      responses:
+        '200': {$ref: '#/components/responses/NodeOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/sccs/{sccs}/parents:
+    get:
+      tags: [nodes]
+      operationId: getSccsParents
+      summary: Node parent lineage for an SCCS classification
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sccs'}
+      responses:
+        '200': {$ref: '#/components/responses/LineageOk'}
+  /releases/{release}/sccs/{sccs}/children:
+    get:
+      tags: [nodes]
+      operationId: getSccsChildren
+      summary: Seek-paginated child nodes below an SCCS classification
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/sccs'}
+        - {$ref: '#/components/parameters/limit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/ChildrenOk'}
+  /releases/{release}/domains:
+    get:
+      tags: [nodes]
+      operationId: listDomains
+      summary: Compact seek-paginated domain index
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/limit'}
+        - {$ref: '#/components/parameters/cursor'}
+        - name: class
+          in: query
+          schema: {type: string, pattern: '^[A-Za-z]$'}
+        - name: sccs_prefix
+          in: query
+          schema: {type: string}
+      responses:
+        '200': {$ref: '#/components/responses/DomainsOk'}
+  /sequences/sids/{sid}:
+    get:
+      tags: [sequences]
+      operationId: getSequenceBySid
+      summary: Domain sequence selected by public SID
+      parameters:
+        - {$ref: '#/components/parameters/sid'}
+        - {$ref: '#/components/parameters/releaseQuery'}
+        - {$ref: '#/components/parameters/sequenceSource'}
+        - {$ref: '#/components/parameters/domainSequenceStyle'}
+        - {$ref: '#/components/parameters/sequenceFormat'}
+      responses:
+        '200': {$ref: '#/components/responses/SequenceOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /sequences/sunids/{sunid}:
+    get:
+      tags: [sequences]
+      operationId: getSequenceBySunid
+      summary: Domain sequence selected by public SUNID
+      parameters:
+        - {$ref: '#/components/parameters/sunid'}
+        - {$ref: '#/components/parameters/releaseQuery'}
+        - {$ref: '#/components/parameters/sequenceSource'}
+        - {$ref: '#/components/parameters/domainSequenceStyle'}
+        - {$ref: '#/components/parameters/sequenceFormat'}
+      responses:
+        '200': {$ref: '#/components/responses/SequenceOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /sequences/pdb/{code}:
+    get:
+      tags: [sequences]
+      operationId: getPdbSequences
+      summary: Sequences for all chains in a PDB entry
+      parameters:
+        - {$ref: '#/components/parameters/pdbCode'}
+        - {$ref: '#/components/parameters/releaseQuery'}
+        - {$ref: '#/components/parameters/sequenceSource'}
+        - {$ref: '#/components/parameters/sequenceFormat'}
+      responses:
+        '200': {$ref: '#/components/responses/SequenceOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /sequences/pdb/{code}/chains/{chain}:
+    get:
+      tags: [sequences]
+      operationId: getPdbChainSequence
+      summary: Sequence for one chain in a PDB entry
+      parameters:
+        - {$ref: '#/components/parameters/pdbCode'}
+        - {$ref: '#/components/parameters/pdbChain'}
+        - {$ref: '#/components/parameters/releaseQuery'}
+        - {$ref: '#/components/parameters/sequenceSource'}
+        - {$ref: '#/components/parameters/sequenceFormat'}
+      responses:
+        '200': {$ref: '#/components/responses/SequenceOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/alphafolds/{model}:
+    get:
+      tags: [alphafold]
+      operationId: getAlphaFoldModel
+      summary: AlphaFold model metadata, confidence, sequence, and matching SCOPe domains
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/alphaFoldModel'}
+        - {$ref: '#/components/parameters/includePlddtByPosition'}
+      responses:
+        '200': {$ref: '#/components/responses/AlphaFoldOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/alphafolds/domain-candidates:
+    get:
+      tags: [alphafold, hits]
+      operationId: listAlphaFoldDomainCandidates
+      summary: AlphaFold models with hits concentrated in one or more distinct regions
+      description: >
+        Lists screening candidates from a generated hit-topology index. Regions
+        are supported sequence spans, not curated domain boundaries or SCOPe
+        classifications. Set min_regions and max_regions to 1 for single-region
+        candidates or to 2 and 3 for typical multidomain candidates.
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/candidateMinRegions'}
+        - {$ref: '#/components/parameters/candidateMaxRegions'}
+        - {$ref: '#/components/parameters/candidateMinHitsPerRegion'}
+        - {$ref: '#/components/parameters/candidateMinRegionHitFraction'}
+        - {$ref: '#/components/parameters/candidateMaxSequenceHits'}
+        - {$ref: '#/components/parameters/candidateMinStructureHits'}
+        - {$ref: '#/components/parameters/candidateRequireSequenceAvailable'}
+        - {$ref: '#/components/parameters/candidateLimit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/AlphaFoldDomainCandidatesOk'}
+        '400': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/alphafolds/{model}/hits:
+    get:
+      tags: [alphafold, hits]
+      operationId: getAlphaFoldHits
+      summary: Combined sequence and FATCAT structure matches to SCOPe domains
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/alphaFoldModel'}
+        - {$ref: '#/components/parameters/hitLimit'}
+      responses:
+        '200': {$ref: '#/components/responses/HitsOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/alphafolds/{model}/sequence-hits:
+    get:
+      tags: [alphafold, hits]
+      operationId: getAlphaFoldSequenceHits
+      summary: Ranked sequence matches from an AlphaFold model to SCOPe domains
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/alphaFoldModel'}
+        - {$ref: '#/components/parameters/hitLimit'}
+      responses:
+        '200': {$ref: '#/components/responses/SequenceHitsOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/alphafolds/{model}/structure-hits:
+    get:
+      tags: [alphafold, hits]
+      operationId: getAlphaFoldStructureHits
+      summary: Ranked FATCAT structure matches from an AlphaFold model to SCOPe domains
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/alphaFoldModel'}
+        - {$ref: '#/components/parameters/hitLimit'}
+      responses:
+        '200': {$ref: '#/components/responses/StructureHitsOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/alphafolds/{model}/uniprot-matching-domains:
+    get:
+      tags: [alphafold]
+      operationId: listAlphaFoldUniprotMatchingDomains
+      summary: Cursor-paginated SCOPe domains linked to the model's UniProt accession
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/alphaFoldModel'}
+        - {$ref: '#/components/parameters/hitLimit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/AlphaFoldDomainsOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/chains/{chain}:
+    get:
+      tags: [chains]
+      operationId: getChain
+      summary: PDB chain metadata, sequence, cross-references, and classified domains
+      description: >-
+        Results describe the requested chain; there is no automatic representative
+        substitution. cluster_representative (under chain or subject) supplies
+        release-specific representative links and local sequence identity/coverage.
+        Follow those links explicitly for representative evidence, especially when
+        the requested chain has no stored FATCAT hits. Do not transfer coordinates
+        or classifications from the representative to the requested chain.
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/chainIdentifier'}
+      responses:
+        '200': {$ref: '#/components/responses/ChainOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/chains/{chain}/hits:
+    get:
+      tags: [chains, hits]
+      operationId: getChainHits
+      summary: Sequence and structure matches from a PDB chain to SCOPe domains
+      description: >-
+        Results describe the requested chain; there is no automatic representative
+        substitution. cluster_representative (under chain or subject) supplies
+        release-specific representative links and local sequence identity/coverage.
+        Follow those links explicitly for representative evidence, especially when
+        the requested chain has no stored FATCAT hits. Do not transfer coordinates
+        or classifications from the representative to the requested chain.
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/chainIdentifier'}
+        - {$ref: '#/components/parameters/hitLimit'}
+      responses:
+        '200': {$ref: '#/components/responses/HitsOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/chains/{chain}/sequence-hits:
+    get:
+      tags: [chains, hits]
+      operationId: getChainSequenceHits
+      summary: Ranked sequence matches from a PDB chain to SCOPe domains
+      description: >-
+        Results describe the requested chain; there is no automatic representative
+        substitution. cluster_representative (under chain or subject) supplies
+        release-specific representative links and local sequence identity/coverage.
+        Follow those links explicitly for representative evidence, especially when
+        the requested chain has no stored FATCAT hits. Do not transfer coordinates
+        or classifications from the representative to the requested chain.
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/chainIdentifier'}
+        - {$ref: '#/components/parameters/hitLimit'}
+      responses:
+        '200': {$ref: '#/components/responses/SequenceHitsOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/chains/{chain}/structure-hits:
+    get:
+      tags: [chains, hits]
+      operationId: getChainStructureHits
+      summary: Ranked FATCAT structure matches from a PDB chain to SCOPe domains
+      description: >-
+        Results describe the requested chain; there is no automatic representative
+        substitution. cluster_representative (under chain or subject) supplies
+        release-specific representative links and local sequence identity/coverage.
+        Follow those links explicitly for representative evidence, especially when
+        the requested chain has no stored FATCAT hits. Do not transfer coordinates
+        or classifications from the representative to the requested chain.
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/chainIdentifier'}
+        - {$ref: '#/components/parameters/hitLimit'}
+      responses:
+        '200': {$ref: '#/components/responses/StructureHitsOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/chains/{chain}/coordinates:
+    get:
+      tags: [chains]
+      operationId: getChainCoordinates
+      summary: Chain-only PDB coordinates from the SCOPe local PDB snapshot
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/chainIdentifier'}
+      responses:
+        '200':
+          description: PDB coordinate records for the selected chain
+          content:
+            chemical/x-pdb:
+              schema: {type: string}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/pdb:
+    get:
+      tags: [pdb]
+      operationId: listPdb
+      summary: Compact seek-paginated PDB index classified in a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/limit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/PdbListOk'}
+  /releases/{release}/pdb/{code}:
+    get:
+      tags: [pdb]
+      operationId: getPdb
+      summary: Compact PDB summary
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/pdbCode'}
+      responses:
+        '200': {$ref: '#/components/responses/PdbOk'}
+  /releases/{release}/pdb/{code}/coordinates:
+    get:
+      tags: [pdb]
+      operationId: getPdbCoordinates
+      summary: Complete PDB coordinates from the SCOPe local PDB snapshot
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/pdbCode'}
+      responses:
+        '200':
+          description: Decompressed PDB coordinate records for the complete entry
+          content:
+            chemical/x-pdb:
+              schema: {type: string}
+        '404': {$ref: '#/components/responses/Problem'}
+        '503': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/pdb/{code}/chains:
+    get:
+      tags: [pdb]
+      operationId: getPdbChains
+      summary: Chains and classified domains for a PDB entry
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/pdbCode'}
+      responses:
+        '200': {$ref: '#/components/responses/PdbChainsOk'}
+  /releases/{release}/pdb/{code}/domains:
+    get:
+      tags: [pdb]
+      operationId: getPdbDomains
+      summary: Classified SCOPe domains for a PDB entry
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/pdbCode'}
+      responses:
+        '200': {$ref: '#/components/responses/PdbDomainsOk'}
+  /releases/{release}/pdb/{code}/heterogens:
+    get:
+      tags: [pdb]
+      operationId: getPdbHeterogens
+      summary: Heterogens for a PDB entry
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/pdbCode'}
+      responses:
+        '200': {description: OK}
+  /releases/{release}/pdb/{code}/quality:
+    get:
+      tags: [pdb, astral]
+      operationId: getPdbQuality
+      summary: SPACI/AEROSPACI quality for a PDB entry
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/pdbCode'}
+      responses:
+        '200': {$ref: '#/components/responses/QualityOk'}
+        '404': {$ref: '#/components/responses/Problem'}
+  /releases/{release}/pdb/{code}/revisions:
+    get:
+      tags: [pdb]
+      operationId: getPdbRevisions
+      summary: PDB revision dates for a PDB entry
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/pdbCode'}
+      responses:
+        '200': {description: OK}
+  /releases/{release}/astral/quality:
+    get:
+      tags: [astral]
+      operationId: listAstralQuality
+      summary: Paginated release-wide SPACI/AEROSPACI rows
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+        - {$ref: '#/components/parameters/limit'}
+        - {$ref: '#/components/parameters/cursor'}
+      responses:
+        '200': {$ref: '#/components/responses/QualityListOk'}
+  /releases/{release}/downloads:
+    get:
+      tags: [downloads]
+      operationId: listReleaseDownloads
+      summary: Static download manifest for a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200': {$ref: '#/components/responses/DownloadsOk'}
+  /releases/{release}/parseable-files:
+    get:
+      tags: [downloads]
+      operationId: listParseableFiles
+      summary: Parseable SCOP/SCOPe file manifest for a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200': {$ref: '#/components/responses/DownloadsOk'}
+  /releases/{release}/astral/files:
+    get:
+      tags: [astral, downloads]
+      operationId: listAstralFiles
+      summary: ASTRAL static file manifest for a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200': {$ref: '#/components/responses/DownloadsOk'}
+  /releases/{release}/astral/raf:
+    get:
+      tags: [astral, downloads]
+      operationId: listAstralRafFiles
+      summary: RAF static file manifest for a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200': {$ref: '#/components/responses/DownloadsOk'}
+  /releases/{release}/astral/pdbstyle:
+    get:
+      tags: [astral, downloads]
+      operationId: listAstralPdbstyleFiles
+      summary: ASTRAL PDB-style coordinate archive manifest for a release
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200': {$ref: '#/components/responses/DownloadsOk'}
+  /releases/{release}/astral/subsets:
+    get:
+      tags: [astral, downloads]
+      operationId: listAstralSubsets
+      summary: ASTRAL representative subset static file manifest
+      description: >
+        This endpoint lists static subset files. It intentionally does not
+        expand subset membership from SQL because the subset tables are large
+        and require additional indexing/materialization for cheap public JSON
+        traversal.
+      parameters:
+        - {$ref: '#/components/parameters/releasePath'}
+      responses:
+        '200': {$ref: '#/components/responses/DownloadsOk'}
+components:
+  parameters:
+    releasePath:
+      name: release
+      in: path
+      required: true
+      schema: {type: string, examples: ['2.08', '1.75']}
+      description: Public SCOP/SCOPe release selector such as 2.08.
+    releaseQuery:
+      name: release
+      in: query
+      required: false
+      schema: {type: string, examples: ['2.08', '1.75']}
+      description: Public release selector; defaults to the current release.
+    searchQuery:
+      name: q
+      in: query
+      required: true
+      schema: {type: string, maxLength: 256}
+      examples:
+        sunid: {value: 'sunid:46456'}
+        pdbChain: {value: '1ux8A'}
+        name: {value: histone}
+    searchMode:
+      name: mode
+      in: query
+      schema: {type: string, enum: [auto, identifier, token, prefix], default: auto}
+      description: >
+        auto searches exact public identifiers plus exact precomputed word and
+        phrase tokens. identifier restricts to public identifiers and accessions.
+        token searches exact normalized word and phrase tokens. prefix searches
+        precomputed prefix tokens and requires one normalized token of at least
+        three characters.
+    limit:
+      name: limit
+      in: query
+      schema: {type: integer, minimum: 1, maximum: 500, default: 100}
+    cursor:
+      name: cursor
+      in: query
+      schema: {type: string}
+      description: Opaque seek-pagination cursor returned by the previous page.
+    sunid:
+      name: sunid
+      in: path
+      required: true
+      schema: {type: integer}
+      description: Public SCOP/SCOPe SUNID.
+    sid:
+      name: sid
+      in: path
+      required: true
+      schema: {type: string}
+      description: Public SCOP/SCOPe domain identifier such as d4as4b_.
+    sccs:
+      name: sccs
+      in: path
+      required: true
+      schema: {type: string}
+      description: Public SCOP/SCOPe classification such as e.7.1.1.
+    pdbCode:
+      name: code
+      in: path
+      required: true
+      schema: {type: string, pattern: '^[0-9][A-Za-z0-9]{3}$'}
+    pdbChain:
+      name: chain
+      in: path
+      required: true
+      schema: {type: string, pattern: '^[A-Za-z0-9]$'}
+      description: One case-sensitive PDB chain character.
+    sequenceSource:
+      name: source
+      in: query
+      schema: {type: string, enum: [seqres, atom], default: seqres}
+      description: Return full declared residues or residues observed in ATOM records.
+    domainSequenceStyle:
+      name: style
+      in: query
+      schema: {type: string, enum: [genetic, original], default: genetic}
+      description: Use genetic-domain boundaries or the original SCOP boundaries.
+    sequenceFormat:
+      name: format
+      in: query
+      schema: {type: string, enum: [json, fasta], default: json}
+    alphaFoldModel:
+      name: model
+      in: path
+      required: true
+      schema: {type: string, pattern: '^AF-[A-Za-z0-9]+-F[0-9]+$', examples: [AF-P69905-F1]}
+    chainIdentifier:
+      name: chain
+      in: path
+      required: true
+      description: Four-character PDB code followed by one chain character.
+      schema: {type: string, pattern: '^[0-9][A-Za-z0-9]{4}$', examples: [1akeA]}
+    hitLimit:
+      name: limit
+      in: query
+      description: Maximum returned hits of each kind.
+      schema: {type: integer, minimum: 1, maximum: 100, default: 100}
+    candidateLimit:
+      name: limit
+      in: query
+      description: Maximum returned candidate models.
+      schema: {type: integer, minimum: 1, maximum: 100, default: 20}
+    candidateMinRegions:
+      name: min_regions
+      in: query
+      schema: {type: integer, minimum: 1, maximum: 10, default: 1}
+    candidateMaxRegions:
+      name: max_regions
+      in: query
+      schema: {type: integer, minimum: 1, maximum: 10, default: 3}
+    candidateMinHitsPerRegion:
+      name: min_hits_per_region
+      in: query
+      schema: {type: integer, minimum: 2, maximum: 100, default: 2}
+      description: Minimum qualifying sequence-plus-structure hits assigned to every returned region.
+    candidateMinRegionHitFraction:
+      name: min_region_hit_fraction
+      in: query
+      schema: {type: number, minimum: 0.5, maximum: 1, default: 0.8}
+      description: Minimum fraction of qualifying hits assigned to the reported candidate regions (assigned_hit_count / qualifying_hit_count in the candidate index). Measures regional concentration of hits, not residue coverage or confidence in homology.
+    candidateMaxSequenceHits:
+      name: max_sequence_hits
+      in: query
+      schema: {type: integer, minimum: 0, maximum: 100}
+      description: Optional ceiling on all qualifying sequence hits; useful for structure-led discovery.
+    candidateMinStructureHits:
+      name: min_structure_hits
+      in: query
+      schema: {type: integer, minimum: 0, maximum: 100, default: 0}
+    candidateRequireSequenceAvailable:
+      name: require_sequence_available
+      in: query
+      schema: {type: boolean, default: false}
+      description: Require the model's exact af_model.uniprot_id to resolve to a stored query sequence.
+    includePlddtByPosition:
+      name: include_plddt_by_position
+      in: query
+      schema: {type: boolean, default: false}
+      description: Add a redundant one-based position-to-pLDDT object for compatibility; the ordered array is always returned.
+    statisticsMinimumSupportingHits:
+      name: minimum_supporting_hits
+      in: query
+      schema: {type: integer, enum: [2, 3, 5], default: 2}
+      description: Stored sample selected by its minimum supporting-hit threshold.
+  responses:
+    Problem:
+      description: Problem detail
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/Problem'}
+    NodeOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/NodeResponse'}
+    LineageOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/LineageResponse'}
+    ChildrenOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ChildrenResponse'}
+    SearchOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/SearchResponse'}
+    DomainsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/DomainsResponse'}
+    PdbOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/PdbResponse'}
+    PdbListOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/PdbListResponse'}
+    PdbDomainsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/PdbDomainsResponse'}
+    PdbChainsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/PdbChainsResponse'}
+    AlphaFoldOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/AlphaFoldResponse'}
+    AlphaFoldDomainsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/AlphaFoldDomainsResponse'}
+    AlphaFoldDomainCandidatesOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/AlphaFoldDomainCandidatesResponse'}
+    SequenceHitsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/SequenceHitsResponse'}
+    StructureHitsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/StructureHitsResponse'}
+    DomainAlphaFoldStructureMatchesOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/DomainAlphaFoldStructureMatchesResponse'}
+    ChainOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ChainResponse'}
+    HitsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/HitsResponse'}
+    QualityOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/QualityResponse'}
+    QualityListOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/QualityListResponse'}
+    ImagesOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/ImagesResponse'}
+    AnnotationsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/AnnotationsResponse'}
+    HomologyOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/HomologyResponse'}
+    FatcatChainStatisticsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/FatcatChainStatisticsResponse'}
+    DownloadsOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/DownloadsResponse'}
+    SequenceOk:
+      description: OK
+      content:
+        application/json:
+          schema: {$ref: '#/components/schemas/SequenceResponse'}
+        text/plain:
+          schema: {type: string}
+  schemas:
+    Problem:
+      type: object
+      required: [type, title, status, detail]
+      properties:
+        type: {type: string}
+        title: {type: string}
+        status: {type: integer}
+        detail: {type: string}
+    ServiceIndex:
+      type: object
+      properties:
+        service: {type: string}
+        version: {type: string}
+        status: {type: string}
+        current_release: {$ref: '#/components/schemas/Release'}
+        openapi_url: {type: string}
+        api_catalog_url: {type: string}
+        endpoints:
+          type: array
+          items: {type: string}
+    Release:
+      type: object
+      required: [version, db_name, is_public, is_comprehensive, freeze_date, release_date]
+      properties:
+        version: {type: string}
+        old_version: {type: [string, 'null']}
+        db_name: {type: string, enum: [SCOP, SCOPe]}
+        is_public: {type: boolean}
+        is_comprehensive: {type: boolean}
+        freeze_date: {type: string}
+        release_date: {type: string}
+        stable_label: {type: string}
+        latest_periodic_update:
+          type: object
+          properties:
+            version: {type: string}
+            date: {type: string}
+    ReleasesResponse:
+      type: object
+      properties:
+        releases:
+          type: array
+          items: {$ref: '#/components/schemas/Release'}
+    Level:
+      type: object
+      properties:
+        code: {type: string}
+        master_code: {type: string}
+        name: {type: string}
+        plural: {type: string}
+        is_hidden: {type: boolean}
+        is_autoexpanded: {type: boolean}
+    LevelsResponse:
+      type: object
+      properties:
+        levels:
+          type: array
+          items: {$ref: '#/components/schemas/Level'}
+    NodeSummary:
+      type: object
+      properties:
+        sunid: {type: integer}
+        sid: {type: [string, 'null']}
+        sccs: {type: string}
+        description: {type: string}
+        label: {type: string}
+        release: {type: string}
+        api_url: {type: string}
+        canonical_url: {type: string}
+        level: {$ref: '#/components/schemas/LevelRef'}
+        parent:
+          type: object
+          properties:
+            sunid: {type: integer}
+            sid: {type: [string, 'null']}
+            sccs: {type: string}
+            api_url: {type: string}
+    LevelRef:
+      type: object
+      properties:
+        code: {type: string}
+        name: {type: string}
+        plural: {type: string}
+    NodeResponse:
+      type: object
+      properties:
+        node: {$ref: '#/components/schemas/NodeSummary'}
+    ResolveResponse:
+      oneOf:
+        - type: object
+          properties:
+            kind: {const: node}
+            matched_by: {type: string}
+            node: {$ref: '#/components/schemas/NodeSummary'}
+        - type: object
+          properties:
+            kind: {const: pdb_entry}
+            matched_by: {type: string}
+            pdb: {$ref: '#/components/schemas/PdbSummary'}
+    LineageResponse:
+      type: object
+      properties:
+        release: {type: string}
+        sunid: {type: integer}
+        parents:
+          type: array
+          items: {$ref: '#/components/schemas/NodeSummary'}
+    FatcatChainStatisticsStat:
+      type: object
+      required: [classification_level, classification_sunid, classification_sccs, classification_name, minimum_supporting_hits, n_cases, match_fraction]
+      properties:
+        classification_level: {type: string, enum: [family, superfamily, fold]}
+        classification_sunid: {type: integer}
+        classification_sccs: {type: string}
+        classification_name: {type: string}
+        minimum_supporting_hits: {type: integer, enum: [2, 3, 5]}
+        n_cases:
+          type: integer
+          minimum: 1
+          description: Stored number of cases in the fraction denominator.
+        match_fraction:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: Matching classifications divided by all stored observations for this node and level.
+    FatcatChainStatisticsResponse:
+      type: object
+      required: [release, node, status, applicable, classification_level, requested_minimum_supporting_hits, available_minimum_supporting_hits, statistics]
+      properties:
+        release: {type: string}
+        node: {$ref: '#/components/schemas/NodeSummary'}
+        status: {type: string, enum: [available, no_observations, threshold_unavailable, not_applicable]}
+        applicable: {type: boolean}
+        classification_level: {type: [string, 'null'], enum: [family, superfamily, fold, null]}
+        requested_minimum_supporting_hits: {type: integer, enum: [2, 3, 5]}
+        available_minimum_supporting_hits:
+          type: array
+          items: {type: integer, enum: [2, 3, 5]}
+        statistics:
+          oneOf:
+            - {$ref: '#/components/schemas/FatcatChainStatisticsStat'}
+            - {type: 'null'}
+    ChildrenResponse:
+      type: object
+      properties:
+        release: {type: string}
+        parent: {$ref: '#/components/schemas/NodeSummary'}
+        limit: {type: integer}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        children:
+          type: array
+          items: {$ref: '#/components/schemas/NodeSummary'}
+    SearchResponse:
+      type: object
+      properties:
+        query: {type: string}
+        mode: {type: string}
+        release: {type: string}
+        release_defaulted: {type: boolean}
+        limit: {type: integer}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        truncated: {type: boolean}
+        search_timeout_seconds: {type: integer}
+        search_index_ready:
+          type: boolean
+          description: False only when an exact identifier result was returned without the generated token index.
+        warning: {type: string}
+        single_match: {type: boolean}
+        results:
+          type: array
+          items: {$ref: '#/components/schemas/SearchResult'}
+    SearchResult:
+      type: object
+      properties:
+        kind: {type: string}
+        score: {type: integer}
+        matched_by: {type: string}
+        match_types:
+          type: array
+          items: {type: string}
+        sources:
+          type: array
+          items: {type: string}
+        node: {$ref: '#/components/schemas/NodeSummary'}
+        pdb: {$ref: '#/components/schemas/PdbSummary'}
+    DomainsResponse:
+      type: object
+      properties:
+        release: {type: string}
+        limit: {type: integer}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        domains:
+          type: array
+          items: {$ref: '#/components/schemas/NodeSummary'}
+    PdbSummary:
+      type: object
+      properties:
+        code: {type: string}
+        description: {type: string}
+        release: {type: string}
+        api_url: {type: string}
+    PdbResponse:
+      type: object
+      properties:
+        pdb: {$ref: '#/components/schemas/PdbSummary'}
+    PdbListResponse:
+      type: object
+      properties:
+        limit: {type: integer}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        pdb:
+          type: array
+          items: {$ref: '#/components/schemas/PdbSummary'}
+    PdbDomainsResponse:
+      type: object
+      properties:
+        release: {type: string}
+        pdb_code: {type: string}
+        domains:
+          type: array
+          items:
+            type: object
+            properties:
+              sid: {type: string}
+              sunid: {type: integer}
+              sccs: {type: string}
+              description: {type: string}
+              chain: {type: string}
+              api_url: {type: string}
+    PdbChainsResponse:
+      type: object
+      properties:
+        release: {type: string}
+        pdb_code: {type: string}
+        chains:
+          type: array
+          items: {type: object}
+    PublicDomainRef:
+      type: object
+      required: [sid, sunid, sccs, description, api_url]
+      properties:
+        sid: {type: string}
+        sunid: {type: integer}
+        sccs: {type: string}
+        description: {type: string}
+        header: {type: [string, 'null']}
+        comment: {type: [string, 'null']}
+        api_url: {type: string}
+    AlphaFoldClassificationSummary:
+      type: object
+      required: [sccs, domain_count, api_url]
+      properties:
+        sccs: {type: string}
+        description: {type: [string, 'null']}
+        domain_count: {type: integer}
+        api_url: {type: string}
+    AlphaFoldSequenceEvidence:
+      type: object
+      required: [source, status, uniprot_id_available, sequence_id_available, stored_blast_result_count, interpretation]
+      properties:
+        source: {type: string, const: af_model.uniprot_id}
+        status:
+          type: string
+          enum: [stored_blast_results_available, no_stored_blast_results, unavailable_no_uniprot_id, unavailable_no_sequence, unavailable_comparison_cache]
+        uniprot_id_available: {type: boolean}
+        sequence_id_available: {type: boolean}
+        stored_blast_result_count: {type: [integer, 'null'], minimum: 0}
+        interpretation: {type: string}
+    AlphaFoldCandidateSequenceEvidence:
+      type: object
+      required: [source, uniprot_id_available, sequence_id_available]
+      properties:
+        source: {type: string, const: af_model.uniprot_id}
+        uniprot_id_available: {type: boolean}
+        sequence_id_available: {type: boolean}
+    AlphaFoldModel:
+      type: object
+      required: [name, uniprot_accession, residue_plddt, sequence_length, sequence_evidence, matching_domain_count, matching_classifications, uniprot_matching_domains_url, hits_url, sequence_hits_url, structure_hits_url, api_url]
+      properties:
+        name: {type: string}
+        uniprot_accession: {type: string}
+        description: {type: [string, 'null']}
+        global_plddt: {type: [number, 'null']}
+        residue_plddt: {type: array, items: {type: number}}
+        residue_plddt_by_position:
+          type: object
+          description: Optional compatibility representation, returned only when include_plddt_by_position=true; one-based model residue positions mapped to their pLDDT scores.
+          propertyNames: {pattern: '^[1-9][0-9]*$'}
+          additionalProperties: {type: number}
+        sequence: {type: [string, 'null']}
+        sequence_length: {type: [integer, 'null']}
+        model_residue_count: {type: integer, minimum: 0}
+        sequence_length_matches_model: {type: [boolean, 'null']}
+        sequence_evidence: {$ref: '#/components/schemas/AlphaFoldSequenceEvidence'}
+        uniprot_entry_name: {type: [string, 'null']}
+        uniprot_name: {type: [string, 'null']}
+        gene_name: {type: [string, 'null']}
+        matching_domain_count: {type: integer}
+        matching_classification_count: {type: integer}
+        matching_classifications:
+          type: array
+          items: {$ref: '#/components/schemas/AlphaFoldClassificationSummary'}
+        matching_classifications_truncated: {type: boolean}
+        uniprot_matching_domains_url: {type: string}
+        hits_url: {type: string}
+        sequence_hits_url: {type: string}
+        structure_hits_url: {type: string}
+        coordinate_url:
+          type: [string, 'null']
+          description: Deployment-relative URL derived from the stored CIF path; null if no readable model exists under the models symlink.
+        entry_url: {type: string}
+        api_url: {type: string}
+    AlphaFoldResponse:
+      type: object
+      required: [release, alphafold]
+      properties:
+        release: {type: string}
+        alphafold: {$ref: '#/components/schemas/AlphaFoldModel'}
+    AlphaFoldDomainsResponse:
+      type: object
+      required: [release, alphafold, uniprot_accession, matching_domain_count, limit, domains]
+      properties:
+        release: {type: string}
+        alphafold: {type: string}
+        uniprot_accession: {type: string}
+        matching_domain_count: {type: integer}
+        limit: {type: integer}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        domains:
+          type: array
+          items: {$ref: '#/components/schemas/PublicDomainRef'}
+    AlphaFoldCandidateRepresentative:
+      type: object
+      required: [sid, sccs, api_url]
+      properties:
+        sid: {type: string}
+        sccs: {type: [string, 'null']}
+        api_url: {type: string}
+    AlphaFoldCandidateRegion:
+      type: object
+      required: [region_index, core_range, consensus_hit_range, hit_count, sequence_hit_count, structure_hit_count, distinct_sid_count]
+      properties:
+        region_index: {type: integer, minimum: 1}
+        core_range: {$ref: '#/components/schemas/AlignmentRange'}
+        consensus_hit_range: {$ref: '#/components/schemas/AlignmentRange'}
+        hit_count: {type: integer, minimum: 2}
+        sequence_hit_count: {type: integer, minimum: 0}
+        structure_hit_count: {type: integer, minimum: 0}
+        distinct_sid_count: {type: integer, minimum: 1}
+        best_sequence_hit:
+          oneOf:
+            - {$ref: '#/components/schemas/AlphaFoldCandidateRepresentative'}
+            - {type: 'null'}
+        best_log10_evalue: {type: [number, 'null']}
+        best_structure_hit:
+          oneOf:
+            - {$ref: '#/components/schemas/AlphaFoldCandidateRepresentative'}
+            - {type: 'null'}
+        best_structure_p_value: {type: [number, 'null']}
+        best_structure_rmsd: {type: [number, 'null']}
+    AlphaFoldCandidate:
+      type: object
+      required: [candidate_kind, alphafold, region_count, qualifying_hit_count, assigned_hit_count, unassigned_hit_count, region_hit_fraction, sequence_hit_count, structure_hit_count, minimum_region_hit_count, core_coverage_length, core_coverage_fraction, regions]
+      properties:
+        candidate_kind: {type: string, enum: [single_region, multi_region]}
+        alphafold:
+          type: object
+          required: [name, uniprot_accession, sequence_length, sequence_evidence, api_url, hits_url]
+          properties:
+            name: {type: string}
+            uniprot_accession: {type: string}
+            description: {type: [string, 'null']}
+            sequence_length: {type: integer, minimum: 1}
+            global_plddt: {type: [number, 'null']}
+            sequence_evidence: {$ref: '#/components/schemas/AlphaFoldCandidateSequenceEvidence'}
+            api_url: {type: string}
+            hits_url: {type: string}
+        region_count: {type: integer, minimum: 1}
+        qualifying_hit_count: {type: integer, minimum: 2}
+        assigned_hit_count: {type: integer, minimum: 2}
+        unassigned_hit_count: {type: integer, minimum: 0}
+        region_hit_fraction:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: assigned_hit_count divided by qualifying_hit_count in the candidate index. A fraction of hits, not residues; redundant matches can contribute, so this is not confidence in homology.
+        sequence_hit_count: {type: integer, minimum: 0}
+        structure_hit_count: {type: integer, minimum: 0}
+        minimum_region_hit_count: {type: integer, minimum: 2}
+        core_coverage_length: {type: integer, minimum: 1}
+        core_coverage_fraction:
+          type: number
+          minimum: 0
+          maximum: 1
+          description: Combined candidate core interval length divided by the model sequence length. Includes any short low-support gaps bridged during core construction; this is not coverage of each region by its hits.
+        regions:
+          type: array
+          items: {$ref: '#/components/schemas/AlphaFoldCandidateRegion'}
+    AlphaFoldDomainCandidatesResponse:
+      type: object
+      required: [release, filters, limit, next_cursor, index, method, candidates]
+      properties:
+        release: {type: string}
+        filters: {type: object}
+        limit: {type: integer, minimum: 1, maximum: 100}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        index:
+          type: object
+          required: [version, built_at, analyzed_model_count, indexed_model_count]
+          properties:
+            version: {type: integer, const: 1}
+            built_at: {type: string}
+            analyzed_model_count: {type: integer, minimum: 0}
+            indexed_model_count: {type: integer, minimum: 0}
+        method:
+          type: object
+          required: [index_version, maximum_hits_per_evidence_stream, sequence_hit_filter, structure_hit_filter, minimum_support_depth, maximum_low_support_gap, minimum_region_core_length, minimum_hit_to_region_overlap_fraction, interpretation]
+          properties:
+            index_version: {type: integer, const: 1}
+            maximum_hits_per_evidence_stream: {type: integer, const: 100}
+            sequence_hit_filter: {type: object}
+            structure_hit_filter: {type: object}
+            minimum_support_depth: {type: integer, const: 2}
+            maximum_low_support_gap: {type: integer, const: 15}
+            minimum_region_core_length: {type: integer, const: 30}
+            minimum_hit_to_region_overlap_fraction: {type: number, const: 0.5}
+            interpretation: {type: string}
+        candidates:
+          type: array
+          items: {$ref: '#/components/schemas/AlphaFoldCandidate'}
+    ChainClusterSimilarity:
+      type: object
+      description: >-
+        Newly calculated local sequence similarity, not original clustering BLAST
+        scores or FATCAT structural similarity. Source-4 SEQRES-minus-tags sequences
+        can differ from the normal SEQRES sequence in Chain. Positions are one-based
+        inclusive sequence coordinates, not PDB author residue identifiers. Coverage
+        is the consumed interval divided by the full corresponding sequence length.
+        Endpoints do not encode internal gaps or a residue-by-residue mapping.
+        Null similarity means measurements are unavailable, not zero similarity.
+      required: [method, sequence_source, coordinate_system, identical_residues, alignment_columns, percent_identity, member_start, member_end, representative_start, representative_end, member_length, representative_length, member_coverage_percent, representative_coverage_percent, interpretation]
+      properties:
+        method: {type: string}
+        sequence_source: {type: string, const: seqres_minus_tags}
+        coordinate_system: {type: string, const: one_based_inclusive_sequence_position}
+        identical_residues: {type: integer, minimum: 0}
+        alignment_columns: {type: integer, minimum: 1, description: Includes internal gap columns; excludes unaligned termini.}
+        percent_identity: {type: number, minimum: 0, maximum: 100, description: 100 times identical residues divided by alignment columns; literal equal ambiguity symbols count as identical.}
+        member_start: {type: integer, minimum: 1}
+        member_end: {type: integer, minimum: 1}
+        representative_start: {type: integer, minimum: 1}
+        representative_end: {type: integer, minimum: 1}
+        member_length: {type: integer, minimum: 1}
+        representative_length: {type: integer, minimum: 1}
+        member_coverage_percent: {type: number, minimum: 0, maximum: 100}
+        representative_coverage_percent: {type: number, minimum: 0, maximum: 100}
+        interpretation: {type: string}
+    ChainClusterRepresentative:
+      type: object
+      description: >-
+        A release-specific ASTRAL chain-cluster representative. Null means no
+        mapping is available for this chain/release; it does not imply no relatives.
+        Current hits and metadata still describe the requested chain. Retrieve
+        representative links separately and label their evidence accordingly.
+      required: [identifier, is_requested_chain, similarity, api_url, hits_url, sequence_hits_url, structure_hits_url, coordinate_url, interpretation]
+      properties:
+        identifier: {type: string}
+        is_requested_chain: {type: boolean}
+        similarity:
+          oneOf:
+            - {$ref: '#/components/schemas/ChainClusterSimilarity'}
+            - {type: 'null'}
+        api_url: {type: string}
+        hits_url: {type: string}
+        sequence_hits_url: {type: string}
+        structure_hits_url: {type: string}
+        coordinate_url: {type: string}
+        interpretation: {type: string}
+    Chain:
+      type: object
+      required: [identifier, pdb_code, chain, domains, coordinate_url, api_url, hits_url, sequence_hits_url, structure_hits_url]
+      properties:
+        identifier: {type: string}
+        cluster_representative:
+          oneOf:
+            - {$ref: '#/components/schemas/ChainClusterRepresentative'}
+            - {type: 'null'}
+        pdb_code: {type: string}
+        chain: {type: string}
+        is_polypeptide: {type: boolean}
+        description: {type: [string, 'null']}
+        sequence: {type: [string, 'null']}
+        sequence_length: {type: [integer, 'null']}
+        genes: {type: array, items: {type: string}}
+        uniprot_accessions: {type: array, items: {type: string}}
+        domains:
+          type: array
+          items: {$ref: '#/components/schemas/PublicDomainRef'}
+        pdb: {$ref: '#/components/schemas/PdbSummary'}
+        coordinate_url: {type: string}
+        api_url: {type: string}
+        hits_url: {type: string}
+        sequence_hits_url: {type: string}
+        structure_hits_url: {type: string}
+    ChainResponse:
+      type: object
+      required: [release, chain]
+      properties:
+        release: {type: string}
+        chain: {$ref: '#/components/schemas/Chain'}
+    AlignmentRange:
+      type: object
+      description: >-
+        Residue range summary. Sequence hits use one-based inclusive positions
+        in the compared sequences. AlphaFold FATCAT summaries retain the stored
+        model/domain offsets and per-side lengths; lengths are not paired-residue counts.
+        PDB-chain FATCAT uses the separate PdbAlignmentRange schema.
+      required: [start, end, length]
+      properties:
+        start: {type: integer}
+        end: {type: integer}
+        length: {type: integer}
+    PdbAlignmentRange:
+      type: object
+      description: >-
+        Stored PDB author residue label and per-side residue count. Insertion codes
+        and negative labels are preserved when present in storage. End is null:
+        author labels cannot be advanced by adding a residue count. These fields
+        must not be used as SEQRES positions or for sequence coverage calculations.
+      required: [start, end, length, coordinate_system, length_semantics]
+      properties:
+        start: {type: [string, 'null']}
+        end: {type: 'null'}
+        length: {type: [integer, 'null']}
+        coordinate_system: {const: pdb_author_residue_id}
+        length_semantics: {const: per_side_residue_count}
+    HitPage:
+      type: object
+      required: [limit, has_more, filters]
+      description: >-
+        Bounded top-hit list. Limit applies to each stream separately; combined
+        responses can contain twice that many hits. has_more indicates omitted
+        hits after deduplication and filtering. No continuation cursor is offered.
+      properties:
+        limit: {type: integer}
+        has_more: {type: boolean}
+        filters: {type: object}
+    TransformMatrix:
+      type: array
+      minItems: 4
+      maxItems: 4
+      items:
+        type: array
+        minItems: 4
+        maxItems: 4
+        items: {type: number}
+    SequenceHit:
+      type: object
+      required: [kind, domain, log10_evalue, percent_identity, domain_range]
+      properties:
+        kind: {const: sequence}
+        domain: {$ref: '#/components/schemas/PublicDomainRef'}
+        log10_evalue: {type: number}
+        percent_identity: {type: [number, 'null']}
+        alphafold_range: {$ref: '#/components/schemas/AlignmentRange'}
+        chain_range: {$ref: '#/components/schemas/AlignmentRange'}
+        domain_range: {$ref: '#/components/schemas/AlignmentRange'}
+    StructureHit:
+      type: object
+      required: [kind, domain, p_value, domain_range]
+      properties:
+        kind: {const: structure}
+        domain: {$ref: '#/components/schemas/PublicDomainRef'}
+        p_value: {type: [number, 'null']}
+        p_value_reported_as_zero:
+          type: boolean
+          description: True when the archived FATCAT result itself reported P-value 0.00e+00; such hits sort as most significant.
+        identity: {type: [number, 'null']}
+        similarity: {type: [number, 'null']}
+        score: {type: [number, 'null']}
+        rmsd:
+          type: [number, 'null']
+          description: Initial FATCAT RMSD (ini_rmsd), not optimized RMSD.
+        alphafold_range: {$ref: '#/components/schemas/AlignmentRange'}
+        chain_range: {$ref: '#/components/schemas/PdbAlignmentRange'}
+        domain_range:
+          oneOf:
+            - {$ref: '#/components/schemas/AlignmentRange'}
+            - {$ref: '#/components/schemas/PdbAlignmentRange'}
+        transform:
+          oneOf:
+            - {$ref: '#/components/schemas/TransformMatrix'}
+            - {type: 'null'}
+    HitsResponse:
+      type: object
+      required: [release, subject, limit, sequence_hits, structure_hits, sequence_page, structure_page]
+      properties:
+        release: {type: string}
+        subject:
+          type: object
+          properties:
+            kind: {type: string, enum: [alphafold, chain]}
+            name: {type: string}
+            identifier: {type: string}
+            cluster_representative:
+              oneOf:
+                - {$ref: '#/components/schemas/ChainClusterRepresentative'}
+                - {type: 'null'}
+            uniprot_accession: {type: string}
+            description: {type: [string, 'null']}
+            global_plddt: {type: [number, 'null']}
+            model_residue_count: {type: integer, minimum: 0}
+            api_url: {type: string}
+        limit: {type: integer, description: Maximum hits per requested stream.}
+        sequence_evidence:
+          oneOf:
+            - {$ref: '#/components/schemas/AlphaFoldSequenceEvidence'}
+            - {type: 'null'}
+        sequence_page: {$ref: '#/components/schemas/HitPage'}
+        sequence_hits:
+          type: array
+          items: {$ref: '#/components/schemas/SequenceHit'}
+        structure_page: {$ref: '#/components/schemas/HitPage'}
+        structure_hits:
+          type: array
+          items: {$ref: '#/components/schemas/StructureHit'}
+    SequenceHitsResponse:
+      type: object
+      required: [release, subject, limit, sequence_hits, sequence_page]
+      properties:
+        release: {type: string}
+        subject:
+          type: object
+          properties:
+            cluster_representative:
+              oneOf:
+                - {$ref: '#/components/schemas/ChainClusterRepresentative'}
+                - {type: 'null'}
+        limit: {type: integer, description: Maximum hits per requested stream.}
+        sequence_evidence:
+          oneOf:
+            - {$ref: '#/components/schemas/AlphaFoldSequenceEvidence'}
+            - {type: 'null'}
+        sequence_page: {$ref: '#/components/schemas/HitPage'}
+        sequence_hits:
+          type: array
+          items: {$ref: '#/components/schemas/SequenceHit'}
+    StructureHitsResponse:
+      type: object
+      required: [release, subject, limit, structure_hits, structure_page]
+      properties:
+        release: {type: string}
+        subject:
+          type: object
+          properties:
+            cluster_representative:
+              oneOf:
+                - {$ref: '#/components/schemas/ChainClusterRepresentative'}
+                - {type: 'null'}
+        limit: {type: integer, description: Maximum hits per requested stream.}
+        structure_page: {$ref: '#/components/schemas/HitPage'}
+        structure_hits:
+          type: array
+          items: {$ref: '#/components/schemas/StructureHit'}
+    DomainAlphaFoldStructureMatch:
+      type: object
+      required: [alphafold, p_value, alphafold_range, domain_range]
+      properties:
+        alphafold:
+          type: object
+          required: [name, uniprot_accession, api_url, hits_url, structure_hits_url]
+          properties:
+            name: {type: string}
+            uniprot_accession: {type: string}
+            description: {type: [string, 'null']}
+            global_plddt: {type: [number, 'null']}
+            api_url: {type: string}
+            hits_url: {type: string}
+            structure_hits_url: {type: string}
+        p_value: {type: [number, 'null']}
+        p_value_reported_as_zero:
+          type: boolean
+          description: True when the archived FATCAT result itself reported P-value 0.00e+00; such hits sort as most significant.
+        identity: {type: [number, 'null']}
+        similarity: {type: [number, 'null']}
+        score: {type: [number, 'null']}
+        rmsd: {type: [number, 'null']}
+        alphafold_range: {$ref: '#/components/schemas/AlignmentRange'}
+        domain_range: {$ref: '#/components/schemas/AlignmentRange'}
+    DomainAlphaFoldStructureMatchesResponse:
+      type: object
+      required: [release, domain, limit, next_cursor, alphafold_structure_matches]
+      properties:
+        release: {type: string}
+        domain: {$ref: '#/components/schemas/NodeSummary'}
+        limit: {type: integer}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        alphafold_structure_matches:
+          type: array
+          items: {$ref: '#/components/schemas/DomainAlphaFoldStructureMatch'}
+    QualityResponse:
+      type: object
+      properties:
+        release: {type: string}
+        quality: {$ref: '#/components/schemas/QualityScore'}
+    QualityListResponse:
+      type: object
+      properties:
+        release: {type: string}
+        limit: {type: integer}
+        has_more: {type: boolean}
+        next_cursor: {type: [string, 'null']}
+        quality_scores:
+          type: array
+          items: {$ref: '#/components/schemas/QualityScore'}
+    QualityScore:
+      type: object
+      properties:
+        pdb_code: {type: string}
+        spaci: {type: [number, 'null']}
+        aerospaci: {type: [number, 'null']}
+        method_summary: {type: string}
+        resolution: {type: [number, 'null']}
+        r_factor: {type: [number, 'null']}
+        effective_resolution: {type: [number, 'null']}
+        effective_r_factor: {type: [number, 'null']}
+    Image:
+      type: object
+      properties:
+        role: {type: string}
+        url: {type: string}
+        width: {type: integer}
+        height: {type: integer}
+    ImagesResponse:
+      type: object
+      properties:
+        release: {type: string}
+        node: {$ref: '#/components/schemas/NodeSummary'}
+        images:
+          type: array
+          items: {$ref: '#/components/schemas/Image'}
+    AnnotationsResponse:
+      type: object
+      properties:
+        release: {type: string}
+        node: {$ref: '#/components/schemas/NodeSummary'}
+        comments:
+          type: array
+          items: {type: object}
+        inconsistencies:
+          type: array
+          items: {type: object}
+        repeats:
+          type: array
+          items: {type: object}
+        xrefs:
+          type: object
+    HomologyResponse:
+      type: object
+      properties:
+        release: {type: string}
+        node: {$ref: '#/components/schemas/NodeSummary'}
+        homology_implied_by_level: {type: boolean}
+        homology_scope: {type: [string, 'null']}
+        warnings:
+          type: array
+          items: {type: object}
+        heterogeneity:
+          type: array
+          items: {type: object}
+        repeat_family: {type: [object, 'null']}
+    DownloadFile:
+      type: object
+      properties:
+        path: {type: string}
+        url: {type: string}
+        description: {type: string}
+        format: {type: string}
+        category: {type: string}
+        identity_threshold: {type: integer}
+        sequence_scope: {type: string}
+        source: {type: string}
+        style: {type: string}
+        may_be_split: {type: boolean}
+    DownloadsResponse:
+      type: object
+      properties:
+        release: {type: string}
+        downloads_page_url: {type: string}
+        astral_page_url: {type: string}
+        parseable_files_url: {type: string}
+        astral_files_url: {type: string}
+        stable_subset_note: {type: string}
+        notes:
+          type: array
+          items: {type: string}
+        files:
+          type: array
+          items: {$ref: '#/components/schemas/DownloadFile'}
+    SequenceItem:
+      type: object
+      required: [identifier, header, sequence, length]
+      properties:
+        identifier: {type: string}
+        header: {type: string}
+        sequence: {type: string}
+        length: {type: integer, minimum: 1}
+    SequenceResponse:
+      type: object
+      required: [release, entity, identifier, source, sequences]
+      properties:
+        release: {type: string}
+        entity: {type: string, enum: [domain, pdb, chain]}
+        identifier: {type: string}
+        source: {type: string, enum: [seqres, atom]}
+        style: {type: [string, 'null'], enum: [genetic, original, null]}
+        classified_in_release: {type: boolean}
+        sequence_release_scope: {type: string, enum: [requested_scop_release, latest_pdb]}
+        sequences:
+          type: array
+          items: {$ref: '#/components/schemas/SequenceItem'}

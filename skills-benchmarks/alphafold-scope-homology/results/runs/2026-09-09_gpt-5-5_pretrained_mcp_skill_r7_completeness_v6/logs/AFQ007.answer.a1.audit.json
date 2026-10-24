@@ -1,0 +1,156 @@
+{
+  "attempt": 1,
+  "citation_audit": {
+    "issues": [],
+    "items": [
+      {
+        "id": "E1",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d1d5ra2",
+          "https://scop.berkeley.edu/sunid=52799&ver=2.08"
+        ]
+      },
+      {
+        "id": "E2",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1fq1a_/parents",
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1fq1a_"
+        ]
+      },
+      {
+        "id": "E3",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1p15b_",
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d4hv4a3"
+        ]
+      },
+      {
+        "id": "E4",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d5buga2",
+          "https://scop.berkeley.edu/sunid=49562&ver=2.08"
+        ]
+      },
+      {
+        "id": "E5",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P60484-F1",
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/52799/fatcat-chain-benchmark?minimum_supporting_hits=5"
+        ]
+      }
+    ]
+  },
+  "definitive_claim_matches": [],
+  "duration_seconds": 103.403,
+  "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+  "failed_call_count": 0,
+  "forbidden_events": [],
+  "foreign_mcp_calls": [],
+  "input_attestation": {
+    "model": "AF-P60484-F1",
+    "question_id": "AFQ007",
+    "question_sha256": "db6c1c7b21f832d5219a9e5900b0bd37a76e5f8f2e8fb6cd2ebec0f385559a54",
+    "release": "2.08",
+    "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+  },
+  "issues": [],
+  "max_mcp_calls": 8,
+  "missing_benchmark_counts": [],
+  "missing_benchmarks": [],
+  "missing_hits": [],
+  "missing_representative_calls": [],
+  "missing_source_urls": [],
+  "missing_tools": [],
+  "observed_benchmark_counts": [
+    [
+      "2.08",
+      5,
+      1
+    ]
+  ],
+  "observed_benchmarks": [
+    [
+      "2.08",
+      52799,
+      5
+    ]
+  ],
+  "observed_hits": [
+    [
+      "2.08",
+      "AF-P60484-F1",
+      100
+    ]
+  ],
+  "off_target_calls": [],
+  "reported_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ],
+  "required_benchmark_counts": [
+    [
+      "2.08",
+      5,
+      1
+    ]
+  ],
+  "required_benchmarks": [
+    [
+      "2.08",
+      52800,
+      5
+    ]
+  ],
+  "required_hits": [
+    [
+      "2.08",
+      "AF-P60484-F1",
+      100
+    ]
+  ],
+  "required_representatives": [
+    [
+      "2.08",
+      "d1d5ra2"
+    ],
+    [
+      "2.08",
+      "d1fq1a_"
+    ],
+    [
+      "2.08",
+      "d1p15b_"
+    ],
+    [
+      "2.08",
+      "d4hv4a3"
+    ],
+    [
+      "2.08",
+      "d5buga2"
+    ]
+  ],
+  "successful_call_count": 2,
+  "total_call_count": 2,
+  "uncalled_reported_tools": [],
+  "unfrozen_source_urls": [],
+  "unreported_required_tools": [],
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 134784,
+    "input_tokens": 160755,
+    "output_tokens": 4825,
+    "reasoning_output_tokens": 1240
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ],
+  "wrong_release_calls": [],
+  "wrong_source_urls": []
+}

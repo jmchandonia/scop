@@ -1,0 +1,310 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9a1",
+      "chain": "A",
+      "description": "3jb9 A:1784-2030",
+      "sccs": "c.55.3.14",
+      "sid": "d3jb9a1",
+      "sunid": 344792
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9a2",
+      "chain": "A",
+      "description": "3jb9 A:1605-1780",
+      "sccs": "c.52.1.36",
+      "sid": "d3jb9a2",
+      "sunid": 344793
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9a3",
+      "chain": "A",
+      "description": "3jb9 A:823-1604",
+      "sccs": "e.8.1.8",
+      "sid": "d3jb9a3",
+      "sunid": 344794
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9a4",
+      "chain": "A",
+      "description": "3jb9 A:698-822",
+      "sccs": "a.29.2.1",
+      "sid": "d3jb9a4",
+      "sunid": 344795
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9a5",
+      "chain": "A",
+      "description": "3jb9 A:47-697",
+      "sccs": "d.394.1.1",
+      "sid": "d3jb9a5",
+      "sunid": 344796
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9b1",
+      "chain": "B",
+      "description": "3jb9 B:68-451",
+      "sccs": "c.37.1.8",
+      "sid": "d3jb9b1",
+      "sunid": 344797
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9b2",
+      "chain": "B",
+      "description": "3jb9 B:452-595",
+      "sccs": "b.43.3.1",
+      "sid": "d3jb9b2",
+      "sunid": 344798
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9b3",
+      "chain": "B",
+      "description": "3jb9 B:596-673",
+      "sccs": "d.58.11.1",
+      "sid": "d3jb9b3",
+      "sunid": 344799
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9b4",
+      "chain": "B",
+      "description": "3jb9 B:843-971",
+      "sccs": "d.58.11.1",
+      "sid": "d3jb9b4",
+      "sunid": 344800
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9b5",
+      "chain": "B",
+      "description": "3jb9 B:674-842",
+      "sccs": "d.14.1.1",
+      "sid": "d3jb9b5",
+      "sunid": 344801
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9c_",
+      "chain": "c",
+      "description": "3jb9 c:",
+      "sccs": "d.13.1.5",
+      "sid": "d3jb9c_",
+      "sunid": 344802
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9e_",
+      "chain": "e",
+      "description": "3jb9 e:",
+      "sccs": "g.99.1.1",
+      "sid": "d3jb9e_",
+      "sunid": 344803
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9f_",
+      "chain": "F",
+      "description": "3jb9 F:",
+      "sccs": "b.38.1.1",
+      "sid": "d3jb9f_",
+      "sunid": 344804
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9g_",
+      "chain": "g",
+      "description": "3jb9 g:",
+      "sccs": "j.139.1.1",
+      "sid": "d3jb9g_",
+      "sunid": 344805
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9h_",
+      "chain": "h",
+      "description": "3jb9 h:",
+      "sccs": "j.140.1.1",
+      "sid": "d3jb9h_",
+      "sunid": 344806
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9i_",
+      "chain": "i",
+      "description": "3jb9 i:",
+      "sccs": "h.1.41.1",
+      "sid": "d3jb9i_",
+      "sunid": 344807
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9j_",
+      "chain": "J",
+      "description": "3jb9 J:",
+      "sccs": "b.38.1.1",
+      "sid": "d3jb9j_",
+      "sunid": 344808
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9k_",
+      "chain": "K",
+      "description": "3jb9 K:",
+      "sccs": "b.69.4.1",
+      "sid": "d3jb9k_",
+      "sunid": 344809
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9l_",
+      "chain": "L",
+      "description": "3jb9 L:",
+      "sccs": "b.69.4.1",
+      "sid": "d3jb9l_",
+      "sunid": 344810
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9m_",
+      "chain": "M",
+      "description": "3jb9 M:",
+      "sccs": "j.137.1.1",
+      "sid": "d3jb9m_",
+      "sunid": 344811
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9r_",
+      "chain": "R",
+      "description": "3jb9 R:",
+      "sccs": "a.118.8.7",
+      "sid": "d3jb9r_",
+      "sunid": 344812
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9s1",
+      "chain": "S",
+      "description": "3jb9 S:1-57",
+      "sccs": "g.44.1.2",
+      "sid": "d3jb9s1",
+      "sunid": 344813
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9s2",
+      "chain": "S",
+      "description": "3jb9 S:58-132",
+      "sccs": "h.1.40.1",
+      "sid": "d3jb9s2",
+      "sunid": 344814
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9t1",
+      "chain": "T",
+      "description": "3jb9 T:1-57",
+      "sccs": "g.44.1.2",
+      "sid": "d3jb9t1",
+      "sunid": 344815
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9t2",
+      "chain": "T",
+      "description": "3jb9 T:58-134",
+      "sccs": "h.1.40.1",
+      "sid": "d3jb9t2",
+      "sunid": 344816
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9u1",
+      "chain": "U",
+      "description": "3jb9 U:1-57",
+      "sccs": "g.44.1.2",
+      "sid": "d3jb9u1",
+      "sunid": 344817
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9u2",
+      "chain": "U",
+      "description": "3jb9 U:58-135",
+      "sccs": "h.1.40.1",
+      "sid": "d3jb9u2",
+      "sunid": 344818
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9u3",
+      "chain": "U",
+      "description": "3jb9 U:173-488",
+      "sccs": "b.69.4.1",
+      "sid": "d3jb9u3",
+      "sunid": 344819
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9v1",
+      "chain": "V",
+      "description": "3jb9 V:1-57",
+      "sccs": "g.44.1.2",
+      "sid": "d3jb9v1",
+      "sunid": 344820
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9v2",
+      "chain": "V",
+      "description": "3jb9 V:58-131",
+      "sccs": "h.1.40.1",
+      "sid": "d3jb9v2",
+      "sunid": 344821
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9w_",
+      "chain": "W",
+      "description": "3jb9 W:",
+      "sccs": "j.138.1.1",
+      "sid": "d3jb9w_",
+      "sunid": 344822
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9x1",
+      "chain": "X",
+      "description": "3jb9 X:461-615",
+      "sccs": "b.49.4.1",
+      "sid": "d3jb9x1",
+      "sunid": 344823
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9x2",
+      "chain": "X",
+      "description": "3jb9 X:7-383",
+      "sccs": "a.118.1.29",
+      "sid": "d3jb9x2",
+      "sunid": 344824
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9x3",
+      "chain": "X",
+      "description": "3jb9 X:385-460,X:619-1044",
+      "sccs": "c.37.1.19",
+      "sid": "d3jb9x3",
+      "sunid": 344825
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9x4",
+      "chain": "X",
+      "description": "3jb9 X:1045-1284",
+      "sccs": "c.37.1.19",
+      "sid": "d3jb9x4",
+      "sunid": 344826
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9y1",
+      "chain": "Y",
+      "description": "3jb9 Y:49-171",
+      "sccs": "g.66.1.2",
+      "sid": "d3jb9y1",
+      "sunid": 344827
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9y2",
+      "chain": "Y",
+      "description": "3jb9 Y:172-289",
+      "sccs": "d.58.7.1",
+      "sid": "d3jb9y2",
+      "sunid": 344828
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d3jb9z_",
+      "chain": "Z",
+      "description": "3jb9 Z:",
+      "sccs": "b.38.1.1",
+      "sid": "d3jb9z_",
+      "sunid": 344829
+    }
+  ],
+  "pdb_code": "3jb9",
+  "release": "2.08"
+}

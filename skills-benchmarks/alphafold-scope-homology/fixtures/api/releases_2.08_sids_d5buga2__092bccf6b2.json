@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/277818",
+    "canonical_url": "/?sunid=277818&ver=2.08",
+    "description": "5bug A:188-351",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/188151",
+      "sccs": "b.7.1.1",
+      "sid": null,
+      "sunid": 188151
+    },
+    "release": "2.08",
+    "sccs": "b.7.1.1",
+    "sid": "d5buga2",
+    "sunid": 277818
+  }
+}

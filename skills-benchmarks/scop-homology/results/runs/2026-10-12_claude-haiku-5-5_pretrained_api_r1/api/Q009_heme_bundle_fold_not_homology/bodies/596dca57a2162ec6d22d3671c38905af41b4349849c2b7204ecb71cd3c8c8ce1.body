@@ -1,0 +1,1 @@
+{"node":{"sunid":82870,"sid":null,"sccs":"f.21.2.2","description":"Succinate dehydrogenase subunit SdhC","level":{"code":"dm","name":"Protein","plural":"Proteins"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/82870","canonical_url":"/?sunid=82870&ver=2.08","parent":{"sunid":81373,"sid":null,"sccs":"f.21.2.2","api_url":"/api/v1/releases/2.08/sunids/81373"}}}

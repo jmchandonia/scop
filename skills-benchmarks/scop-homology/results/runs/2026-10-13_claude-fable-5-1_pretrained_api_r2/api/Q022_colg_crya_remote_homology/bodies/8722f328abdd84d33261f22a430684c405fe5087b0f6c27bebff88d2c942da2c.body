@@ -1,0 +1,1 @@
+{"kind":"node","matched_by":"sccs","node":{"sunid":49784,"sid":null,"sccs":"b.18","description":"Galactose-binding domain-like","level":{"code":"cf","name":"Fold","plural":"Folds"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/49784","canonical_url":"/?sunid=49784&ver=2.08","parent":{"sunid":48724,"sid":null,"sccs":"b","api_url":"/api/v1/releases/2.08/sunids/48724"}}}

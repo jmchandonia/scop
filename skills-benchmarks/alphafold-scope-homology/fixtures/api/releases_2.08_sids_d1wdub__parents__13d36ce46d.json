@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/53931",
+      "canonical_url": "/?sunid=53931&ver=2.08",
+      "description": "Alpha and beta proteins (a+b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "d",
+      "sid": null,
+      "sunid": 53931
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56218",
+      "canonical_url": "/?sunid=56218&ver=2.08",
+      "description": "DNase I-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/53931",
+        "sccs": "d",
+        "sid": null,
+        "sunid": 53931
+      },
+      "release": "2.08",
+      "sccs": "d.151",
+      "sid": null,
+      "sunid": 56218
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56219",
+      "canonical_url": "/?sunid=56219&ver=2.08",
+      "description": "DNase I-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56218",
+        "sccs": "d.151",
+        "sid": null,
+        "sunid": 56218
+      },
+      "release": "2.08",
+      "sccs": "d.151.1",
+      "sid": null,
+      "sunid": 56219
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56220",
+      "canonical_url": "/?sunid=56220&ver=2.08",
+      "description": "DNase I-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56219",
+        "sccs": "d.151.1",
+        "sid": null,
+        "sunid": 56219
+      },
+      "release": "2.08",
+      "sccs": "d.151.1.1",
+      "sid": null,
+      "sunid": 56220
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/111215",
+      "canonical_url": "/?sunid=111215&ver=2.08",
+      "description": "Endonuclease domain of TRAS1 retrotransposon (ORF2)",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56220",
+        "sccs": "d.151.1.1",
+        "sid": null,
+        "sunid": 56220
+      },
+      "release": "2.08",
+      "sccs": "d.151.1.1",
+      "sid": null,
+      "sunid": 111215
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/111216",
+      "canonical_url": "/?sunid=111216&ver=2.08",
+      "description": "Silkworm (Bombyx mori) [TaxId: 7091]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/111215",
+        "sccs": "d.151.1.1",
+        "sid": null,
+        "sunid": 111215
+      },
+      "release": "2.08",
+      "sccs": "d.151.1.1",
+      "sid": null,
+      "sunid": 111216
+    }
+  ],
+  "release": "2.08",
+  "sunid": 109287
+}

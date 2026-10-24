@@ -1,0 +1,1 @@
+{"node":{"sunid":110463,"sid":null,"sccs":"c.137.1.1","description":"Pseudomonas aeruginosa","level":{"code":"sp","name":"Species","plural":"Species"},"release":"1.69","api_url":"/api/v1/releases/1.69/sunids/110463","canonical_url":"/?sunid=110463&ver=1.69","parent":{"sunid":110462,"sid":null,"sccs":"c.137.1.1","api_url":"/api/v1/releases/1.69/sunids/110462"}}}

@@ -1,0 +1,157 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=seq&hit=d1bz1a_"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2dc3a_"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1/hits?limit=100"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://scop.berkeley.edu/sunid=51349&ver=2.08"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P69905-F1",
+      "question_id": "AFQ002",
+      "question_sha256": "001134b5c0f81ec65b4f34b5103c5a23d1d898f7a0ea3aeb13debf1d9d774ba0",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [],
+    "observed_benchmarks": [],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P69905-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [],
+    "required_benchmarks": [],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P69905-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1bz1a_"
+      ],
+      [
+        "2.08",
+        "d2dc3a_"
+      ],
+      [
+        "2.08",
+        "d4aa7a1"
+      ]
+    ],
+    "successful_call_count": 3,
+    "total_call_count": 3,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 2,
+    "duration_seconds": 176.867,
+    "mcp_call_count": 6,
+    "rejected_attempts": [
+      {
+        "attempt": 1,
+        "issues": [
+          "scop_local calls used REST evidence absent from the parity-checked fixture manifest: ['http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d4j0ea1', 'http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d4j0ea1/annotations', 'http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d4j0ea1/homology', 'http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d4j0ea1/parents']"
+        ]
+      }
+    ],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 345728,
+      "input_tokens": 427853,
+      "output_tokens": 8023,
+      "reasoning_output_tokens": 2826
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n### 1. Conclusion\nFor AF-P69905-F1, UniProt P69905, release 2.08, the retrieved evidence does not favor the alpha/beta SCOPe structural class. The controlling evidence favors an all-alpha globin-like relationship across approximately residues 1-142: the top sequence record is a full-length, 100% identity all-alpha globin hit, and the strongest FATCAT structure hit is also full-length all-alpha; alpha/beta appears only as low-ranked structure-only alternatives, including a very short 20-residue c.68 fragment that is exactly the kind of insufficient helix-length match named in the question.\n\n### 2. What can be said at each level\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | Target function is not established by this assessment. The model metadata says P69905 is hemoglobin subunit alpha, and retrieved references include heme-complexed globin examples, but reference annotations do not transfer exact function, ligand state, or assembly state to the target. | E1, E2, E5 |\n| Family | Evidence strongly favors, as a non-official hypothesis, the all-alpha Globins family, SCCS a.1.1.2, SUNID 46463, over an alpha/beta family. This is supported by near-exact sequence evidence plus convergent structure evidence over nearly the full 142-residue model; the c.68 alpha/beta representative is automated and only a short fragment. | E1, E2, E3, E4 |\n| Superfamily | Evidence supports the all-alpha Globin-like superfamily, SCCS a.1.1, SUNID 46458, rather than an alpha/beta superfamily. | E1, E2, E4 |\n| Fold | Evidence supports all-alpha Globin-like fold similarity, SCCS a.1, SUNID 46457. The alpha/beta c.68 and c.2 structure-only hits are weak competing architecture signals and do not control the conclusion. | E2, E3, E4 |\n\n### 3. Evidence considered\n- **E1** \u2014 Sequence evidence is full-length and all-alpha: rank 1 d1bz1a_ aligns AF-P69905-F1 residues 1-142, i.e. 142/142 residues = 100.0% model coverage, with 100% identity and log10(E-value) -77.626. The sequence stream has 100 raw hits, all grouped as SCCS a.1.1.2, so it provides no alpha/beta sequence support in the returned top 100. Source: [d1bz1a_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=seq&hit=d1bz1a_)\n- **E2** \u2014 The strongest structure hit is also full-length and all-alpha: rank 1 d2dc3a_ aligns residues 1-142, i.e. 142/142 residues = 100.0% model coverage, with FATCAT P-value 2.12e-14, score 347.69, RMSD 1.68, 27.81% identity, and SCCS a.1.1.2. Its lineage is all-alpha class a, Globin-like fold/superfamily, Globins family. Source: [d2dc3a_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2dc3a_)\n- **E3** \u2014 The compact hit summary shows the alpha/beta class only in the raw structure stream: c.68.1.0 and c.2.1.0 each occur once among 62 raw structure hits, while the compact representatives are dominated by all-alpha hits and no compact alpha/beta record appears. The highest-ranked alpha/beta group exposed by the raw summary is d4aa7a1, SCCS c.68.1.0, with range envelope 55-74, only 20/142 residues = 14.08% model coverage; this does not support an alpha/beta-class relationship for the model. Source: [raw hit summary](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1/hits?limit=100)\n- **E4** \u2014 Retrieved lineage confirms the class-level contrast: d1bz1a_ and d2dc3a_ trace to All alpha proteins, class a, SUNID 46456, while d4aa7a1 traces to Alpha and beta proteins (a/b), class c, SUNID 51349, through Nucleotide-diphospho-sugar transferases fold c.68 and an automated-matches family c.68.1.0. Source: [alpha/beta class node](https://scop.berkeley.edu/sunid=51349&ver=2.08)\n- **E5** \u2014 Confidence does not explain away the all-alpha evidence, but it also does not make the short alpha/beta fragment decisive. Whole-model global pLDDT is 98.03; the 1-142 region has median 98.55 with band counts >=90: 141, 70-<90: 0, 50-<70: 1, <50: 0 and no sustained low-confidence stretches. The alpha/beta fragment region 55-74 has median 98.67 with all 20 residues >=90, but it covers only 20/142 residues = 14.08%. Source: [AlphaFold confidence evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1)\n\n### 4. Caveats by evidence item\n- **E1** \u2014 The 100 sequence hits are redundant/correlated SCOPe examples in one SCCS group, not 100 independent observations. Still, the near-exact full-length sequence match is family-discriminating for this contrast.\n- **E2** \u2014 d2dc3a_ is marked as an automated match to d1v5ha_; by the skill rule, that label alone would not independently establish family-level evidence. Here it is used mainly as structure support for the same all-alpha globin-like lineage already discriminated by sequence evidence. Its chain-benchmark applicability is uncertain_missing_filter_inputs because alignment_length/component_length are missing, so no benchmark fraction is reassuring.\n- **E3** \u2014 The alpha/beta evidence is structure-only and fragmentary. The raw response was used only because the compact summary showed question-relevant class c hits without compact metrics; the retained alpha/beta representative is the strongest class-level contrast available, not an added corroborating hit.\n- **E4** \u2014 SCOPe class labels are retrieved lineage for representatives, not an official classification of AF-P69905-F1. The alpha/beta d4aa7a1 family is an automated-matches family, so it is not family-discriminating target evidence.\n- **E5** \u2014 pLDDT supports local geometric interpretability but is not evolutionary evidence. PAE/pTM and assembly context were not returned, so this assessment cannot infer exact domain boundaries, multi-chain contacts, or target function.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "mcp__scop_local.get_alphafold_hits(model=AF-P69905-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "mcp__scop_local.get_alphafold_hits(model=AF-P69905-F1, release=2.08, limit=100, compact=false, include_transforms=false)",
+      "mcp__scop_local.get_alphafold_decision_evidence(model=AF-P69905-F1, release=2.08, regions=1-142;55-74;59-140, sids=d1bz1a_;d2dc3a_;d4aa7a1, calibration_requests=null)"
+    ],
+    "input_attestation": {
+      "model": "AF-P69905-F1",
+      "question_id": "AFQ002",
+      "question_sha256": "001134b5c0f81ec65b4f34b5103c5a23d1d898f7a0ea3aeb13debf1d9d774ba0",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ002",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:38:32Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

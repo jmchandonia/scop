@@ -1,0 +1,1 @@
+{"node":{"sunid":89263,"sid":null,"sccs":"b.23.2.1","description":"Clostridium histolyticum [TaxId: 1498]","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.04","api_url":"/api/v1/releases/2.04/sunids/89263","canonical_url":"/?sunid=89263&ver=2.04","parent":{"sunid":89262,"sid":null,"sccs":"b.23.2.1","api_url":"/api/v1/releases/2.04/sunids/89262"}}}

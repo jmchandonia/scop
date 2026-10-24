@@ -1,0 +1,36 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d1r6ra_"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/348808",
+    "canonical_url": "/?sunid=348808&ver=2.08",
+    "description": "5ygh B:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/348807",
+      "sccs": "a.190.1.0",
+      "sid": null,
+      "sunid": 348807
+    },
+    "release": "2.08",
+    "sccs": "a.190.1.0",
+    "sid": "d5yghb_",
+    "sunid": 348808
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

@@ -1,0 +1,161 @@
+{
+  "attempt": 1,
+  "citation_audit": {
+    "issues": [],
+    "items": [
+      {
+        "id": "E1",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1/hits?limit=100"
+        ]
+      },
+      {
+        "id": "E2",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=seq&hit=d1bz1a_",
+          "https://scop.berkeley.edu/sunid=46463&ver=2.08"
+        ]
+      },
+      {
+        "id": "E3",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2dc3a_",
+          "https://scop.berkeley.edu/sunid=46463&ver=2.08"
+        ]
+      },
+      {
+        "id": "E4",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P69905-F1&mode=struct&hit=d2wtha_",
+          "https://scop.berkeley.edu/sunid=46458&ver=2.08"
+        ]
+      },
+      {
+        "id": "E5",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P69905-F1"
+        ]
+      },
+      {
+        "id": "E6",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/46463/fatcat-chain-benchmark?minimum_supporting_hits=2"
+        ]
+      }
+    ]
+  },
+  "definitive_claim_matches": [],
+  "duration_seconds": 79.502,
+  "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+  "failed_call_count": 0,
+  "forbidden_events": [],
+  "foreign_mcp_calls": [],
+  "input_attestation": {
+    "model": "AF-P69905-F1",
+    "question_id": "AFQ001",
+    "question_sha256": "1c28a5b9e840d50aa90a7f8f67e5b427a2d4a7607736352c612ae0e5f4f3c4b8",
+    "release": "2.08",
+    "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+  },
+  "issues": [],
+  "max_mcp_calls": 8,
+  "missing_benchmark_counts": [],
+  "missing_benchmarks": [],
+  "missing_hits": [],
+  "missing_representative_calls": [],
+  "missing_source_urls": [],
+  "missing_tools": [],
+  "observed_benchmark_counts": [
+    [
+      "2.08",
+      2,
+      1
+    ]
+  ],
+  "observed_benchmarks": [
+    [
+      "2.08",
+      46463,
+      2
+    ]
+  ],
+  "observed_hits": [
+    [
+      "2.08",
+      "AF-P69905-F1",
+      100
+    ]
+  ],
+  "off_target_calls": [],
+  "reported_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ],
+  "required_benchmark_counts": [
+    [
+      "2.08",
+      2,
+      1
+    ]
+  ],
+  "required_benchmarks": [
+    [
+      "2.08",
+      46463,
+      2
+    ]
+  ],
+  "required_hits": [
+    [
+      "2.08",
+      "AF-P69905-F1",
+      100
+    ]
+  ],
+  "required_representatives": [
+    [
+      "2.08",
+      "d1bz1a_"
+    ],
+    [
+      "2.08",
+      "d1s56b_"
+    ],
+    [
+      "2.08",
+      "d2dc3a_"
+    ],
+    [
+      "2.08",
+      "d2wtha_"
+    ],
+    [
+      "2.08",
+      "d2xkha_"
+    ]
+  ],
+  "successful_call_count": 2,
+  "total_call_count": 2,
+  "uncalled_reported_tools": [],
+  "unfrozen_source_urls": [],
+  "unreported_required_tools": [],
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 77696,
+    "input_tokens": 108126,
+    "output_tokens": 3640,
+    "reasoning_output_tokens": 818
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ],
+  "wrong_release_calls": [],
+  "wrong_source_urls": []
+}

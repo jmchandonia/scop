@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51349",
+      "canonical_url": "/?sunid=51349&ver=2.08",
+      "description": "Alpha and beta proteins (a/b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "c",
+      "sid": null,
+      "sunid": 51349
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52798",
+      "canonical_url": "/?sunid=52798&ver=2.08",
+      "description": "(Phosphotyrosine protein) phosphatases II",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51349",
+        "sccs": "c",
+        "sid": null,
+        "sunid": 51349
+      },
+      "release": "2.08",
+      "sccs": "c.45",
+      "sid": null,
+      "sunid": 52798
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52799",
+      "canonical_url": "/?sunid=52799&ver=2.08",
+      "description": "(Phosphotyrosine protein) phosphatases II",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52798",
+        "sccs": "c.45",
+        "sid": null,
+        "sunid": 52798
+      },
+      "release": "2.08",
+      "sccs": "c.45.1",
+      "sid": null,
+      "sunid": 52799
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/191381",
+      "canonical_url": "/?sunid=191381&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52799",
+        "sccs": "c.45.1",
+        "sid": null,
+        "sunid": 52799
+      },
+      "release": "2.08",
+      "sccs": "c.45.1.0",
+      "sid": null,
+      "sunid": 191381
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/190475",
+      "canonical_url": "/?sunid=190475&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/191381",
+        "sccs": "c.45.1.0",
+        "sid": null,
+        "sunid": 191381
+      },
+      "release": "2.08",
+      "sccs": "c.45.1.0",
+      "sid": null,
+      "sunid": 190475
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/187400",
+      "canonical_url": "/?sunid=187400&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/190475",
+        "sccs": "c.45.1.0",
+        "sid": null,
+        "sunid": 190475
+      },
+      "release": "2.08",
+      "sccs": "c.45.1.0",
+      "sid": null,
+      "sunid": 187400
+    }
+  ],
+  "release": "2.08",
+  "sunid": 382498
+}

@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/51736",
+    "canonical_url": "/?sunid=51736&ver=2.08",
+    "description": "Alcohol dehydrogenase-like, C-terminal domain",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/51735",
+      "sccs": "c.2.1",
+      "sid": null,
+      "sunid": 51735
+    },
+    "release": "2.08",
+    "sccs": "c.2.1.1",
+    "sid": null,
+    "sunid": 51736
+  }
+}

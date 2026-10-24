@@ -1,0 +1,1 @@
+{"kind":"node","matched_by":"sccs","node":{"sunid":47654,"sid":null,"sccs":"a.47","description":"STAT-like","level":{"code":"cf","name":"Fold","plural":"Folds"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/47654","canonical_url":"/?sunid=47654&ver=2.08","parent":{"sunid":46456,"sid":null,"sccs":"a","api_url":"/api/v1/releases/2.08/sunids/46456"}}}

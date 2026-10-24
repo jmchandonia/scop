@@ -1,0 +1,1 @@
+{"node":{"sunid":56990,"sid":null,"sccs":"f.11.1.1","description":"Anthrax protective antigen","level":{"code":"dm","name":"Protein","plural":"Proteins"},"release":"1.75","api_url":"/api/v1/releases/1.75/sunids/56990","canonical_url":"/?sunid=56990&ver=1.75","parent":{"sunid":56989,"sid":null,"sccs":"f.11.1.1","api_url":"/api/v1/releases/1.75/sunids/56989"}}}

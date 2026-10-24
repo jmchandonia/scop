@@ -1,0 +1,28 @@
+{
+  "heterogeneity": [],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/133349",
+    "canonical_url": "/?sunid=133349&ver=2.08",
+    "description": "2fej A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/49420",
+      "sccs": "b.2.5.2",
+      "sid": null,
+      "sunid": 49420
+    },
+    "release": "2.08",
+    "sccs": "b.2.5.2",
+    "sid": "d2feja_",
+    "sunid": 133349
+  },
+  "release": "2.08",
+  "repeat_family": null,
+  "warnings": []
+}

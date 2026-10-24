@@ -1,0 +1,195 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=seq&hit=d2cpea1",
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=seq&hit=d6snja_",
+            "https://scop.berkeley.edu/sunid=54928&ver=2.08"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d1hl6a_",
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d1jmta_",
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d2lcwa_"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1jmta_",
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d2cpea1",
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d6snja_",
+            "https://scop.berkeley.edu/sunid=54861&ver=2.08"
+          ]
+        },
+        {
+          "id": "E6",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/54928/fatcat-chain-benchmark?minimum_supporting_hits=5"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P35637-F1",
+      "question_id": "AFQ011",
+      "question_sha256": "1167f73955abbc640c5f4b7312f6cb6e050fb129b43d676e8134f6860854e766",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "observed_benchmarks": [
+      [
+        "2.08",
+        54928,
+        5
+      ]
+    ],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P35637-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "required_benchmarks": [
+      [
+        "2.08",
+        54928,
+        5
+      ]
+    ],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P35637-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1hl6a_"
+      ],
+      [
+        "2.08",
+        "d1jmta_"
+      ],
+      [
+        "2.08",
+        "d2cpea1"
+      ],
+      [
+        "2.08",
+        "d2lcwa_"
+      ],
+      [
+        "2.08",
+        "d6snja_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 99.792,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 120448,
+      "input_tokens": 154497,
+      "output_tokens": 4690,
+      "reasoning_output_tokens": 1211
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**1. Conclusion**\nAF-P35637-F1, UniProt P35637, release 2.08 has low global confidence, with global pLDDT 53.98, but the evidence supports a strong chance of a local SCOPe-like RRM-superfamily relationship for approximately residues 279-370, within a broader material envelope of about 262-381. Local confidence is much higher over the structural core than over the full model, so it makes the FATCAT comparisons over the core interpretable; it does not by itself establish homology, exact boundaries, family placement, or function.\n\n**2. What can be said at each level**\n\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | Target function is not established by this benchmark evidence. The model record describes P35637 as RNA-binding protein FUS, and the retrieved SCOPe node is RRM-like, but reference annotation and family names do not transfer exact function to the target. | E1, E5 |\n| Family | Family placement is not established. Canonical RBD, d.58.7.1/SUNID 54929, is a plausible candidate from sequence rank 5 and structure rank 2, but the strongest sequence and structure records also include automated-match family d.58.7.0 and a weaker d.58.7.3 structural branch. | E2, E3, E5 |\n| Superfamily | Supported strongest hypothesis: strong chance of an RNA-binding domain/RRM superfamily relationship, d.58.7/SUNID 54928, over about 279-370, with broader overlapping evidence from 262-381. Sequence and FATCAT streams converge at this superfamily. | E2, E3, E5, E6 |\n| Fold | Structural evidence is consistent with the Ferredoxin-like fold, d.58/SUNID 54861, but the more specific shared superfamily signal is stronger than a fold-only interpretation. Fold-level similarity alone would not establish homology. | E3, E5 |\n\n**3. Evidence considered**\n\n- **E1** \u2014 Model/provenance and global confidence: AF-P35637-F1 is UniProt P35637, RNA-binding protein FUS, length 526, global pLDDT 53.98. Whole-model pLDDT distribution is median 42.54, with 42/526 residues >=90, 81/526 at 70-<90, 39/526 at 50-<70, and 364/526 <50. Stored BLAST rows exist for the exact UniProt-linked sequence: 161 stored rows, 59 raw sequence hits, 2 compact representatives returned. Source: [AlphaFold decision evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1).\n- **E2** \u2014 Sequence evidence localizes the signal to the same region. Rank 1 d6snja_ aligns residues 262-370, 109/526 = 20.72% whole-model coverage, log10 E-value -58.26, 33.18% identity, SCCS d.58.7.0, with 21 raw hits in its overlap-SCCS group; its family is automated matches. Rank 5 d2cpea1 aligns 280-369, 90/526 = 17.11%, log10 E-value -29.56, 17.54% identity, SCCS d.58.7.1, with 38 raw hits. These support a local RRM-superfamily signal, while family-level specificity remains mixed. Sources: [d6snja_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=seq&hit=d6snja_), [d2cpea1 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=seq&hit=d2cpea1), [RRM superfamily node](https://scop.berkeley.edu/sunid=54928&ver=2.08).\n- **E3** \u2014 FATCAT structure hits overlap the sequence-supported region. Rank 1 d2lcwa_ aligns 279-375, 97/526 = 18.44%, P=0.0041, score 252.7, RMSD 3.1, identity 100%, SCCS d.58.7.0, group size 3. Rank 2 d1hl6a_ aligns 279-371, 93/526 = 17.68%, P=0.00412, score 214.94, RMSD 2.45, identity 26.04%, SCCS d.58.7.1, group size 5. Rank 8 d1jmta_ aligns 284-370, 87/526 = 16.54%, P=0.0418, score 147.76, RMSD 1.56, identity 14.95%, SCCS d.58.7.3, group size 1. All three share the d.58.7 superfamily, but current-hit benchmark applicability is outside filters because P-values exceed 1e-4. Sources: [d2lcwa_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d2lcwa_), [d1hl6a_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d1hl6a_), [d1jmta_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d1jmta_).\n- **E4** \u2014 Local confidence is materially higher than global confidence. The full material envelope 262-381 has median pLDDT 86.82 with bands 38/120 >=90, 50/120 at 70-<90, 9/120 at 50-<70, and 23/120 <50; low-confidence stretches occur at 262-282 and 371-381. The tighter 279-375 structural core has median 88.84 with 38/97 >=90, 50/97 at 70-<90, 6/97 at 50-<70, and 3/97 <50, with only a 371-375 <70 stretch. The 284-370 core has median 89.51 and no residues below 70. The high-pLDDT residues are split into six clusters, so they describe local confidence but do not define boundaries. Source: [AlphaFold residue confidence evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1).\n- **E5** \u2014 Retrieved lineages agree at superfamily and fold but not family. d6snja_ and d2lcwa_ are automated-match family d.58.7.0/SUNID 191529; d2cpea1 and d1hl6a_ are Canonical RBD family d.58.7.1/SUNID 54929; d1jmta_ is Splicing factor U2AF subunits family d.58.7.3/SUNID 64276 and is annotated as a heterodimer with a fragment U2AF65 subunit. All share RRM superfamily d.58.7/SUNID 54928 and Ferredoxin-like fold d.58/SUNID 54861. Sources: [d6snja_ domain evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d6snja_), [d2cpea1 domain evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d2cpea1), [d1jmta_ domain evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1jmta_), [Ferredoxin-like node](https://scop.berkeley.edu/sunid=54861&ver=2.08).\n- **E6** \u2014 Prespecified FATCAT calibration at minimum_supporting_hits=5 was available for the retained superfamily level resolved from d1hl6a_: RRM superfamily d.58.7/SUNID 54928 had benchmark_match_fraction 1.0, 46/46 benchmark cases. This is level-resolved historical classification consistency, not homology evidence or a probability, and the current structure hits are outside the benchmark filters from E3. Source: [RRM superfamily FATCAT chain benchmark](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/54928/fatcat-chain-benchmark?minimum_supporting_hits=5).\n\n**4. Caveats by evidence item**\n\n- **E1** \u2014 Low global pLDDT reflects most of the 526-residue model, not the local matched region. pTM/PAE and MSA depth were not retrieved, so relative domain placement, long-range packing, and template or sequence dependence cannot be assessed.\n- **E2** \u2014 Sequence hits are numerous but correlated by overlapping SCCS groups. The d.58.7.0 family label is automated and does not independently establish family-level evidence for the target; the d.58.7.1 sequence representative is lower ranked and shorter.\n- **E3** \u2014 FATCAT P-values support structural similarity, not a probability of homology. The current structure hits have P-values above the chain-benchmark inclusion filter of 1e-4, and alignment length/component-length inputs are missing, so the benchmark scalar cannot be used as reassurance for these current hits. Structure hits are also overlapping and family-mixed.\n- **E4** \u2014 Local pLDDT supports interpreting geometry mainly over 279-370 or 284-370; the lower-confidence ends at 262-282 and 371-381 make the broader envelope less reliable and boundaries approximate. Fragmented >=90 clusters are descriptive only.\n- **E5** \u2014 Family-level evidence is limited by automated-match records and a partner-context warning for d1jmta_. No retrieved warning proves the target lacks the relationship, but the evidence does not establish exact family, complex state, RNA binding mode, or function transfer.\n- **E6** \u2014 The 46/46 calibration row is a biased historical chain-to-domain benchmark at release-specific node d.58.7 with threshold 5. It is not independent target evidence, not an AlphaFold model-error estimate, and it cannot rescue weak, partial, or outside-filter FATCAT hits.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "mcp__scop_local.get_alphafold_hits(model=AF-P35637-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "mcp__scop_local.get_alphafold_decision_evidence(model=AF-P35637-F1, release=2.08, regions=262-381/262-370/279-375/274-381/284-370, sids=d6snja_,d2cpea1,d2lcwa_,d1hl6a_,d1jmta_, calibration=d1hl6a_:superfamily:min5)"
+    ],
+    "input_attestation": {
+      "model": "AF-P35637-F1",
+      "question_id": "AFQ011",
+      "question_sha256": "1167f73955abbc640c5f4b7312f6cb6e050fb129b43d676e8134f6860854e766",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ011",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:41:31Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

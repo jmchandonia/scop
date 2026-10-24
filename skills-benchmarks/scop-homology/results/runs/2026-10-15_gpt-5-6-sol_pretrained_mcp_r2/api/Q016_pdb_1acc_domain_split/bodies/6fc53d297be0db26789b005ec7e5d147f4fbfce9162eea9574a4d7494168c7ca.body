@@ -1,0 +1,1 @@
+{"release":"2.08","pdb_code":"1acc","chains":[{"chain":"A","is_polypeptide":true,"domains":[{"sid":"d1acca1","sunid":238521,"sccs":"f.60.1.1","description":"1acc A:226-735","api_url":"/api/v1/releases/2.08/sids/d1acca1"},{"sid":"d1acca2","sunid":238522,"sccs":"b.179.1.1","description":"1acc A:14-225","api_url":"/api/v1/releases/2.08/sids/d1acca2"}]}]}

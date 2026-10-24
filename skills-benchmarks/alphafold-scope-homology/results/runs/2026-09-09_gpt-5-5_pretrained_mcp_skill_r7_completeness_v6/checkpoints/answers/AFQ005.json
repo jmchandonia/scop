@@ -1,0 +1,199 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-Q96LI5-F1/hits?limit=100"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-Q96LI5-F1&mode=struct&hit=d3i48a_",
+            "https://scop.berkeley.edu/sunid=56219&ver=2.08"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-Q96LI5-F1&mode=struct&hit=d1ltxa3",
+            "https://scop.berkeley.edu/sunid=52058&ver=2.08"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-Q96LI5-F1"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/52058/fatcat-chain-benchmark?minimum_supporting_hits=3",
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/56219/fatcat-chain-benchmark?minimum_supporting_hits=3"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-Q96LI5-F1",
+      "question_id": "AFQ005",
+      "question_sha256": "7bfe1ae6140293366f8d908e0e5167b141ddab9fe27ee658f2c1af3a48ebfd54",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [
+      [
+        "2.08",
+        3,
+        2
+      ]
+    ],
+    "observed_benchmarks": [
+      [
+        "2.08",
+        52058,
+        3
+      ],
+      [
+        "2.08",
+        56219,
+        3
+      ]
+    ],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-Q96LI5-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [
+      [
+        "2.08",
+        3,
+        2
+      ]
+    ],
+    "required_benchmarks": [
+      [
+        "2.08",
+        52058,
+        3
+      ],
+      [
+        "2.08",
+        56219,
+        3
+      ]
+    ],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-Q96LI5-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1ltxa3"
+      ],
+      [
+        "2.08",
+        "d1wdub_"
+      ],
+      [
+        "2.08",
+        "d2ifga3"
+      ],
+      [
+        "2.08",
+        "d2uyrx_"
+      ],
+      [
+        "2.08",
+        "d3i48a_"
+      ],
+      [
+        "2.08",
+        "d4p91a_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 107.16,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 134784,
+      "input_tokens": 162295,
+      "output_tokens": 5243,
+      "reasoning_output_tokens": 1806
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**Conclusion**\nAF-Q96LI5-F1 is Q96LI5, release 2.08. The empty public sequence-hit result appears to be a real filtered-result outcome rather than a missing UniProt/query data gap: the exact UniProt-linked sequence is available and 31 stored BLAST rows exist, but there are 0 qualifying/returned sequence hits in the public hit stream (E1).\n\nThe structure evidence separates mostly into an N-terminal LRR/L domain-like signal and a C-terminal DNase I-like signal, but their broad envelopes overlap at approximately residues 186-208. For residues about 186-539, the evidence supports a strong chance of a DNase I-like superfamily, d.151.1/SUNID 56219, relationship; family placement is not established. For residues about 2-208, especially the high-confidence core 37-156, the evidence favors a cautious L domain-like superfamily, c.10.2/SUNID 52058, candidate; family placement is not established and the FATCAT statistics are weaker.\n\n**What can be said at each level**\nC-terminal region, approximate envelope 186-539:\n\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established from these data; reference comments include ligands/mutants but do not transfer function. | E2, E5 |\n| Family | Not established. Hits fall in different d.151.1 families, including automated matches d.151.1.0 and d.151.1.3 plus DNase I-like d.151.1.1. | E2 |\n| Superfamily | Strongest defensible hypothesis: DNase I-like superfamily, d.151.1/SUNID 56219, over approximately 186-539. | E2, E4, E5 |\n| Fold | Structural similarity is within DNase I-like fold d.151/SUNID 56218; this remains structure-led evidence, not a final homology determination. | E2 |\n\nN-terminal region, approximate envelope 2-208 with tighter core 37-156:\n\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established; reference ligand or family labels do not transfer functional annotation. | E3, E5 |\n| Family | Not established. The selected hits span multiple c.10.2 families, including c.10.2.2, automated c.10.2.0, and c.10.2.7. | E3 |\n| Superfamily | Cautious candidate: L domain-like superfamily, c.10.2/SUNID 52058, mainly over the high-confidence 37-156 core and broader 2-208 envelope. | E3, E4, E5 |\n| Fold | Structural evidence is consistent with LRR right-handed beta-alpha superhelix fold c.10/SUNID 52046, but exact boundaries remain approximate. | E3, E4 |\n\n**Evidence considered**\n- **E1** \u2014 Sequence provenance supports a real filtered-result outcome, not a basic data gap: UniProt accession Q96LI5 and the sequence identifier are available from `af_model.uniprot_id`; stored BLAST status is `stored_blast_results_available` with 31 stored BLAST rows, but the public sequence stream has raw_hit_count=0 and returned_hit_count=0. Source: [AF-Q96LI5-F1 hit evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-Q96LI5-F1/hits?limit=100)\n- **E2** \u2014 The C-terminal structure stream has 6 raw hits in 3 d.151.1 groups with envelope 186-539, overlapping the N-terminal broad envelope at 186-208. Selected metrics: rank 1 d3i48a_ spans 186-537, 352/555 residues = 63.42% model coverage, P=0.000144, score=315.37, RMSD=2.94, identity=9.54%; rank 2 d2uyrx_ spans 186-538, 353/555 = 63.60%, P=0.000244, score=302.31, RMSD=2.78, identity=10.10%; rank 4 d1wdub_ spans 188-539, 352/555 = 63.42%, P=0.00069, score=264.27, RMSD=3.10, identity=8.72%. Their lineages agree at DNase I-like superfamily d.151.1/SUNID 56219 but differ at family level. Sources: [d3i48a_ FATCAT hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-Q96LI5-F1&mode=struct&hit=d3i48a_), [d.151.1 node](https://scop.berkeley.edu/sunid=56219&ver=2.08)\n- **E3** \u2014 The N-terminal structure stream has 7 raw hits across c.10.2 groups with broad envelope 2-208 and tighter representative cores around 37-156. Selected metrics: rank 5 d1ltxa3 spans 37-156, 120/555 = 21.62%, P=0.00118, score=233.41, RMSD=1.98, identity=28.23%; rank 8 d4p91a_ spans 4-156, 153/555 = 27.57%, P=0.0142, score=240.83, RMSD=2.64, identity=14.16%; rank 9 d2ifga3 spans 35-154, 120/555 = 21.62%, P=0.0187, score=201.04, RMSD=3.55, identity=20.16%. Lineages agree at L domain-like superfamily c.10.2/SUNID 52058 but differ at family level. Sources: [d1ltxa3 FATCAT hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-Q96LI5-F1&mode=struct&hit=d1ltxa3), [c.10.2 node](https://scop.berkeley.edu/sunid=52058&ver=2.08)\n- **E4** \u2014 Confidence supports interpreting local geometry but does not establish classification. Whole model pLDDT: global 89.64; distribution 413 >=90, 82 from 70-<90, 33 from 50-<70, 27 <50. Region 37-156 has median 96.96 with all 120 residues >=90. Broad region 2-208 has median 95.99 with bands 159/25/12/11 and sustained low confidence at 1-22, so the broader N-terminal boundary is less secure than the 37-156 core. Region 186-539 has median 96.06 with bands 276/57/19/2 and sustained <70 stretches at 341-350 and 450-456; high-pLDDT clusters are fragmented, which is descriptive rather than a boundary criterion. Source: [AF-Q96LI5-F1 model and residue confidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-Q96LI5-F1)\n- **E5** \u2014 Prespecified calibration at minimum_supporting_hits=3 was available at the retained superfamily level: d.151.1 returned 10/10 benchmark-consistent cases, and c.10.2 returned 14/14. However, every current selected FATCAT hit has `chain_benchmark_applicability=outside_benchmark_filters` because each P-value is above the benchmark maximum 1e-4 and length-match inputs are missing, so these fractions cannot be used as reassurance for the current AlphaFold hits. Sources: [d.151.1 calibration](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/56219/fatcat-chain-benchmark?minimum_supporting_hits=3), [c.10.2 calibration](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/52058/fatcat-chain-benchmark?minimum_supporting_hits=3)\n\n**Caveats by evidence item**\n- **E1** \u2014 Stored raw BLAST rows are not the same as public qualifying hits; the available evidence says the filtered public sequence stream is empty, not that sequence similarity is biologically absent.\n- **E2** \u2014 C-terminal support is structure-only and correlated by same-superfamily overlap groups. Automated-match families d.151.1.0 and d.151.1.3 cannot independently establish family-level placement. Boundaries are approximate, and the broad C-terminal envelope overlaps the N-terminal broad envelope at 186-208.\n- **E3** \u2014 N-terminal hits are weaker by FATCAT P-value than the C-terminal hits and are structure-only. The c.10.2 family labels conflict, and automated c.10.2.0 does not establish a target family. The broad 2-208 envelope is partly driven by grouped context; the cleaner high-confidence core is 37-156.\n- **E4** \u2014 pLDDT supports local coordinate confidence but not evolutionary relationship, exact boundaries, domain orientation, PAE/pTM, partner context, ligand state, or function. Fragmented high-pLDDT clusters must not be used as fold or boundary criteria.\n- **E5** \u2014 The calibration samples are historical chain-to-domain FATCAT consistency summaries, not homology evidence or probabilities for the current target. Because the current hits are outside benchmark filters, the 10/10 and 14/14 fractions are reported only as unavailable-for-reassurance calibration context, not as support for upgrading either region.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "Read workspace alphafold-scope-homology/SKILL.md and material references fatcat-caveats.md, fatcat-chain-benchmark.md, alphafold-caveats.md",
+      "MCP get_alphafold_hits(model=AF-Q96LI5-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "MCP get_alphafold_decision_evidence(model=AF-Q96LI5-F1, release=2.08, regions=[2-208,37-156,186-539], sids=[d3i48a_,d2uyrx_,d1wdub_,d1ltxa3,d4p91a_,d2ifga3], calibration_requests=[d3i48a_:superfamily:3,d1ltxa3:superfamily:3])"
+    ],
+    "input_attestation": {
+      "model": "AF-Q96LI5-F1",
+      "question_id": "AFQ005",
+      "question_sha256": "7bfe1ae6140293366f8d908e0e5167b141ddab9fe27ee658f2c1af3a48ebfd54",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ005",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:38:42Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

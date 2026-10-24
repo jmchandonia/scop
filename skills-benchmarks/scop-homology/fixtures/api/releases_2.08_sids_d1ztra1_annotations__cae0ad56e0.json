@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "description": "mutant"
+    }
+  ],
+  "inconsistencies": [
+    {
+      "abbreviation": "hf",
+      "description": "heterogeneous fold; applies to domains that adopt a different fold than the exemplar domain but has similar sequence and number of secondary structures"
+    }
+  ],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/125655",
+    "canonical_url": "/?sunid=125655&ver=2.08",
+    "description": "1ztr A:0-59",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/46692",
+      "sccs": "a.4.1.1",
+      "sid": null,
+      "sunid": 46692
+    },
+    "release": "2.08",
+    "sccs": "a.4.1.1",
+    "sid": "d1ztra1",
+    "sunid": 125655
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scop.berkeley.edu/schemas/benchmark-answer.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["run_id", "question_id", "condition", "model", "prompt", "answer", "evidence_used", "timestamp"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "question_id": {"type": "string", "pattern": "^Q[0-9]{3}_[a-z0-9_]+$"},
+    "condition": {"enum": ["pretrained_only", "pretrained_api", "pretrained_skill", "pretrained_mcp", "pretrained_mcp_skill"]},
+    "model": {"type": "string", "minLength": 1},
+    "prompt": {"type": "string"},
+    "answer": {"type": "string"},
+    "evidence_used": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "reference"],
+        "properties": {
+          "kind": {"enum": ["seed", "fixture", "skill_reference", "api", "mcp"]},
+          "reference": {"type": "string", "minLength": 1},
+          "sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"}
+        }
+      }
+    },
+    "timestamp": {"type": "string", "format": "date-time"}
+  }
+}

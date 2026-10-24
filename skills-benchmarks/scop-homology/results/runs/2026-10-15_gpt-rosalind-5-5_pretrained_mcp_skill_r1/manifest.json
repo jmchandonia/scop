@@ -1,0 +1,849 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 733,
+    "response_body_count": 597,
+    "stable_release_consistent": true,
+    "successful_response_count": 695,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "a3e30749c4d5a113c2455ee4f023d4496e3eb4b375f8b8f914e9bb977e0a8af6",
+    "transient_error_count": 0,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-15T00:20:48Z",
+  "condition": "pretrained_mcp_skill",
+  "evaluation": {
+    "completed_at": "2026-10-23T04:09:36Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "evidence_audit": {
+    "rejected_reference_count": 187,
+    "rejected_references": [
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sccs/a.22"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sccs/a.22/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47112"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47112/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47112/annotations"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47112/homology"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47113"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47113/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47113/annotations"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47113/homology"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47114"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47114/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47114/annotations"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47114/homology"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47129"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47129/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47129/annotations"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47129/homology"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47134"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47134/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47134/annotations"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/47134/homology"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/101318"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/101318/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/101318/annotations"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/101318/homology"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/238448"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/238448/parents"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/238448/annotations"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP get_scop_node: /api/v1/releases/2.08/sunids/238448/homology"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP list_scop_children: /api/v1/releases/2.08/sccs/a.22/children?limit=100"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP list_scop_children: /api/v1/releases/2.08/sccs/a.22.1/children?limit=100"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP list_scop_children: /api/v1/releases/2.08/sunids/47114/children?limit=100"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP list_scop_children: /api/v1/releases/2.08/sunids/47129/children?limit=100"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP list_scop_children: /api/v1/releases/2.08/sunids/47134/children?limit=100"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP list_scop_children: /api/v1/releases/2.08/sunids/101318/children?limit=100"
+      },
+      {
+        "question_id": "Q001_histone_related_proteins",
+        "reference": "MCP list_scop_children: /api/v1/releases/2.08/sunids/238448/children?limit=100"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "MCP compare_scop_domains"
+      },
+      {
+        "question_id": "Q002_mazg_hise_remote_homology",
+        "reference": "MCP get_scop_node"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "skill: scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "skill: scop-homology/references/biological-interpretation.md"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "skill: scop-homology/references/api-usage.md"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "MCP tool: mcp__scope.get_scop_node"
+      },
+      {
+        "question_id": "Q003_actin_like_atpase_divergence",
+        "reference": "MCP tool: mcp__scope.list_scop_children"
+      },
+      {
+        "question_id": "Q004_ferritin_like_functional_divergence",
+        "reference": "MCP tool: get_scop_node"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sccs/b.6"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sccs/b.6/parents"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sccs/b.6.1"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sccs/b.6.1/parents"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49502"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49502/annotations"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49502/homology"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49503"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49503/annotations"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49503/homology"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49504"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49504/annotations"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/49504/homology"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/74874"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/74874/annotations"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/74874/homology"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/110107"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/110107/annotations"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_node /api/v1/releases/2.08/sunids/110107/homology"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_domains /api/v1/releases/2.08/sids/d1shwa_"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_domains /api/v1/releases/2.08/sids/d1shwa_/parents"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_domains /api/v1/releases/2.08/sids/d1kgye_"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_domains /api/v1/releases/2.08/sids/d1kgye_/parents"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_domains /api/v1/releases/2.08/sids/d4dkta1"
+      },
+      {
+        "question_id": "Q005_cupredoxin_function_transfer",
+        "reference": "get_scop_domains /api/v1/releases/2.08/sids/d4dkta1/parents"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.list_scop_children: /api/v1/releases/2.08/sccs/d.15.1/children?limit=100"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54236"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54236/parents"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54236/homology"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54237"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54237/parents"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54250"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54250/parents"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54263"
+      },
+      {
+        "question_id": "Q006_ubiquitin_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/54263/parents"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.list_scop_children: /api/v1/releases/2.08/sunids/0/children?limit=100"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.list_scop_children: /api/v1/releases/2.08/sunids/51349/children?limit=100"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.list_scop_children: /api/v1/releases/2.08/sunids/52171/children?limit=100"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.list_scop_children: /api/v1/releases/2.08/sunids/52172/children?limit=100"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52172"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52172/parents"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52172/annotations"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52172/homology"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52173"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52173/parents"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52173/annotations"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52173/homology"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52252"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52252/parents"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52252/annotations"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/52252/homology"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/82344"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/82344/parents"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/82344/annotations"
+      },
+      {
+        "question_id": "Q007_chey_like_function_divergence",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/82344/homology"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "MCP tool: get_scop_node"
+      },
+      {
+        "question_id": "Q008_v1_atp_synthase_bulge_classification",
+        "reference": "MCP tool: list_scop_children"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "skill: scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "skill: scop-homology/references/biological-interpretation.md"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "skill: scop-homology/references/api-usage.md"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "MCP: list_scop_children"
+      },
+      {
+        "question_id": "Q009_heme_bundle_fold_not_homology",
+        "reference": "MCP: get_scop_node"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "skill: scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "skill: scop-homology/references/biological-interpretation.md"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "skill: scop-homology/references/api-usage.md"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "MCP: list_scop_children"
+      },
+      {
+        "question_id": "Q010_rossmann_family_function_divergence",
+        "reference": "MCP: get_scop_node"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "skill: scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "skill: scop-homology/references/biological-interpretation.md"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "skill: scop-homology/references/api-usage.md"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1s9za_, /api/v1/releases/2.08/sids/d1s9za_/parents, /api/v1/releases/2.08/sids/d1s9za_/annotations, /api/v1/releases/2.08/sids/d1s9za_/homology, /api/v1/releases/2.08/sids/d1hqja_, /api/v1/releases/2.08/sids/d1hqja_/parents, /api/v1/releases/2.08/sids/d1hqja_/annotations, /api/v1/releases/2.08/sids/d1hqja_/homology"
+      },
+      {
+        "question_id": "Q012_not_true_family_specific_pair",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/100905, /api/v1/releases/2.08/sunids/100905/parents, /api/v1/releases/2.08/sunids/100905/annotations, /api/v1/releases/2.08/sunids/100905/homology"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "MCP get_scop_domains"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "MCP list_scop_domains"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "MCP compare_scop_domains"
+      },
+      {
+        "question_id": "Q014_paper_example_reclassification_pa1492",
+        "reference": "MCP get_scop_node"
+      },
+      {
+        "question_id": "Q015_artifact_tag_not_homology",
+        "reference": "mcp__scope.get_scop_pdb_entry: /api/v1/releases/2.08/pdb/1a14; /api/v1/releases/2.08/pdb/1a14/domains"
+      },
+      {
+        "question_id": "Q015_artifact_tag_not_homology",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1a14h1; /api/v1/releases/2.08/sids/d1a14h1/parents; /api/v1/releases/2.08/sids/d1a14h2; /api/v1/releases/2.08/sids/d1a14h2/parents; /api/v1/releases/2.08/sids/d1a14h2/homology"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/1.75/sids/d1acca_"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/1.75/sids/d1acca_/parents"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/1.75/sids/d1acca_/annotations"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/1.75/sids/d1acca_/homology"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca1"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca1/parents"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca1/annotations"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca1/homology"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca2"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca2/parents"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca2/annotations"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d1acca2/homology"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/1.75/sunids/56989/annotations"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/1.75/sunids/56989/homology"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/254146/annotations"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/254146/homology"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/254147/annotations"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_node: /api/v1/releases/2.08/sunids/254147/homology"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_chain_hits: /api/v1/releases/2.08/chains/1accA/hits?limit=100"
+      },
+      {
+        "question_id": "Q016_pdb_1acc_domain_split",
+        "reference": "mcp__scope.get_scop_chain_hits: /api/v1/releases/2.08/chains/3tewA/hits?limit=100"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_service_info: /api/v1/releases/current"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_pdb_entry: /api/v1/releases/2.08/pdb/3jb9"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_pdb_entry: /api/v1/releases/2.08/pdb/3jb9/domains"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a1"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a1/parents"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a2"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a2/parents"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a3"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a3/parents"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a4"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a4/parents"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a5"
+      },
+      {
+        "question_id": "Q017_prp8_evolutionary_mosaic",
+        "reference": "mcp__scope.get_scop_domains: /api/v1/releases/2.08/sids/d3jb9a5/parents"
+      },
+      {
+        "question_id": "Q018_tal_effector_repeat_lengths",
+        "reference": "mcp__scope.get_scop_domains"
+      },
+      {
+        "question_id": "Q018_tal_effector_repeat_lengths",
+        "reference": "mcp__scope.get_scop_node"
+      },
+      {
+        "question_id": "Q019_stable_periodic_release_semantics",
+        "reference": "MCP tool: get_scop_service_info"
+      },
+      {
+        "question_id": "Q019_stable_periodic_release_semantics",
+        "reference": "REST path: /api/v1/releases/current"
+      },
+      {
+        "question_id": "Q020_syntaxin_fragment_reclassification",
+        "reference": "get_scop_pdb_entry: /api/v1/releases/2.08/pdb/1br0/domains; /api/v1/releases/2.08/pdb/1ez3/domains; /api/v1/releases/2.08/pdb/1dn1/domains"
+      },
+      {
+        "question_id": "Q020_syntaxin_fragment_reclassification",
+        "reference": "get_scop_domains: /api/v1/releases/current; /api/v1/releases/2.08/sids/d1br0a_; /api/v1/releases/2.08/sids/d1br0a_/parents; /api/v1/releases/2.08/sids/d1br0a_/annotations; /api/v1/releases/2.08/sids/d1br0a_/homology; /api/v1/releases/2.08/sids/d1ez3a_; /api/v1/releases/2.08/sids/d1ez3a_/parents; /api/v1/releases/2.08/sids/d1ez3a_/annotations; /api/v1/releases/2.08/sids/d1ez3a_/homology; /api/v1/releases/2.08/sids/d1ez3b_; /api/v1/releases/2.08/sids/d1ez3b_/parents; /api/v1/releases/2.08/sids/d1ez3b_/annotations; /api/v1/releases/2.08/sids/d1ez3b_/homology; /api/v1/releases/2.08/sids/d1ez3c_; /api/v1/releases/2.08/sids/d1ez3c_/parents; /api/v1/releases/2.08/sids/d1ez3c_/annotations; /api/v1/releases/2.08/sids/d1ez3c_/homology; /api/v1/releases/2.08/sids/d1dn1b_; /api/v1/releases/2.08/sids/d1dn1b_/parents; /api/v1/releases/2.08/sids/d1dn1b_/annotations; /api/v1/releases/2.08/sids/d1dn1b_/homology"
+      },
+      {
+        "question_id": "Q020_syntaxin_fragment_reclassification",
+        "reference": "get_scop_node: /api/v1/releases/2.08/sunids/47662; /api/v1/releases/2.08/sunids/47662/parents; /api/v1/releases/2.08/sunids/47662/annotations; /api/v1/releases/2.08/sunids/47662/homology"
+      },
+      {
+        "question_id": "Q020_syntaxin_fragment_reclassification",
+        "reference": "compare_scop_domains: /api/v1/releases/2.08/sids/d1br0a_; /api/v1/releases/2.08/sids/d1br0a_/parents; /api/v1/releases/2.08/sids/d1br0a_/annotations; /api/v1/releases/2.08/sids/d1br0a_/homology; /api/v1/releases/2.08/sids/d1ez3a_; /api/v1/releases/2.08/sids/d1ez3a_/parents; /api/v1/releases/2.08/sids/d1ez3a_/annotations; /api/v1/releases/2.08/sids/d1ez3a_/homology; /api/v1/releases/2.08/sids/d1dn1b_; /api/v1/releases/2.08/sids/d1dn1b_/parents; /api/v1/releases/2.08/sids/d1dn1b_/annotations; /api/v1/releases/2.08/sids/d1dn1b_/homology"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "skill: scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "skill: scop-homology/references/biological-interpretation.md"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "skill: scop-homology/references/api-usage.md"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "MCP get_scop_service_info -> /api/v1/releases/current"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "MCP get_scop_node -> /api/v1/releases/2.08/sccs/c.2, /api/v1/releases/2.08/sccs/c.2/parents, /api/v1/releases/2.08/sccs/c.3, /api/v1/releases/2.08/sccs/c.3/parents, /api/v1/releases/2.08/sunids/51734, /api/v1/releases/2.08/sunids/51734/annotations, /api/v1/releases/2.08/sunids/51734/homology, /api/v1/releases/2.08/sunids/51735, /api/v1/releases/2.08/sunids/51735/parents, /api/v1/releases/2.08/sunids/51735/annotations, /api/v1/releases/2.08/sunids/51735/homology, /api/v1/releases/2.08/sccs/c.3, /api/v1/releases/2.08/sccs/c.3/parents, /api/v1/releases/2.08/sunids/51904, /api/v1/releases/2.08/sunids/51904/annotations, /api/v1/releases/2.08/sunids/51904/homology, /api/v1/releases/2.08/sunids/51905, /api/v1/releases/2.08/sunids/51905/parents, /api/v1/releases/2.08/sunids/51905/annotations, /api/v1/releases/2.08/sunids/51905/homology, /api/v1/releases/2.08/sccs/c.4, /api/v1/releases/2.08/sccs/c.4/parents, /api/v1/releases/2.08/sunids/51970, /api/v1/releases/2.08/sunids/51970/annotations, /api/v1/releases/2.08/sunids/51970/homology, /api/v1/releases/2.08/sunids/51971, /api/v1/releases/2.08/sunids/51971/parents, /api/v1/releases/2.08/sunids/51971/annotations, /api/v1/releases/2.08/sunids/51971/homology"
+      },
+      {
+        "question_id": "Q021_nad_binding_convergent_evolution",
+        "reference": "MCP list_scop_children -> /api/v1/releases/2.08/sunids/51734/children?limit=100, /api/v1/releases/2.08/sunids/51904/children?limit=100, /api/v1/releases/2.08/sunids/51970/children?limit=100"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "tool:mcp__scope.get_scop_service_info"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "tool:mcp__scope.get_scop_pdb_entry"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "tool:mcp__scope.compare_scop_domains"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "tool:mcp__scope.get_scop_domains"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "tool:mcp__scope.get_scop_node"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "tool:mcp__scope.get_scop_chain"
+      },
+      {
+        "question_id": "Q022_colg_crya_remote_homology",
+        "reference": "tool:mcp__scope.get_scop_chain_hits"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "skill: scop-homology/SKILL.md"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "skill: scop-homology/references/biological-interpretation.md"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "skill: scop-homology/references/api-usage.md"
+      },
+      {
+        "question_id": "Q023_homeodomain_heterogeneous_fold",
+        "reference": "MCP: compare_scop_domains"
+      },
+      {
+        "question_id": "Q024_fibronectin_fragment_selection",
+        "reference": "MCP mcp__scope.get_scop_domains"
+      },
+      {
+        "question_id": "Q024_fibronectin_fragment_selection",
+        "reference": "MCP mcp__scope.get_scop_pdb_entry"
+      },
+      {
+        "question_id": "Q024_fibronectin_fragment_selection",
+        "reference": "MCP mcp__scope.get_scop_node"
+      },
+      {
+        "question_id": "Q025_classification_as_evolutionary_hypothesis",
+        "reference": "mcp__scope.get_scop_service_info"
+      },
+      {
+        "question_id": "Q026_protein_kinase_like_function_transfer",
+        "reference": "mcp__scope.get_scop_node"
+      },
+      {
+        "question_id": "Q026_protein_kinase_like_function_transfer",
+        "reference": "mcp__scope.list_scop_children"
+      }
+    ]
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "aaf15f87781907c585370b48a2b5c74dd2c1b7bb3c99ab96680d1c5d7e06b2d6",
+    "name": "codex-cli-isolated",
+    "version": "4.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "fresh_auth_only_per_question",
+    "event_log_format": "codex_exec_jsonl",
+    "forbidden_markers_checked": [],
+    "logs_sha256": "b021685620687349569d972239d99313eeb385bd29e6e686ca05c9e2420e8b42",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "mcp_access": {
+    "command": "/scratch/jmc/scop-server/mcp/.venv/bin/scop-mcp",
+    "rest_base_url": "live_rest_capture_gateway",
+    "server": "scop-mcp",
+    "tool_call_count": 224,
+    "tools_used": [
+      "mcp__scope__compare_scop_domains",
+      "mcp__scope__get_scop_chain",
+      "mcp__scope__get_scop_chain_hits",
+      "mcp__scope__get_scop_domains",
+      "mcp__scope__get_scop_node",
+      "mcp__scope__get_scop_pdb_entry",
+      "mcp__scope__get_scop_service_info",
+      "mcp__scope__list_scop_children",
+      "mcp__scope__list_scop_domains",
+      "mcp__scope__resolve_scop_identifier"
+    ],
+    "transport": "stdio"
+  },
+  "model": {
+    "name": "gpt-rosalind-5.5",
+    "parameters": {
+      "question_batching": "one_question_per_session",
+      "reasoning_effort": "high",
+      "replicate": 1
+    },
+    "provider": "openai",
+    "snapshot": "gpt-rosalind-5.5"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-15_gpt-rosalind-5-5_pretrained_mcp_skill_r1",
+  "skill": {
+    "commit": "1ecce073f1cadcd5349ab1255e8cca1ea67996f8",
+    "content_sha256": "d6d818dcc2b123f3fd68949f9106cb3328093fae2df432af425d231c5531b9a1",
+    "path": "skills/scop-homology",
+    "repository": "git@github.com:jmchandonia/scop.git"
+  },
+  "started_at": "2026-10-15T00:09:59Z",
+  "suite_version": "4.3.0"
+}

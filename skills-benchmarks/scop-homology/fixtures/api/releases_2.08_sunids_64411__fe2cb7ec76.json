@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/64411",
+    "canonical_url": "/?sunid=64411&ver=2.08",
+    "description": "APH phosphotransferases",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/56112",
+      "sccs": "d.144.1",
+      "sid": null,
+      "sunid": 56112
+    },
+    "release": "2.08",
+    "sccs": "d.144.1.6",
+    "sid": null,
+    "sunid": 64411
+  }
+}

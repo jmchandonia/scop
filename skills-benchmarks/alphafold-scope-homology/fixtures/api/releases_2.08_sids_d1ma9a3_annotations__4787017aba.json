@@ -1,0 +1,41 @@
+{
+  "comments": [
+    {
+      "description": "complexed with atp, mg"
+    }
+  ],
+  "inconsistencies": [
+    {
+      "abbreviation": "fr",
+      "description": "fragment; missing more than one-third of the common structure and/or sequence"
+    }
+  ],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/78889",
+    "canonical_url": "/?sunid=78889&ver=2.08",
+    "description": "1ma9 A:387-458",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/69112",
+      "sccs": "a.126.1.1",
+      "sid": null,
+      "sunid": 69112
+    },
+    "release": "2.08",
+    "sccs": "a.126.1.1",
+    "sid": "d1ma9a3",
+    "sunid": 78889
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

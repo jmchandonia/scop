@@ -1,0 +1,1 @@
+{"kind":"node","matched_by":"sccs","node":{"sunid":53720,"sid":null,"sccs":"c.82.1","description":"ALDH-like","level":{"code":"sf","name":"Superfamily","plural":"Superfamilies"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/53720","canonical_url":"/?sunid=53720&ver=2.08","parent":{"sunid":53719,"sid":null,"sccs":"c.82","api_url":"/api/v1/releases/2.08/sunids/53719"}}}

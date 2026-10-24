@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/52252",
+    "canonical_url": "/?sunid=52252&ver=2.08",
+    "description": "Ornithine decarboxylase N-terminal 'wing' domain",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/52172",
+      "sccs": "c.23.1",
+      "sid": null,
+      "sunid": 52172
+    },
+    "release": "2.08",
+    "sccs": "c.23.1.4",
+    "sid": null,
+    "sunid": 52252
+  }
+}

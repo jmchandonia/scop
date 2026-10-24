@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d1n8yc3"
+    },
+    {
+      "description": "complexed with mes, nag"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/239158",
+    "canonical_url": "/?sunid=239158&ver=2.08",
+    "description": "3be1 A:165-321",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/232408",
+      "sccs": "g.3.9.0",
+      "sid": null,
+      "sunid": 232408
+    },
+    "release": "2.08",
+    "sccs": "g.3.9.0",
+    "sid": "d3be1a2",
+    "sunid": 239158
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

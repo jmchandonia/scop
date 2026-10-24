@@ -1,0 +1,53 @@
+{
+  "api_access": null,
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-14T23:45:48Z",
+  "condition": "pretrained_only",
+  "evaluation": {
+    "completed_at": "2026-10-22T22:06:11Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "44066f2ff114329117edd1249cdf6e1e149329207bad60c6fa2339da2801b4e5",
+    "name": "codex-cli-isolated",
+    "version": "3.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "fresh_auth_only_per_question",
+    "event_log_format": "codex_exec_jsonl",
+    "forbidden_markers_checked": [
+      "/scratch/jmc/scop/skills/scop-homology",
+      "/scratch/jmc/scop-server",
+      "skill-sources/scop-homology",
+      "/.codex/skills/scop-homology"
+    ],
+    "logs_sha256": "e6a3d22e2c244d68afc41ac53a681a51c4afa343451b79133401e3931a383834",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "model": {
+    "name": "gpt-5.6-sol",
+    "parameters": {
+      "question_batching": "one_question_per_session",
+      "reasoning_effort": "high",
+      "replicate": 3
+    },
+    "provider": "openai",
+    "snapshot": "gpt-5.6-sol"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-14_gpt-5-6-sol_pretrained_only_r3",
+  "skill": null,
+  "started_at": "2026-10-14T23:36:18Z",
+  "suite_version": "4.3.0"
+}

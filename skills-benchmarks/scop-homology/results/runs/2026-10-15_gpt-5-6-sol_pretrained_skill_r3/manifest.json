@@ -1,0 +1,77 @@
+{
+  "api_access": {
+    "mode": "live_rest_capture",
+    "openapi_sha256": "acaa89b76100f6256cdf815a27f3a7b9882048082f9b3c1b517148ed400b7667",
+    "question_trace_count": 24,
+    "release_end": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "release_start": {
+      "latest_periodic_update": "2.08-2026-08-16",
+      "response_sha256": "a662cd6eabfb19a4538cea9118adbe43106d769ff55d2e3ce3c519202a4b5355",
+      "stable_label": "2.08-stable",
+      "stable_release": "2.08"
+    },
+    "request_count": 476,
+    "response_body_count": 464,
+    "stable_release_consistent": true,
+    "successful_response_count": 475,
+    "trace_format": "scop-live-http-v1",
+    "trace_tree_sha256": "b815c01a57660be6661b7fcd2c952d22194e2a1edc07ca1b5b5a0211922fccbe",
+    "transient_error_count": 0,
+    "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+  },
+  "benchmark_id": "scop-homology",
+  "blind_questions_sha256": "10d843a84cf5e8bd6d5fd990a2d2f1bdd36bfc770108cf80e91c976f6a70c706",
+  "completed_at": "2026-10-15T00:30:20Z",
+  "condition": "pretrained_skill",
+  "evaluation": {
+    "completed_at": "2026-10-22T22:06:11Z",
+    "instructions_sha256": "eb927ba307c826f9e83bd3553e3f786fd8d7d9ff8254ef529b7a50bd50159f9f",
+    "model": "claude-fable-5-1",
+    "parameters": {
+      "blinding": "opaque_labels_randomized_per_question",
+      "effort": "high",
+      "harness": "claude-code-cli-no-tools"
+    },
+    "provider": "anthropic",
+    "snapshot": "claude-fable-5-1"
+  },
+  "fixture_manifest_sha256": null,
+  "harness": {
+    "instructions_sha256": "4ab5614d419d62abd96f7b8a41def0980ce843a8c9fa237f54a41286edc98aee",
+    "name": "codex-cli-isolated",
+    "version": "3.0.0"
+  },
+  "isolation_audit": {
+    "codex_home": "fresh_auth_only_per_question",
+    "event_log_format": "codex_exec_jsonl",
+    "forbidden_markers_checked": [],
+    "logs_sha256": "9820b79e5e3e076a0e148eeaa97f621097e6b177837cfaf2923e256eac2b6654",
+    "question_workspace": "one_question_per_session",
+    "status": "passed"
+  },
+  "model": {
+    "name": "gpt-5.6-sol",
+    "parameters": {
+      "question_batching": "one_question_per_session",
+      "reasoning_effort": "high",
+      "replicate": 3
+    },
+    "provider": "openai",
+    "snapshot": "gpt-5.6-sol"
+  },
+  "questions_sha256": "9b466934c9ac8232c950d23c8d5413ebb501cb8ea686bee783dbdf9ce22cb9cc",
+  "run_id": "2026-10-15_gpt-5-6-sol_pretrained_skill_r3",
+  "skill": {
+    "commit": "1ecce073f1cadcd5349ab1255e8cca1ea67996f8",
+    "content_sha256": "d6d818dcc2b123f3fd68949f9106cb3328093fae2df432af425d231c5531b9a1",
+    "path": "skills/scop-homology",
+    "repository": "git@github.com:jmchandonia/scop.git"
+  },
+  "started_at": "2026-10-15T00:07:53Z",
+  "suite_version": "4.3.0"
+}

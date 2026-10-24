@@ -1,0 +1,189 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1jm7a_",
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d2y43a_",
+            "https://scop.berkeley.edu/sunid=57850&ver=2.08"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1oqaa1",
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1t2vb1",
+            "https://scop.berkeley.edu/sunid=63955&ver=2.08"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=struct&hit=d1t2vb1",
+            "https://scop.berkeley.edu/sunid=52112&ver=2.08"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/63955/fatcat-chain-benchmark?minimum_supporting_hits=2"
+          ]
+        },
+        {
+          "id": "E6",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1/hits?limit=100"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P38398-F1",
+      "question_id": "AFQ009",
+      "question_sha256": "ba4da604c596fa7e96d238a792325acba1ebc2f71f4251ac24fa2b3a0ae2d15c",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [
+      [
+        "2.08",
+        2,
+        1
+      ]
+    ],
+    "observed_benchmarks": [
+      [
+        "2.08",
+        63955,
+        2
+      ]
+    ],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P38398-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [
+      [
+        "2.08",
+        2,
+        1
+      ]
+    ],
+    "required_benchmarks": [
+      [
+        "2.08",
+        63955,
+        2
+      ]
+    ],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P38398-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1jm7a_"
+      ],
+      [
+        "2.08",
+        "d1oqaa1"
+      ],
+      [
+        "2.08",
+        "d1t2vb1"
+      ],
+      [
+        "2.08",
+        "d2y43a_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 107.901,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 133760,
+      "input_tokens": 160409,
+      "output_tokens": 4937,
+      "reasoning_output_tokens": 1239
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**Conclusion**\nAF-P38398-F1, UniProt P38398, release 2.08, is best treated as a regional problem: the current evidence supports a candidate RING/U-box signal near residues ~1-103 and two adjacent BRCT-domain candidate signals near ~1645-1757 and ~1755-1863, with a small overlap at ~1755-1757. The large middle portion, ~104-1644, should be treated separately because the retrieved hit groups do not support a comparable SCOPe-domain hypothesis there and its AlphaFold confidence is mostly very low.\n\n**What Can Be Said At Each Level**\nN terminus, approximately residues 1-103:\n\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established. The retrieved representative annotation mentions a BARD1 RING heterodimer and zinc complex, but that does not transfer function or binding state to the AlphaFold target. | E1, E4 |\n| Family | A RING finger C3HC4 family candidate is favored by the strongest non-automated sequence hit, but family placement is qualified because the second N-terminal sequence group is an automated-match family and no N-terminal FATCAT structure hit was returned. | E1, E4 |\n| Superfamily | The evidence is more robust at RING/U-box superfamily g.44.1 / SUNID 57850, because both N-terminal sequence groups share this superfamily. | E1 |\n| Fold | RING/U-box fold g.44 / SUNID 57849 is consistent with the sequence evidence; no structure-derived fold conclusion is established for this region. | E1 |\n\nC terminus, approximately residues 1645-1863:\n\n| Level | Assessment and ambiguity | Evidence |\n|---|---|---|\n| Function | Target function is not established. BRCT-domain labels describe retrieved SCOPe representatives, not a definitive target function. | E2, E3 |\n| Family | The evidence supports a strong chance of a BRCT-domain family-level relationship, c.15.1.3 / SUNID 63955, for two adjacent terminal segments: ~1645-1757 and ~1755-1863. This remains a hypothesis, not an official classification or exact boundary call. | E2, E3, E4, E5 |\n| Superfamily | BRCT-domain superfamily c.15.1 / SUNID 52113 is supported by both C-terminal sequence groups and the returned C-terminal structure hit. | E2, E3 |\n| Fold | BRCT-domain fold c.15 / SUNID 52112 is structurally consistent for ~1648-1757, but architectural similarity alone is not a definitive homology determination. | E3, E5 |\n\n**Evidence Considered**\n- **E1** \u2014 N-terminal sequence evidence: the compact hit summary reports 4 raw hits in sequence group g.44.1.1, represented by d1jm7a_ at rank 24 over residues 1-103, aligned extent 103 residues, model coverage 103/1863 = 5.53%, log10(E) = -54.89, identity 10.48%. A second N-terminal group, d2y43a_, covers residues 14-86 at rank 57, aligned extent 73 residues, model coverage 73/1863 = 3.92%, log10(E) = -2.99, identity 2.25%, but its family is automated matches g.44.1.0; both representatives share RING/U-box fold/superfamily g.44/g.44.1. Source: [d1jm7a_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1jm7a_), [d2y43a_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d2y43a_), [RING/U-box superfamily](https://scop.berkeley.edu/sunid=57850&ver=2.08)\n- **E2** \u2014 C-terminal sequence evidence: two BRCT-domain sequence groups are returned. d1t2vb1 represents the ~1645-1757 group with 26 raw hits, rank 27, aligned extent 112 residues, model coverage 112/1863 = 6.01%, log10(E) = -51.72, identity 9.92%. d1oqaa1 represents the ~1755-1863 group with 27 raw hits, rank 1, aligned extent 109 residues, model coverage 109/1863 = 5.85%, log10(E) = -64.21, identity 11.05%. The two envelopes overlap at approximately residues 1755-1757 and both trace to BRCT domain family c.15.1.3 / SUNID 63955. Source: [d1t2vb1 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1t2vb1), [d1oqaa1 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=seq&hit=d1oqaa1), [BRCT family](https://scop.berkeley.edu/sunid=63955&ver=2.08)\n- **E3** \u2014 C-terminal structure evidence: one FATCAT structure hit is returned, d1t2vb1, over residues 1648-1757, aligned extent 110 residues, model coverage 110/1863 = 5.90%, rank 1, P = 0.00361, score 311.1, RMSD 0.38, identity 100, similarity 100. It supports structural similarity for the first C-terminal BRCT-like segment but does not by itself establish homology or exact boundaries. Source: [d1t2vb1 structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P38398-F1&mode=struct&hit=d1t2vb1), [BRCT fold](https://scop.berkeley.edu/sunid=52112&ver=2.08)\n- **E4** \u2014 AlphaFold confidence separates the termini from the middle. Whole-model global pLDDT is 41.68; whole-model median is 30.66 with bands >=90: 200, 70-<90: 125, 50-<70: 42, <50: 1496. N-terminal residues 1-103 have median 87.76 with bands 27/64/9/3 and fragmented high-pLDDT clusters; residues 14-86 have median 88.54 with bands 24/45/4/0. The large middle region 104-1644 has median 29.68 with bands 7/21/26/1487 and sustained <50 stretches at 106-376, 388-849, 864-1390, and 1423-1647. C-terminal residues 1645-1757 have median 94.87 with bands 104/5/1/3, residues 1755-1863 have median 91.74 with bands 62/38/6/3, and the combined terminal envelope 1645-1863 has median 94.17 with bands 166/40/7/6. Source: [AlphaFold decision evidence API](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1)\n- **E5** \u2014 Calibration and benchmark applicability for the FATCAT-driven C-terminal hypothesis: the requested minimum_supporting_hits=2 calibration was resolved at family level to BRCT domain c.15.1.3 / SUNID 63955, but status was no_observations, so no benchmark fraction or denominator is available. The current d1t2vb1 FATCAT hit is outside benchmark filters because P = 0.00361 exceeds the prespecified maximum 1e-4; length-match inputs were also missing. Therefore the benchmark adds no reassuring support and limits calibration-based interpretation. Source: [BRCT family calibration API](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/63955/fatcat-chain-benchmark?minimum_supporting_hits=2)\n- **E6** \u2014 Search provenance and nonredundant context: for this exact UniProt-linked sequence and release, stored BLAST rows exist, with stored_blast_result_count = 73. The public filtered sequence stream returned 59 raw hits summarized into 4 overlap-SCCS groups; the structure stream returned 1 raw hit in 1 group. Those counts show repeated terminal evidence, not broad support across the middle portion. Source: [AlphaFold hits API](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P38398-F1/hits?limit=100)\n\n**Caveats By Evidence Item**\n- **E1** \u2014 N-terminal family specificity is limited by lack of returned structure evidence and by d2y43a_ being an automated-match family. d1jm7a_ also has annotations for heterodimer with BARD1 RING domain, complexed with zinc, and an insertion/extension inconsistency, so partner and metal context should not be transferred to this single-chain target.\n- **E2** \u2014 The two C-terminal BRCT-like sequence envelopes are adjacent and overlap at ~1755-1757, so boundaries are approximate. The raw hits are grouped by overlap and SCCS; the 53 raw c.15.1.3 sequence hits are correlated support, not 53 independent observations.\n- **E3** \u2014 FATCAT P-value is evidence of structural similarity, not probability of homology. The returned structure evidence covers only ~1648-1757 and cannot directly support the second C-terminal segment ~1755-1863.\n- **E4** \u2014 pLDDT supports local geometric interpretability at the termini but does not establish homology, domain boundaries, relative domain orientation, partner contacts, PAE, pTM, MSA depth, or template independence. The low-confidence middle should not be merged into a terminal domain hypothesis from these data.\n- **E5** \u2014 The benchmark has no observations at the requested stratum, and the current FATCAT hit is outside its P-value filter; calibration therefore cannot strengthen the C-terminal family-level hypothesis.\n- **E6** \u2014 The compact hit call used limit 100 and returned all overlap-SCCS groups reported by the summary, but result filters and server-side criteria still mean absence of a middle hit is not evidence that no domain or relationship exists there.\n\nOverall, the current release-2.08 evidence favors a candidate RING/U-box domain hypothesis near the N terminus, two adjacent BRCT-domain candidate hypotheses near the C terminus, and separate treatment of the low-confidence, hit-poor middle region. No official classification, exact boundary, function transfer, or definitive homology conclusion follows from this evidence set.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "get_alphafold_hits(model=AF-P38398-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "get_alphafold_decision_evidence(model=AF-P38398-F1, release=2.08, regions=1-103;14-86;104-1644;1645-1757;1755-1863;1645-1863, sids=d1jm7a_;d2y43a_;d1t2vb1;d1oqaa1, calibration_requests=d1t2vb1 family minimum_supporting_hits=2)"
+    ],
+    "input_attestation": {
+      "model": "AF-P38398-F1",
+      "question_id": "AFQ009",
+      "question_sha256": "ba4da604c596fa7e96d238a792325acba1ebc2f71f4251ac24fa2b3a0ae2d15c",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ009",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:40:30Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d2hr9a_"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/264361",
+    "canonical_url": "/?sunid=264361&ver=2.08",
+    "description": "2kwb A:1-181",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/267792",
+      "sccs": "b.88.1.0",
+      "sid": null,
+      "sunid": 267792
+    },
+    "release": "2.08",
+    "sccs": "b.88.1.0",
+    "sid": "d2kwba1",
+    "sunid": 264361
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

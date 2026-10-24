@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://scop.berkeley.edu/schemas/blind-benchmark-question.schema.json",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "track", "category", "prompt"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^Q[0-9]{3}_[a-z0-9_]+$"},
+    "track": {"enum": ["conformance", "held_out"]},
+    "category": {"type": "string", "minLength": 1},
+    "prompt": {"type": "string", "minLength": 1}
+  }
+}

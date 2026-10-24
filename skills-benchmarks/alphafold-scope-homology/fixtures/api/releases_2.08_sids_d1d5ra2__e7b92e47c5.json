@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/32697",
+    "canonical_url": "/?sunid=32697&ver=2.08",
+    "description": "1d5r A:14-187",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/52819",
+      "sccs": "c.45.1.1",
+      "sid": null,
+      "sunid": 52819
+    },
+    "release": "2.08",
+    "sccs": "c.45.1.1",
+    "sid": "d1d5ra2",
+    "sunid": 32697
+  }
+}

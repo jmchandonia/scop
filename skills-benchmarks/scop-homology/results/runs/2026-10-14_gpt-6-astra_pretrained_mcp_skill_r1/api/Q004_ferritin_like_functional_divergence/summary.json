@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q004_ferritin_like_functional_divergence",
+  "request_count": 26,
+  "response_body_count": 24,
+  "successful_response_count": 26,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

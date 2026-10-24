@@ -1,0 +1,15 @@
+{
+  "api_url": "/api/v1/releases/2.08",
+  "db_name": "SCOPe",
+  "freeze_date": "2021-07-28",
+  "is_comprehensive": false,
+  "is_public": true,
+  "latest_periodic_update": {
+    "date": "2023-01-06",
+    "version": "2.08-2023-01-06"
+  },
+  "old_version": null,
+  "release_date": "2021-09-22",
+  "stable_label": "2.08-stable",
+  "version": "2.08"
+}

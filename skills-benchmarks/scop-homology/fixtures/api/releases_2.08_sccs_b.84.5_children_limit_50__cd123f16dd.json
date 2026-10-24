@@ -1,0 +1,48 @@
+{
+  "children": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/310616",
+      "canonical_url": "/?sunid=310616&ver=2.08",
+      "description": "V1 ATP synthase A subunit, bulge domain-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/310577",
+        "sccs": "b.84.5",
+        "sid": null,
+        "sunid": 310577
+      },
+      "release": "2.08",
+      "sccs": "b.84.5.1",
+      "sid": null,
+      "sunid": 310616
+    }
+  ],
+  "limit": 50,
+  "next_cursor": null,
+  "parent": {
+    "api_url": "/api/v1/releases/2.08/sunids/310577",
+    "canonical_url": "/?sunid=310577&ver=2.08",
+    "description": "V1 ATP synthase A subunit, bulge domain-like",
+    "level": {
+      "code": "sf",
+      "name": "Superfamily",
+      "plural": "Superfamilies"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/51229",
+      "sccs": "b.84",
+      "sid": null,
+      "sunid": 51229
+    },
+    "release": "2.08",
+    "sccs": "b.84.5",
+    "sid": null,
+    "sunid": 310577
+  },
+  "release": "2.08",
+  "sort": "database"
+}

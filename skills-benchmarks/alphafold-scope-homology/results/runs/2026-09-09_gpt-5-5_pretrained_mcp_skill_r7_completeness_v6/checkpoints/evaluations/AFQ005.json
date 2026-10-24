@@ -1,0 +1,27 @@
+{
+  "performance": {
+    "duration_seconds": 25.426,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 10624,
+      "input_tokens": 18910,
+      "output_tokens": 601,
+      "reasoning_output_tokens": 297
+    }
+  },
+  "record": {
+    "applied_penalties": [],
+    "criterion_scores": {
+      "calibration_and_caveats": 4,
+      "evidence_completeness": 4,
+      "scientific_correctness": 4,
+      "task_resolution": 4
+    },
+    "evaluator": "gpt-5.6-sol",
+    "question_id": "AFQ005",
+    "rubric_notes": "The candidate fully resolves the task. It verifies the exact Q96LI5 linkage, availability of the stored query sequence, stored-BLAST status, and 31 raw rows, correctly interpreting zero qualifying hits as a filtered result rather than evidence of no relationship. It separates the representative 37\u2013156 L-domain-like core (with a broader approximate 2\u2013208 envelope) from the approximately 186\u2013539 DNase-I-like region and reports the representative FATCAT metrics, coverage, lineage agreement, release 2.08, representative SIDs, SCCS identifiers, and SUNIDs. Both conclusions are appropriately limited to provisional, structure-only superfamily hypotheses, with family and function unresolved. Regional pLDDT distributions are accurately reported and explicitly excluded as evolutionary evidence. The required threshold-3 benchmarks, fractions, and 14/10 denominators are included and conservatively characterized as historical calibration rather than target-specific homology evidence. Automated-match, correlated-hit, boundary, sequence-negative, and functional-transfer caveats are all addressed. The opening disclaimer and repeated hypothesis language clearly preserve the non-official, non-definitive claim boundary. Additional details about broad-envelope overlap and benchmark-filter applicability do not materially contradict the supplied evidence.",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "score": 4,
+    "timestamp": "2026-09-10T00:42:34Z"
+  }
+}

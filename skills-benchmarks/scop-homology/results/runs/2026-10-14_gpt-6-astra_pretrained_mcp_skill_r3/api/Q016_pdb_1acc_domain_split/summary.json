@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q016_pdb_1acc_domain_split",
+  "request_count": 45,
+  "response_body_count": 45,
+  "successful_response_count": 45,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

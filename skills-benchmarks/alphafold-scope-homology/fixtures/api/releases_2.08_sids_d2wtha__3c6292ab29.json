@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/169616",
+    "canonical_url": "/?sunid=169616&ver=2.08",
+    "description": "2wth A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/189323",
+      "sccs": "a.1.1.0",
+      "sid": null,
+      "sunid": 189323
+    },
+    "release": "2.08",
+    "sccs": "a.1.1.0",
+    "sid": "d2wtha_",
+    "sunid": 169616
+  }
+}

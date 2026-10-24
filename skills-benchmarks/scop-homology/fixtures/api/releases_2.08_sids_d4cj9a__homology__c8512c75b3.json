@@ -1,0 +1,30 @@
+{
+  "heterogeneity": [],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/265996",
+    "canonical_url": "/?sunid=265996&ver=2.08",
+    "description": "4cj9 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/267706",
+      "sccs": "a.298.1.1",
+      "sid": null,
+      "sunid": 267706
+    },
+    "release": "2.08",
+    "sccs": "a.298.1.1",
+    "sid": "d4cj9a_",
+    "sunid": 265996
+  },
+  "release": "2.08",
+  "repeat_family": {
+    "description": "4cj9 A:259-292"
+  },
+  "warnings": []
+}

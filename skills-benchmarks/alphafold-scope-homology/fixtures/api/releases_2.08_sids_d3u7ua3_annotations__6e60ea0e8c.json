@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "automated match to d1n8zc2"
+    },
+    {
+      "description": "complexed with nag"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/250147",
+    "canonical_url": "/?sunid=250147&ver=2.08",
+    "description": "3u7u A:312-477",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/188042",
+      "sccs": "c.10.2.0",
+      "sid": null,
+      "sunid": 188042
+    },
+    "release": "2.08",
+    "sccs": "c.10.2.0",
+    "sid": "d3u7ua3",
+    "sunid": 250147
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

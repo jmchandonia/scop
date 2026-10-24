@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/148189",
+    "canonical_url": "/?sunid=148189&ver=2.08",
+    "description": "2js1 A:1-72",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/158391",
+      "sccs": "a.23.7.1",
+      "sid": null,
+      "sunid": 158391
+    },
+    "release": "2.08",
+    "sccs": "a.23.7.1",
+    "sid": "d2js1a2",
+    "sunid": 148189
+  }
+}

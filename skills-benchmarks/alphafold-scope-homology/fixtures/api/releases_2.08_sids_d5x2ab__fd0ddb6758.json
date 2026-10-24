@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/348603",
+    "canonical_url": "/?sunid=348603&ver=2.08",
+    "description": "5x2a B:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/82796",
+      "sccs": "d.144.1.7",
+      "sid": null,
+      "sunid": 82796
+    },
+    "release": "2.08",
+    "sccs": "d.144.1.7",
+    "sid": "d5x2ab_",
+    "sunid": 348603
+  }
+}

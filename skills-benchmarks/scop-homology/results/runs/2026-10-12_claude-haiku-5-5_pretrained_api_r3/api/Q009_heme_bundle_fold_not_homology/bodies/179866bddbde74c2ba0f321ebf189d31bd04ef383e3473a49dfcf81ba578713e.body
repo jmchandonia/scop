@@ -1,0 +1,1 @@
+{"node":{"sunid":46627,"sid":null,"sccs":"a.3.1.1","description":"monodomain cytochrome c","level":{"code":"fa","name":"Family","plural":"Families"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/46627","canonical_url":"/?sunid=46627&ver=2.08","parent":{"sunid":46626,"sid":null,"sccs":"a.3.1","api_url":"/api/v1/releases/2.08/sunids/46626"}}}

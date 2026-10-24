@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q017_prp8_evolutionary_mosaic",
+  "request_count": 19,
+  "response_body_count": 19,
+  "successful_response_count": 19,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

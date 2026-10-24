@@ -1,0 +1,1 @@
+{"node":{"sunid":140403,"sid":null,"sccs":"a.22.1.4","description":"Thermus thermophilus [TaxId: 274]","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/140403","canonical_url":"/?sunid=140403&ver=2.08","parent":{"sunid":140402,"sid":null,"sccs":"a.22.1.4","api_url":"/api/v1/releases/2.08/sunids/140402"}}}

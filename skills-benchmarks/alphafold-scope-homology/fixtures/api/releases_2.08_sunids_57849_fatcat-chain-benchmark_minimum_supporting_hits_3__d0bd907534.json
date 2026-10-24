@@ -1,0 +1,50 @@
+{
+  "applicable": true,
+  "available_minimum_supporting_hits": [
+    2
+  ],
+  "benchmark": null,
+  "classification_level": "fold",
+  "method": {
+    "ambiguous_assignments_count_as_non_matches": true,
+    "assignment_ambiguity_margin": 0.05,
+    "benchmark_version": 3,
+    "default_minimum_supporting_hits": 2,
+    "interpretation": "Benchmark classification consistency for filtered chain-to-domain FATCAT alignments; not homology evidence or a probability that a current hit is correct.",
+    "length_match_definition": "min(alignment_length, component_length) / max(alignment_length, component_length)",
+    "maximum_fatcat_p_value": 0.0001,
+    "minimum_length_match": 0.8,
+    "representative_chain_sequence_identity_percent": 90,
+    "same_pdb_chain_hits_excluded": true,
+    "source_release_id": 19,
+    "support_threshold_interpretation": "Minimum number of classification-consistent supporting hits required when constructing each benchmark case.",
+    "supported_minimum_supporting_hits": [
+      2,
+      3,
+      5
+    ]
+  },
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/57849",
+    "canonical_url": "/?sunid=57849&ver=2.08",
+    "description": "RING/U-box",
+    "level": {
+      "code": "cf",
+      "name": "Fold",
+      "plural": "Folds"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/56992",
+      "sccs": "g",
+      "sid": null,
+      "sunid": 56992
+    },
+    "release": "2.08",
+    "sccs": "g.44",
+    "sid": null,
+    "sunid": 57849
+  },
+  "release": "2.08",
+  "requested_minimum_supporting_hits": 3,
+  "status": "threshold_unavailable"
+}

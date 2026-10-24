@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q008_v1_atp_synthase_bulge_classification",
+  "request_count": 12,
+  "response_body_count": 10,
+  "successful_response_count": 10,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

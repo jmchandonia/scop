@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51349",
+      "canonical_url": "/?sunid=51349&ver=2.08",
+      "description": "Alpha and beta proteins (a/b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "c",
+      "sid": null,
+      "sunid": 51349
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52046",
+      "canonical_url": "/?sunid=52046&ver=2.08",
+      "description": "Leucine-rich repeat, LRR (right-handed beta-alpha superhelix)",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51349",
+        "sccs": "c",
+        "sid": null,
+        "sunid": 51349
+      },
+      "release": "2.08",
+      "sccs": "c.10",
+      "sid": null,
+      "sunid": 52046
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52058",
+      "canonical_url": "/?sunid=52058&ver=2.08",
+      "description": "L domain-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52046",
+        "sccs": "c.10",
+        "sid": null,
+        "sunid": 52046
+      },
+      "release": "2.08",
+      "sccs": "c.10.2",
+      "sid": null,
+      "sunid": 52058
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/75142",
+      "canonical_url": "/?sunid=75142&ver=2.08",
+      "description": "Ngr ectodomain-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52058",
+        "sccs": "c.10.2",
+        "sid": null,
+        "sunid": 52058
+      },
+      "release": "2.08",
+      "sccs": "c.10.2.7",
+      "sid": null,
+      "sunid": 75142
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/141992",
+      "canonical_url": "/?sunid=141992&ver=2.08",
+      "description": "High affinity nerve growth factor receptor, N-terminal domain",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/75142",
+        "sccs": "c.10.2.7",
+        "sid": null,
+        "sunid": 75142
+      },
+      "release": "2.08",
+      "sccs": "c.10.2.7",
+      "sid": null,
+      "sunid": 141992
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/141993",
+      "canonical_url": "/?sunid=141993&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/141992",
+        "sccs": "c.10.2.7",
+        "sid": null,
+        "sunid": 141992
+      },
+      "release": "2.08",
+      "sccs": "c.10.2.7",
+      "sid": null,
+      "sunid": 141993
+    }
+  ],
+  "release": "2.08",
+  "sunid": 137337
+}

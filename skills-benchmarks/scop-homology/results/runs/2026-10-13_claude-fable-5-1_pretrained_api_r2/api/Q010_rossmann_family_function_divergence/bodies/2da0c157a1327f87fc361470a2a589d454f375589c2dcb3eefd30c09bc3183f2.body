@@ -1,0 +1,1 @@
+{"node":{"sunid":75119,"sid":null,"sccs":"c.2.1.9","description":"Bacillus subtilis [TaxId: 1423]","level":{"code":"sp","name":"Species","plural":"Species"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/75119","canonical_url":"/?sunid=75119&ver=2.08","parent":{"sunid":75118,"sid":null,"sccs":"c.2.1.9","api_url":"/api/v1/releases/2.08/sunids/75118"}}}

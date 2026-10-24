@@ -1,0 +1,1 @@
+WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/scop-pretrained_mcp_skill-Q005_cupredoxin_function_transfer-rem7lej7/codex-home"))

@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56835",
+      "canonical_url": "/?sunid=56835&ver=2.08",
+      "description": "Membrane and cell surface proteins and peptides",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "f",
+      "sid": null,
+      "sunid": 56835
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/81407",
+      "canonical_url": "/?sunid=81407&ver=2.08",
+      "description": "Single transmembrane helix",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56835",
+        "sccs": "f",
+        "sid": null,
+        "sunid": 56835
+      },
+      "release": "2.08",
+      "sccs": "f.23",
+      "sid": null,
+      "sunid": 81407
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/161041",
+      "canonical_url": "/?sunid=161041&ver=2.08",
+      "description": "Photosystem II reaction center protein I, PsbI",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/81407",
+        "sccs": "f.23",
+        "sid": null,
+        "sunid": 81407
+      },
+      "release": "2.08",
+      "sccs": "f.23.37",
+      "sid": null,
+      "sunid": 161041
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/161042",
+      "canonical_url": "/?sunid=161042&ver=2.08",
+      "description": "PsbI-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/161041",
+        "sccs": "f.23.37",
+        "sid": null,
+        "sunid": 161041
+      },
+      "release": "2.08",
+      "sccs": "f.23.37.1",
+      "sid": null,
+      "sunid": 161042
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/161043",
+      "canonical_url": "/?sunid=161043&ver=2.08",
+      "description": "Photosystem II reaction center protein I, PsbI",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/161042",
+        "sccs": "f.23.37.1",
+        "sid": null,
+        "sunid": 161042
+      },
+      "release": "2.08",
+      "sccs": "f.23.37.1",
+      "sid": null,
+      "sunid": 161043
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/224950",
+      "canonical_url": "/?sunid=224950&ver=2.08",
+      "description": "Thermosynechococcus vulcanus [TaxId: 32053]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/161043",
+        "sccs": "f.23.37.1",
+        "sid": null,
+        "sunid": 161043
+      },
+      "release": "2.08",
+      "sccs": "f.23.37.1",
+      "sid": null,
+      "sunid": 224950
+    }
+  ],
+  "release": "2.08",
+  "sunid": 345656
+}

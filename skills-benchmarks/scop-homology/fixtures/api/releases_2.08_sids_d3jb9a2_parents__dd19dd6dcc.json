@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/51349",
+      "canonical_url": "/?sunid=51349&ver=2.08",
+      "description": "Alpha and beta proteins (a/b)",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "c",
+      "sid": null,
+      "sunid": 51349
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52979",
+      "canonical_url": "/?sunid=52979&ver=2.08",
+      "description": "Restriction endonuclease-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/51349",
+        "sccs": "c",
+        "sid": null,
+        "sunid": 51349
+      },
+      "release": "2.08",
+      "sccs": "c.52",
+      "sid": null,
+      "sunid": 52979
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/52980",
+      "canonical_url": "/?sunid=52980&ver=2.08",
+      "description": "Restriction endonuclease-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52979",
+        "sccs": "c.52",
+        "sid": null,
+        "sunid": 52979
+      },
+      "release": "2.08",
+      "sccs": "c.52.1",
+      "sid": null,
+      "sunid": 52980
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/345968",
+      "canonical_url": "/?sunid=345968&ver=2.08",
+      "description": "Splicing factor Prp8 endonuclease-like domain",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/52980",
+        "sccs": "c.52.1",
+        "sid": null,
+        "sunid": 52980
+      },
+      "release": "2.08",
+      "sccs": "c.52.1.36",
+      "sid": null,
+      "sunid": 345968
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/346085",
+      "canonical_url": "/?sunid=346085&ver=2.08",
+      "description": "Pre-mRNA splicing factor 8, Prp8 / Spp42",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/345968",
+        "sccs": "c.52.1.36",
+        "sid": null,
+        "sunid": 345968
+      },
+      "release": "2.08",
+      "sccs": "c.52.1.36",
+      "sid": null,
+      "sunid": 346085
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/346308",
+      "canonical_url": "/?sunid=346308&ver=2.08",
+      "description": "Schizosaccharomyces pombe 972h- [TaxId: 284812]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/346085",
+        "sccs": "c.52.1.36",
+        "sid": null,
+        "sunid": 346085
+      },
+      "release": "2.08",
+      "sccs": "c.52.1.36",
+      "sid": null,
+      "sunid": 346308
+    }
+  ],
+  "release": "2.08",
+  "sunid": 344793
+}

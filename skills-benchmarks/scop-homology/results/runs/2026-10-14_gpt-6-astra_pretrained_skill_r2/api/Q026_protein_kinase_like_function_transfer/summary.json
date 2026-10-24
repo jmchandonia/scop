@@ -1,0 +1,9 @@
+{
+  "format": "scop-live-http-v1",
+  "label": "Q026_protein_kinase_like_function_transfer",
+  "request_count": 23,
+  "response_body_count": 23,
+  "successful_response_count": 23,
+  "transient_error_count": 0,
+  "upstream_base_url": "https://scop.berkeley.edu/api/v1"
+}

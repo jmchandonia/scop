@@ -1,0 +1,33 @@
+{
+  "heterogeneity": [
+    {
+      "abbreviation": "re",
+      "description": "applies to all domains of a family if the common domain is composed of a different number of small repeating units"
+    }
+  ],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/265556",
+    "canonical_url": "/?sunid=265556&ver=2.08",
+    "description": "3v6p A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/267705",
+      "sccs": "a.298.1.1",
+      "sid": null,
+      "sunid": 267705
+    },
+    "release": "2.08",
+    "sccs": "a.298.1.1",
+    "sid": "d3v6pa_",
+    "sunid": 265556
+  },
+  "release": "2.08",
+  "repeat_family": null,
+  "warnings": []
+}

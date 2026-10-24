@@ -1,0 +1,1 @@
+WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir "/tmp" (codex_home: AbsolutePathBuf("/tmp/scop-pretrained_only-Q016_pdb_1acc_domain_split-zrt3ro7s/codex-home"))

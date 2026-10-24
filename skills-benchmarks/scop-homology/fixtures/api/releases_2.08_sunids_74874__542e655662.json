@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/74874",
+    "canonical_url": "/?sunid=74874&ver=2.08",
+    "description": "Ephrin ectodomain",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/49503",
+      "sccs": "b.6.1",
+      "sid": null,
+      "sunid": 49503
+    },
+    "release": "2.08",
+    "sccs": "b.6.1.5",
+    "sid": null,
+    "sunid": 74874
+  }
+}

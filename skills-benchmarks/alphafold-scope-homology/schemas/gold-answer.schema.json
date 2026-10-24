@@ -1,0 +1,16 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["question_id", "model", "release", "reference_status", "answer", "must_include", "must_avoid", "evidence_paths"],
+  "properties": {
+    "question_id": {"type": "string", "pattern": "^AFQ[0-9]{3}(?:_[a-z0-9_]+)?$"},
+    "model": {"type": "string"},
+    "release": {"type": "string"},
+    "reference_status": {"enum": ["draft_gold", "curator_verified"]},
+    "answer": {"type": "string", "minLength": 1},
+    "must_include": {"type": "array", "minItems": 2, "items": {"type": "string"}},
+    "must_avoid": {"type": "array", "items": {"type": "string"}},
+    "evidence_paths": {"type": "array", "minItems": 2, "uniqueItems": true, "items": {"type": "string", "pattern": "^/releases/"}}
+  }
+}

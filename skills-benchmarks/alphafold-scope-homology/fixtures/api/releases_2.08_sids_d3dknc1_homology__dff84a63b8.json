@@ -1,0 +1,28 @@
+{
+  "heterogeneity": [],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/157761",
+    "canonical_url": "/?sunid=157761&ver=2.08",
+    "description": "3dkn C:21-52",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/267694",
+      "sccs": "f.17.6.1",
+      "sid": null,
+      "sunid": 267694
+    },
+    "release": "2.08",
+    "sccs": "f.17.6.1",
+    "sid": "d3dknc1",
+    "sunid": 157761
+  },
+  "release": "2.08",
+  "repeat_family": null,
+  "warnings": []
+}

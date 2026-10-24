@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.08",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.08",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/56992",
+      "canonical_url": "/?sunid=56992&ver=2.08",
+      "description": "Small proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.08",
+      "sccs": "g",
+      "sid": null,
+      "sunid": 56992
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57015",
+      "canonical_url": "/?sunid=57015&ver=2.08",
+      "description": "Knottins (small inhibitors, toxins, lectins)",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/56992",
+        "sccs": "g",
+        "sid": null,
+        "sunid": 56992
+      },
+      "release": "2.08",
+      "sccs": "g.3",
+      "sid": null,
+      "sunid": 57015
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/57184",
+      "canonical_url": "/?sunid=57184&ver=2.08",
+      "description": "Growth factor receptor domain",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57015",
+        "sccs": "g.3",
+        "sid": null,
+        "sunid": 57015
+      },
+      "release": "2.08",
+      "sccs": "g.3.9",
+      "sid": null,
+      "sunid": 57184
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/232406",
+      "canonical_url": "/?sunid=232406&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/57184",
+        "sccs": "g.3.9",
+        "sid": null,
+        "sunid": 57184
+      },
+      "release": "2.08",
+      "sccs": "g.3.9.0",
+      "sid": null,
+      "sunid": 232406
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/232407",
+      "canonical_url": "/?sunid=232407&ver=2.08",
+      "description": "automated matches",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/232406",
+        "sccs": "g.3.9.0",
+        "sid": null,
+        "sunid": 232406
+      },
+      "release": "2.08",
+      "sccs": "g.3.9.0",
+      "sid": null,
+      "sunid": 232407
+    },
+    {
+      "api_url": "/api/v1/releases/2.08/sunids/232408",
+      "canonical_url": "/?sunid=232408&ver=2.08",
+      "description": "Human (Homo sapiens) [TaxId: 9606]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.08/sunids/232407",
+        "sccs": "g.3.9.0",
+        "sid": null,
+        "sunid": 232407
+      },
+      "release": "2.08",
+      "sccs": "g.3.9.0",
+      "sid": null,
+      "sunid": 232408
+    }
+  ],
+  "release": "2.08",
+  "sunid": 239158
+}

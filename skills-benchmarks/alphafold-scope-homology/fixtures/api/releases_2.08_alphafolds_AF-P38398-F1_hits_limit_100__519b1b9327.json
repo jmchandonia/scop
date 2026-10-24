@@ -1,0 +1,1494 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 73,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [
+    {
+      "alphafold_range": {
+        "end": 1863,
+        "length": 109,
+        "start": 1755
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1oqaa1",
+        "comment": "C-terminal domain only",
+        "description": "1oqa A:2-110",
+        "header": "c.15.1.3 (A:2-110) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d1oqaa1",
+        "sunid": 104021
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -64.21022810991894,
+      "percent_identity": 11.05476673427992
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1jnxx2",
+        "comment": null,
+        "description": "1jnx X:1758-1859",
+        "header": "c.15.1.3 (X:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1jnxx2",
+        "sunid": 63202
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t15a2",
+        "comment": null,
+        "description": "1t15 A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t15a2",
+        "sunid": 99068
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t29a2",
+        "comment": null,
+        "description": "1t29 A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t29a2",
+        "sunid": 99077
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2va2",
+        "comment": null,
+        "description": "1t2v A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2va2",
+        "sunid": 99099
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2vb2",
+        "comment": null,
+        "description": "1t2v B:1758-1859",
+        "header": "c.15.1.3 (B:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2vb2",
+        "sunid": 99101
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2vc2",
+        "comment": null,
+        "description": "1t2v C:1758-1859",
+        "header": "c.15.1.3 (C:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2vc2",
+        "sunid": 99103
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2ve2",
+        "comment": null,
+        "description": "1t2v E:1758-1859",
+        "header": "c.15.1.3 (E:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2ve2",
+        "sunid": 99107
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxaa2",
+        "comment": "automated match to d1t15a2",
+        "description": "3pxa A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxaa2",
+        "sunid": 214965
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxba2",
+        "comment": "automated match to d1t15a2",
+        "description": "3pxb A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxba2",
+        "sunid": 214967
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxcx2",
+        "comment": "automated match to d1t15a2",
+        "description": "3pxc X:1758-1859",
+        "header": "c.15.1.3 (X:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxcx2",
+        "sunid": 214969
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ofba2",
+        "comment": "automated match to d1t15a2",
+        "description": "4ofb A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d4ofba2",
+        "sunid": 271403
+      },
+      "domain_range": {
+        "end": 102,
+        "length": 102,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -59.97056394777007,
+      "percent_identity": 10.381679389312977
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxda2",
+        "comment": "automated match to d1t15a2",
+        "description": "3pxd A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxda2",
+        "sunid": 214971
+      },
+      "domain_range": {
+        "end": 100,
+        "length": 100,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -56.15124255657281,
+      "percent_identity": 10.086602139582272
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1y98a2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "1y98 A:1760-1855",
+        "header": "c.15.1.3 (A:1760-1855) Breast cancer associated protein, BRCA1 {Rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.15.1.3",
+        "sid": "d1y98a2",
+        "sunid": 122776
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3coja2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj A:1760-1855",
+        "header": "c.15.1.3 (A:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3coja2",
+        "sunid": 156858
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojb2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj B:1760-1855",
+        "header": "c.15.1.3 (B:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojb2",
+        "sunid": 156860
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojc2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj C:1760-1855",
+        "header": "c.15.1.3 (C:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojc2",
+        "sunid": 156862
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojd2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj D:1760-1855",
+        "header": "c.15.1.3 (D:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojd2",
+        "sunid": 156864
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3coje2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj E:1760-1855",
+        "header": "c.15.1.3 (E:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3coje2",
+        "sunid": 156866
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojf2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj F:1760-1855",
+        "header": "c.15.1.3 (F:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojf2",
+        "sunid": 156868
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojg2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj G:1760-1855",
+        "header": "c.15.1.3 (G:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojg2",
+        "sunid": 156870
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojx2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "3coj X:1760-1855",
+        "header": "c.15.1.3 (X:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojx2",
+        "sunid": 156872
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 96,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.669297827099754,
+      "percent_identity": 9.80091883614089
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1n5ox2",
+        "comment": "complexed with co, so4; mutant",
+        "description": "1n5o X:1758-1859",
+        "header": "c.15.1.3 (X:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1n5ox2",
+        "sunid": 80034
+      },
+      "domain_range": {
+        "end": 99,
+        "length": 99,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -55.42651363988036,
+      "percent_identity": 9.98980632008155
+    },
+    {
+      "alphafold_range": {
+        "end": 103,
+        "length": 103,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1jm7a_",
+        "comment": null,
+        "description": "1jm7 A:",
+        "header": "g.44.1.1 (A:) brca1 RING domain {Human (Homo sapiens)}",
+        "sccs": "g.44.1.1",
+        "sid": "d1jm7a_",
+        "sunid": 66880
+      },
+      "domain_range": {
+        "end": 103,
+        "length": 103,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -54.89021424249618,
+      "percent_identity": 10.478128179043743
+    },
+    {
+      "alphafold_range": {
+        "end": 1859,
+        "length": 102,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2ua2",
+        "comment": "complexed with co, so4; mutant",
+        "description": "1t2u A:1758-1859",
+        "header": "c.15.1.3 (A:1758-1859) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2ua2",
+        "sunid": 99097
+      },
+      "domain_range": {
+        "end": 98,
+        "length": 98,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -54.87571966406834,
+      "percent_identity": 9.892911779704233
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ingx2",
+        "comment": "automatically matched to d1l0ba2",
+        "description": "2ing X:1760-1855",
+        "header": "c.15.1.3 (X:1760-1855) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d2ingx2",
+        "sunid": 147740
+      },
+      "domain_range": {
+        "end": 94,
+        "length": 94,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -51.95868577525284,
+      "percent_identity": 9.504343382728667
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 112,
+        "start": 1646
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2vb1",
+        "comment": null,
+        "description": "1t2v B:1646-1757",
+        "header": "c.15.1.3 (B:1646-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2vb1",
+        "sunid": 99100
+      },
+      "domain_range": {
+        "end": 112,
+        "length": 112,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -51.715901586809636,
+      "percent_identity": 9.924050632911392
+    },
+    {
+      "alphafold_range": {
+        "end": 1856,
+        "length": 99,
+        "start": 1758
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2vd2",
+        "comment": null,
+        "description": "1t2v D:1758-1856",
+        "header": "c.15.1.3 (D:1758-1856) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2vd2",
+        "sunid": 99105
+      },
+      "domain_range": {
+        "end": 94,
+        "length": 94,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -51.34266619484963,
+      "percent_identity": 9.606540623403168
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 111,
+        "start": 1647
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2vd1",
+        "comment": null,
+        "description": "1t2v D:1647-1757",
+        "header": "c.15.1.3 (D:1647-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2vd1",
+        "sunid": 99104
+      },
+      "domain_range": {
+        "end": 111,
+        "length": 111,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -51.05277462767582,
+      "percent_identity": 9.827760891590678
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1jnxx1",
+        "comment": null,
+        "description": "1jnx X:1649-1757",
+        "header": "c.15.1.3 (X:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1jnxx1",
+        "sunid": 63201
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1n5ox1",
+        "comment": null,
+        "description": "1n5o X:1649-1757",
+        "header": "c.15.1.3 (X:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1n5ox1",
+        "sunid": 80033
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t15a1",
+        "comment": null,
+        "description": "1t15 A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t15a1",
+        "sunid": 99067
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t29a1",
+        "comment": null,
+        "description": "1t29 A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t29a1",
+        "sunid": 99076
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2ua1",
+        "comment": null,
+        "description": "1t2u A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2ua1",
+        "sunid": 99096
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2va1",
+        "comment": null,
+        "description": "1t2v A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2va1",
+        "sunid": 99098
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2vc1",
+        "comment": null,
+        "description": "1t2v C:1649-1757",
+        "header": "c.15.1.3 (C:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2vc1",
+        "sunid": 99102
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2ve1",
+        "comment": null,
+        "description": "1t2v E:1649-1757",
+        "header": "c.15.1.3 (E:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2ve1",
+        "sunid": 99106
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxda1",
+        "comment": "automated match to d1t15a1",
+        "description": "3pxd A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxda1",
+        "sunid": 214970
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ofba1",
+        "comment": "automated match to d1t15a1",
+        "description": "4ofb A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d4ofba1",
+        "sunid": 271396
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -50.201218150468264,
+      "percent_identity": 9.634888438133874
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxba1",
+        "comment": "automated match to d1t15a1",
+        "description": "3pxb A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxba1",
+        "sunid": 214966
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -49.86784284937941,
+      "percent_identity": 9.533468559837727
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxaa1",
+        "comment": "automated match to d1t15a1",
+        "description": "3pxa A:1649-1757",
+        "header": "c.15.1.3 (A:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxaa1",
+        "sunid": 214964
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 109,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -49.14673757678845,
+      "percent_identity": 9.533468559837727
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1y98a1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "1y98 A:1650-1756",
+        "header": "c.15.1.3 (A:1650-1756) Breast cancer associated protein, BRCA1 {Rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.15.1.3",
+        "sid": "d1y98a1",
+        "sunid": 122775
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ingx1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "2ing X:1650-1756",
+        "header": "c.15.1.3 (X:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d2ingx1",
+        "sunid": 147739
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3coja1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj A:1650-1756",
+        "header": "c.15.1.3 (A:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3coja1",
+        "sunid": 156857
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojb1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj B:1650-1756",
+        "header": "c.15.1.3 (B:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojb1",
+        "sunid": 156859
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojc1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj C:1650-1756",
+        "header": "c.15.1.3 (C:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojc1",
+        "sunid": 156861
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojd1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj D:1650-1756",
+        "header": "c.15.1.3 (D:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojd1",
+        "sunid": 156863
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3coje1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj E:1650-1756",
+        "header": "c.15.1.3 (E:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3coje1",
+        "sunid": 156865
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojf1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj F:1650-1756",
+        "header": "c.15.1.3 (F:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojf1",
+        "sunid": 156867
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojg1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj G:1650-1756",
+        "header": "c.15.1.3 (G:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojg1",
+        "sunid": 156869
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 107,
+        "start": 1650
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3cojx1",
+        "comment": "automatically matched to d1l0ba1",
+        "description": "3coj X:1650-1756",
+        "header": "c.15.1.3 (X:1650-1756) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3cojx1",
+        "sunid": 156871
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 107,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -48.93294254886351,
+      "percent_identity": 9.441624365482234
+    },
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 109,
+        "start": 1649
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3pxcx1",
+        "comment": "automated match to d1t15a1",
+        "description": "3pxc X:1649-1757",
+        "header": "c.15.1.3 (X:1649-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d3pxcx1",
+        "sunid": 214968
+      },
+      "domain_range": {
+        "end": 108,
+        "length": 108,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -47.805989082021945,
+      "percent_identity": 9.43683409436834
+    },
+    {
+      "alphafold_range": {
+        "end": 1756,
+        "length": 112,
+        "start": 1645
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1l0ba1",
+        "comment": null,
+        "description": "1l0b A:1591-1702",
+        "header": "c.15.1.3 (A:1591-1702) Breast cancer associated protein, BRCA1 {Rat (Rattus norvegicus)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1l0ba1",
+        "sunid": 73391
+      },
+      "domain_range": {
+        "end": 112,
+        "length": 112,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -36.0037786728117,
+      "percent_identity": 7.189873417721519
+    },
+    {
+      "alphafold_range": {
+        "end": 1855,
+        "length": 96,
+        "start": 1760
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1l0ba2",
+        "comment": null,
+        "description": "1l0b A:1705-1801",
+        "header": "c.15.1.3 (A:1705-1801) Breast cancer associated protein, BRCA1 {Rat (Rattus norvegicus)}",
+        "sccs": "c.15.1.3",
+        "sid": "d1l0ba2",
+        "sunid": 73392
+      },
+      "domain_range": {
+        "end": 77,
+        "length": 77,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -18.83495063659219,
+      "percent_identity": 4.842864502833591
+    },
+    {
+      "alphafold_range": {
+        "end": 65,
+        "length": 46,
+        "start": 20
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1rmd_2",
+        "comment": null,
+        "description": "1rmd 1-86",
+        "header": "g.44.1.1 (1-86) V(D)J recombination activating protein 1 (RAG1), dimerization domain {Mouse (Mus musculus)}",
+        "sccs": "g.44.1.1",
+        "sid": "d1rmd_2",
+        "sunid": 45322
+      },
+      "domain_range": {
+        "end": 65,
+        "length": 44,
+        "start": 22
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.7279763693292285,
+      "percent_identity": 1.9497178040020522
+    },
+    {
+      "alphafold_range": {
+        "end": 65,
+        "length": 46,
+        "start": 20
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1rmda2",
+        "comment": "include dimerization helices",
+        "description": "1rmd A:1-86",
+        "header": "g.44.1.1 (A:1-86) V(D)J recombination activating protein 1 (RAG1), dimerization domain {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "g.44.1.1",
+        "sid": "d1rmda2",
+        "sunid": 45322
+      },
+      "domain_range": {
+        "end": 65,
+        "length": 44,
+        "start": 22
+      },
+      "kind": "sequence",
+      "log10_evalue": -3.7279763693292285,
+      "percent_identity": 1.9497178040020522
+    },
+    {
+      "alphafold_range": {
+        "end": 86,
+        "length": 73,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2y43a_",
+        "comment": "automated match to d1jm7b_",
+        "description": "2y43 A:",
+        "header": "g.44.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.44.1.0",
+        "sid": "d2y43a_",
+        "sunid": 170589
+      },
+      "domain_range": {
+        "end": 78,
+        "length": 71,
+        "start": 8
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.988752877240449,
+      "percent_identity": 2.2540983606557377
+    },
+    {
+      "alphafold_range": {
+        "end": 86,
+        "length": 73,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2y43b_",
+        "comment": "automated match to d1jm7b_",
+        "description": "2y43 B:",
+        "header": "g.44.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.44.1.0",
+        "sid": "d2y43b_",
+        "sunid": 170590
+      },
+      "domain_range": {
+        "end": 79,
+        "length": 71,
+        "start": 9
+      },
+      "kind": "sequence",
+      "log10_evalue": -2.9054090498647884,
+      "percent_identity": 2.2540983606557377
+    },
+    {
+      "alphafold_range": {
+        "end": 64,
+        "length": 50,
+        "start": 15
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1jm7b_",
+        "comment": null,
+        "description": "1jm7 B:",
+        "header": "g.44.1.1 (B:) bard1 RING domain {Human (Homo sapiens)}",
+        "sccs": "g.44.1.1",
+        "sid": "d1jm7b_",
+        "sunid": 66881
+      },
+      "domain_range": {
+        "end": 61,
+        "length": 46,
+        "start": 16
+      },
+      "kind": "sequence",
+      "log10_evalue": -1.216790672199183,
+      "percent_identity": 1.6326530612244898
+    }
+  ],
+  "structure_hits": [
+    {
+      "alphafold_range": {
+        "end": 1757,
+        "length": 110,
+        "start": 1648
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t2vb1",
+        "comment": null,
+        "description": "1t2v B:1646-1757",
+        "header": "c.15.1.3 (B:1646-1757) Breast cancer associated protein, BRCA1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.15.1.3",
+        "sid": "d1t2vb1",
+        "sunid": 99100
+      },
+      "domain_range": {
+        "end": 1757,
+        "length": 110,
+        "start": 1648
+      },
+      "identity": 100,
+      "kind": "structure",
+      "p_value": 0.00361,
+      "rmsd": 0.38,
+      "score": 311.1,
+      "similarity": 100,
+      "transform": [
+        [
+          -0.512,
+          -0.002,
+          -0.859,
+          11.894
+        ],
+        [
+          -0.669,
+          0.629,
+          0.397,
+          18.62
+        ],
+        [
+          0.539,
+          0.778,
+          -0.323,
+          -48.358
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-P38398-F1",
+    "kind": "alphafold",
+    "name": "AF-P38398-F1",
+    "uniprot_accession": "P38398",
+    "description": "Breast cancer type 1 susceptibility protein",
+    "global_plddt": 41.68,
+    "sequence_length": 1863
+  }
+}

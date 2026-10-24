@@ -1,0 +1,195 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=seq&hit=d6snja_"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://scop.berkeley.edu/sunid=54928&ver=2.08"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d2lcwa_"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1"
+          ]
+        },
+        {
+          "id": "E6",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1jmta_/annotations"
+          ]
+        },
+        {
+          "id": "E7",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/54928/fatcat-chain-benchmark?minimum_supporting_hits=5"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P35637-F1",
+      "question_id": "AFQ012",
+      "question_sha256": "6a1314799a979f436a59ea180c3ca41c245c28a51819fabf42e7d0752e25c2c5",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "observed_benchmarks": [
+      [
+        "2.08",
+        54928,
+        5
+      ]
+    ],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P35637-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "required_benchmarks": [
+      [
+        "2.08",
+        54928,
+        5
+      ]
+    ],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P35637-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1hl6a_"
+      ],
+      [
+        "2.08",
+        "d1jmta_"
+      ],
+      [
+        "2.08",
+        "d2cpea1"
+      ],
+      [
+        "2.08",
+        "d2lcwa_"
+      ],
+      [
+        "2.08",
+        "d6snja_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 100.13,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 116352,
+      "input_tokens": 156875,
+      "output_tokens": 4443,
+      "reasoning_output_tokens": 992
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**Conclusion**\nFor AF-P35637-F1 / UniProt P35637 in SCOPe release 2.08, the approximately 280-370 region is best treated as a superfamily-level evidence hypothesis: the evidence supports a strong chance of a d.58.7 RNA-binding domain / RRM superfamily relationship across the local envelope, roughly residues 262-381, with the tightest well-confident core around 280-370. It does not support choosing one specific family because the sequence and structure records split among automated matches, Canonical RBD, and Splicing factor U2AF subunits, while all material branches agree at d.58.7.\n\nTask contract reconciled: target AF-P35637-F1, release 2.08, region 280-370, tested level family vs superfamily vs fold vs inconclusive, minimum_supporting_hits=5 calibration for the resulting node, and no definitive homology/classification claim. No representative SID was explicitly named by the question.\n\n**What can be said at each level**\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | Target function is not established by this evidence assessment. The model metadata says RNA-binding protein FUS and the retrieved superfamily is RRM, but reference annotations/family names do not transfer exact target function, ligand state, or partner context. | E1, E4, E6 |\n| Family | A specific family is not established. Sequence groups include d.58.7.0 automated matches and d.58.7.1 Canonical RBD; structure groups include d.58.7.0, d.58.7.1, and d.58.7.3. The d.58.7.0 family is explicitly automated, so it supports only its non-automated higher lineage here. | E2, E3, E4 |\n| Superfamily | Favored level: d.58.7, RNA-binding domain, RBD, aka RNA recognition motif (RRM), SUNID 54928. Both sequence and structure streams place the material region in this superfamily despite family-level disagreement. | E2, E3, E4, E7 |\n| Fold | Fold-level similarity to d.58 Ferredoxin-like, SUNID 54861, is supported as the shared higher lineage, but stopping at fold only would ignore convergent d.58.7 superfamily evidence from both streams. This remains an evidence hypothesis, not a homology determination. | E3, E4 |\n\n**Evidence considered**\n- **E1** \u2014 The target record is AF-P35637-F1, UniProt P35637, RNA-binding protein FUS, length 526, global pLDDT 53.98; whole-model confidence is low overall: median 42.54 with bands 42 residues >=90, 81 at 70-<90, 39 at 50-<70, and 364 <50. This makes local, not global, confidence the relevant geometry check. Source: [model evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1)\n- **E2** \u2014 Sequence evidence covers the requested region and favors d.58.7 above family: rank 1 d6snja_ spans AF residues 262-370, 109/526 = 20.72% of the model, log10 E-value -58.259, identity 33.18%, SCCS d.58.7.0, group size 21; rank 5 d2cpea1 spans 280-369, 90/526 = 17.11%, log10 E-value -29.556, identity 17.54%, SCCS d.58.7.1, group size 38. Raw sequence evidence is 59 hits in two overlap-SCCS groups: 21 d.58.7.0 and 38 d.58.7.1. Source: [d6snja_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=seq&hit=d6snja_)\n- **E3** \u2014 Retrieved lineage for the selected sequence representatives shows shared d.58.7 superfamily and d.58 fold, but not one family: d6snja_ is d.58.7.0 automated matches, while d2cpea1 is d.58.7.1 Canonical RBD. This is family-conflicting but superfamily-convergent evidence. Source: [RRM superfamily node](https://scop.berkeley.edu/sunid=54928&ver=2.08)\n- **E4** \u2014 Structure hits overlap the same local envelope but also split by family: rank 1 d2lcwa_ spans 279-375, 97/526 = 18.44%, P=0.0041, score 252.7, RMSD 3.1, identity 100%, SCCS d.58.7.0 automated; rank 2 d1hl6a_ spans 279-371, 93/526 = 17.68%, P=0.00412, score 214.94, RMSD 2.45, identity 26.04%, SCCS d.58.7.1; rank 8 d1jmta_ spans 284-370, 87/526 = 16.54%, P=0.0418, score 147.76, RMSD 1.56, identity 14.95%, SCCS d.58.7.3. Raw structure evidence is 9 hits in three groups: 3 d.58.7.0, 5 d.58.7.1, 1 d.58.7.3. Source: [d2lcwa_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P35637-F1&mode=struct&hit=d2lcwa_)\n- **E5** \u2014 The material hit envelope is approximately 262-381, while the requested 280-370 region lies inside the tight shared core. Envelope coverage is 120/526 = 22.81%; the requested core is 91/526 = 17.30%. Local confidence for 280-370 is much stronger than the full model: median 89.22, bands 38 >=90, 50 at 70-<90, 3 at 50-<70, 0 <50; fragmented high-pLDDT clusters occur at 285-290, 301-303, 322-325, 336-341, 346-355, and 364-368. Source: [confidence evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P35637-F1)\n- **E6** \u2014 Annotations preserve decision-relevant warnings: d6snja_ and d2lcwa_ are automated matches; d6snja_ is a protein/RNA complex; d1jmta_ is a heterodimer with a fragment U2AF65 subunit and is complexed with hez. These affect family specificity and partner/ligand transfer, but they do not remove the shared d.58.7 higher-lineage signal. Source: [d1jmta_ annotations](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1jmta_/annotations)\n- **E7** \u2014 The requested calibration for the retained superfamily level resolved from d2cpea1 to d.58.7 / SUNID 54928 with minimum_supporting_hits=5 and status available: 46/46 benchmark cases, fraction 1.0, requested_level superfamily, resolved_node RNA-binding domain, RBD, aka RRM. Because the current structure hits have FATCAT P-values above the benchmark filter maximum 1e-4 and missing length-match inputs, this fraction is historical context outside the current-hit calibration domain, not reassuring evidence. Source: [calibration evidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/54928/fatcat-chain-benchmark?minimum_supporting_hits=5)\n\n**Caveats by evidence item**\n- **E1** \u2014 Global pLDDT is poor and PAE/pTM was not retrieved, so domain placement, inter-domain orientation, and partner-dependent geometry are not established.\n- **E2** \u2014 Sequence hits are grouped and correlated: 59 raw hits reduce conceptually to two overlap-SCCS groups. Family labels alone are not family-discriminating evidence, and the automated d.58.7.0 group cannot independently confirm a target family.\n- **E3** \u2014 Lineage supports the superfamily contrast, but mixed family branches prevent a specific family hypothesis from being the controlling conclusion.\n- **E4** \u2014 FATCAT P-values are structural similarity statistics, not homology probabilities; all selected current structure hits are outside the benchmark P-value filter of 1e-4. The returned schema does not establish exact structural run mode, twist count, equivalent positions, or complete alignment blocks.\n- **E5** \u2014 Boundaries remain approximate. The high-confidence 280-370 core is flanked by lower-confidence stretches: for the broader 262-381 envelope, median pLDDT is 86.82 with bands 38 >=90, 50 at 70-<90, 9 at 50-<70, and 23 <50, including low-confidence stretches 252-282 and 371-391 that overlap or flank the envelope.\n- **E6** \u2014 Automated, protein/RNA, heterodimer, fragment, and ligand/partner annotations constrain family specificity and function transfer; they do not by themselves establish or refute the superfamily-level hypothesis.\n- **E7** \u2014 The calibration denominator is a biased historical FATCAT chain-benchmark sample with 90% sequence-identity representative chains and same-PDB-chain exclusion; it is not an independent probability for AF-P35637-F1. Its current-hit applicability is limited because the selected structure hits are outside benchmark filters.\n\nOverall, the requested contrast resolves to a non-official superfamily-level hypothesis for approximately residues 280-370, with material evidence spanning about 262-381 and all shortlisted lineages agreeing at d.58.7 while disagreeing below that level.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "MCP get_alphafold_hits(model=AF-P35637-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "MCP get_alphafold_decision_evidence(model=AF-P35637-F1, release=2.08, regions=262-381;280-370;279-375;278-370;284-370, sids=d6snja_;d2cpea1;d2lcwa_;d1hl6a_;d1jmta_, calibration=d2cpea1:superfamily:minimum_supporting_hits=5)"
+    ],
+    "input_attestation": {
+      "model": "AF-P35637-F1",
+      "question_id": "AFQ012",
+      "question_sha256": "6a1314799a979f436a59ea180c3ca41c245c28a51819fabf42e7d0752e25c2c5",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ012",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:41:50Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

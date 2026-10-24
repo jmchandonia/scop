@@ -1,0 +1,120 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 45,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [
+    {
+      "alphafold_range": {
+        "end": 1117,
+        "length": 161,
+        "start": 957
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3hqva_",
+        "comment": null,
+        "description": "3hqv A:",
+        "header": "i.25.1.1 (A:) Collagen I alpha {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "i.25.1.1",
+        "sid": "d3hqva_",
+        "sunid": 177784
+      },
+      "domain_range": {
+        "end": 955,
+        "length": 161,
+        "start": 795
+      },
+      "kind": "sequence",
+      "log10_evalue": -33.19390228714541,
+      "percent_identity": 7.227958697378872
+    },
+    {
+      "alphafold_range": {
+        "end": 1117,
+        "length": 161,
+        "start": 957
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3hqvc_",
+        "comment": "automatically matched to 1Y0F A:1-1054",
+        "description": "3hqv C:",
+        "header": "i.25.1.1 (C:) Collagen I alpha {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "i.25.1.1",
+        "sid": "d3hqvc_",
+        "sunid": 177786
+      },
+      "domain_range": {
+        "end": 955,
+        "length": 161,
+        "start": 795
+      },
+      "kind": "sequence",
+      "log10_evalue": -33.19390228714541,
+      "percent_identity": 7.227958697378872
+    },
+    {
+      "alphafold_range": {
+        "end": 96,
+        "length": 58,
+        "start": 39
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u5ma1",
+        "comment": "splice isoform 2",
+        "description": "1u5m A:5-73",
+        "header": "g.27.1.2 (A:5-73) Collagen alpha 1(II) chain precursor {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.27.1.2",
+        "sid": "d1u5ma1",
+        "sunid": 113043
+      },
+      "domain_range": {
+        "end": 62,
+        "length": 58,
+        "start": 5
+      },
+      "kind": "sequence",
+      "log10_evalue": -19.057112405169086,
+      "percent_identity": 5.218525766470972
+    },
+    {
+      "alphafold_range": {
+        "end": 1117,
+        "length": 159,
+        "start": 959
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3hqvb_",
+        "comment": null,
+        "description": "3hqv B:",
+        "header": "i.25.1.1 (B:) Collagen I alpha {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "i.25.1.1",
+        "sid": "d3hqvb_",
+        "sunid": 177785
+      },
+      "domain_range": {
+        "end": 948,
+        "length": 159,
+        "start": 790
+      },
+      "kind": "sequence",
+      "log10_evalue": -7.346445474085524,
+      "percent_identity": 4.417670682730924
+    }
+  ],
+  "structure_hits": [],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-P02452-F1",
+    "kind": "alphafold",
+    "name": "AF-P02452-F1",
+    "uniprot_accession": "P02452",
+    "description": "Collagen alpha-1(I) chain",
+    "global_plddt": 54.69,
+    "sequence_length": 1464
+  }
+}

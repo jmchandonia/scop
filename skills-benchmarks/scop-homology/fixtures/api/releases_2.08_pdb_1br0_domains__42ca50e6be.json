@@ -1,0 +1,14 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/2.08/sids/d1br0a_",
+      "chain": "A",
+      "description": "1br0 A:",
+      "sccs": "a.47.2.1",
+      "sid": "d1br0a_",
+      "sunid": 17772
+    }
+  ],
+  "pdb_code": "1br0",
+  "release": "2.08"
+}

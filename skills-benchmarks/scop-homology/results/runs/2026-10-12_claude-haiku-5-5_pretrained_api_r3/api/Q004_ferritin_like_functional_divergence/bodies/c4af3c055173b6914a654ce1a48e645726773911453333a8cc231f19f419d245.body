@@ -1,0 +1,1 @@
+{"node":{"sunid":47257,"sid":null,"sccs":"a.25.1.2","description":"Ribonucleotide reductase R2","level":{"code":"dm","name":"Protein","plural":"Proteins"},"release":"2.08","api_url":"/api/v1/releases/2.08/sunids/47257","canonical_url":"/?sunid=47257&ver=2.08","parent":{"sunid":47253,"sid":null,"sccs":"a.25.1.2","api_url":"/api/v1/releases/2.08/sunids/47253"}}}

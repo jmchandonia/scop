@@ -1,0 +1,32 @@
+{
+  "comments": [],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/99100",
+    "canonical_url": "/?sunid=99100&ver=2.08",
+    "description": "1t2v B:1646-1757",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/63957",
+      "sccs": "c.15.1.3",
+      "sid": null,
+      "sunid": 63957
+    },
+    "release": "2.08",
+    "sccs": "c.15.1.3",
+    "sid": "d1t2vb1",
+    "sunid": 99100
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

@@ -1,0 +1,4333 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 10105,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 307,
+        "start": 695
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2jiub_",
+        "comment": "automated match to d3ikaa_",
+        "description": "2jiu B:",
+        "header": "d.144.1.7 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2jiub_",
+        "sunid": 242231
+      },
+      "domain_range": {
+        "end": 307,
+        "length": 307,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -9999,
+      "percent_identity": 40.26315789473684
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3poza_",
+        "comment": "automated match to d1m14a_",
+        "description": "3poz A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3poza_",
+        "sunid": 183915
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -179.1446134049375,
+      "percent_identity": 39.42370661427636
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3w32a_",
+        "comment": "automated match to d2gs6a_",
+        "description": "3w32 A:",
+        "header": "d.144.1.7 (A:) automated matches {Homo sapiens [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3w32a_",
+        "sunid": 193901
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -179.1446134049375,
+      "percent_identity": 39.42370661427636
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 303,
+        "start": 699
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6p8qc_",
+        "comment": "automated match to d4zseb_",
+        "description": "6p8q C:",
+        "header": "d.144.1.7 (C:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6p8qc_",
+        "sunid": 378313
+      },
+      "domain_range": {
+        "end": 303,
+        "length": 303,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -179.08301144721588,
+      "percent_identity": 39.44954128440367
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 303,
+        "start": 699
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wa2a_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wa2 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wa2a_",
+        "sunid": 402810
+      },
+      "domain_range": {
+        "end": 303,
+        "length": 303,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -179.08301144721588,
+      "percent_identity": 39.44954128440367
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 303,
+        "start": 699
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wxna_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wxn A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wxna_",
+        "sunid": 407310
+      },
+      "domain_range": {
+        "end": 303,
+        "length": 303,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -179.08301144721588,
+      "percent_identity": 39.44954128440367
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 303,
+        "start": 699
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5x2fb_",
+        "comment": "automated match to d4zseb_",
+        "description": "5x2f B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5x2fb_",
+        "sunid": 349221
+      },
+      "domain_range": {
+        "end": 303,
+        "length": 303,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -178.93444201921076,
+      "percent_identity": 39.55321944809461
+    },
+    {
+      "alphafold_range": {
+        "end": 1022,
+        "length": 323,
+        "start": 700
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5x2ab_",
+        "comment": "automated match to d4zseb_",
+        "description": "5x2a B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5x2ab_",
+        "sunid": 348603
+      },
+      "domain_range": {
+        "end": 322,
+        "length": 322,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -178.73514156763449,
+      "percent_identity": 39.947780678851174
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5d41b_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5d41 B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5d41b_",
+        "sunid": 318089
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5x2ad_",
+        "comment": "automated match to d4zseb_",
+        "description": "5x2a D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5x2ad_",
+        "sunid": 348731
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5x2cb_",
+        "comment": "automated match to d4zseb_",
+        "description": "5x2c B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5x2cb_",
+        "sunid": 348690
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v5na_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v5n A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v5na_",
+        "sunid": 384536
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v5pa_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v5p A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v5pa_",
+        "sunid": 384574
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v66a_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v66 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v66a_",
+        "sunid": 384434
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v66b_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v66 B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v66b_",
+        "sunid": 384429
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v66d_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v66 D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v66d_",
+        "sunid": 384591
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6kd_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6k D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6kd_",
+        "sunid": 384558
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6ke_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6k E:",
+        "header": "d.144.1.7 (E:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6ke_",
+        "sunid": 384508
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6kf_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6k F:",
+        "header": "d.144.1.7 (F:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6kf_",
+        "sunid": 384600
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6kg_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6k G:",
+        "header": "d.144.1.7 (G:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6kg_",
+        "sunid": 384586
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6kh_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6k H:",
+        "header": "d.144.1.7 (H:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6kh_",
+        "sunid": 384610
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6ob_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6o B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6ob_",
+        "sunid": 384581
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6od_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6o D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6od_",
+        "sunid": 384613
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6oe_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6o E:",
+        "header": "d.144.1.7 (E:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6oe_",
+        "sunid": 384437
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wa2b_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wa2 B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wa2b_",
+        "sunid": 402712
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wa2c_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wa2 C:",
+        "header": "d.144.1.7 (C:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wa2c_",
+        "sunid": 402687
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wa2d_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wa2 D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wa2d_",
+        "sunid": 402708
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wakc_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wak C:",
+        "header": "d.144.1.7 (C:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wakc_",
+        "sunid": 402692
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wakd_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wak D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wakd_",
+        "sunid": 402676
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wxnc_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wxn C:",
+        "header": "d.144.1.7 (C:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wxnc_",
+        "sunid": 407274
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.71327379455363,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6p1dd_",
+        "comment": "automated match to d4zseb_",
+        "description": "6p1d D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6p1dd_",
+        "sunid": 378285
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.49947876447143,
+      "percent_identity": 39.39393939393939
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v5nd_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v5n D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v5nd_",
+        "sunid": 384552
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.49947876447143,
+      "percent_identity": 39.39393939393939
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v5pc_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v5p C:",
+        "header": "d.144.1.7 (C:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v5pc_",
+        "sunid": 384609
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.49947876447143,
+      "percent_identity": 39.39393939393939
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v5pd_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v5p D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v5pd_",
+        "sunid": 384594
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.49947876447143,
+      "percent_identity": 39.39393939393939
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6dukd_",
+        "comment": "automated match to d4zseb_",
+        "description": "6duk D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6dukd_",
+        "sunid": 369843
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.4632423187818,
+      "percent_identity": 39.41990771259064
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6p1la_",
+        "comment": "automated match to d4zseb_",
+        "description": "6p1l A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6p1la_",
+        "sunid": 378291
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.4632423187818,
+      "percent_identity": 39.41990771259064
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v5nc_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v5n C:",
+        "header": "d.144.1.7 (C:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v5nc_",
+        "sunid": 384564
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.4632423187818,
+      "percent_identity": 39.41990771259064
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6v6oa_",
+        "comment": "automated match to d4zseb_",
+        "description": "6v6o A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6v6oa_",
+        "sunid": 384467
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.4632423187818,
+      "percent_identity": 39.41990771259064
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d7jxkc_",
+        "comment": "automated match to d3ikaa_",
+        "description": "7jxk C:",
+        "header": "d.144.1.7 (C:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d7jxkc_",
+        "sunid": 421995
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.4632423187818,
+      "percent_identity": 39.41990771259064
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 301,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6duka_",
+        "comment": "automated match to d4zseb_",
+        "description": "6duk A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6duka_",
+        "sunid": 369854
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.43425316181182,
+      "percent_identity": 39.44591029023747
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 302,
+        "start": 700
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5hg5a_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5hg5 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5hg5a_",
+        "sunid": 314724
+      },
+      "domain_range": {
+        "end": 302,
+        "length": 302,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -177.2929310231424,
+      "percent_identity": 39.55026455026455
+    },
+    {
+      "alphafold_range": {
+        "end": 1020,
+        "length": 325,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6jwla_",
+        "comment": "automated match to d4zseb_",
+        "description": "6jwl A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6jwla_",
+        "sunid": 383988
+      },
+      "domain_range": {
+        "end": 319,
+        "length": 319,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -176.88708283083486,
+      "percent_identity": 39.76455199476782
+    },
+    {
+      "alphafold_range": {
+        "end": 999,
+        "length": 300,
+        "start": 700
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5hg8a_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5hg8 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5hg8a_",
+        "sunid": 314935
+      },
+      "domain_range": {
+        "end": 300,
+        "length": 300,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -176.064515509034,
+      "percent_identity": 39.33774834437086
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 306,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5hiba_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5hib A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5hiba_",
+        "sunid": 314749
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -175.98841897615387,
+      "percent_identity": 39.23884514435695
+    },
+    {
+      "alphafold_range": {
+        "end": 1020,
+        "length": 324,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5gtza_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5gtz A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5gtza_",
+        "sunid": 338481
+      },
+      "domain_range": {
+        "end": 317,
+        "length": 317,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -175.7057746955205,
+      "percent_identity": 39.554682383759
+    },
+    {
+      "alphafold_range": {
+        "end": 998,
+        "length": 303,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2jiua_",
+        "comment": "automated match to d3ikaa_",
+        "description": "2jiu A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2jiua_",
+        "sunid": 242230
+      },
+      "domain_range": {
+        "end": 304,
+        "length": 304,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -175.57532349023015,
+      "percent_identity": 39.365918097754296
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 305,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2jitb_",
+        "comment": "automated match to d3ikaa_",
+        "description": "2jit B:",
+        "header": "d.144.1.7 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2jitb_",
+        "sunid": 242229
+      },
+      "domain_range": {
+        "end": 300,
+        "length": 300,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -175.00641129056896,
+      "percent_identity": 39.15900131406045
+    },
+    {
+      "alphafold_range": {
+        "end": 1020,
+        "length": 320,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6wakb_",
+        "comment": "automated match to d4zseb_",
+        "description": "6wak B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6wakb_",
+        "sunid": 402709
+      },
+      "domain_range": {
+        "end": 316,
+        "length": 316,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -174.69115421210125,
+      "percent_identity": 39.31847968545216
+    },
+    {
+      "alphafold_range": {
+        "end": 996,
+        "length": 301,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1m17a_",
+        "comment": "complexed with aq4",
+        "description": "1m17 A:",
+        "header": "d.144.1.2 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens)}",
+        "sccs": "d.144.1.2",
+        "sid": "d1m17a_",
+        "sunid": 78370
+      },
+      "domain_range": {
+        "end": 301,
+        "length": 301,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -174.49910104943072,
+      "percent_identity": 38.76478318002628
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 297,
+        "start": 698
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3w2qa1",
+        "comment": "automated match to d3w2oa_",
+        "description": "3w2q A:698-1017",
+        "header": "d.144.1.7 (A:698-1017) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3w2qa1",
+        "sunid": 233922
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 297,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -174.28892966321538,
+      "percent_identity": 38.78627968337731
+    },
+    {
+      "alphafold_range": {
+        "end": 1018,
+        "length": 323,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6jx4a_",
+        "comment": "automated match to d4zseb_",
+        "description": "6jx4 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6jx4a_",
+        "sunid": 383995
+      },
+      "domain_range": {
+        "end": 315,
+        "length": 315,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -174.22008041646768,
+      "percent_identity": 39.34426229508197
+    },
+    {
+      "alphafold_range": {
+        "end": 1018,
+        "length": 322,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d7aeia_",
+        "comment": "automated match to d4zseb_",
+        "description": "7aei A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d7aeia_",
+        "sunid": 404405
+      },
+      "domain_range": {
+        "end": 315,
+        "length": 315,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -173.92656520639434,
+      "percent_identity": 39.47540983606557
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 297,
+        "start": 698
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3w2pa1",
+        "comment": "automated match to d1m14a_",
+        "description": "3w2p A:698-1018",
+        "header": "d.144.1.7 (A:698-1018) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3w2pa1",
+        "sunid": 194104
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 297,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -173.43374954219556,
+      "percent_identity": 38.62887277521424
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 299,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2j5ea_",
+        "comment": "automated match to d3ikaa_",
+        "description": "2j5e A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2j5ea_",
+        "sunid": 242190
+      },
+      "domain_range": {
+        "end": 298,
+        "length": 298,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -173.372147584243,
+      "percent_identity": 38.81578947368421
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 305,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5x2fd_",
+        "comment": "automated match to d4zseb_",
+        "description": "5x2f D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5x2fd_",
+        "sunid": 349680
+      },
+      "domain_range": {
+        "end": 298,
+        "length": 298,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -173.30329833676308,
+      "percent_identity": 38.97300855826201
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 305,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3ikab_",
+        "comment": "automated match to d1m14a_",
+        "description": "3ika B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3ikab_",
+        "sunid": 178368
+      },
+      "domain_range": {
+        "end": 298,
+        "length": 298,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -173.2272018006646,
+      "percent_identity": 39.078947368421055
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 300,
+        "start": 695
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5ugba_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5ugb A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5ugba_",
+        "sunid": 332284
+      },
+      "domain_range": {
+        "end": 298,
+        "length": 298,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -173.16922348729895,
+      "percent_identity": 38.89255108767304
+    },
+    {
+      "alphafold_range": {
+        "end": 988,
+        "length": 293,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3ikaa_",
+        "comment": "automated match to d1m14a_",
+        "description": "3ika A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3ikaa_",
+        "sunid": 178367
+      },
+      "domain_range": {
+        "end": 293,
+        "length": 293,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -173.136610685415,
+      "percent_identity": 38.421052631578945
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 299,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5xdka_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5xdk A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5xdka_",
+        "sunid": 342921
+      },
+      "domain_range": {
+        "end": 298,
+        "length": 298,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -172.87208463162028,
+      "percent_identity": 38.76071193144364
+    },
+    {
+      "alphafold_range": {
+        "end": 990,
+        "length": 296,
+        "start": 695
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d7aema_",
+        "comment": "automated match to d4zseb_",
+        "description": "7aem A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d7aema_",
+        "sunid": 401664
+      },
+      "domain_range": {
+        "end": 294,
+        "length": 294,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -172.8177299643103,
+      "percent_identity": 38.633377135348226
+    },
+    {
+      "alphafold_range": {
+        "end": 990,
+        "length": 293,
+        "start": 698
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3w2oa1",
+        "comment": "automated match to d1m14a_",
+        "description": "3w2o A:698-1017",
+        "header": "d.144.1.7 (A:698-1017) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3w2oa1",
+        "sunid": 194105
+      },
+      "domain_range": {
+        "end": 293,
+        "length": 293,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -172.35752710062627,
+      "percent_identity": 38.44121532364597
+    },
+    {
+      "alphafold_range": {
+        "end": 989,
+        "length": 293,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5xgna_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5xgn A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5xgna_",
+        "sunid": 340168
+      },
+      "domain_range": {
+        "end": 293,
+        "length": 293,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -172.13648478051184,
+      "percent_identity": 38.35978835978836
+    },
+    {
+      "alphafold_range": {
+        "end": 989,
+        "length": 294,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6jz0a_",
+        "comment": "automated match to d3ikaa_",
+        "description": "6jz0 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6jz0a_",
+        "sunid": 377680
+      },
+      "domain_range": {
+        "end": 293,
+        "length": 293,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -172.12561384721047,
+      "percent_identity": 38.52728468113084
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 299,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2gs2a1",
+        "comment": "automatically matched to d1m14a_",
+        "description": "2gs2 A:672-994",
+        "header": "d.144.1.7 (A:672-994) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2gs2a1",
+        "sunid": 135574
+      },
+      "domain_range": {
+        "end": 296,
+        "length": 296,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -172.01690450955934,
+      "percent_identity": 38.679867986798676
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 299,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2gs2a_",
+        "comment": "automated match to d1m14a_",
+        "description": "2gs2 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2gs2a_",
+        "sunid": 135574
+      },
+      "domain_range": {
+        "end": 296,
+        "length": 296,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -172.01690450955934,
+      "percent_identity": 38.679867986798676
+    },
+    {
+      "alphafold_range": {
+        "end": 991,
+        "length": 296,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2gs6a2",
+        "comment": "automated match to d1m14a_",
+        "description": "2gs6 A:672-995",
+        "header": "d.144.1.7 (A:672-995) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2gs6a2",
+        "sunid": 135578
+      },
+      "domain_range": {
+        "end": 293,
+        "length": 293,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.98066806627716,
+      "percent_identity": 38.6034255599473
+    },
+    {
+      "alphafold_range": {
+        "end": 1022,
+        "length": 325,
+        "start": 698
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4zseb_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4zse B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4zseb_",
+        "sunid": 318633
+      },
+      "domain_range": {
+        "end": 313,
+        "length": 313,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.93356068452817,
+      "percent_identity": 39.00196979645437
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 292,
+        "start": 693
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4riwb_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4riw B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4riwb_",
+        "sunid": 261970
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 292,
+        "start": 6
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.91906610605722,
+      "percent_identity": 38.61977438619774
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 292,
+        "start": 693
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4riwd_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4riw D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4riwd_",
+        "sunid": 261572
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 292,
+        "start": 6
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.91906610605722,
+      "percent_identity": 38.61977438619774
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 292,
+        "start": 693
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4rixb_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4rix B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4rixb_",
+        "sunid": 261968
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 292,
+        "start": 6
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.91906610605722,
+      "percent_identity": 38.61977438619774
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 292,
+        "start": 693
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4rixd_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4rix D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4rixd_",
+        "sunid": 261969
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 292,
+        "start": 6
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.91906610605722,
+      "percent_identity": 38.61977438619774
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 292,
+        "start": 693
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4riyb_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4riy B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4riyb_",
+        "sunid": 261570
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 292,
+        "start": 6
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.91906610605722,
+      "percent_identity": 38.61977438619774
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 292,
+        "start": 693
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4riyd_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4riy D:",
+        "header": "d.144.1.7 (D:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4riyd_",
+        "sunid": 261571
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 292,
+        "start": 6
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.91906610605722,
+      "percent_identity": 38.61977438619774
+    },
+    {
+      "alphafold_range": {
+        "end": 986,
+        "length": 291,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2jita_",
+        "comment": "automated match to d3ikaa_",
+        "description": "2jit A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2jita_",
+        "sunid": 242228
+      },
+      "domain_range": {
+        "end": 291,
+        "length": 291,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.4624868881839,
+      "percent_identity": 38.43605036447979
+    },
+    {
+      "alphafold_range": {
+        "end": 986,
+        "length": 291,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4g5pa_",
+        "comment": "automated match to d4li5a_",
+        "description": "4g5p A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4g5pa_",
+        "sunid": 252153
+      },
+      "domain_range": {
+        "end": 291,
+        "length": 291,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.4624868881839,
+      "percent_identity": 38.43605036447979
+    },
+    {
+      "alphafold_range": {
+        "end": 985,
+        "length": 290,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4li5a1",
+        "comment": "automated match to d2eb2a_",
+        "description": "4li5 A:696-1020",
+        "header": "d.144.1.7 (A:696-1020) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4li5a1",
+        "sunid": 224685
+      },
+      "domain_range": {
+        "end": 290,
+        "length": 290,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.45523959966306,
+      "percent_identity": 38.33443489755452
+    },
+    {
+      "alphafold_range": {
+        "end": 985,
+        "length": 290,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4jq7a_",
+        "comment": "automated match to d4jq8a_",
+        "description": "4jq7 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4jq7a_",
+        "sunid": 223939
+      },
+      "domain_range": {
+        "end": 290,
+        "length": 290,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.02040224872928,
+      "percent_identity": 38.20224719101123
+    },
+    {
+      "alphafold_range": {
+        "end": 985,
+        "length": 290,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4jq8a_",
+        "comment": "automated match to d1m14a_",
+        "description": "4jq8 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4jq8a_",
+        "sunid": 197414
+      },
+      "domain_range": {
+        "end": 290,
+        "length": 290,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.02040224872928,
+      "percent_identity": 38.20224719101123
+    },
+    {
+      "alphafold_range": {
+        "end": 985,
+        "length": 290,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4jr3a_",
+        "comment": "automated match to d4jq8a_",
+        "description": "4jr3 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4jr3a_",
+        "sunid": 223948
+      },
+      "domain_range": {
+        "end": 290,
+        "length": 290,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -171.02040224872928,
+      "percent_identity": 38.20224719101123
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 289,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2itwa1",
+        "comment": "automatically matched to d1m14a_",
+        "description": "2itw A:696-1018",
+        "header": "d.144.1.7 (A:696-1018) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2itwa1",
+        "sunid": 137646
+      },
+      "domain_range": {
+        "end": 289,
+        "length": 289,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -170.9116929144827,
+      "percent_identity": 38.25281270681668
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 289,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2itwa_",
+        "comment": "automated match to d1m14a_",
+        "description": "2itw A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2itwa_",
+        "sunid": 137646
+      },
+      "domain_range": {
+        "end": 289,
+        "length": 289,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -170.9116929144827,
+      "percent_identity": 38.25281270681668
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 305,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5xgnb_",
+        "comment": "automated match to d3ikaa_",
+        "description": "5xgn B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5xgnb_",
+        "sunid": 340175
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 297,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -170.6870269483804,
+      "percent_identity": 38.866930171278
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 304,
+        "start": 698
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6p8qb_",
+        "comment": "automated match to d4zseb_",
+        "description": "6p8q B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6p8qb_",
+        "sunid": 378305
+      },
+      "domain_range": {
+        "end": 294,
+        "length": 294,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -170.5529520979859,
+      "percent_identity": 38.675496688741724
+    },
+    {
+      "alphafold_range": {
+        "end": 983,
+        "length": 288,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1m14a_",
+        "comment": "mutant",
+        "description": "1m14 A:",
+        "header": "d.144.1.2 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens)}",
+        "sccs": "d.144.1.2",
+        "sid": "d1m14a_",
+        "sunid": 78367
+      },
+      "domain_range": {
+        "end": 288,
+        "length": 288,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -170.13623297080056,
+      "percent_identity": 37.969676994067235
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 288,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2itpa_",
+        "comment": "automated match to d1m14a_",
+        "description": "2itp A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2itpa_",
+        "sunid": 165685
+      },
+      "domain_range": {
+        "end": 288,
+        "length": 288,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -170.08187830209198,
+      "percent_identity": 37.88778877887789
+    },
+    {
+      "alphafold_range": {
+        "end": 984,
+        "length": 288,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2itqa_",
+        "comment": "automated match to d1m14a_",
+        "description": "2itq A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2itqa_",
+        "sunid": 165686
+      },
+      "domain_range": {
+        "end": 288,
+        "length": 288,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.8282231828054,
+      "percent_identity": 38.01324503311258
+    },
+    {
+      "alphafold_range": {
+        "end": 983,
+        "length": 287,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2j6ma_",
+        "comment": "automated match to d3ikaa_",
+        "description": "2j6m A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2j6ma_",
+        "sunid": 138088
+      },
+      "domain_range": {
+        "end": 287,
+        "length": 287,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.57094441544,
+      "percent_identity": 37.86279683377309
+    },
+    {
+      "alphafold_range": {
+        "end": 983,
+        "length": 287,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5cava_",
+        "comment": "automated match to d4wkqa_",
+        "description": "5cav A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5cava_",
+        "sunid": 278551
+      },
+      "domain_range": {
+        "end": 287,
+        "length": 287,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.57094441544,
+      "percent_identity": 37.86279683377309
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 300,
+        "start": 695
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4i23a_",
+        "comment": "automated match to d1m14a_",
+        "description": "4i23 A:",
+        "header": "d.144.1.7 (A:) automated matches {Homo sapiens [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4i23a_",
+        "sunid": 194125
+      },
+      "domain_range": {
+        "end": 295,
+        "length": 295,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.55644983775034,
+      "percent_identity": 38.57331571994716
+    },
+    {
+      "alphafold_range": {
+        "end": 989,
+        "length": 293,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2itxa_",
+        "comment": "automated match to d1m14a_",
+        "description": "2itx A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2itxa_",
+        "sunid": 137647
+      },
+      "domain_range": {
+        "end": 289,
+        "length": 289,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.45498778916698,
+      "percent_identity": 38.10151615029664
+    },
+    {
+      "alphafold_range": {
+        "end": 1021,
+        "length": 322,
+        "start": 700
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6p1da_",
+        "comment": "automated match to d4zseb_",
+        "description": "6p1d A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6p1da_",
+        "sunid": 378282
+      },
+      "domain_range": {
+        "end": 309,
+        "length": 309,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.45498778916698,
+      "percent_identity": 38.57801184990125
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 302,
+        "start": 700
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4i24b_",
+        "comment": "automated match to d4i24a_",
+        "description": "4i24 B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4i24b_",
+        "sunid": 234764
+      },
+      "domain_range": {
+        "end": 291,
+        "length": 291,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.40425676463576,
+      "percent_identity": 38.30911492734479
+    },
+    {
+      "alphafold_range": {
+        "end": 1019,
+        "length": 321,
+        "start": 699
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6p8qa_",
+        "comment": "automated match to d4zseb_",
+        "description": "6p8q A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6p8qa_",
+        "sunid": 378292
+      },
+      "domain_range": {
+        "end": 309,
+        "length": 309,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.37526760822666,
+      "percent_identity": 38.57801184990125
+    },
+    {
+      "alphafold_range": {
+        "end": 1019,
+        "length": 319,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3w2sa_",
+        "comment": "automated match to d2gs6a_",
+        "description": "3w2s A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3w2sa_",
+        "sunid": 218196
+      },
+      "domain_range": {
+        "end": 307,
+        "length": 307,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.3426548073206,
+      "percent_identity": 38.62887277521424
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 302,
+        "start": 700
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5cnnb_",
+        "comment": "automated match to d4li5a_",
+        "description": "5cnn B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5cnnb_",
+        "sunid": 275375
+      },
+      "domain_range": {
+        "end": 291,
+        "length": 291,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.27018191532989,
+      "percent_identity": 38.30911492734479
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 304,
+        "start": 698
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d6duke_",
+        "comment": "automated match to d4zseb_",
+        "description": "6duk E:",
+        "header": "d.144.1.7 (E:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d6duke_",
+        "sunid": 369858
+      },
+      "domain_range": {
+        "end": 292,
+        "length": 292,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.23756911399508,
+      "percent_identity": 38.46153846153847
+    },
+    {
+      "alphafold_range": {
+        "end": 994,
+        "length": 299,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5em8a_",
+        "comment": "automated match to d1m14a_",
+        "description": "5em8 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5em8a_",
+        "sunid": 280163
+      },
+      "domain_range": {
+        "end": 294,
+        "length": 294,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.21945089121306,
+      "percent_identity": 38.466622604097815
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 306,
+        "start": 696
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4g5ja_",
+        "comment": "automated match to d2gs6a_",
+        "description": "4g5j A:",
+        "header": "d.144.1.7 (A:) automated matches {Homo sapiens [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4g5ja_",
+        "sunid": 194750
+      },
+      "domain_range": {
+        "end": 292,
+        "length": 292,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -169.16147257747483,
+      "percent_identity": 38.49703361898484
+    },
+    {
+      "alphafold_range": {
+        "end": 1020,
+        "length": 324,
+        "start": 697
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5x28a_",
+        "comment": "automated match to d4zseb_",
+        "description": "5x28 A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5x28a_",
+        "sunid": 348464
+      },
+      "domain_range": {
+        "end": 310,
+        "length": 310,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -168.70851700460582,
+      "percent_identity": 38.81578947368421
+    },
+    {
+      "alphafold_range": {
+        "end": 1001,
+        "length": 303,
+        "start": 699
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4zsea_",
+        "comment": "automated match to d3ikaa_",
+        "description": "4zse A:",
+        "header": "d.144.1.7 (A:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4zsea_",
+        "sunid": 318634
+      },
+      "domain_range": {
+        "end": 291,
+        "length": 291,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -168.63604411423626,
+      "percent_identity": 38.354346383543465
+    }
+  ],
+  "structure_hits": [
+    {
+      "alphafold_range": {
+        "end": 505,
+        "length": 166,
+        "start": 340
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3u7ua3",
+        "comment": "automated match to d1n8zc2",
+        "description": "3u7u A:312-477",
+        "header": "c.10.2.0 (A:312-477) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.10.2.0",
+        "sid": "d3u7ua3",
+        "sunid": 250147
+      },
+      "domain_range": {
+        "end": 477,
+        "length": 166,
+        "start": 312
+      },
+      "identity": 43.71,
+      "kind": "structure",
+      "p_value": 0.000001,
+      "rmsd": 0.9,
+      "score": 457.75,
+      "similarity": 59.28,
+      "transform": [
+        [
+          -0.293,
+          -0.508,
+          -0.81,
+          17.238
+        ],
+        [
+          -0.308,
+          0.852,
+          -0.424,
+          70.648
+        ],
+        [
+          0.905,
+          0.125,
+          -0.406,
+          13.441
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 1035,
+        "length": 336,
+        "start": 700
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5x2ab_",
+        "comment": "automated match to d4zseb_",
+        "description": "5x2a B:",
+        "header": "d.144.1.7 (B:) EGF receptor tyrosine kinase, Erbb-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5x2ab_",
+        "sunid": 348603
+      },
+      "domain_range": {
+        "end": 1021,
+        "length": 322,
+        "start": 700
+      },
+      "identity": 79.48,
+      "kind": "structure",
+      "p_value": 0.000001,
+      "rmsd": 3.42,
+      "score": 772.74,
+      "similarity": 80.64,
+      "transform": [
+        [
+          -0.11,
+          -0.891,
+          0.44,
+          -16.366
+        ],
+        [
+          0.729,
+          0.229,
+          0.645,
+          56.638
+        ],
+        [
+          -0.676,
+          0.392,
+          0.625,
+          -16.054
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 979,
+        "length": 287,
+        "start": 693
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t45a_",
+        "comment": null,
+        "description": "1t45 A:",
+        "header": "d.144.1.7 (A:) c-KIT receptor {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d1t45a_",
+        "sunid": 106396
+      },
+      "domain_range": {
+        "end": 877,
+        "length": 319,
+        "start": 559
+      },
+      "identity": 27.59,
+      "kind": "structure",
+      "p_value": 0.000024,
+      "rmsd": 2.41,
+      "score": 645.93,
+      "similarity": 46.39,
+      "transform": [
+        [
+          -0.813,
+          0.553,
+          -0.184,
+          -12.396
+        ],
+        [
+          -0.537,
+          -0.833,
+          -0.132,
+          43.858
+        ],
+        [
+          -0.226,
+          -0.009,
+          0.974,
+          -3.457
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 638,
+        "length": 134,
+        "start": 505
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1nqla4",
+        "comment": "complexed with EGF",
+        "description": "1nql A:481-614",
+        "header": "g.3.9.1 (A:481-614) EGF receptor Cys-rich domains, N-terminal domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.3.9.1",
+        "sid": "d1nqla4",
+        "sunid": 86036
+      },
+      "domain_range": {
+        "end": 614,
+        "length": 134,
+        "start": 481
+      },
+      "identity": 99.25,
+      "kind": "structure",
+      "p_value": 0.000038,
+      "rmsd": 0.67,
+      "score": 380.99,
+      "similarity": 99.25,
+      "transform": [
+        [
+          -0.483,
+          0.091,
+          0.871,
+          24.556
+        ],
+        [
+          0.694,
+          0.646,
+          0.318,
+          -32.807
+        ],
+        [
+          -0.534,
+          0.758,
+          -0.376,
+          5.713
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 974,
+        "length": 268,
+        "start": 707
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2wela_",
+        "comment": "automated match to d1a06a_",
+        "description": "2wel A:",
+        "header": "d.144.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d2wela_",
+        "sunid": 198491
+      },
+      "domain_range": {
+        "end": 266,
+        "length": 268,
+        "start": -1
+      },
+      "identity": 17.45,
+      "kind": "structure",
+      "p_value": 0.000079,
+      "rmsd": 2.41,
+      "score": 551.46,
+      "similarity": 37.09,
+      "transform": [
+        [
+          -0.995,
+          -0.061,
+          -0.074,
+          -1.989
+        ],
+        [
+          -0.057,
+          0.997,
+          -0.055,
+          45.48
+        ],
+        [
+          0.077,
+          -0.05,
+          -0.996,
+          2.498
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 974,
+        "length": 269,
+        "start": 706
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4wsqa_",
+        "comment": "automated match to d5ikwa_",
+        "description": "4wsq A:",
+        "header": "d.144.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d4wsqa_",
+        "sunid": 345493
+      },
+      "domain_range": {
+        "end": 317,
+        "length": 278,
+        "start": 40
+      },
+      "identity": 14.29,
+      "kind": "structure",
+      "p_value": 0.00009,
+      "rmsd": 2.14,
+      "score": 519.18,
+      "similarity": 32.99,
+      "transform": [
+        [
+          -0.865,
+          -0.469,
+          0.18,
+          -13.501
+        ],
+        [
+          0.455,
+          -0.883,
+          -0.115,
+          11.356
+        ],
+        [
+          0.213,
+          -0.017,
+          0.977,
+          58.099
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 975,
+        "length": 309,
+        "start": 667
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4qd6a1",
+        "comment": "automated match to d4l7sa_",
+        "description": "4qd6 A:357-619",
+        "header": "d.144.1.7 (A:357-619) Tyrosine-protein kinase Itk/Tsk {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d4qd6a1",
+        "sunid": 268678
+      },
+      "domain_range": {
+        "end": 619,
+        "length": 262,
+        "start": 358
+      },
+      "identity": 24.92,
+      "kind": "structure",
+      "p_value": 0.000099,
+      "rmsd": 1.37,
+      "score": 580.76,
+      "similarity": 41.01,
+      "transform": [
+        [
+          -0.939,
+          -0.197,
+          -0.281,
+          -13.276
+        ],
+        [
+          0.245,
+          0.191,
+          -0.951,
+          46.605
+        ],
+        [
+          0.241,
+          -0.962,
+          -0.132,
+          33.136
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 975,
+        "length": 302,
+        "start": 674
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1iasa_",
+        "comment": "complexed with so4",
+        "description": "1ias A:",
+        "header": "d.144.1.7 (A:) Type I TGF-beta receptor R4 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d1iasa_",
+        "sunid": 66100
+      },
+      "domain_range": {
+        "end": 499,
+        "length": 327,
+        "start": 173
+      },
+      "identity": 15.27,
+      "kind": "structure",
+      "p_value": 0.0002,
+      "rmsd": 3.36,
+      "score": 517.66,
+      "similarity": 31.99,
+      "transform": [
+        [
+          0.382,
+          0.551,
+          -0.742,
+          4.775
+        ],
+        [
+          0.635,
+          -0.74,
+          -0.223,
+          23.31
+        ],
+        [
+          -0.671,
+          -0.386,
+          -0.633,
+          127.461
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 975,
+        "length": 268,
+        "start": 708
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4yomb1",
+        "comment": "automated match to d1zmub_",
+        "description": "4yom B:13-342",
+        "header": "d.144.1.0 (B:13-342) automated matches {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "d.144.1.0",
+        "sid": "d4yomb1",
+        "sunid": 279987
+      },
+      "domain_range": {
+        "end": 276,
+        "length": 261,
+        "start": 16
+      },
+      "identity": 19.56,
+      "kind": "structure",
+      "p_value": 0.000322,
+      "rmsd": 3.03,
+      "score": 527.5,
+      "similarity": 38.75,
+      "transform": [
+        [
+          0.212,
+          -0.738,
+          -0.641,
+          -8.887
+        ],
+        [
+          0.88,
+          -0.141,
+          0.453,
+          47.02
+        ],
+        [
+          -0.424,
+          -0.661,
+          0.619,
+          17.682
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 1004,
+        "length": 301,
+        "start": 704
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4otda_",
+        "comment": "automated match to d4otga_",
+        "description": "4otd A:",
+        "header": "d.144.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d4otda_",
+        "sunid": 267130
+      },
+      "domain_range": {
+        "end": 907,
+        "length": 295,
+        "start": 613
+      },
+      "identity": 20.19,
+      "kind": "structure",
+      "p_value": 0.000337,
+      "rmsd": 2.71,
+      "score": 498.64,
+      "similarity": 36.86,
+      "transform": [
+        [
+          -0.635,
+          -0.069,
+          0.769,
+          -21.218
+        ],
+        [
+          -0.489,
+          0.807,
+          -0.331,
+          13.824
+        ],
+        [
+          -0.598,
+          -0.586,
+          -0.546,
+          -3.136
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 971,
+        "length": 266,
+        "start": 706
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5we8b_",
+        "comment": "automated match to d4pwna_",
+        "description": "5we8 B:",
+        "header": "d.144.1.7 (B:) Protein kinase wnk1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d5we8b_",
+        "sunid": 338023
+      },
+      "domain_range": {
+        "end": 480,
+        "length": 266,
+        "start": 215
+      },
+      "identity": 23.36,
+      "kind": "structure",
+      "p_value": 0.000343,
+      "rmsd": 2.42,
+      "score": 488.26,
+      "similarity": 41.24,
+      "transform": [
+        [
+          -0.868,
+          0.085,
+          -0.489,
+          38.035
+        ],
+        [
+          0.421,
+          -0.397,
+          -0.816,
+          30.013
+        ],
+        [
+          -0.263,
+          -0.914,
+          0.308,
+          22.031
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 990,
+        "length": 283,
+        "start": 708
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ckja_",
+        "comment": "complexed with wo4; mutant",
+        "description": "1ckj A:",
+        "header": "d.144.1.7 (A:) Casein kinase-1, CK1 {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "d.144.1.7",
+        "sid": "d1ckja_",
+        "sunid": 41662
+      },
+      "domain_range": {
+        "end": 298,
+        "length": 291,
+        "start": 8
+      },
+      "identity": 16.33,
+      "kind": "structure",
+      "p_value": 0.000428,
+      "rmsd": 2.81,
+      "score": 485.94,
+      "similarity": 31,
+      "transform": [
+        [
+          0.482,
+          0.646,
+          0.592,
+          -91.046
+        ],
+        [
+          0.532,
+          0.321,
+          -0.783,
+          69.247
+        ],
+        [
+          -0.696,
+          0.692,
+          -0.189,
+          55.243
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 996,
+        "length": 290,
+        "start": 707
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5b2la_",
+        "comment": "automated match to d2dyla_",
+        "description": "5b2l A:",
+        "header": "d.144.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d5b2la_",
+        "sunid": 312859
+      },
+      "domain_range": {
+        "end": 415,
+        "length": 285,
+        "start": 131
+      },
+      "identity": 21.52,
+      "kind": "structure",
+      "p_value": 0.000522,
+      "rmsd": 3.72,
+      "score": 487.15,
+      "similarity": 40.07,
+      "transform": [
+        [
+          -0.793,
+          -0.046,
+          0.608,
+          -42.566
+        ],
+        [
+          0.111,
+          0.97,
+          0.218,
+          35.427
+        ],
+        [
+          -0.599,
+          0.24,
+          -0.764,
+          13.012
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 1018,
+        "length": 314,
+        "start": 705
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3iw4c_",
+        "comment": "automated match to d2i0ea_",
+        "description": "3iw4 C:",
+        "header": "d.144.1.7 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3iw4c_",
+        "sunid": 196517
+      },
+      "domain_range": {
+        "end": 658,
+        "length": 327,
+        "start": 332
+      },
+      "identity": 18.05,
+      "kind": "structure",
+      "p_value": 0.000548,
+      "rmsd": 2.61,
+      "score": 476.83,
+      "similarity": 35.8,
+      "transform": [
+        [
+          0.782,
+          0.58,
+          -0.23,
+          -37.59
+        ],
+        [
+          -0.624,
+          0.722,
+          -0.299,
+          -29.25
+        ],
+        [
+          -0.008,
+          0.377,
+          0.926,
+          -25.658
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 973,
+        "length": 266,
+        "start": 708
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5m08b_",
+        "comment": "automated match to d1o6ya_",
+        "description": "5m08 B:",
+        "header": "d.144.1.0 (B:) automated matches {Mycobacterium tuberculosis [TaxId: 83332]}",
+        "sccs": "d.144.1.0",
+        "sid": "d5m08b_",
+        "sunid": 328085
+      },
+      "domain_range": {
+        "end": 256,
+        "length": 249,
+        "start": 8
+      },
+      "identity": 14.96,
+      "kind": "structure",
+      "p_value": 0.000622,
+      "rmsd": 2.96,
+      "score": 478.43,
+      "similarity": 31.75,
+      "transform": [
+        [
+          0.214,
+          -0.977,
+          0.01,
+          10.708
+        ],
+        [
+          0.881,
+          0.198,
+          0.43,
+          45.639
+        ],
+        [
+          -0.422,
+          -0.083,
+          0.903,
+          7.702
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 972,
+        "length": 271,
+        "start": 702
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2nrub_",
+        "comment": "automated match to d4y73b_",
+        "description": "2nru B:",
+        "header": "d.144.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d2nrub_",
+        "sunid": 304228
+      },
+      "domain_range": {
+        "end": 458,
+        "length": 296,
+        "start": 163
+      },
+      "identity": 20.13,
+      "kind": "structure",
+      "p_value": 0.000772,
+      "rmsd": 2.98,
+      "score": 472.59,
+      "similarity": 34.65,
+      "transform": [
+        [
+          -0.508,
+          -0.754,
+          0.417,
+          -43.989
+        ],
+        [
+          0.257,
+          -0.595,
+          -0.762,
+          50.086
+        ],
+        [
+          0.822,
+          -0.28,
+          0.496,
+          -10.585
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 974,
+        "length": 283,
+        "start": 692
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3amya_",
+        "comment": "automated match to d1jwha_",
+        "description": "3amy A:",
+        "header": "d.144.1.7 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3amya_",
+        "sunid": 172250
+      },
+      "domain_range": {
+        "end": 328,
+        "length": 313,
+        "start": 16
+      },
+      "identity": 12.31,
+      "kind": "structure",
+      "p_value": 0.00101,
+      "rmsd": 2.85,
+      "score": 450.56,
+      "similarity": 31.69,
+      "transform": [
+        [
+          -0.056,
+          0.95,
+          0.306,
+          -18.32
+        ],
+        [
+          0.248,
+          0.31,
+          -0.918,
+          37.925
+        ],
+        [
+          -0.967,
+          0.025,
+          -0.253,
+          23.078
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 973,
+        "length": 267,
+        "start": 707
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4o2za1",
+        "comment": "automated match to d3coia_",
+        "description": "4o2z A:19-377",
+        "header": "d.144.1.0 (A:19-377) automated matches {Leishmania donovani [TaxId: 981087]}",
+        "sccs": "d.144.1.0",
+        "sid": "d4o2za1",
+        "sunid": 236275
+      },
+      "domain_range": {
+        "end": 337,
+        "length": 296,
+        "start": 42
+      },
+      "identity": 17.05,
+      "kind": "structure",
+      "p_value": 0.00119,
+      "rmsd": 2.57,
+      "score": 465.69,
+      "similarity": 34.43,
+      "transform": [
+        [
+          -0.381,
+          0.231,
+          -0.895,
+          -38.412
+        ],
+        [
+          0.749,
+          0.644,
+          -0.153,
+          42.975
+        ],
+        [
+          0.541,
+          -0.729,
+          -0.419,
+          1.349
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 974,
+        "length": 266,
+        "start": 709
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4bbma1",
+        "comment": "automated match to d3blra_",
+        "description": "4bbm A:1-308",
+        "header": "d.144.1.0 (A:1-308) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d4bbma1",
+        "sunid": 219406
+      },
+      "domain_range": {
+        "end": 292,
+        "length": 292,
+        "start": 1
+      },
+      "identity": 18.15,
+      "kind": "structure",
+      "p_value": 0.00133,
+      "rmsd": 3.53,
+      "score": 451.02,
+      "similarity": 33,
+      "transform": [
+        [
+          -0.342,
+          -0.651,
+          -0.678,
+          -54.064
+        ],
+        [
+          0.938,
+          -0.286,
+          -0.198,
+          31.636
+        ],
+        [
+          -0.066,
+          -0.703,
+          0.708,
+          42.556
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 1022,
+        "length": 316,
+        "start": 707
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4a9ta1",
+        "comment": "automated match to d2ycfa_",
+        "description": "4a9t A:210-513",
+        "header": "d.144.1.0 (A:210-513) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d4a9ta1",
+        "sunid": 250976
+      },
+      "domain_range": {
+        "end": 510,
+        "length": 296,
+        "start": 215
+      },
+      "identity": 17.7,
+      "kind": "structure",
+      "p_value": 0.0014,
+      "rmsd": 3.95,
+      "score": 443.77,
+      "similarity": 32.3,
+      "transform": [
+        [
+          0.255,
+          0.246,
+          -0.935,
+          -7.359
+        ],
+        [
+          -0.955,
+          -0.089,
+          -0.283,
+          38.936
+        ],
+        [
+          -0.152,
+          0.965,
+          0.212,
+          54.787
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 997,
+        "length": 297,
+        "start": 701
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4u43b_",
+        "comment": "automated match to d4lg4f_",
+        "description": "4u43 B:",
+        "header": "d.144.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d4u43b_",
+        "sunid": 263950
+      },
+      "domain_range": {
+        "end": 311,
+        "length": 298,
+        "start": 14
+      },
+      "identity": 17.57,
+      "kind": "structure",
+      "p_value": 0.00148,
+      "rmsd": 3.09,
+      "score": 424.09,
+      "similarity": 36.1,
+      "transform": [
+        [
+          -0.631,
+          0.772,
+          -0.077,
+          -8.211
+        ],
+        [
+          0.549,
+          0.375,
+          -0.747,
+          21.927
+        ],
+        [
+          -0.548,
+          -0.514,
+          -0.66,
+          19.627
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 974,
+        "length": 268,
+        "start": 707
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1q8zb_",
+        "comment": "complexed with edo, moh, so4",
+        "description": "1q8z B:",
+        "header": "d.144.1.7 (B:) Sky1p {Baker's yeast (Saccharomyces cerevisiae) [TaxId: 4932]}",
+        "sccs": "d.144.1.7",
+        "sid": "d1q8zb_",
+        "sunid": 96237
+      },
+      "domain_range": {
+        "end": 478,
+        "length": 326,
+        "start": 153
+      },
+      "identity": 13.61,
+      "kind": "structure",
+      "p_value": 0.00205,
+      "rmsd": 3.19,
+      "score": 431.48,
+      "similarity": 28.7,
+      "transform": [
+        [
+          0.338,
+          -0.311,
+          -0.888,
+          31.63
+        ],
+        [
+          -0.775,
+          0.444,
+          -0.45,
+          112.791
+        ],
+        [
+          0.534,
+          0.84,
+          -0.091,
+          26.251
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 973,
+        "length": 267,
+        "start": 707
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2a19c1",
+        "comment": "automated match to d2java1",
+        "description": "2a19 C:258-541",
+        "header": "d.144.1.0 (C:258-541) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d2a19c1",
+        "sunid": 162647
+      },
+      "domain_range": {
+        "end": 510,
+        "length": 249,
+        "start": 262
+      },
+      "identity": 16.61,
+      "kind": "structure",
+      "p_value": 0.00228,
+      "rmsd": 1.99,
+      "score": 396.74,
+      "similarity": 31.77,
+      "transform": [
+        [
+          0.455,
+          0.826,
+          0.333,
+          -32.076
+        ],
+        [
+          0.169,
+          -0.447,
+          0.878,
+          31.523
+        ],
+        [
+          0.875,
+          -0.343,
+          -0.343,
+          -32.049
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 623,
+        "length": 119,
+        "start": 505
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3be1a4",
+        "comment": "automated match to d1n8yc4",
+        "description": "3be1 A:488-607",
+        "header": "g.3.9.0 (A:488-607) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.3.9.0",
+        "sid": "d3be1a4",
+        "sunid": 239160
+      },
+      "domain_range": {
+        "end": 597,
+        "length": 110,
+        "start": 488
+      },
+      "identity": 44.54,
+      "kind": "structure",
+      "p_value": 0.00256,
+      "rmsd": 0.91,
+      "score": 302.51,
+      "similarity": 57.14,
+      "transform": [
+        [
+          -0.575,
+          -0.734,
+          -0.362,
+          19.307
+        ],
+        [
+          -0.785,
+          0.62,
+          -0.01,
+          43.88
+        ],
+        [
+          0.232,
+          0.278,
+          -0.932,
+          46.087
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 337,
+        "length": 156,
+        "start": 182
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3be1a2",
+        "comment": "automated match to d1n8yc3",
+        "description": "3be1 A:165-321",
+        "header": "g.3.9.0 (A:165-321) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.3.9.0",
+        "sid": "d3be1a2",
+        "sunid": 239158
+      },
+      "domain_range": {
+        "end": 321,
+        "length": 157,
+        "start": 165
+      },
+      "identity": 44.94,
+      "kind": "structure",
+      "p_value": 0.00269,
+      "rmsd": 2.42,
+      "score": 405.24,
+      "similarity": 58.86,
+      "transform": [
+        [
+          0.766,
+          -0.026,
+          -0.642,
+          25.66
+        ],
+        [
+          0.529,
+          -0.543,
+          0.653,
+          -48.703
+        ],
+        [
+          -0.366,
+          -0.839,
+          -0.402,
+          1.859
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 973,
+        "length": 267,
+        "start": 707
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3w2ce_",
+        "comment": "automated match to d1ol5a_",
+        "description": "3w2c E:",
+        "header": "d.144.1.7 (E:) Aurora-related kinase 1 (aurora-2) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d3w2ce_",
+        "sunid": 236654
+      },
+      "domain_range": {
+        "end": 375,
+        "length": 248,
+        "start": 128
+      },
+      "identity": 15.67,
+      "kind": "structure",
+      "p_value": 0.00282,
+      "rmsd": 2.23,
+      "score": 370.42,
+      "similarity": 31.72,
+      "transform": [
+        [
+          -0.133,
+          0.773,
+          -0.62,
+          33.068
+        ],
+        [
+          0.988,
+          0.057,
+          -0.142,
+          28.16
+        ],
+        [
+          -0.074,
+          -0.632,
+          -0.771,
+          25.663
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 933,
+        "length": 228,
+        "start": 706
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5ei8a1",
+        "comment": "automated match to d5d9ka_",
+        "description": "5ei8 A:519-753",
+        "header": "d.144.1.0 (A:519-753) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d5ei8a1",
+        "sunid": 316601
+      },
+      "domain_range": {
+        "end": 753,
+        "length": 235,
+        "start": 519
+      },
+      "identity": 16.74,
+      "kind": "structure",
+      "p_value": 0.00319,
+      "rmsd": 2.63,
+      "score": 406.91,
+      "similarity": 36.48,
+      "transform": [
+        [
+          0.547,
+          -0.089,
+          -0.832,
+          -36.844
+        ],
+        [
+          0.13,
+          -0.973,
+          0.189,
+          0.316
+        ],
+        [
+          -0.827,
+          -0.211,
+          -0.521,
+          -5.014
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 976,
+        "length": 272,
+        "start": 705
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5ukfa_",
+        "comment": "automated match to d3op5a_",
+        "description": "5ukf A:",
+        "header": "d.144.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d5ukfa_",
+        "sunid": 332498
+      },
+      "domain_range": {
+        "end": 332,
+        "length": 302,
+        "start": 31
+      },
+      "identity": 11.61,
+      "kind": "structure",
+      "p_value": 0.00372,
+      "rmsd": 3.48,
+      "score": 396.61,
+      "similarity": 25.81,
+      "transform": [
+        [
+          -0.138,
+          0.888,
+          -0.439,
+          26.374
+        ],
+        [
+          0.682,
+          -0.237,
+          -0.692,
+          37.089
+        ],
+        [
+          -0.718,
+          -0.395,
+          -0.573,
+          106.124
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 186,
+        "length": 160,
+        "start": 27
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1m6bb1",
+        "comment": "L1 and L2 domains",
+        "description": "1m6b B:6-165",
+        "header": "c.10.2.5 (B:6-165) Receptor protein-tyrosine kinase Erbb-3 extracellular domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.10.2.5",
+        "sid": "d1m6bb1",
+        "sunid": 74525
+      },
+      "domain_range": {
+        "end": 165,
+        "length": 160,
+        "start": 6
+      },
+      "identity": 34.78,
+      "kind": "structure",
+      "p_value": 0.00383,
+      "rmsd": 1.25,
+      "score": 342.64,
+      "similarity": 50.93,
+      "transform": [
+        [
+          0.559,
+          -0.236,
+          0.795,
+          -58.79
+        ],
+        [
+          0.826,
+          0.082,
+          -0.557,
+          -32.135
+        ],
+        [
+          0.067,
+          0.968,
+          0.241,
+          -23.983
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 992,
+        "length": 287,
+        "start": 706
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3enmb_",
+        "comment": "automated match to d3mbla_",
+        "description": "3enm B:",
+        "header": "d.144.1.0 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d3enmb_",
+        "sunid": 209562
+      },
+      "domain_range": {
+        "end": 330,
+        "length": 282,
+        "start": 49
+      },
+      "identity": 15.93,
+      "kind": "structure",
+      "p_value": 0.0043,
+      "rmsd": 3.99,
+      "score": 393.24,
+      "similarity": 28.47,
+      "transform": [
+        [
+          0.839,
+          -0.242,
+          -0.488,
+          23.122
+        ],
+        [
+          -0.54,
+          -0.483,
+          -0.689,
+          77.641
+        ],
+        [
+          -0.068,
+          0.841,
+          -0.536,
+          -30.747
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 338,
+        "length": 156,
+        "start": 183
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1s78a3",
+        "comment": "complexed with nag",
+        "description": "1s78 A:166-322",
+        "header": "g.3.9.1 (A:166-322) Protooncoprotein Her2 extracellular domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.3.9.1",
+        "sid": "d1s78a3",
+        "sunid": 98618
+      },
+      "domain_range": {
+        "end": 322,
+        "length": 157,
+        "start": 166
+      },
+      "identity": 43.67,
+      "kind": "structure",
+      "p_value": 0.00731,
+      "rmsd": 3.01,
+      "score": 401.78,
+      "similarity": 55.7,
+      "transform": [
+        [
+          -0.171,
+          -0.168,
+          -0.971,
+          214.885
+        ],
+        [
+          0.985,
+          -0.022,
+          -0.17,
+          -33.191
+        ],
+        [
+          0.008,
+          -0.985,
+          0.17,
+          41.371
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 605,
+        "length": 101,
+        "start": 505
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1m6ba4",
+        "comment": "complexed with nag, so4",
+        "description": "1m6b A:480-580",
+        "header": "g.3.9.1 (A:480-580) Receptor protein-tyrosine kinase Erbb-3 Cys-rich domains {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.3.9.1",
+        "sid": "d1m6ba4",
+        "sunid": 74524
+      },
+      "domain_range": {
+        "end": 580,
+        "length": 101,
+        "start": 480
+      },
+      "identity": 58.42,
+      "kind": "structure",
+      "p_value": 0.0079,
+      "rmsd": 0.91,
+      "score": 281.94,
+      "similarity": 63.37,
+      "transform": [
+        [
+          -0.973,
+          -0.127,
+          0.195,
+          -31.598
+        ],
+        [
+          -0.204,
+          0.869,
+          -0.451,
+          -21.515
+        ],
+        [
+          -0.112,
+          -0.479,
+          -0.871,
+          49.251
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 971,
+        "length": 218,
+        "start": 754
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2y4pd_",
+        "comment": "automated match to d1ig1a_",
+        "description": "2y4p D:",
+        "header": "d.144.1.7 (D:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.7",
+        "sid": "d2y4pd_",
+        "sunid": 170602
+      },
+      "domain_range": {
+        "end": 276,
+        "length": 221,
+        "start": 56
+      },
+      "identity": 16.44,
+      "kind": "structure",
+      "p_value": 0.00915,
+      "rmsd": 2.07,
+      "score": 361.37,
+      "similarity": 35.11,
+      "transform": [
+        [
+          0.924,
+          -0.126,
+          0.362,
+          -48.618
+        ],
+        [
+          -0.053,
+          0.893,
+          0.446,
+          -44.423
+        ],
+        [
+          -0.38,
+          -0.431,
+          0.818,
+          5.366
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 974,
+        "length": 216,
+        "start": 759
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2exea_",
+        "comment": "automated match to d4bgqa_",
+        "description": "2exe A:",
+        "header": "d.144.1.0 (A:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d2exea_",
+        "sunid": 264285
+      },
+      "domain_range": {
+        "end": 476,
+        "length": 279,
+        "start": 198
+      },
+      "identity": 12.36,
+      "kind": "structure",
+      "p_value": 0.0098,
+      "rmsd": 3.91,
+      "score": 356.75,
+      "similarity": 25.82,
+      "transform": [
+        [
+          0.748,
+          0.605,
+          0.273,
+          -29.123
+        ],
+        [
+          -0.643,
+          0.56,
+          0.523,
+          2.485
+        ],
+        [
+          0.163,
+          -0.567,
+          0.808,
+          12.72
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 969,
+        "length": 248,
+        "start": 722
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5j0ab1",
+        "comment": "automated match to d4p2ka_",
+        "description": "5j0a B:19-319",
+        "header": "d.144.1.0 (B:19-319) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d5j0ab1",
+        "sunid": 322249
+      },
+      "domain_range": {
+        "end": 319,
+        "length": 250,
+        "start": 70
+      },
+      "identity": 16.49,
+      "kind": "structure",
+      "p_value": 0.0129,
+      "rmsd": 3.13,
+      "score": 353.48,
+      "similarity": 34.77,
+      "transform": [
+        [
+          0.822,
+          0.411,
+          0.395,
+          2.034
+        ],
+        [
+          0.42,
+          -0.905,
+          0.068,
+          58.031
+        ],
+        [
+          0.385,
+          0.11,
+          -0.916,
+          22.054
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 998,
+        "length": 289,
+        "start": 710
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3alnc_",
+        "comment": "automated match to d3mbla_",
+        "description": "3aln C:",
+        "header": "d.144.1.0 (C:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.144.1.0",
+        "sid": "d3alnc_",
+        "sunid": 208245
+      },
+      "domain_range": {
+        "end": 389,
+        "length": 290,
+        "start": 100
+      },
+      "identity": 13.09,
+      "kind": "structure",
+      "p_value": 0.0332,
+      "rmsd": 2.81,
+      "score": 310.28,
+      "similarity": 24.5,
+      "transform": [
+        [
+          -0.627,
+          -0.478,
+          -0.615,
+          -74.098
+        ],
+        [
+          -0.769,
+          0.504,
+          0.392,
+          58.836
+        ],
+        [
+          0.123,
+          0.72,
+          -0.684,
+          -34.378
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-P00533-F1",
+    "kind": "alphafold",
+    "name": "AF-P00533-F1",
+    "uniprot_accession": "P00533",
+    "description": "Epidermal growth factor receptor",
+    "global_plddt": 76.52,
+    "sequence_length": 1210
+  }
+}

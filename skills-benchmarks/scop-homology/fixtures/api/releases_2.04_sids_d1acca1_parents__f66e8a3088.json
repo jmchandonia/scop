@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.04",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.04",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/56835",
+      "canonical_url": "/?sunid=56835&ver=2.04",
+      "description": "Membrane and cell surface proteins and peptides",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.04",
+      "sccs": "f",
+      "sid": null,
+      "sunid": 56835
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254103",
+      "canonical_url": "/?sunid=254103&ver=2.04",
+      "description": "Anthrax protective antigen C-terminal-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/56835",
+        "sccs": "f",
+        "sid": null,
+        "sunid": 56835
+      },
+      "release": "2.04",
+      "sccs": "f.60",
+      "sid": null,
+      "sunid": 254103
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254122",
+      "canonical_url": "/?sunid=254122&ver=2.04",
+      "description": "Anthrax protective antigen C-terminal-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254103",
+        "sccs": "f.60",
+        "sid": null,
+        "sunid": 254103
+      },
+      "release": "2.04",
+      "sccs": "f.60.1",
+      "sid": null,
+      "sunid": 254122
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254146",
+      "canonical_url": "/?sunid=254146&ver=2.04",
+      "description": "Anthrax protective antigen C-terminal-like",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254122",
+        "sccs": "f.60.1",
+        "sid": null,
+        "sunid": 254122
+      },
+      "release": "2.04",
+      "sccs": "f.60.1.1",
+      "sid": null,
+      "sunid": 254146
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254333",
+      "canonical_url": "/?sunid=254333&ver=2.04",
+      "description": "Anthrax protective antigen C-terminal-like",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254146",
+        "sccs": "f.60.1.1",
+        "sid": null,
+        "sunid": 254146
+      },
+      "release": "2.04",
+      "sccs": "f.60.1.1",
+      "sid": null,
+      "sunid": 254333
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254762",
+      "canonical_url": "/?sunid=254762&ver=2.04",
+      "description": "Anthrax bacillus (Bacillus anthracis) [TaxId: 1392]",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254333",
+        "sccs": "f.60.1.1",
+        "sid": null,
+        "sunid": 254333
+      },
+      "release": "2.04",
+      "sccs": "f.60.1.1",
+      "sid": null,
+      "sunid": 254762
+    }
+  ],
+  "release": "2.04",
+  "sunid": 238521
+}

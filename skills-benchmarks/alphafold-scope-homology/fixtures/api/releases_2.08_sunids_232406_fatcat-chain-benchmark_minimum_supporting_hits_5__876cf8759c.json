@@ -1,0 +1,48 @@
+{
+  "applicable": true,
+  "available_minimum_supporting_hits": [],
+  "benchmark": null,
+  "classification_level": "family",
+  "method": {
+    "ambiguous_assignments_count_as_non_matches": true,
+    "assignment_ambiguity_margin": 0.05,
+    "benchmark_version": 3,
+    "default_minimum_supporting_hits": 2,
+    "interpretation": "Benchmark classification consistency for filtered chain-to-domain FATCAT alignments; not homology evidence or a probability that a current hit is correct.",
+    "length_match_definition": "min(alignment_length, component_length) / max(alignment_length, component_length)",
+    "maximum_fatcat_p_value": 0.0001,
+    "minimum_length_match": 0.8,
+    "representative_chain_sequence_identity_percent": 90,
+    "same_pdb_chain_hits_excluded": true,
+    "source_release_id": 19,
+    "support_threshold_interpretation": "Minimum number of classification-consistent supporting hits required when constructing each benchmark case.",
+    "supported_minimum_supporting_hits": [
+      2,
+      3,
+      5
+    ]
+  },
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/232406",
+    "canonical_url": "/?sunid=232406&ver=2.08",
+    "description": "automated matches",
+    "level": {
+      "code": "fa",
+      "name": "Family",
+      "plural": "Families"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/57184",
+      "sccs": "g.3.9",
+      "sid": null,
+      "sunid": 57184
+    },
+    "release": "2.08",
+    "sccs": "g.3.9.0",
+    "sid": null,
+    "sunid": 232406
+  },
+  "release": "2.08",
+  "requested_minimum_supporting_hits": 5,
+  "status": "no_observations"
+}

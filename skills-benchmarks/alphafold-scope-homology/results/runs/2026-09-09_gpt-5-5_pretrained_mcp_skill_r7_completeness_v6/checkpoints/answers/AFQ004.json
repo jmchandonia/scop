@@ -1,0 +1,258 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P00533-F1/hits?limit=100"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d1m6bb1",
+            "https://scop.berkeley.edu/sunid=52058&ver=2.08"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d1s78a3",
+            "https://scop.berkeley.edu/sunid=57184&ver=2.08"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d3u7ua3",
+            "https://scop.berkeley.edu/sunid=52058&ver=2.08"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d1nqla4",
+            "https://scop.berkeley.edu/sunid=57184&ver=2.08"
+          ]
+        },
+        {
+          "id": "E6",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P00533-F1"
+          ]
+        },
+        {
+          "id": "E7",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=seq&hit=d2jiub_",
+            "https://scop.berkeley.edu/sunid=88854&ver=2.08"
+          ]
+        },
+        {
+          "id": "E8",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d5x2ab_",
+            "https://scop.berkeley.edu/sunid=56112&ver=2.08"
+          ]
+        },
+        {
+          "id": "E9",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P00533-F1"
+          ]
+        },
+        {
+          "id": "E10",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/52058/fatcat-chain-benchmark?minimum_supporting_hits=2",
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/57184/fatcat-chain-benchmark?minimum_supporting_hits=2",
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/88854/fatcat-chain-benchmark?minimum_supporting_hits=5"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P00533-F1",
+      "question_id": "AFQ004",
+      "question_sha256": "06e0db63a05a8f99bdb989d8e63f9f22566f7f379ddd24d94f23248bae5eede7",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [
+      [
+        "2.08",
+        2,
+        2
+      ],
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "observed_benchmarks": [
+      [
+        "2.08",
+        52058,
+        2
+      ],
+      [
+        "2.08",
+        57184,
+        2
+      ],
+      [
+        "2.08",
+        88854,
+        5
+      ]
+    ],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P00533-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [
+      [
+        "2.08",
+        2,
+        2
+      ],
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "required_benchmarks": [
+      [
+        "2.08",
+        52058,
+        2
+      ],
+      [
+        "2.08",
+        56112,
+        5
+      ],
+      [
+        "2.08",
+        57184,
+        2
+      ]
+    ],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P00533-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1m6bb1"
+      ],
+      [
+        "2.08",
+        "d1nqla4"
+      ],
+      [
+        "2.08",
+        "d1s78a3"
+      ],
+      [
+        "2.08",
+        "d2jiub_"
+      ],
+      [
+        "2.08",
+        "d3u7ua3"
+      ],
+      [
+        "2.08",
+        "d5x2ab_"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 142.655,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 152576,
+      "input_tokens": 185143,
+      "output_tokens": 6853,
+      "reasoning_output_tokens": 1793
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**Conclusion**\nAF-P00533-F1, UniProt P00533, release 2.08, has evidence consistent with five SCOPe-like regional signals: approximately 27-186 and 340-505 favor L domain-like superfamily c.10.2; approximately 182-338 and 505-638 favor Growth factor receptor domain superfamily g.3.9; and approximately 667/693-1035 supports a strong chance of a Protein kinases, catalytic subunit family d.144.1.7 relationship. Boundaries are approximate; the 182-186 and 505 boundary contacts overlap between adjacent extracellular-region envelopes, and the kinase envelope includes lower-confidence terminal/internal stretches.\n\n**What Can Be Said At Each Level**\nRegion approx. 27-186: Function: target function is not established from this SCOPe-like hit; the reference comments mention L1/L2 and ligands, but those do not transfer to the target (E2, E6). Family: L domain c.10.2.5 is a candidate from one structure-only hit, not a family-level conclusion (E2). Superfamily: evidence favors L domain-like c.10.2, SUNID 52058, as the reported level (E2, E6). Fold: compatible with Leucine-rich repeat/LRR c.10, SUNID 52046, but the stronger reported interpretation is superfamily, with FATCAT limitations (E2, E6).\n\nRegion approx. 182-338: Function: not established; the reference annotation only notes NAG for d1s78a3 (E3). Family: Growth factor receptor domain g.3.9.1 is a candidate from structure-only evidence, but not promoted to family-level target evidence (E3). Superfamily: evidence favors Growth factor receptor domain g.3.9, SUNID 57184, while calibration is sparse and the current hit is outside benchmark filters (E3, E6). Fold: compatible with Knottins g.3, SUNID 57015, but not a definitive fold/domain boundary claim (E3).\n\nRegion approx. 340-505: Function: not established; d3u7ua3 is an automated match with NAG annotation only for the reference (E4). Family: automated matches c.10.2.0 are not family-discriminating for the target (E4). Superfamily: evidence favors L domain-like c.10.2, SUNID 52058, as the reported level (E4, E6). Fold: compatible with LRR c.10, SUNID 52046 (E4).\n\nRegion approx. 505-638: Function: not established; d1nqla4 is annotated as complexed with EGF/NAG, which is reference context only (E5). Family: Growth factor receptor domain g.3.9.1 is a candidate from structure-only evidence, but not the retained relationship level (E5). Superfamily: evidence favors Growth factor receptor domain g.3.9, SUNID 57184, with sparse calibration and uncertain current-hit benchmark applicability (E5, E6). Fold: compatible with Knottins g.3, SUNID 57015 (E5).\n\nRegion approx. 667/693-1035: Function: no exact target function, ligand state, or catalytic state is established from SCOPe-like evidence (E7). Family: sequence and structure converge on Protein kinases, catalytic subunit d.144.1.7, SUNID 88854; the sequence stream is strong, but representative comments are automated/ligand-contextual, so this remains a strong evidence hypothesis rather than an official classification (E7, E8). Superfamily: Protein kinase-like d.144.1, SUNID 56112, is also supported by both selected kinase representatives (E7). Fold: compatible with Protein kinase-like d.144, SUNID 56111; this is not a separate final homology determination (E7).\n\n**Evidence Considered**\n- **E1** \u2014 The compact hit search for AF-P00533-F1 reported model length 1210, UniProt P00533, global pLDDT 76.52, stored BLAST status available with 10105 stored rows, 100 sequence rows condensed to 2 returned sequence groups, and 36 structure rows condensed to 8 returned structure groups. This supports a multidomain assessment rather than a single global hit. Source: [model hits](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P00533-F1/hits?limit=100)\n- **E2** \u2014 For approx. 27-186, FATCAT rank 29 hit d1m6bb1 aligns 160 residues, 160/1210 = 13.22% whole-model coverage, P=0.00383, score 342.64, RMSD 1.25, identity 34.78%, to L domain c.10.2.5 under L domain-like c.10.2. The representative lineage supports reporting the c.10.2 superfamily signal, but the P-value is outside the benchmark filter. Source: [d1m6bb1 structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d1m6bb1); [c.10.2 node](https://scop.berkeley.edu/sunid=52058&ver=2.08)\n- **E3** \u2014 For approx. 182-338, the selected non-automated structure representative d1s78a3 aligns 156 residues at rank 31, 156/1210 = 12.89% whole-model coverage, P=0.00731, score 401.78, RMSD 3.01, identity 43.67%, under Growth factor receptor domain g.3.9.1/g.3.9. The nearby compact representative d3be1a2 at 182-337 is automated g.3.9.0; together these favor a g.3.9 regional signal but not a family-level conclusion. Source: [d1s78a3 structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d1s78a3); [g.3.9 node](https://scop.berkeley.edu/sunid=57184&ver=2.08)\n- **E4** \u2014 For approx. 340-505, FATCAT rank 1 hit d3u7ua3 aligns 166 residues, 166/1210 = 13.72% whole-model coverage, P=1e-6, score 457.75, RMSD 0.90, identity 43.71%, to automated c.10.2.0 under L domain-like c.10.2. The automated family label limits specificity; the strongest retained interpretation is superfamily c.10.2. Source: [d3u7ua3 structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d3u7ua3); [c.10.2 node](https://scop.berkeley.edu/sunid=52058&ver=2.08)\n- **E5** \u2014 For approx. 505-638, FATCAT rank 4 hit d1nqla4 aligns 134 residues, 134/1210 = 11.07% whole-model coverage, P=0.000038, score 380.99, RMSD 0.67, identity 99.25%, under Growth factor receptor domain g.3.9.1/g.3.9. A second g.3.9.0 group covers 505-623, so the material envelope is about 505-638; the retained level is superfamily g.3.9. Source: [d1nqla4 structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d1nqla4); [g.3.9 node](https://scop.berkeley.edu/sunid=57184&ver=2.08)\n- **E6** \u2014 Regional confidence supports interpreting the extracellular structure-only regions as local geometry, with caveats: 27-186 median pLDDT 94.00 with bands 111/44/5/0; 182-338 median 91.42 with bands 95/58/4/0; 340-505 median 94.93 with bands 142/23/1/0; 505-638 median 94.63 with bands 108/24/2/0 and a sustained <70 stretch at 637-648 overlapping the right boundary. High-pLDDT clusters are fragmented, so they describe confidence only and do not define SCOPe boundaries. Source: [decision evidence model data](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P00533-F1)\n- **E7** \u2014 The kinase-region sequence evidence has rank 1 d2jiub_ over 695-1001, 307/1210 = 25.37% whole-model coverage, log10 E-value -9999, identity 40.26%, in d.144.1.7; the group envelope spans 693-1022 and contains 98 raw hits. A second sequence group d1m17a_ spans 696-996, 301/1210 = 24.88%, log10 E-value -174.50, identity 38.76%, d.144.1.2, giving a same-superfamily but different-family context. Source: [d2jiub_ sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=seq&hit=d2jiub_); [d.144.1.7 node](https://scop.berkeley.edu/sunid=88854&ver=2.08)\n- **E8** \u2014 The kinase-region structure evidence has rank 2 d5x2ab_ over 700-1035, 336/1210 = 27.77% whole-model coverage, P=1e-6, score 772.74, RMSD 3.42, identity 79.48%, d.144.1.7. A lower-ranked d.144.1.0 automated group spans 701-1022, so the material kinase envelope is about 667-1035 from the structural group and 693-1022 from sequence; overlap with the sequence core is broad, approximately 700-1001. Source: [d5x2ab_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P00533-F1&mode=struct&hit=d5x2ab_); [d.144.1 node](https://scop.berkeley.edu/sunid=56112&ver=2.08)\n- **E9** \u2014 Kinase-region confidence is mixed: the broad 667-1035 envelope has median pLDDT 84.78 with bands 122/124/61/62 and sustained <70 stretches at 673-704, 748-762, 856-875, and 985-1045; the tighter 693-1022 sequence envelope has median 86.27 with bands 122/118/52/38 and <70 stretches at 683-704, 748-762, 856-875, and 985-1032. This weakens exact boundary and structure-dependent claims near both ends but does not erase the sequence evidence. Source: [decision evidence model data](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P00533-F1)\n- **E10** \u2014 Historical calibration was retrieved at the requested thresholds. For structure-only superfamily hypotheses with minimum_supporting_hits=2: c.10.2 returned 38/41, fraction 0.9268292683, requested_level superfamily, resolved_node L domain-like c.10.2/SUNID 52058; g.3.9 returned 1/1, fraction 1.0, requested_level superfamily, resolved_node Growth factor receptor domain g.3.9/SUNID 57184. For the kinase hypothesis with minimum_supporting_hits=5: d.144.1.7 returned 229/229, fraction 1.0, requested_level family, resolved_node Protein kinases, catalytic subunit d.144.1.7/SUNID 88854. These are historical classification-consistency statistics, not target-homology probabilities. Source: [c.10.2 calibration](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/52058/fatcat-chain-benchmark?minimum_supporting_hits=2); [g.3.9 calibration](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/57184/fatcat-chain-benchmark?minimum_supporting_hits=2); [d.144.1.7 calibration](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/88854/fatcat-chain-benchmark?minimum_supporting_hits=5)\n\n**Caveats By Evidence Item**\nE1: Compact mode returned all overlap-SCCS groups for the top-100 sequence and structure searches, but raw members were condensed; same-SCCS overlapping hits are correlated, not independent. Stored BLAST rows are available, so sequence absence in extracellular regions is a filtered-hit observation, not proof that no sequence relationship exists.\n\nE2: d1m6bb1 is structure-only and outside benchmark filters: current P=0.00383 exceeds the prespecified P<=1e-4 filter, length-match inputs are missing, and the calibration fraction must not reassure this hit. Boundaries at 27-186 overlap the next regional envelope at 182-186.\n\nE3: d1s78a3 is also structure-only and outside benchmark filters: current P=0.00731 exceeds P<=1e-4, length-match inputs are missing, and the g.3.9 calibration denominator is only 1. The nearby automated g.3.9.0 hit is useful as regional context but does not establish a family-level target interpretation.\n\nE4: d3u7ua3 has strong FATCAT statistics, but its family is automated matches c.10.2.0; the current chain-benchmark applicability is uncertain_missing_filter_inputs because alignment-length/component-length inputs are unavailable. The retained level is therefore c.10.2 superfamily, not family.\n\nE5: d1nqla4 has strong local structural metrics and high identity, but the evidence is structure-only, the current chain-benchmark applicability is uncertain_missing_filter_inputs, and the right boundary touches a low-confidence stretch beginning around 637. Reference complex annotations do not transfer to target function.\n\nE6: pLDDT supports local geometry for most extracellular domains but cannot establish homology, relative domain orientation, exact SCOPe boundaries, ligand state, or function. pTM/PAE and partner-context evidence were not retrieved in the allowed evidence bundle.\n\nE7: The kinase sequence stream is strong and raw-count rich, but raw hits are highly redundant by overlap/SCCS grouping, and one compact sequence group points to d.144.1.2 rather than d.144.1.7. The d.144.1.7 family hypothesis is favored because the strongest sequence group and structure stream converge, not because a label alone assigns the target.\n\nE8: The kinase structure representative is automated-match annotated and has uncertain_missing_filter_inputs for benchmark applicability; FATCAT P-value is structural-match significance, not a homology probability. Sequence/template dependence of AlphaFold means sequence and predicted-structure agreement should be treated as convergence, not fully independent validation.\n\nE9: Mixed pLDDT in the kinase envelope, especially 683-704 and 985-1032/1045, constrains boundary confidence and structure-dependent interpretation at the edges. It does not by itself contradict the sequence hit over the kinase core.\n\nE10: Benchmark fractions are biased historical chain-to-domain calibration, with 90% sequence-identity representative chains, same-PDB-chain exclusion, P<=1e-4 and length-match filters; they do not provide official classification, function, or target-specific probability. For current hits outside or uncertain relative to benchmark filters, the fraction is a caveat only, not positive support.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "MCP get_alphafold_hits(model=AF-P00533-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "MCP get_alphafold_decision_evidence(model=AF-P00533-F1, release=2.08, regions=27-186;182-338;340-505;505-638;667-1035;693-1022, sids=d1m6bb1;d1s78a3;d3u7ua3;d1nqla4;d2jiub_;d5x2ab_, calibration_requests=d1m6bb1/superfamily/2;d1s78a3/superfamily/2;d3u7ua3/superfamily/2;d1nqla4/superfamily/2;d2jiub_/family/5)"
+    ],
+    "input_attestation": {
+      "model": "AF-P00533-F1",
+      "question_id": "AFQ004",
+      "question_sha256": "06e0db63a05a8f99bdb989d8e63f9f22566f7f379ddd24d94f23248bae5eede7",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ004",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:37:58Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

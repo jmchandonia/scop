@@ -1,0 +1,5711 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 4366,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bz1a_",
+        "comment": null,
+        "description": "1bz1 A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bz1a_",
+        "sunid": 15241
+      },
+      "domain_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -77.62624840696466,
+      "percent_identity": 100
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bz1c_",
+        "comment": null,
+        "description": "1bz1 C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bz1c_",
+        "sunid": 15242
+      },
+      "domain_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -77.62624840696466,
+      "percent_identity": 100
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1baba_",
+        "comment": null,
+        "description": "1bab A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1baba_",
+        "sunid": 15235
+      },
+      "domain_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.93413229379448,
+      "percent_identity": 99.29577464788733
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1babc_",
+        "comment": null,
+        "description": "1bab C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1babc_",
+        "sunid": 15236
+      },
+      "domain_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.93413229379448,
+      "percent_identity": 99.29577464788733
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a00a_",
+        "comment": null,
+        "description": "1a00 A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a00a_",
+        "sunid": 15290
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a00c_",
+        "comment": null,
+        "description": "1a00 C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a00c_",
+        "sunid": 15291
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a01a_",
+        "comment": null,
+        "description": "1a01 A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a01a_",
+        "sunid": 15271
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a01c_",
+        "comment": null,
+        "description": "1a01 C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a01c_",
+        "sunid": 15272
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0ua_",
+        "comment": null,
+        "description": "1a0u A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0ua_",
+        "sunid": 15322
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0uc_",
+        "comment": null,
+        "description": "1a0u C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0uc_",
+        "sunid": 15323
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0va_",
+        "comment": null,
+        "description": "1a0v A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0va_",
+        "sunid": 15330
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0vc_",
+        "comment": null,
+        "description": "1a0v C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0vc_",
+        "sunid": 15331
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0wa_",
+        "comment": null,
+        "description": "1a0w A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0wa_",
+        "sunid": 15306
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0wc_",
+        "comment": null,
+        "description": "1a0w C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0wc_",
+        "sunid": 15307
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0xa_",
+        "comment": null,
+        "description": "1a0x A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0xa_",
+        "sunid": 15325
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0xc_",
+        "comment": null,
+        "description": "1a0x C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0xc_",
+        "sunid": 15326
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0ya_",
+        "comment": null,
+        "description": "1a0y A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0ya_",
+        "sunid": 15308
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0yc_",
+        "comment": null,
+        "description": "1a0y C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0yc_",
+        "sunid": 15309
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0za_",
+        "comment": null,
+        "description": "1a0z A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0za_",
+        "sunid": 15302
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a0zc_",
+        "comment": null,
+        "description": "1a0z C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a0zc_",
+        "sunid": 15303
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a3na_",
+        "comment": null,
+        "description": "1a3n A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a3na_",
+        "sunid": 15247
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a3nc_",
+        "comment": null,
+        "description": "1a3n C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a3nc_",
+        "sunid": 15248
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a9wa_",
+        "comment": null,
+        "description": "1a9w A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a9wa_",
+        "sunid": 15359
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1a9wc_",
+        "comment": null,
+        "description": "1a9w C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1a9wc_",
+        "sunid": 15360
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1abwa2",
+        "comment": null,
+        "description": "1abw A:143-283",
+        "header": "a.1.1.2 (A:143-283) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1abwa2",
+        "sunid": 15289
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1abya2",
+        "comment": null,
+        "description": "1aby A:143-283",
+        "header": "a.1.1.2 (A:143-283) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1abya2",
+        "sunid": 15350
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1axfa_",
+        "comment": null,
+        "description": "1axf A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1axfa_",
+        "sunid": 15318
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1axfc_",
+        "comment": null,
+        "description": "1axf C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1axfc_",
+        "sunid": 15319
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1b86a_",
+        "comment": null,
+        "description": "1b86 A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1b86a_",
+        "sunid": 15361
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1b86c_",
+        "comment": null,
+        "description": "1b86 C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1b86c_",
+        "sunid": 15362
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bbba_",
+        "comment": null,
+        "description": "1bbb A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bbba_",
+        "sunid": 15255
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bbbc_",
+        "comment": null,
+        "description": "1bbb C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bbbc_",
+        "sunid": 15256
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bija_",
+        "comment": null,
+        "description": "1bij A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bija_",
+        "sunid": 15345
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bijc_",
+        "comment": null,
+        "description": "1bij C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bijc_",
+        "sunid": 15346
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1buwa_",
+        "comment": null,
+        "description": "1buw A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1buwa_",
+        "sunid": 15294
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1buwc_",
+        "comment": null,
+        "description": "1buw C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1buwc_",
+        "sunid": 15295
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bz0a_",
+        "comment": null,
+        "description": "1bz0 A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bz0a_",
+        "sunid": 15237
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bz0c_",
+        "comment": null,
+        "description": "1bz0 C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1bz0c_",
+        "sunid": 15238
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1c7ca2",
+        "comment": null,
+        "description": "1c7c A:143-283",
+        "header": "a.1.1.2 (A:143-283) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1c7ca2",
+        "sunid": 15262
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1clsa_",
+        "comment": null,
+        "description": "1cls A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1clsa_",
+        "sunid": 15292
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1clsc_",
+        "comment": null,
+        "description": "1cls C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1clsc_",
+        "sunid": 15293
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1cmya_",
+        "comment": null,
+        "description": "1cmy A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1cmya_",
+        "sunid": 15368
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1cmyc_",
+        "comment": null,
+        "description": "1cmy C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1cmyc_",
+        "sunid": 15369
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1coha_",
+        "comment": null,
+        "description": "1coh A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1coha_",
+        "sunid": 15364
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1cohc_",
+        "comment": null,
+        "description": "1coh C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1cohc_",
+        "sunid": 15365
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dkea_",
+        "comment": null,
+        "description": "1dke A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dkea_",
+        "sunid": 15333
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dkec_",
+        "comment": null,
+        "description": "1dke C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dkec_",
+        "sunid": 15334
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dxta_",
+        "comment": null,
+        "description": "1dxt A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dxta_",
+        "sunid": 15267
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dxtc_",
+        "comment": null,
+        "description": "1dxt C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dxtc_",
+        "sunid": 15268
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dxua_",
+        "comment": null,
+        "description": "1dxu A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dxua_",
+        "sunid": 15269
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dxuc_",
+        "comment": null,
+        "description": "1dxu C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dxuc_",
+        "sunid": 15270
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dxva_",
+        "comment": null,
+        "description": "1dxv A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dxva_",
+        "sunid": 15259
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dxvc_",
+        "comment": null,
+        "description": "1dxv C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1dxvc_",
+        "sunid": 15260
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fdha_",
+        "comment": null,
+        "description": "1fdh A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1fdha_",
+        "sunid": 15363
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fdhb_",
+        "comment": "duplicate of 1FDH A",
+        "description": "1fdh B:",
+        "header": "a.1.1.2 (B:) Hemoglobin, alpha-chain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.1.1.2",
+        "sid": "d1fdhb_",
+        "sunid": 118454
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fn3a_",
+        "comment": null,
+        "description": "1fn3 A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1fn3a_",
+        "sunid": 90494
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fn3c_",
+        "comment": "complexed with hni",
+        "description": "1fn3 C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1fn3c_",
+        "sunid": 90496
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1g9va_",
+        "comment": null,
+        "description": "1g9v A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1g9va_",
+        "sunid": 15280
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1g9vc_",
+        "comment": null,
+        "description": "1g9v C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1g9vc_",
+        "sunid": 15281
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gbua_",
+        "comment": null,
+        "description": "1gbu A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1gbua_",
+        "sunid": 15284
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gbuc_",
+        "comment": null,
+        "description": "1gbu C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1gbuc_",
+        "sunid": 15285
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gbva_",
+        "comment": null,
+        "description": "1gbv A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1gbva_",
+        "sunid": 15310
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gbvc_",
+        "comment": null,
+        "description": "1gbv C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1gbvc_",
+        "sunid": 15311
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gzxa_",
+        "comment": null,
+        "description": "1gzx A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1gzxa_",
+        "sunid": 70825
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gzxc_",
+        "comment": null,
+        "description": "1gzx C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1gzxc_",
+        "sunid": 70827
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1haba_",
+        "comment": null,
+        "description": "1hab A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1haba_",
+        "sunid": 15351
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1habc_",
+        "comment": null,
+        "description": "1hab C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1habc_",
+        "sunid": 15352
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1haca_",
+        "comment": null,
+        "description": "1hac A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1haca_",
+        "sunid": 15355
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hacc_",
+        "comment": null,
+        "description": "1hac C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hacc_",
+        "sunid": 15356
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbaa_",
+        "comment": null,
+        "description": "1hba A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbaa_",
+        "sunid": 15316
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbac_",
+        "comment": null,
+        "description": "1hba C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbac_",
+        "sunid": 15317
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbba_",
+        "comment": null,
+        "description": "1hbb A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbba_",
+        "sunid": 15300
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbbc_",
+        "comment": null,
+        "description": "1hbb C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbbc_",
+        "sunid": 15301
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbsa_",
+        "comment": null,
+        "description": "1hbs A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbsa_",
+        "sunid": 15370
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbsc_",
+        "comment": null,
+        "description": "1hbs C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbsc_",
+        "sunid": 15371
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbse_",
+        "comment": null,
+        "description": "1hbs E:",
+        "header": "a.1.1.2 (E:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbse_",
+        "sunid": 15372
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hbsg_",
+        "comment": null,
+        "description": "1hbs G:",
+        "header": "a.1.1.2 (G:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hbsg_",
+        "sunid": 15373
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hcoa_",
+        "comment": null,
+        "description": "1hco A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hcoa_",
+        "sunid": 15367
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hdba_",
+        "comment": null,
+        "description": "1hdb A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hdba_",
+        "sunid": 15320
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hdbc_",
+        "comment": null,
+        "description": "1hdb C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hdbc_",
+        "sunid": 15321
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hgaa_",
+        "comment": null,
+        "description": "1hga A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hgaa_",
+        "sunid": 15335
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hgac_",
+        "comment": null,
+        "description": "1hga C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hgac_",
+        "sunid": 15336
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hgba_",
+        "comment": null,
+        "description": "1hgb A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hgba_",
+        "sunid": 15339
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hgbc_",
+        "comment": null,
+        "description": "1hgb C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hgbc_",
+        "sunid": 15340
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hgca_",
+        "comment": null,
+        "description": "1hgc A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hgca_",
+        "sunid": 15343
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hgcc_",
+        "comment": null,
+        "description": "1hgc C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hgcc_",
+        "sunid": 15344
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1hhoa_",
+        "comment": null,
+        "description": "1hho A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1hhoa_",
+        "sunid": 15347
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1irda_",
+        "comment": null,
+        "description": "1ird A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1irda_",
+        "sunid": 66286
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3ya_",
+        "comment": null,
+        "description": "1j3y A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3ya_",
+        "sunid": 84080
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3yc_",
+        "comment": null,
+        "description": "1j3y C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3yc_",
+        "sunid": 84082
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3ye_",
+        "comment": null,
+        "description": "1j3y E:",
+        "header": "a.1.1.2 (E:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3ye_",
+        "sunid": 84084
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3yg_",
+        "comment": "complexed with 2fu, cmo, hem, hni",
+        "description": "1j3y G:",
+        "header": "a.1.1.2 (G:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3yg_",
+        "sunid": 84086
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3za_",
+        "comment": null,
+        "description": "1j3z A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3za_",
+        "sunid": 84088
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3zc_",
+        "comment": null,
+        "description": "1j3z C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3zc_",
+        "sunid": 84090
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3ze_",
+        "comment": null,
+        "description": "1j3z E:",
+        "header": "a.1.1.2 (E:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3ze_",
+        "sunid": 84092
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j3zg_",
+        "comment": "complexed with 2fu, cmo, hem, hni",
+        "description": "1j3z G:",
+        "header": "a.1.1.2 (G:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j3zg_",
+        "sunid": 84094
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j40a_",
+        "comment": null,
+        "description": "1j40 A:",
+        "header": "a.1.1.2 (A:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j40a_",
+        "sunid": 84096
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j40c_",
+        "comment": null,
+        "description": "1j40 C:",
+        "header": "a.1.1.2 (C:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j40c_",
+        "sunid": 84098
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j40e_",
+        "comment": null,
+        "description": "1j40 E:",
+        "header": "a.1.1.2 (E:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j40e_",
+        "sunid": 84100
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j40g_",
+        "comment": "complexed with 2fu, cmo, hem, hni",
+        "description": "1j40 G:",
+        "header": "a.1.1.2 (G:) Hemoglobin, alpha-chain {Human (Homo sapiens)}",
+        "sccs": "a.1.1.2",
+        "sid": "d1j40g_",
+        "sunid": 84102
+      },
+      "domain_range": {
+        "end": 141,
+        "length": 141,
+        "start": 1
+      },
+      "kind": "sequence",
+      "log10_evalue": -76.80730473292735,
+      "percent_identity": 99.64664310954063
+    }
+  ],
+  "structure_hits": [
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 142,
+        "start": 1
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2dc3a_",
+        "comment": "automated match to d1v5ha_",
+        "description": "2dc3 A:",
+        "header": "a.1.1.2 (A:) Cytoglobin {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.1.1.2",
+        "sid": "d2dc3a_",
+        "sunid": 203945
+      },
+      "domain_range": {
+        "end": 167,
+        "length": 151,
+        "start": 17
+      },
+      "identity": 27.81,
+      "kind": "structure",
+      "p_value": 2.12E-14,
+      "rmsd": 1.68,
+      "score": 347.69,
+      "similarity": 49.01,
+      "transform": [
+        [
+          -0.622,
+          -0.779,
+          -0.078,
+          11.221
+        ],
+        [
+          0.499,
+          -0.472,
+          0.727,
+          -26.545
+        ],
+        [
+          -0.603,
+          0.413,
+          0.682,
+          -14.489
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 138,
+        "length": 137,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2gtld1",
+        "comment": "automatically matched to d1x9fd_",
+        "description": "2gtl D:8-147",
+        "header": "a.1.1.2 (D:8-147) Extracellular dodecameric hemoglobin (erythrocruorin), subunit D1 {Common earthworm (Lumbricus terrestris) [TaxId: 6398]}",
+        "sccs": "a.1.1.2",
+        "sid": "d2gtld1",
+        "sunid": 135658
+      },
+      "domain_range": {
+        "end": 147,
+        "length": 140,
+        "start": 8
+      },
+      "identity": 15.97,
+      "kind": "structure",
+      "p_value": 4.15E-14,
+      "rmsd": 1.7,
+      "score": 307.28,
+      "similarity": 29.17,
+      "transform": [
+        [
+          0.257,
+          0.966,
+          -0.035,
+          -131.296
+        ],
+        [
+          0.891,
+          -0.251,
+          -0.379,
+          5.751
+        ],
+        [
+          -0.375,
+          0.066,
+          -0.925,
+          22.045
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 141,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2wtha_",
+        "comment": "automated match to d1asha_",
+        "description": "2wth A:",
+        "header": "a.1.1.0 (A:) automated matches {Nematode (Caenorhabditis elegans) [TaxId: 6239]}",
+        "sccs": "a.1.1.0",
+        "sid": "d2wtha_",
+        "sunid": 169616
+      },
+      "domain_range": {
+        "end": 152,
+        "length": 150,
+        "start": 3
+      },
+      "identity": 9.8,
+      "kind": "structure",
+      "p_value": 3.99E-11,
+      "rmsd": 2.51,
+      "score": 305.84,
+      "similarity": 22.22,
+      "transform": [
+        [
+          0.666,
+          -0.713,
+          -0.219,
+          -33.166
+        ],
+        [
+          0.041,
+          0.328,
+          -0.944,
+          1.895
+        ],
+        [
+          0.745,
+          0.62,
+          0.247,
+          -15.434
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 138,
+        "length": 120,
+        "start": 19
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2xkha_",
+        "comment": "automated match to d1kr7a_",
+        "description": "2xkh A:",
+        "header": "a.1.1.4 (A:) automated matches {Milky ribbon worm (Cerebratulus lacteus) [TaxId: 6221]}",
+        "sccs": "a.1.1.4",
+        "sid": "d2xkha_",
+        "sunid": 170180
+      },
+      "domain_range": {
+        "end": 109,
+        "length": 110,
+        "start": 0
+      },
+      "identity": 12.9,
+      "kind": "structure",
+      "p_value": 6.5E-8,
+      "rmsd": 2.18,
+      "score": 212.08,
+      "similarity": 24.19,
+      "transform": [
+        [
+          -0.129,
+          -0.969,
+          0.213,
+          33.393
+        ],
+        [
+          0.99,
+          -0.138,
+          -0.028,
+          -22.266
+        ],
+        [
+          0.057,
+          0.207,
+          0.977,
+          -26.22
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 139,
+        "length": 131,
+        "start": 9
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1s56b_",
+        "comment": "complexed with cyn, hec, hem, k, po4, xe",
+        "description": "1s56 B:",
+        "header": "a.1.1.1 (B:) Protozoan/bacterial hemoglobin {Mycobacterium tuberculosis, HbN [TaxId: 1773]}",
+        "sccs": "a.1.1.1",
+        "sid": "d1s56b_",
+        "sunid": 105261
+      },
+      "domain_range": {
+        "end": 128,
+        "length": 117,
+        "start": 12
+      },
+      "identity": 9.92,
+      "kind": "structure",
+      "p_value": 7.01E-7,
+      "rmsd": 2.94,
+      "score": 207.18,
+      "similarity": 22.14,
+      "transform": [
+        [
+          0.975,
+          0.199,
+          0.098,
+          -6.938
+        ],
+        [
+          0.205,
+          -0.977,
+          -0.054,
+          -10.102
+        ],
+        [
+          0.085,
+          0.072,
+          -0.994,
+          8.552
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 139,
+        "length": 131,
+        "start": 9
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2xykb_",
+        "comment": "automated match to d1ux8a_",
+        "description": "2xyk B:",
+        "header": "a.1.1.0 (B:) automated matches {Agrobacterium tumefaciens [TaxId: 358]}",
+        "sccs": "a.1.1.0",
+        "sid": "d2xykb_",
+        "sunid": 170485
+      },
+      "domain_range": {
+        "end": 127,
+        "length": 123,
+        "start": 5
+      },
+      "identity": 10.37,
+      "kind": "structure",
+      "p_value": 0.00000112,
+      "rmsd": 3.43,
+      "score": 199.73,
+      "similarity": 20,
+      "transform": [
+        [
+          -0.109,
+          0.932,
+          -0.346,
+          -9.54
+        ],
+        [
+          0.521,
+          0.35,
+          0.779,
+          -6.517
+        ],
+        [
+          0.846,
+          -0.095,
+          -0.524,
+          13.707
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 48,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1q2ha_",
+        "comment": null,
+        "description": "1q2h A:",
+        "header": "a.34.4.1 (A:) Adapter protein APS, dimerisation domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.34.4.1",
+        "sid": "d1q2ha_",
+        "sunid": 104498
+      },
+      "domain_range": {
+        "end": 77,
+        "length": 48,
+        "start": 30
+      },
+      "identity": 14.58,
+      "kind": "structure",
+      "p_value": 0.000306,
+      "rmsd": 2.82,
+      "score": 127.23,
+      "similarity": 25,
+      "transform": [
+        [
+          0.003,
+          0.855,
+          0.519,
+          -17.054
+        ],
+        [
+          0.842,
+          -0.282,
+          0.459,
+          -40.232
+        ],
+        [
+          0.539,
+          0.436,
+          -0.721,
+          -7.291
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 77,
+        "length": 75,
+        "start": 3
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4ddja_",
+        "comment": "automated match to d2doba_",
+        "description": "4ddj A:",
+        "header": "a.64.1.1 (A:) Saposin C {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.64.1.1",
+        "sid": "d4ddja_",
+        "sunid": 196036
+      },
+      "domain_range": {
+        "end": 72,
+        "length": 70,
+        "start": 3
+      },
+      "identity": 13.16,
+      "kind": "structure",
+      "p_value": 0.000592,
+      "rmsd": 3.02,
+      "score": 133.26,
+      "similarity": 26.32,
+      "transform": [
+        [
+          0.593,
+          -0.484,
+          0.643,
+          -13.379
+        ],
+        [
+          -0.782,
+          -0.536,
+          0.318,
+          25.879
+        ],
+        [
+          0.191,
+          -0.691,
+          -0.697,
+          -5.83
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 89,
+        "length": 75,
+        "start": 15
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ma9a3",
+        "comment": "complexed with atp, mg",
+        "description": "1ma9 A:387-458",
+        "header": "a.126.1.1 (A:387-458) Vitamin D binding protein {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.126.1.1",
+        "sid": "d1ma9a3",
+        "sunid": 78889
+      },
+      "domain_range": {
+        "end": 454,
+        "length": 60,
+        "start": 395
+      },
+      "identity": 10.67,
+      "kind": "structure",
+      "p_value": 0.00091,
+      "rmsd": 3.02,
+      "score": 117.15,
+      "similarity": 24,
+      "transform": [
+        [
+          0.657,
+          -0.639,
+          0.4,
+          -26.226
+        ],
+        [
+          0.473,
+          0.762,
+          0.442,
+          -17.66
+        ],
+        [
+          -0.587,
+          -0.101,
+          0.803,
+          -54.54
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 76,
+        "start": 67
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2js1a2",
+        "comment": "automated match to d2gsvb_",
+        "description": "2js1 A:1-72",
+        "header": "a.23.7.1 (A:1-72) Hypothetical protein YvfG {Bacillus subtilis [TaxId: 1423]}",
+        "sccs": "a.23.7.1",
+        "sid": "d2js1a2",
+        "sunid": 148189
+      },
+      "domain_range": {
+        "end": 71,
+        "length": 68,
+        "start": 4
+      },
+      "identity": 8.64,
+      "kind": "structure",
+      "p_value": 0.00112,
+      "rmsd": 3.23,
+      "score": 114.48,
+      "similarity": 14.81,
+      "transform": [
+        [
+          -0.295,
+          0.557,
+          0.776,
+          -8.575
+        ],
+        [
+          0.951,
+          0.247,
+          0.184,
+          -8.635
+        ],
+        [
+          -0.089,
+          0.793,
+          -0.603,
+          -6.26
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 74,
+        "length": 22,
+        "start": 53
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5gtii_",
+        "comment": "automated match to d2axti1",
+        "description": "5gti I:",
+        "header": "f.23.37.1 (I:) Photosystem II reaction center protein I, PsbI {Thermosynechococcus vulcanus [TaxId: 32053]}",
+        "sccs": "f.23.37.1",
+        "sid": "d5gtii_",
+        "sunid": 345656
+      },
+      "domain_range": {
+        "end": 23,
+        "length": 22,
+        "start": 2
+      },
+      "identity": 9.09,
+      "kind": "structure",
+      "p_value": 0.0015,
+      "rmsd": 1.86,
+      "score": 66.94,
+      "similarity": 13.64,
+      "transform": [
+        [
+          0.93,
+          0.049,
+          0.364,
+          59.703
+        ],
+        [
+          0.332,
+          0.313,
+          -0.89,
+          -29.798
+        ],
+        [
+          -0.158,
+          0.948,
+          0.275,
+          -36.842
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 115,
+        "length": 26,
+        "start": 90
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3dknc1",
+        "comment": "automatically matched to d1rh5c_",
+        "description": "3dkn C:21-52",
+        "header": "f.17.6.1 (C:21-52) Sec-beta subunit {Dog (Canis familiaris) [TaxId: 9615]}",
+        "sccs": "f.17.6.1",
+        "sid": "d3dknc1",
+        "sunid": 157761
+      },
+      "domain_range": {
+        "end": 49,
+        "length": 26,
+        "start": 24
+      },
+      "identity": 19.23,
+      "kind": "structure",
+      "p_value": 0.00203,
+      "rmsd": 0.81,
+      "score": 70.46,
+      "similarity": 42.31,
+      "transform": [
+        [
+          -0.257,
+          0.397,
+          -0.881,
+          133.981
+        ],
+        [
+          -0.864,
+          0.313,
+          0.393,
+          -12.413
+        ],
+        [
+          0.432,
+          0.862,
+          0.263,
+          11.622
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 78,
+        "length": 77,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1sn6a2",
+        "comment": "automated match to d1m12a_",
+        "description": "1sn6 A:1-80",
+        "header": "a.64.1.1 (A:1-80) Saposin C {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.64.1.1",
+        "sid": "d1sn6a2",
+        "sunid": 118972
+      },
+      "domain_range": {
+        "end": 72,
+        "length": 66,
+        "start": 7
+      },
+      "identity": 8.75,
+      "kind": "structure",
+      "p_value": 0.00397,
+      "rmsd": 3.84,
+      "score": 105.54,
+      "similarity": 21.25,
+      "transform": [
+        [
+          0.609,
+          0.682,
+          -0.405,
+          -2.413
+        ],
+        [
+          -0.307,
+          0.674,
+          0.672,
+          2.258
+        ],
+        [
+          0.731,
+          -0.285,
+          0.619,
+          1.578
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 45,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1rm1b1",
+        "comment": "automated match to d1nh2d1",
+        "description": "1rm1 B:4-54",
+        "header": "a.32.1.1 (B:4-54) Small chain TOA2, N-terminal domain {Baker's yeast (Saccharomyces cerevisiae) [TaxId: 4932]}",
+        "sccs": "a.32.1.1",
+        "sid": "d1rm1b1",
+        "sunid": 118780
+      },
+      "domain_range": {
+        "end": 54,
+        "length": 46,
+        "start": 9
+      },
+      "identity": 6.52,
+      "kind": "structure",
+      "p_value": 0.00471,
+      "rmsd": 1.91,
+      "score": 95.77,
+      "similarity": 23.91,
+      "transform": [
+        [
+          -0.644,
+          0.557,
+          -0.524,
+          29.483
+        ],
+        [
+          0.765,
+          0.468,
+          -0.442,
+          24.592
+        ],
+        [
+          -0.001,
+          -0.686,
+          -0.728,
+          90.03
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 117,
+        "length": 60,
+        "start": 58
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5yghb_",
+        "comment": "automated match to d1r6ra_",
+        "description": "5ygh B:",
+        "header": "a.190.1.0 (B:) automated matches {Zika virus (strain mr 766) [TaxId: 64320]}",
+        "sccs": "a.190.1.0",
+        "sid": "d5yghb_",
+        "sunid": 348808
+      },
+      "domain_range": {
+        "end": 95,
+        "length": 53,
+        "start": 43
+      },
+      "identity": 11.67,
+      "kind": "structure",
+      "p_value": 0.00481,
+      "rmsd": 3.81,
+      "score": 103.51,
+      "similarity": 18.33,
+      "transform": [
+        [
+          0.884,
+          0.419,
+          -0.207,
+          23.148
+        ],
+        [
+          0.466,
+          -0.82,
+          0.331,
+          -111.545
+        ],
+        [
+          -0.031,
+          -0.389,
+          -0.921,
+          -38.951
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 47,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2bzba1",
+        "comment": null,
+        "description": "2bzb A:1-54",
+        "header": "a.30.7.1 (A:1-54) Hypothetical protein BAS1536 {Anthrax bacillus (Bacillus anthracis) [TaxId: 1392]}",
+        "sccs": "a.30.7.1",
+        "sid": "d2bzba1",
+        "sunid": 129556
+      },
+      "domain_range": {
+        "end": 48,
+        "length": 47,
+        "start": 2
+      },
+      "identity": 2.13,
+      "kind": "structure",
+      "p_value": 0.00536,
+      "rmsd": 2.67,
+      "score": 98.35,
+      "similarity": 14.89,
+      "transform": [
+        [
+          0.017,
+          -0.994,
+          0.11,
+          -6.174
+        ],
+        [
+          0.599,
+          0.098,
+          0.795,
+          0.992
+        ],
+        [
+          -0.8,
+          0.052,
+          0.597,
+          2.7
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 74,
+        "length": 20,
+        "start": 55
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4aa7a1",
+        "comment": "automated match to d1hv9a2",
+        "description": "4aa7 A:232-251",
+        "header": "c.68.1.0 (A:232-251) automated matches {Escherichia coli K-12 [TaxId: 83333]}",
+        "sccs": "c.68.1.0",
+        "sid": "d4aa7a1",
+        "sunid": 234047
+      },
+      "domain_range": {
+        "end": 251,
+        "length": 20,
+        "start": 232
+      },
+      "identity": 0,
+      "kind": "structure",
+      "p_value": 0.00572,
+      "rmsd": 0.4,
+      "score": 47.9,
+      "similarity": 20,
+      "transform": [
+        [
+          0.021,
+          -0.621,
+          0.783,
+          23.358
+        ],
+        [
+          0.147,
+          0.777,
+          0.612,
+          1.563
+        ],
+        [
+          -0.989,
+          0.102,
+          0.108,
+          35.436
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 47,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ufia1",
+        "comment": null,
+        "description": "1ufi A:5-50",
+        "header": "a.30.4.1 (A:5-50) Dimerisation domain of CENP-B {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.30.4.1",
+        "sid": "d1ufia1",
+        "sunid": 99336
+      },
+      "domain_range": {
+        "end": 50,
+        "length": 44,
+        "start": 7
+      },
+      "identity": 6.38,
+      "kind": "structure",
+      "p_value": 0.0068,
+      "rmsd": 3.03,
+      "score": 94.62,
+      "similarity": 17.02,
+      "transform": [
+        [
+          0.806,
+          0.173,
+          -0.566,
+          37.35
+        ],
+        [
+          -0.232,
+          0.972,
+          -0.033,
+          -20.194
+        ],
+        [
+          0.545,
+          0.158,
+          0.824,
+          -83.53
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 133,
+        "length": 79,
+        "start": 55
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1t6sa1",
+        "comment": "Structural genomics target",
+        "description": "1t6s A:1-85",
+        "header": "a.4.5.60 (A:1-85) Segregation and condensation protein B, ScpB {Chlorobium tepidum [TaxId: 1097]}",
+        "sccs": "a.4.5.60",
+        "sid": "d1t6sa1",
+        "sunid": 112271
+      },
+      "domain_range": {
+        "end": 68,
+        "length": 68,
+        "start": 1
+      },
+      "identity": 5.06,
+      "kind": "structure",
+      "p_value": 0.00684,
+      "rmsd": 3.46,
+      "score": 98.94,
+      "similarity": 17.72,
+      "transform": [
+        [
+          -0.065,
+          -0.473,
+          -0.879,
+          10.232
+        ],
+        [
+          0.869,
+          0.407,
+          -0.283,
+          -7.928
+        ],
+        [
+          0.491,
+          -0.782,
+          0.385,
+          23.603
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 25,
+        "start": 118
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1q90n_",
+        "comment": "complexed with bcr, cla, fes, hec, lfa, lmg, sqd, tds",
+        "description": "1q90 N:",
+        "header": "f.23.27.1 (N:) PetN subunit of the cytochrome b6f complex {Green alga (Chlamydomonas reinhardtii) [TaxId: 3055]}",
+        "sccs": "f.23.27.1",
+        "sid": "d1q90n_",
+        "sunid": 96247
+      },
+      "domain_range": {
+        "end": 93,
+        "length": 25,
+        "start": 69
+      },
+      "identity": 12,
+      "kind": "structure",
+      "p_value": 0.00709,
+      "rmsd": 1.15,
+      "score": 69.8,
+      "similarity": 16,
+      "transform": [
+        [
+          0.307,
+          -0.025,
+          0.951,
+          -144.276
+        ],
+        [
+          0.399,
+          -0.904,
+          -0.152,
+          127.011
+        ],
+        [
+          0.864,
+          0.426,
+          -0.268,
+          -67.319
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 77,
+        "length": 74,
+        "start": 4
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1rpra_",
+        "comment": null,
+        "description": "1rpr A:",
+        "header": "a.30.1.1 (A:) ROP protein {Escherichia coli [TaxId: 562]}",
+        "sccs": "a.30.1.1",
+        "sid": "d1rpra_",
+        "sunid": 16989
+      },
+      "domain_range": {
+        "end": 55,
+        "length": 52,
+        "start": 4
+      },
+      "identity": 5.41,
+      "kind": "structure",
+      "p_value": 0.00711,
+      "rmsd": 3.64,
+      "score": 108.43,
+      "similarity": 12.16,
+      "transform": [
+        [
+          -0.198,
+          0.687,
+          0.699,
+          -5.389
+        ],
+        [
+          0.304,
+          0.721,
+          -0.622,
+          3.417
+        ],
+        [
+          -0.932,
+          0.089,
+          -0.351,
+          -0.73
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 137,
+        "length": 46,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2db7a1",
+        "comment": null,
+        "description": "2db7 A:3-57",
+        "header": "a.273.1.1 (A:3-57) Hairy/enhancer-of-split related with YRPW motif protein 1; HESR-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.273.1.1",
+        "sid": "d2db7a1",
+        "sunid": 146480
+      },
+      "domain_range": {
+        "end": 56,
+        "length": 46,
+        "start": 11
+      },
+      "identity": 8.7,
+      "kind": "structure",
+      "p_value": 0.00764,
+      "rmsd": 3.27,
+      "score": 95.44,
+      "similarity": 30.43,
+      "transform": [
+        [
+          0.013,
+          0.629,
+          -0.777,
+          -13.257
+        ],
+        [
+          -0.999,
+          0.037,
+          0.014,
+          22.698
+        ],
+        [
+          0.038,
+          0.776,
+          0.629,
+          -36.467
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 74,
+        "length": 24,
+        "start": 51
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3a0hl_",
+        "comment": "complexed with bcr, cla, dgd, fe2, hem, iod, lhg, mge, oec, pho, pq9",
+        "description": "3a0h L:",
+        "header": "f.23.31.1 (L:) Photosystem II reaction center protein L, PsbL {Thermosynechococcus vulcanus [TaxId: 32053]}",
+        "sccs": "f.23.31.1",
+        "sid": "d3a0hl_",
+        "sunid": 264650
+      },
+      "domain_range": {
+        "end": 34,
+        "length": 24,
+        "start": 11
+      },
+      "identity": 8.33,
+      "kind": "structure",
+      "p_value": 0.00766,
+      "rmsd": 1.08,
+      "score": 68.99,
+      "similarity": 20.83,
+      "transform": [
+        [
+          0.169,
+          0.717,
+          0.676,
+          -55.086
+        ],
+        [
+          -0.818,
+          0.484,
+          -0.309,
+          9.365
+        ],
+        [
+          -0.549,
+          -0.501,
+          0.669,
+          6.048
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 51,
+        "start": 92
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1fyja_",
+        "comment": null,
+        "description": "1fyj A:",
+        "header": "a.16.1.3 (A:) Multifunctional Glu-Pro-tRNA synthase (EPRS) second repeated element {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.16.1.3",
+        "sid": "d1fyja_",
+        "sunid": 60115
+      },
+      "domain_range": {
+        "end": 48,
+        "length": 48,
+        "start": 1
+      },
+      "identity": 13.73,
+      "kind": "structure",
+      "p_value": 0.00948,
+      "rmsd": 3.61,
+      "score": 102.32,
+      "similarity": 25.49,
+      "transform": [
+        [
+          0.749,
+          -0.295,
+          0.593,
+          -0.424
+        ],
+        [
+          -0.365,
+          0.563,
+          0.741,
+          8.361
+        ],
+        [
+          -0.553,
+          -0.772,
+          0.314,
+          -0.408
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 35,
+        "start": 108
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1mjea2",
+        "comment": "this domain is partly disordered in the crystal structure",
+        "description": "1mje A:2752-2887",
+        "header": "a.171.1.1 (A:2752-2887) BRCA2 tower domain {Mouse (Mus musculus) [TaxId: 10090]}",
+        "sccs": "a.171.1.1",
+        "sid": "d1mjea2",
+        "sunid": 79194
+      },
+      "domain_range": {
+        "end": 2787,
+        "length": 35,
+        "start": 2753
+      },
+      "identity": 5.71,
+      "kind": "structure",
+      "p_value": 0.00998,
+      "rmsd": 0.97,
+      "score": 69.66,
+      "similarity": 11.43,
+      "transform": [
+        [
+          -0.128,
+          -0.992,
+          0.019,
+          116.152
+        ],
+        [
+          -0.309,
+          0.022,
+          -0.951,
+          109.581
+        ],
+        [
+          0.942,
+          -0.128,
+          -0.309,
+          -19.008
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 25,
+        "start": 118
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d5b5ej_",
+        "comment": "automated match to d4ub8j_",
+        "description": "5b5e j:",
+        "header": "f.23.32.1 (j:) automated matches {Thermosynechococcus vulcanus [TaxId: 32053]}",
+        "sccs": "f.23.32.1",
+        "sid": "d5b5ej_",
+        "sunid": 329390
+      },
+      "domain_range": {
+        "end": 32,
+        "length": 25,
+        "start": 8
+      },
+      "identity": 12,
+      "kind": "structure",
+      "p_value": 0.0123,
+      "rmsd": 1.15,
+      "score": 69.51,
+      "similarity": 24,
+      "transform": [
+        [
+          -0.232,
+          0.143,
+          0.962,
+          31.384
+        ],
+        [
+          0.631,
+          0.775,
+          0.037,
+          25.905
+        ],
+        [
+          -0.74,
+          0.616,
+          -0.27,
+          30.723
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 48,
+        "start": 93
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1viba_",
+        "comment": null,
+        "description": "1vib A:",
+        "header": "g.2.2.1 (A:) Neurotoxin B-IV {Milky ribbon worm (Cerebratulus lacteus) [TaxId: 6221]}",
+        "sccs": "g.2.2.1",
+        "sid": "d1viba_",
+        "sunid": 43999
+      },
+      "domain_range": {
+        "end": 53,
+        "length": 45,
+        "start": 9
+      },
+      "identity": 6.25,
+      "kind": "structure",
+      "p_value": 0.0133,
+      "rmsd": 3.66,
+      "score": 80.45,
+      "similarity": 16.67,
+      "transform": [
+        [
+          0.604,
+          -0.651,
+          -0.46,
+          25.774
+        ],
+        [
+          -0.769,
+          -0.627,
+          -0.121,
+          0.123
+        ],
+        [
+          -0.209,
+          0.427,
+          -0.88,
+          -6.755
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 136,
+        "length": 115,
+        "start": 22
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1jfia_",
+        "comment": "protein/DNA complex",
+        "description": "1jfi A:",
+        "header": "a.22.1.3 (A:) Negative cofactor 2, NC2, alpha chain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.22.1.3",
+        "sid": "d1jfia_",
+        "sunid": 62936
+      },
+      "domain_range": {
+        "end": 75,
+        "length": 66,
+        "start": 10
+      },
+      "identity": 2.61,
+      "kind": "structure",
+      "p_value": 0.0138,
+      "rmsd": 2.79,
+      "score": 86.99,
+      "similarity": 15.65,
+      "transform": [
+        [
+          0.944,
+          -0.327,
+          0.033,
+          -55.806
+        ],
+        [
+          0.267,
+          0.705,
+          -0.657,
+          9.115
+        ],
+        [
+          0.192,
+          0.629,
+          0.753,
+          -106.168
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 50,
+        "start": 93
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3djub_",
+        "comment": "automated match to d3e9va1",
+        "description": "3dju B:",
+        "header": "d.370.1.1 (B:) automated matches {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.370.1.1",
+        "sid": "d3djub_",
+        "sunid": 174009
+      },
+      "domain_range": {
+        "end": 54,
+        "length": 48,
+        "start": 7
+      },
+      "identity": 8,
+      "kind": "structure",
+      "p_value": 0.014,
+      "rmsd": 1.39,
+      "score": 113.3,
+      "similarity": 12,
+      "transform": [
+        [
+          0.394,
+          -0.089,
+          0.915,
+          11.307
+        ],
+        [
+          0.551,
+          -0.774,
+          -0.313,
+          11.353
+        ],
+        [
+          0.736,
+          0.627,
+          -0.256,
+          -7.67
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 27,
+        "start": 116
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3a0hf_",
+        "comment": "complexed with bcr, cla, dgd, fe2, hem, iod, lhg, mge, oec, pho, pq9",
+        "description": "3a0h F:",
+        "header": "f.23.38.1 (F:) Cytochrome b559 subunit beta, PsbF {Thermosynechococcus vulcanus [TaxId: 32053]}",
+        "sccs": "f.23.38.1",
+        "sid": "d3a0hf_",
+        "sunid": 264645
+      },
+      "domain_range": {
+        "end": 40,
+        "length": 27,
+        "start": 14
+      },
+      "identity": 11.11,
+      "kind": "structure",
+      "p_value": 0.0142,
+      "rmsd": 0.99,
+      "score": 70.61,
+      "similarity": 25.93,
+      "transform": [
+        [
+          -0.054,
+          -0.738,
+          0.672,
+          22.506
+        ],
+        [
+          -0.784,
+          -0.386,
+          -0.487,
+          67.281
+        ],
+        [
+          0.619,
+          -0.553,
+          -0.558,
+          74.145
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 138,
+        "length": 121,
+        "start": 18
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4yjma_",
+        "comment": "automated match to d3gq1a_",
+        "description": "4yjm A:",
+        "header": "d.45.1.0 (A:) automated matches {Agrobacterium tumefaciens [TaxId: 176299]}",
+        "sccs": "d.45.1.0",
+        "sid": "d4yjma_",
+        "sunid": 312036
+      },
+      "domain_range": {
+        "end": 101,
+        "length": 71,
+        "start": 31
+      },
+      "identity": 5.65,
+      "kind": "structure",
+      "p_value": 0.0148,
+      "rmsd": 3.53,
+      "score": 98.36,
+      "similarity": 12.9,
+      "transform": [
+        [
+          0.05,
+          0.996,
+          0.08,
+          -12.791
+        ],
+        [
+          0.316,
+          -0.091,
+          0.944,
+          11.285
+        ],
+        [
+          0.947,
+          -0.022,
+          -0.319,
+          13.544
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 54,
+        "start": 89
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bsha1",
+        "comment": null,
+        "description": "1bsh A:87-138",
+        "header": "a.2.10.1 (A:87-138) Epsilon subunit of F1F0-ATP synthase C-terminal domain {Escherichia coli [TaxId: 562]}",
+        "sccs": "a.2.10.1",
+        "sid": "d1bsha1",
+        "sunid": 15720
+      },
+      "domain_range": {
+        "end": 133,
+        "length": 47,
+        "start": 87
+      },
+      "identity": 9.26,
+      "kind": "structure",
+      "p_value": 0.0155,
+      "rmsd": 3.94,
+      "score": 84.3,
+      "similarity": 18.52,
+      "transform": [
+        [
+          -0.539,
+          -0.656,
+          0.529,
+          8.634
+        ],
+        [
+          0.75,
+          -0.087,
+          0.656,
+          -3.503
+        ],
+        [
+          -0.384,
+          0.75,
+          0.539,
+          7.53
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 124,
+        "start": 19
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1l0oa_",
+        "comment": "complexed with adp, mg",
+        "description": "1l0o A:",
+        "header": "d.122.1.3 (A:) Anti-sigma factor spoIIab {Bacillus stearothermophilus [TaxId: 1422]}",
+        "sccs": "d.122.1.3",
+        "sid": "d1l0oa_",
+        "sunid": 73403
+      },
+      "domain_range": {
+        "end": 58,
+        "length": 58,
+        "start": 1
+      },
+      "identity": 3.97,
+      "kind": "structure",
+      "p_value": 0.017,
+      "rmsd": 1.55,
+      "score": 103.18,
+      "similarity": 8.73,
+      "transform": [
+        [
+          -0.582,
+          -0.813,
+          0.017,
+          18.726
+        ],
+        [
+          0.211,
+          -0.13,
+          0.969,
+          -52.448
+        ],
+        [
+          -0.786,
+          0.567,
+          0.247,
+          -13.27
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 127,
+        "start": 14
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4n7ta2",
+        "comment": "automated match to d3m7va2",
+        "description": "4n7t A:108-226",
+        "header": "d.327.1.1 (A:108-226) Phosphopentomutase DeoB {Streptococcus mutans [TaxId: 1309]}",
+        "sccs": "d.327.1.1",
+        "sid": "d4n7ta2",
+        "sunid": 229494
+      },
+      "domain_range": {
+        "end": 211,
+        "length": 104,
+        "start": 108
+      },
+      "identity": 3.5,
+      "kind": "structure",
+      "p_value": 0.0176,
+      "rmsd": 3.55,
+      "score": 92.09,
+      "similarity": 9.79,
+      "transform": [
+        [
+          0.006,
+          1,
+          0.014,
+          -44.807
+        ],
+        [
+          0.969,
+          -0.002,
+          -0.246,
+          -1.642
+        ],
+        [
+          -0.246,
+          0.015,
+          -0.969,
+          40.135
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 27,
+        "start": 116
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2p8qb_",
+        "comment": null,
+        "description": "2p8q B:",
+        "header": "g.88.2.1 (B:) importin-beta binding (IBB) domain of snurportin-1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "g.88.2.1",
+        "sid": "d2p8qb_",
+        "sunid": 238793
+      },
+      "domain_range": {
+        "end": 62,
+        "length": 27,
+        "start": 36
+      },
+      "identity": 3.7,
+      "kind": "structure",
+      "p_value": 0.0189,
+      "rmsd": 1.14,
+      "score": 69.5,
+      "similarity": 18.52,
+      "transform": [
+        [
+          0.804,
+          0.156,
+          0.573,
+          -41.382
+        ],
+        [
+          -0.525,
+          0.638,
+          0.563,
+          -7.656
+        ],
+        [
+          -0.278,
+          -0.754,
+          0.595,
+          29.271
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 106,
+        "length": 62,
+        "start": 45
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2dt7b1",
+        "comment": "2nd SURP domain complexed with an alpha-helical fragment of Splicing factor 3a subunit 3 (chain A)",
+        "description": "2dt7 B:134-217",
+        "header": "a.217.1.1 (B:134-217) Splicing factor 3 subunit 1, SF3A1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.217.1.1",
+        "sid": "d2dt7b1",
+        "sunid": 146576
+      },
+      "domain_range": {
+        "end": 211,
+        "length": 59,
+        "start": 153
+      },
+      "identity": 4.76,
+      "kind": "structure",
+      "p_value": 0.0218,
+      "rmsd": 3.91,
+      "score": 95.08,
+      "similarity": 12.7,
+      "transform": [
+        [
+          -0.374,
+          0.437,
+          0.818,
+          -5.236
+        ],
+        [
+          -0.325,
+          0.765,
+          -0.557,
+          -6.505
+        ],
+        [
+          -0.869,
+          -0.474,
+          -0.144,
+          -8.84
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 133,
+        "length": 132,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dwka1",
+        "comment": "complexed with oxl, so4",
+        "description": "1dwk A:1-86",
+        "header": "a.35.1.4 (A:1-86) Cyanase N-terminal domain {Escherichia coli [TaxId: 562]}",
+        "sccs": "a.35.1.4",
+        "sid": "d1dwka1",
+        "sunid": 17075
+      },
+      "domain_range": {
+        "end": 78,
+        "length": 74,
+        "start": 5
+      },
+      "identity": 8.33,
+      "kind": "structure",
+      "p_value": 0.0248,
+      "rmsd": 3.08,
+      "score": 81.84,
+      "similarity": 15.15,
+      "transform": [
+        [
+          -0.325,
+          0.481,
+          -0.814,
+          4.806
+        ],
+        [
+          0.944,
+          0.118,
+          -0.307,
+          -1.2
+        ],
+        [
+          -0.051,
+          -0.869,
+          -0.492,
+          25.473
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 141,
+        "length": 47,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1vzsa_",
+        "comment": null,
+        "description": "1vzs A:",
+        "header": "f.45.1.1 (A:) ATPase subunit F6 {Cow (Bos taurus) [TaxId: 9913]}",
+        "sccs": "f.45.1.1",
+        "sid": "d1vzsa_",
+        "sunid": 108972
+      },
+      "domain_range": {
+        "end": 54,
+        "length": 48,
+        "start": 7
+      },
+      "identity": 10.42,
+      "kind": "structure",
+      "p_value": 0.0264,
+      "rmsd": 3.36,
+      "score": 88.92,
+      "similarity": 18.75,
+      "transform": [
+        [
+          -0.594,
+          -0.76,
+          0.264,
+          -1.283
+        ],
+        [
+          -0.768,
+          0.633,
+          0.097,
+          8.629
+        ],
+        [
+          -0.241,
+          -0.146,
+          -0.96,
+          0.911
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 130,
+        "length": 75,
+        "start": 56
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1leba_",
+        "comment": null,
+        "description": "1leb A:",
+        "header": "a.4.5.2 (A:) LexA repressor, N-terminal DNA-binding domain {Escherichia coli [TaxId: 562]}",
+        "sccs": "a.4.5.2",
+        "sid": "d1leba_",
+        "sunid": 16086
+      },
+      "domain_range": {
+        "end": 66,
+        "length": 63,
+        "start": 4
+      },
+      "identity": 8,
+      "kind": "structure",
+      "p_value": 0.027,
+      "rmsd": 2.33,
+      "score": 84.66,
+      "similarity": 24,
+      "transform": [
+        [
+          -0.101,
+          -0.248,
+          0.964,
+          -3.611
+        ],
+        [
+          0.438,
+          -0.881,
+          -0.181,
+          2.89
+        ],
+        [
+          0.893,
+          0.404,
+          0.197,
+          -1.437
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 38,
+        "length": 37,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1b0na1",
+        "comment": "CASP3; complexed with SinI anti-repressor",
+        "description": "1b0n A:74-108",
+        "header": "a.34.1.1 (A:74-108) SinR repressor dimerisation domain {Bacillus subtilis [TaxId: 1423]}",
+        "sccs": "a.34.1.1",
+        "sid": "d1b0na1",
+        "sunid": 17001
+      },
+      "domain_range": {
+        "end": 108,
+        "length": 35,
+        "start": 74
+      },
+      "identity": 2.7,
+      "kind": "structure",
+      "p_value": 0.0275,
+      "rmsd": 3.28,
+      "score": 78.56,
+      "similarity": 24.32,
+      "transform": [
+        [
+          -0.849,
+          0.24,
+          0.471,
+          -20.393
+        ],
+        [
+          -0.529,
+          -0.37,
+          -0.764,
+          44.966
+        ],
+        [
+          -0.009,
+          -0.897,
+          0.441,
+          23.385
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 77,
+        "length": 25,
+        "start": 53
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1dp5b_",
+        "comment": "mutant",
+        "description": "1dp5 B:",
+        "header": "a.137.7.1 (B:) Proteinase A inhibitor IA3 {Baker's yeast (Saccharomyces cerevisiae) [TaxId: 4932]}",
+        "sccs": "a.137.7.1",
+        "sid": "d1dp5b_",
+        "sunid": 19646
+      },
+      "domain_range": {
+        "end": 26,
+        "length": 25,
+        "start": 2
+      },
+      "identity": 0,
+      "kind": "structure",
+      "p_value": 0.0285,
+      "rmsd": 1.32,
+      "score": 67.77,
+      "similarity": 20,
+      "transform": [
+        [
+          0.124,
+          -0.988,
+          0.093,
+          149.57
+        ],
+        [
+          0.915,
+          0.077,
+          -0.396,
+          -33.937
+        ],
+        [
+          0.384,
+          0.134,
+          0.913,
+          -33.174
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 128,
+        "length": 120,
+        "start": 9
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1praa_",
+        "comment": null,
+        "description": "1pra A:",
+        "header": "a.35.1.2 (A:) 434 C1 repressor, DNA-binding domain {Bacteriophage 434 [TaxId: 10712]}",
+        "sccs": "a.35.1.2",
+        "sid": "d1praa_",
+        "sunid": 17037
+      },
+      "domain_range": {
+        "end": 61,
+        "length": 61,
+        "start": 1
+      },
+      "identity": 5.69,
+      "kind": "structure",
+      "p_value": 0.0292,
+      "rmsd": 3.19,
+      "score": 75.65,
+      "similarity": 10.57,
+      "transform": [
+        [
+          0.385,
+          0.419,
+          -0.822,
+          -8.855
+        ],
+        [
+          -0.686,
+          -0.466,
+          -0.559,
+          3.762
+        ],
+        [
+          -0.618,
+          0.779,
+          0.108,
+          -0.32
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 133,
+        "length": 122,
+        "start": 12
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ys6a1",
+        "comment": "complexed with ca, gol",
+        "description": "1ys6 A:128-233",
+        "header": "a.4.6.1 (A:128-233) Transcriptional regulatory protein PrrA {Mycobacterium tuberculosis [TaxId: 1773]}",
+        "sccs": "a.4.6.1",
+        "sid": "d1ys6a1",
+        "sunid": 123957
+      },
+      "domain_range": {
+        "end": 228,
+        "length": 90,
+        "start": 139
+      },
+      "identity": 6.98,
+      "kind": "structure",
+      "p_value": 0.0305,
+      "rmsd": 3.32,
+      "score": 87.28,
+      "similarity": 11.63,
+      "transform": [
+        [
+          0.184,
+          -0.932,
+          -0.313,
+          32.011
+        ],
+        [
+          -0.768,
+          0.062,
+          -0.637,
+          28.497
+        ],
+        [
+          0.613,
+          0.358,
+          -0.704,
+          9
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 111,
+        "length": 93,
+        "start": 19
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3o2bc_",
+        "comment": "automated match to d1lzwa_",
+        "description": "3o2b C:",
+        "header": "d.45.1.2 (C:) automated matches {Escherichia coli K-12 [TaxId: 83333]}",
+        "sccs": "d.45.1.2",
+        "sid": "d3o2bc_",
+        "sunid": 182751
+      },
+      "domain_range": {
+        "end": 97,
+        "length": 62,
+        "start": 36
+      },
+      "identity": 5.38,
+      "kind": "structure",
+      "p_value": 0.0318,
+      "rmsd": 3.77,
+      "score": 95.02,
+      "similarity": 15.05,
+      "transform": [
+        [
+          0.841,
+          0.479,
+          -0.252,
+          -1.943
+        ],
+        [
+          0.004,
+          -0.472,
+          -0.882,
+          8.074
+        ],
+        [
+          -0.542,
+          0.74,
+          -0.399,
+          -4.834
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 140,
+        "length": 82,
+        "start": 59
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4j0ea1",
+        "comment": "automated match to d4j0eb1",
+        "description": "4j0e A:1-198",
+        "header": "c.2.1.0 (A:1-198) automated matches {Nematode (Caenorhabditis elegans) [TaxId: 6239]}",
+        "sccs": "c.2.1.0",
+        "sid": "d4j0ea1",
+        "sunid": 240274
+      },
+      "domain_range": {
+        "end": 88,
+        "length": 69,
+        "start": 20
+      },
+      "identity": 3.66,
+      "kind": "structure",
+      "p_value": 0.0328,
+      "rmsd": 3.84,
+      "score": 120.9,
+      "similarity": 15.85,
+      "transform": [
+        [
+          0.12,
+          -0.581,
+          0.805,
+          4.31
+        ],
+        [
+          0.278,
+          -0.759,
+          -0.589,
+          -29.16
+        ],
+        [
+          0.953,
+          0.294,
+          0.07,
+          -15.552
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 48,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1sg7a1",
+        "comment": null,
+        "description": "1sg7 A:22-96",
+        "header": "a.239.1.1 (A:22-96) Putative cation transport regulator ChaB {Escherichia coli [TaxId: 562]}",
+        "sccs": "a.239.1.1",
+        "sid": "d1sg7a1",
+        "sunid": 118961
+      },
+      "domain_range": {
+        "end": 84,
+        "length": 45,
+        "start": 40
+      },
+      "identity": 6.25,
+      "kind": "structure",
+      "p_value": 0.0342,
+      "rmsd": 3.02,
+      "score": 91.03,
+      "similarity": 16.67,
+      "transform": [
+        [
+          0.9,
+          0.431,
+          0.062,
+          -3.336
+        ],
+        [
+          0.286,
+          -0.692,
+          0.663,
+          8.745
+        ],
+        [
+          0.328,
+          -0.579,
+          -0.746,
+          -0.595
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 141,
+        "length": 77,
+        "start": 65
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4b5cb_",
+        "comment": "automated match to d4b5ca_",
+        "description": "4b5c B:",
+        "header": "d.79.7.0 (B:) automated matches {Burkholderia pseudomallei [TaxId: 28450]}",
+        "sccs": "d.79.7.0",
+        "sid": "d4b5cb_",
+        "sunid": 240004
+      },
+      "domain_range": {
+        "end": 132,
+        "length": 70,
+        "start": 63
+      },
+      "identity": 14.29,
+      "kind": "structure",
+      "p_value": 0.0347,
+      "rmsd": 3.05,
+      "score": 92.59,
+      "similarity": 23.38,
+      "transform": [
+        [
+          0.669,
+          -0.682,
+          0.294,
+          6.917
+        ],
+        [
+          0.659,
+          0.363,
+          -0.659,
+          0.554
+        ],
+        [
+          0.343,
+          0.635,
+          0.692,
+          8.481
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 133,
+        "length": 39,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ss3a_",
+        "comment": null,
+        "description": "1ss3 A:",
+        "header": "g.2.3.1 (A:) Pollen allergen ole e 6 {Common olive (Olea europaea) [TaxId: 4146]}",
+        "sccs": "g.2.3.1",
+        "sid": "d1ss3a_",
+        "sunid": 105975
+      },
+      "domain_range": {
+        "end": 36,
+        "length": 36,
+        "start": 1
+      },
+      "identity": 12.82,
+      "kind": "structure",
+      "p_value": 0.0363,
+      "rmsd": 2.43,
+      "score": 75.84,
+      "similarity": 15.38,
+      "transform": [
+        [
+          -0.707,
+          0.449,
+          0.547,
+          13.355
+        ],
+        [
+          -0.652,
+          -0.113,
+          -0.75,
+          10.584
+        ],
+        [
+          -0.274,
+          -0.887,
+          0.372,
+          -2.234
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 133,
+        "length": 119,
+        "start": 15
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2mlka1",
+        "comment": "automated match to d3zq7a_",
+        "description": "2mlk A:131-239",
+        "header": "a.4.6.0 (A:131-239) automated matches {Klebsiella pneumoniae [TaxId: 573]}",
+        "sccs": "a.4.6.0",
+        "sid": "d2mlka1",
+        "sunid": 257942
+      },
+      "domain_range": {
+        "end": 230,
+        "length": 91,
+        "start": 140
+      },
+      "identity": 4.76,
+      "kind": "structure",
+      "p_value": 0.0384,
+      "rmsd": 3.2,
+      "score": 81.34,
+      "similarity": 11.9,
+      "transform": [
+        [
+          0.434,
+          -0.386,
+          0.814,
+          -31.234
+        ],
+        [
+          0.839,
+          0.502,
+          -0.209,
+          -10.698
+        ],
+        [
+          -0.328,
+          0.774,
+          0.542,
+          5.578
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 112,
+        "length": 17,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4grpa_",
+        "comment": "automated match to d1cgqa_",
+        "description": "4grp A:",
+        "header": "d.80.1.3 (A:) Microphage migration inhibition factor (MIF) {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "d.80.1.3",
+        "sid": "d4grpa_",
+        "sunid": 228025
+      },
+      "domain_range": {
+        "end": 35,
+        "length": 17,
+        "start": 19
+      },
+      "identity": 17.65,
+      "kind": "structure",
+      "p_value": 0.0398,
+      "rmsd": 3.85,
+      "score": 95.03,
+      "similarity": 17.65,
+      "transform": [
+        [
+          0.101,
+          0.407,
+          -0.908,
+          -17.679
+        ],
+        [
+          0.988,
+          -0.147,
+          0.044,
+          25.963
+        ],
+        [
+          -0.115,
+          -0.901,
+          -0.417,
+          23.128
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 138,
+        "length": 39,
+        "start": 100
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1j2jb_",
+        "comment": "structure of a two-helical fragment bound to ARF1",
+        "description": "1j2j B:",
+        "header": "a.7.8.1 (B:) ADP-ribosylation factor binding protein Gga1 {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "a.7.8.1",
+        "sid": "d1j2jb_",
+        "sunid": 84017
+      },
+      "domain_range": {
+        "end": 208,
+        "length": 41,
+        "start": 168
+      },
+      "identity": 12.2,
+      "kind": "structure",
+      "p_value": 0.0399,
+      "rmsd": 3.96,
+      "score": 75.19,
+      "similarity": 14.63,
+      "transform": [
+        [
+          0.054,
+          0.967,
+          0.248,
+          -34.905
+        ],
+        [
+          -0.366,
+          0.25,
+          -0.896,
+          48.65
+        ],
+        [
+          -0.929,
+          -0.043,
+          0.367,
+          16.691
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 120,
+        "start": 23
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2kwba1",
+        "comment": "automated match to d2hr9a_",
+        "description": "2kwb A:1-181",
+        "header": "b.88.1.0 (A:1-181) automated matches {Nematode (Caenorhabditis elegans) [TaxId: 6239]}",
+        "sccs": "b.88.1.0",
+        "sid": "d2kwba1",
+        "sunid": 264361
+      },
+      "domain_range": {
+        "end": 132,
+        "length": 128,
+        "start": 5
+      },
+      "identity": 6.25,
+      "kind": "structure",
+      "p_value": 0.04,
+      "rmsd": 3.72,
+      "score": 117.28,
+      "similarity": 17.19,
+      "transform": [
+        [
+          0.51,
+          0.233,
+          -0.828,
+          -1.521
+        ],
+        [
+          -0.114,
+          -0.936,
+          -0.333,
+          -2.922
+        ],
+        [
+          -0.853,
+          0.264,
+          -0.45,
+          -4.878
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 138,
+        "length": 49,
+        "start": 90
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2vrha2",
+        "comment": "automatically matched to d1w26a2",
+        "description": "2vrh A:1-131",
+        "header": "d.241.2.1 (A:1-131) Trigger factor ribosome-binding domain {Escherichia coli [TaxId: 562]}",
+        "sccs": "d.241.2.1",
+        "sid": "d2vrha2",
+        "sunid": 153507
+      },
+      "domain_range": {
+        "end": 69,
+        "length": 55,
+        "start": 15
+      },
+      "identity": 7.27,
+      "kind": "structure",
+      "p_value": 0.0401,
+      "rmsd": 3.95,
+      "score": 108.17,
+      "similarity": 21.82,
+      "transform": [
+        [
+          0.949,
+          -0.03,
+          0.315,
+          -616.378
+        ],
+        [
+          -0.218,
+          0.657,
+          0.722,
+          -456.631
+        ],
+        [
+          -0.229,
+          -0.753,
+          0.617,
+          175.364
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 97,
+        "length": 94,
+        "start": 4
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1wmib1",
+        "comment": null,
+        "description": "1wmi B:7-67",
+        "header": "a.137.13.1 (B:7-67) Hypothetical protein PHS014 {Pyrococcus horikoshii [TaxId: 53953]}",
+        "sccs": "a.137.13.1",
+        "sid": "d1wmib1",
+        "sunid": 121046
+      },
+      "domain_range": {
+        "end": 57,
+        "length": 47,
+        "start": 11
+      },
+      "identity": 3.19,
+      "kind": "structure",
+      "p_value": 0.0404,
+      "rmsd": 3.14,
+      "score": 82.6,
+      "similarity": 12.77,
+      "transform": [
+        [
+          -0.9,
+          -0.002,
+          0.436,
+          -27.265
+        ],
+        [
+          0.204,
+          -0.886,
+          0.416,
+          -9.064
+        ],
+        [
+          0.386,
+          0.463,
+          0.798,
+          -4.799
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 74,
+        "length": 24,
+        "start": 51
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2fqmd2",
+        "comment": "automated match to d2fqma1",
+        "description": "2fqm D:107-177",
+        "header": "d.378.1.1 (D:107-177) Phosphoprotein P (M1) {Vesicular stomatitis indiana virus [TaxId: 11277]}",
+        "sccs": "d.378.1.1",
+        "sid": "d2fqmd2",
+        "sunid": 147045
+      },
+      "domain_range": {
+        "end": 152,
+        "length": 24,
+        "start": 129
+      },
+      "identity": 16.67,
+      "kind": "structure",
+      "p_value": 0.0424,
+      "rmsd": 1.24,
+      "score": 68.2,
+      "similarity": 29.17,
+      "transform": [
+        [
+          0.456,
+          0.553,
+          -0.697,
+          -25.177
+        ],
+        [
+          0.485,
+          -0.811,
+          -0.327,
+          54.812
+        ],
+        [
+          -0.746,
+          -0.188,
+          -0.638,
+          77.189
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 77,
+        "length": 28,
+        "start": 50
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1eysh2",
+        "comment": "complexed with bcl, bgl, bph, crt, fe, hem, lda, mq8, pef",
+        "description": "1eys H:7-43",
+        "header": "f.23.10.1 (H:7-43) Photosystem II reaction centre subunit H, transmembrane region {Thermochromatium tepidum [TaxId: 1050]}",
+        "sccs": "f.23.10.1",
+        "sid": "d1eysh2",
+        "sunid": 43517
+      },
+      "domain_range": {
+        "end": 34,
+        "length": 28,
+        "start": 7
+      },
+      "identity": 3.57,
+      "kind": "structure",
+      "p_value": 0.0426,
+      "rmsd": 0.99,
+      "score": 70.73,
+      "similarity": 14.29,
+      "transform": [
+        [
+          0.41,
+          -0.369,
+          -0.834,
+          54.953
+        ],
+        [
+          -0.132,
+          0.881,
+          -0.455,
+          -15.421
+        ],
+        [
+          0.903,
+          0.297,
+          0.312,
+          -38.726
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 121,
+        "length": 119,
+        "start": 3
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2o38b_",
+        "comment": "automated match to d2o38a1",
+        "description": "2o38 B:",
+        "header": "a.35.1.13 (B:) Hypothetical protein RPA3824 {Rhodopseudomonas palustris [TaxId: 1076]}",
+        "sccs": "a.35.1.13",
+        "sid": "d2o38b_",
+        "sunid": 148569
+      },
+      "domain_range": {
+        "end": 96,
+        "length": 65,
+        "start": 32
+      },
+      "identity": 4.1,
+      "kind": "structure",
+      "p_value": 0.0444,
+      "rmsd": 2.99,
+      "score": 80.68,
+      "similarity": 9.02,
+      "transform": [
+        [
+          0.011,
+          -0.865,
+          -0.501,
+          33.601
+        ],
+        [
+          -0.692,
+          0.356,
+          -0.628,
+          34.334
+        ],
+        [
+          0.722,
+          0.354,
+          -0.595,
+          7.669
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 139,
+        "length": 44,
+        "start": 96
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1u96a_",
+        "comment": "complexed with cu1",
+        "description": "1u96 A:",
+        "header": "a.17.1.2 (A:) Cytochrome C oxidase copper chaperone, COX17 {Baker's yeast (Saccharomyces cerevisiae) [TaxId: 4932]}",
+        "sccs": "a.17.1.2",
+        "sid": "d1u96a_",
+        "sunid": 113232
+      },
+      "domain_range": {
+        "end": 63,
+        "length": 42,
+        "start": 22
+      },
+      "identity": 4.55,
+      "kind": "structure",
+      "p_value": 0.0457,
+      "rmsd": 2.57,
+      "score": 81.28,
+      "similarity": 6.82,
+      "transform": [
+        [
+          -0.711,
+          0.703,
+          -0.015,
+          2.786
+        ],
+        [
+          -0.526,
+          -0.545,
+          -0.653,
+          14.521
+        ],
+        [
+          -0.467,
+          -0.456,
+          0.757,
+          6.304
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 107,
+        "length": 85,
+        "start": 23
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xsfa1",
+        "comment": null,
+        "description": "1xsf A:23-108",
+        "header": "d.2.1.8 (A:23-108) Probable resuscitation-promoting factor RpfB {Mycobacterium tuberculosis [TaxId: 1773]}",
+        "sccs": "d.2.1.8",
+        "sid": "d1xsfa1",
+        "sunid": 145890
+      },
+      "domain_range": {
+        "end": 107,
+        "length": 84,
+        "start": 24
+      },
+      "identity": 1.87,
+      "kind": "structure",
+      "p_value": 0.0461,
+      "rmsd": 2.85,
+      "score": 82.31,
+      "similarity": 7.48,
+      "transform": [
+        [
+          -0.6,
+          -0.19,
+          0.777,
+          0.331
+        ],
+        [
+          0.585,
+          -0.767,
+          0.264,
+          -1.455
+        ],
+        [
+          0.546,
+          0.613,
+          0.571,
+          -14.01
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 142,
+        "length": 49,
+        "start": 94
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2dfxi1",
+        "comment": null,
+        "description": "2dfx I:26-108",
+        "header": "d.311.1.1 (I:26-108) Colicin E5 immunity protein ImmE5 {Escherichia coli [TaxId: 562]}",
+        "sccs": "d.311.1.1",
+        "sid": "d2dfxi1",
+        "sunid": 145079
+      },
+      "domain_range": {
+        "end": 99,
+        "length": 72,
+        "start": 28
+      },
+      "identity": 2.7,
+      "kind": "structure",
+      "p_value": 0.0461,
+      "rmsd": 2.05,
+      "score": 84.16,
+      "similarity": 10.81,
+      "transform": [
+        [
+          -0.933,
+          0.301,
+          -0.198,
+          14.448
+        ],
+        [
+          -0.356,
+          -0.856,
+          0.376,
+          -16.742
+        ],
+        [
+          -0.056,
+          0.421,
+          0.905,
+          -14.416
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 115,
+        "length": 21,
+        "start": 95
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1bgyk_",
+        "comment": "complexed with fes, hec, hem",
+        "description": "1bgy K:",
+        "header": "f.23.15.1 (K:) Subunit XI (6.4 kDa protein) of cytochrome bc1 complex (Ubiquinol-cytochrome c reductase) {Cow (Bos taurus) [TaxId: 9913]}",
+        "sccs": "f.23.15.1",
+        "sid": "d1bgyk_",
+        "sunid": 43688
+      },
+      "domain_range": {
+        "end": 36,
+        "length": 21,
+        "start": 16
+      },
+      "identity": 9.52,
+      "kind": "structure",
+      "p_value": 0.0488,
+      "rmsd": 0.37,
+      "score": 47.84,
+      "similarity": 19.05,
+      "transform": [
+        [
+          -0.357,
+          -0.064,
+          -0.932,
+          19.567
+        ],
+        [
+          0.925,
+          0.115,
+          -0.362,
+          -29.999
+        ],
+        [
+          0.131,
+          -0.991,
+          0.018,
+          121.93
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 139,
+        "length": 40,
+        "start": 100
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1gyja_",
+        "comment": null,
+        "description": "1gyj A:",
+        "header": "d.80.1.1 (A:) 4-oxalocrotonate tautomerase homologue YdcE {Escherichia coli [TaxId: 562]}",
+        "sccs": "d.80.1.1",
+        "sid": "d1gyja_",
+        "sunid": 76385
+      },
+      "domain_range": {
+        "end": 33,
+        "length": 33,
+        "start": 1
+      },
+      "identity": 7.5,
+      "kind": "structure",
+      "p_value": 0.05,
+      "rmsd": 1.44,
+      "score": 66.31,
+      "similarity": 20,
+      "transform": [
+        [
+          0.06,
+          -0.395,
+          -0.917,
+          13.277
+        ],
+        [
+          0.089,
+          0.917,
+          -0.389,
+          21.295
+        ],
+        [
+          0.994,
+          -0.058,
+          0.091,
+          -18.075
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-P69905-F1",
+    "kind": "alphafold",
+    "name": "AF-P69905-F1",
+    "uniprot_accession": "P69905",
+    "description": "Hemoglobin subunit alpha",
+    "global_plddt": 98.03,
+    "sequence_length": 142
+  }
+}

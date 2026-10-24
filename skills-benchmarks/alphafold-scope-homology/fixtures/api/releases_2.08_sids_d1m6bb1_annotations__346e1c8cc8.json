@@ -1,0 +1,39 @@
+{
+  "comments": [
+    {
+      "description": "L1 and L2 domains"
+    },
+    {
+      "description": "complexed with nag, so4"
+    }
+  ],
+  "inconsistencies": [],
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/74525",
+    "canonical_url": "/?sunid=74525&ver=2.08",
+    "description": "1m6b B:6-165",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/75146",
+      "sccs": "c.10.2.5",
+      "sid": null,
+      "sunid": 75146
+    },
+    "release": "2.08",
+    "sccs": "c.10.2.5",
+    "sid": "d1m6bb1",
+    "sunid": 74525
+  },
+  "release": "2.08",
+  "repeats": [],
+  "xrefs": {
+    "pfam": [],
+    "pubmed": [],
+    "species": [],
+    "uniprot": []
+  }
+}

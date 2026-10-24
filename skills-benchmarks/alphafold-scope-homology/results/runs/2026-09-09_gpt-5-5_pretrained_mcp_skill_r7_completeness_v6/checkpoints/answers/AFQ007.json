@@ -1,0 +1,187 @@
+{
+  "audit": {
+    "citation_audit": {
+      "issues": [],
+      "items": [
+        {
+          "id": "E1",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d1d5ra2",
+            "https://scop.berkeley.edu/sunid=52799&ver=2.08"
+          ]
+        },
+        {
+          "id": "E2",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1fq1a_/parents",
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1fq1a_"
+          ]
+        },
+        {
+          "id": "E3",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1p15b_",
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d4hv4a3"
+          ]
+        },
+        {
+          "id": "E4",
+          "unreturned_urls": [],
+          "urls": [
+            "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d5buga2",
+            "https://scop.berkeley.edu/sunid=49562&ver=2.08"
+          ]
+        },
+        {
+          "id": "E5",
+          "unreturned_urls": [],
+          "urls": [
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P60484-F1",
+            "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/52799/fatcat-chain-benchmark?minimum_supporting_hits=5"
+          ]
+        }
+      ]
+    },
+    "definitive_claim_matches": [],
+    "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+    "failed_call_count": 0,
+    "forbidden_events": [],
+    "foreign_mcp_calls": [],
+    "input_attestation": {
+      "model": "AF-P60484-F1",
+      "question_id": "AFQ007",
+      "question_sha256": "db6c1c7b21f832d5219a9e5900b0bd37a76e5f8f2e8fb6cd2ebec0f385559a54",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "issues": [],
+    "max_mcp_calls": 8,
+    "missing_benchmark_counts": [],
+    "missing_benchmarks": [],
+    "missing_hits": [],
+    "missing_representative_calls": [],
+    "missing_source_urls": [],
+    "missing_tools": [],
+    "observed_benchmark_counts": [
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "observed_benchmarks": [
+      [
+        "2.08",
+        52799,
+        5
+      ]
+    ],
+    "observed_hits": [
+      [
+        "2.08",
+        "AF-P60484-F1",
+        100
+      ]
+    ],
+    "off_target_calls": [],
+    "reported_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "required_benchmark_counts": [
+      [
+        "2.08",
+        5,
+        1
+      ]
+    ],
+    "required_benchmarks": [
+      [
+        "2.08",
+        52800,
+        5
+      ]
+    ],
+    "required_hits": [
+      [
+        "2.08",
+        "AF-P60484-F1",
+        100
+      ]
+    ],
+    "required_representatives": [
+      [
+        "2.08",
+        "d1d5ra2"
+      ],
+      [
+        "2.08",
+        "d1fq1a_"
+      ],
+      [
+        "2.08",
+        "d1p15b_"
+      ],
+      [
+        "2.08",
+        "d4hv4a3"
+      ],
+      [
+        "2.08",
+        "d5buga2"
+      ]
+    ],
+    "successful_call_count": 2,
+    "total_call_count": 2,
+    "uncalled_reported_tools": [],
+    "unfrozen_source_urls": [],
+    "unreported_required_tools": [],
+    "used_tools": [
+      "get_alphafold_decision_evidence",
+      "get_alphafold_hits"
+    ],
+    "wrong_release_calls": [],
+    "wrong_source_urls": []
+  },
+  "performance": {
+    "attempt_count": 1,
+    "duration_seconds": 103.403,
+    "mcp_call_count": 2,
+    "rejected_attempts": [],
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 134784,
+      "input_tokens": 160755,
+      "output_tokens": 4825,
+      "reasoning_output_tokens": 1240
+    }
+  },
+  "record": {
+    "answer": "This is a non-official evidence assessment, not a definitive determination of homology or an official SCOPe classification.\n\n**1. Conclusion**\nFor AF-P60484-F1, UniProt P60484, release 2.08, the evidence favors a strong chance of a c.45.1 phosphatase-superfamily relationship for approximately residues 1-199, with a qualified family-level candidate toward Dual specificity phosphatase-like c.45.1.1 because sequence and structure converge there but family labels include automated/correlated records and a c.45.1.2 structural alternative. For the following C2-like region, approximately residues 188-351, the evidence favors a b.7.1 C2-domain superfamily hypothesis, with PLC-like (P variant) b.7.1.1 as a sequence-supported family candidate only; no C2-region structure hit was returned in the compact FATCAT evidence.\n\n**2. What can be said at each level**\n\nN-terminal phosphatase region, approximate envelope 1-199; overlaps the C2 region at about 188-199.\n\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | The target description names PTEN phosphatase context, and retrieved reference annotations mention ligands, but exact target function, ligand state, or reaction is not established from this evidence alone. | E1, E2, E5 |\n| Family | Dual specificity phosphatase-like c.45.1.1/SUNID 52800 is favored as a candidate: the top sequence hit and top structure hit both map there, but correlated hits, automated records, and a c.45.1.2 structural alternative prevent a definitive family claim. | E1, E2, E3 |\n| Superfamily | Strongest supported relationship level is (Phosphotyrosine protein) phosphatases II c.45.1/SUNID 52799. Sequence c.45 groups and the best FATCAT hits agree at this node across the N-terminal envelope. | E1, E2, E3, E5 |\n| Fold | c.45 fold-level structural similarity is supported for the N-terminal region; the weak c.59 hit is outside benchmark filters and does not control the interpretation. | E2, E3 |\n\nC2-domain region, approximate envelope 188-351; overlaps the phosphatase envelope at about 188-199.\n\n| Level | Assessment and ambiguity | Evidence |\n| --- | --- | --- |\n| Function | Not established by the retrieved evidence. The C2-domain label does not transfer calcium/lipid-binding function to the target. | E4 |\n| Family | PLC-like (P variant) b.7.1.1/SUNID 49563 is a sequence-supported family candidate, but the representative is automated and no corroborating C2-region structure hit was returned. | E4 |\n| Superfamily | C2 domain (Calcium/lipid-binding domain, CaLB) b.7.1/SUNID 49562 is favored as the strongest defensible relationship-level hypothesis for residues 188-351. | E4 |\n| Fold | C2 domain-like b.7/SUNID 49561 fold similarity is consistent with the sequence evidence, but the current retrieved structure stream does not independently establish it for this region. | E4 |\n\n**3. Evidence considered**\n- **E1** \u2014 Sequence evidence for the phosphatase region: rank 1 hit d1d5ra2 aligns AF-P60484-F1 residues 14-187, 174/403 residues = 43.18% of the model and about 174/199 = 87.4% of the N-terminal evidence envelope, with log10(E) -101.47 and 60.31% identity. Its lineage is c.45 fold/SUNID 52798, c.45.1 superfamily/SUNID 52799, and c.45.1.1 Dual specificity phosphatase-like family/SUNID 52800. Source: [d1d5ra2 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d1d5ra2); [c.45.1 node](https://scop.berkeley.edu/sunid=52799&ver=2.08)\n- **E2** \u2014 Structure evidence for the phosphatase region: rank 1 FATCAT hit d1fq1a_ aligns residues 4-189, 186/403 = 46.15% of the model and about 186/199 = 93.5% of the N-terminal envelope, with P = 0.000028, score 294.26, RMSD 2.25, identity 14.29%, and lineage c.45.1.1. This supports the same c.45.1 superfamily and the same c.45.1.1 family candidate as E1, but it is structural similarity evidence, not a homology probability. Source: [d1fq1a_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1fq1a_); [d1fq1a_ lineage data](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sids/d1fq1a_/parents)\n- **E3** \u2014 Competing N-terminal structure context: d1p15b_ is a c.45.1.2 hit over residues 1-187, 187/403 = 46.4%, P = 0.000092, score 269.65, RMSD 3.05; d4hv4a3 is a weaker different-fold c.59.1.0 hit over residues 13-144, 132/403 = 32.75%, P = 0.0392, score 151.24, RMSD 3.36. The c.45.1.2 hit supports the same c.45.1 superfamily but weakens a definitive c.45.1.1 family claim; the c.59 hit is not strong enough to displace the phosphatase-superfamily hypothesis. Source: [d1p15b_ structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1p15b_); [d4hv4a3 structure hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d4hv4a3)\n- **E4** \u2014 C2-region sequence evidence: rank 14 hit d5buga2 aligns residues 188-351, 164/403 = 40.69% of the model and 164/164 of the selected C2 envelope, with log10(E) -65.75 and 46.78% identity. The compact sequence summary reports 13 raw b.7.1.1 hits in this overlap group. Its lineage is b.7 C2 domain-like/SUNID 49561, b.7.1 C2 domain superfamily/SUNID 49562, and b.7.1.1 PLC-like family/SUNID 49563. Source: [d5buga2 sequence hit](https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d5buga2); [b.7.1 node](https://scop.berkeley.edu/sunid=49562&ver=2.08)\n- **E5** \u2014 Confidence and calibration: whole-model global pLDDT is 83.97; whole-model bands are 278 >=90, 37 from 70-<90, 20 from 50-<70, and 68 <50 residues. The phosphatase envelope 1-199 has median pLDDT 97.07 with bands 169/25/5/0 and no sustained <70 stretch, supporting interpretability of the N-terminal structural comparison. The C2 envelope 188-351 has median 96.51 with bands 121/12/14/17 and sustained low-confidence stretches at 282-304 and 306-313, plus <50 at 284-298, so C2 geometry is more qualified. Prespecified phosphatase c.45.1 superfamily calibration at minimum_supporting_hits=5 resolved to SUNID 52799 but returned status threshold_unavailable, so it supplies no favorable benchmark statistic. Source: [decision evidence and confidence](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P60484-F1); [phosphatase calibration](http://127.0.0.1:18777/api/v1/index.php/releases/2.08/sunids/52799/fatcat-chain-benchmark?minimum_supporting_hits=5)\n\n**4. Caveats by evidence item**\n- **E1** \u2014 Sequence hits are strong and near domain-length for the N-terminal region, but raw counts are correlated: sequence summary gives 94 raw hits, 5 overlap-SCCS groups, and c.45.1.1 has 46 raw hits. Correlated same-node hits are not independent family proof.\n- **E2** \u2014 FATCAT P-value, score, RMSD, and extent support structural similarity, not a probability of homology. Chain-benchmark applicability for d1fq1a_ is uncertain_missing_filter_inputs: the P-value passes the 1e-4 filter, but length-match inputs are missing, so a benchmark fraction could not be used as reassurance.\n- **E3** \u2014 d1p15b_ is a material same-superfamily but different-family alternative. d4hv4a3 is an automated c.59.1.0 match with P = 0.0392 and outside_benchmark_filters, so it is treated as weak competing context rather than a controlling relationship signal.\n- **E4** \u2014 The C2 family representative d5buga2 is annotated as an automated match to d1d5ra1. Because the retrieved evidence gives sequence support but no returned C2-region FATCAT hit, the family label remains a candidate, while b.7.1 superfamily is the more defensible hypothesis.\n- **E5** \u2014 pLDDT supports local geometry interpretation but does not establish homology, function, exact boundaries, domain orientation, PAE/pTM, MSA depth, template dependence, or partner context. The phosphatase calibration threshold requested by the question was unavailable at minimum_supporting_hits=5, limiting benchmark-based calibration of the phosphatase hypothesis.",
+    "claim_status": "non_official_evidence_hypothesis",
+    "condition": "pretrained_mcp_skill",
+    "evidence_used": [
+      "Read alphafold-scope-homology/SKILL.md once; material references read: alphafold-caveats.md, fatcat-caveats.md, fatcat-chain-benchmark.md",
+      "mcp__scop_local.get_alphafold_hits(model=AF-P60484-F1, release=2.08, limit=100, compact=true, include_transforms=false)",
+      "mcp__scop_local.get_alphafold_decision_evidence(model=AF-P60484-F1, release=2.08, regions=[1-199,188-351], sids=[d1d5ra2,d1fq1a_,d1p15b_,d4hv4a3,d5buga2], calibration_requests=[{sid=d1d5ra2, level=superfamily, minimum_supporting_hits=5}])"
+    ],
+    "input_attestation": {
+      "model": "AF-P60484-F1",
+      "question_id": "AFQ007",
+      "question_sha256": "db6c1c7b21f832d5219a9e5900b0bd37a76e5f8f2e8fb6cd2ebec0f385559a54",
+      "release": "2.08",
+      "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+    },
+    "model": "gpt-5.5",
+    "question_id": "AFQ007",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "timestamp": "2026-09-10T00:39:41Z"
+  },
+  "used_tools": [
+    "get_alphafold_decision_evidence",
+    "get_alphafold_hits"
+  ]
+}

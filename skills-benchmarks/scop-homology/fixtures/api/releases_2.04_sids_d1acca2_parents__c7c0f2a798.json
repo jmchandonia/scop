@@ -1,0 +1,140 @@
+{
+  "parents": [
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/0",
+      "canonical_url": "/?sunid=0&ver=2.04",
+      "description": "SCOP root",
+      "level": {
+        "code": "rt",
+        "name": "Root",
+        "plural": "Root"
+      },
+      "release": "2.04",
+      "sccs": "",
+      "sid": null,
+      "sunid": 0
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/48724",
+      "canonical_url": "/?sunid=48724&ver=2.04",
+      "description": "All beta proteins",
+      "level": {
+        "code": "cl",
+        "name": "Class",
+        "plural": "Classes"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/0",
+        "sccs": "",
+        "sid": null,
+        "sunid": 0
+      },
+      "release": "2.04",
+      "sccs": "b",
+      "sid": null,
+      "sunid": 48724
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254104",
+      "canonical_url": "/?sunid=254104&ver=2.04",
+      "description": "Anthrax protective antigen N-terminal-like",
+      "level": {
+        "code": "cf",
+        "name": "Fold",
+        "plural": "Folds"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/48724",
+        "sccs": "b",
+        "sid": null,
+        "sunid": 48724
+      },
+      "release": "2.04",
+      "sccs": "b.179",
+      "sid": null,
+      "sunid": 254104
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254123",
+      "canonical_url": "/?sunid=254123&ver=2.04",
+      "description": "PA14-like",
+      "level": {
+        "code": "sf",
+        "name": "Superfamily",
+        "plural": "Superfamilies"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254104",
+        "sccs": "b.179",
+        "sid": null,
+        "sunid": 254104
+      },
+      "release": "2.04",
+      "sccs": "b.179.1",
+      "sid": null,
+      "sunid": 254123
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254147",
+      "canonical_url": "/?sunid=254147&ver=2.04",
+      "description": "PA14",
+      "level": {
+        "code": "fa",
+        "name": "Family",
+        "plural": "Families"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254123",
+        "sccs": "b.179.1",
+        "sid": null,
+        "sunid": 254123
+      },
+      "release": "2.04",
+      "sccs": "b.179.1.1",
+      "sid": null,
+      "sunid": 254147
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254334",
+      "canonical_url": "/?sunid=254334&ver=2.04",
+      "description": "PA14",
+      "level": {
+        "code": "dm",
+        "name": "Protein",
+        "plural": "Proteins"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254147",
+        "sccs": "b.179.1.1",
+        "sid": null,
+        "sunid": 254147
+      },
+      "release": "2.04",
+      "sccs": "b.179.1.1",
+      "sid": null,
+      "sunid": 254334
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sunids/254763",
+      "canonical_url": "/?sunid=254763&ver=2.04",
+      "description": "Bacillus anthracis",
+      "level": {
+        "code": "sp",
+        "name": "Species",
+        "plural": "Species"
+      },
+      "parent": {
+        "api_url": "/api/v1/releases/2.04/sunids/254334",
+        "sccs": "b.179.1.1",
+        "sid": null,
+        "sunid": 254334
+      },
+      "release": "2.04",
+      "sccs": "b.179.1.1",
+      "sid": null,
+      "sunid": 254763
+    }
+  ],
+  "release": "2.04",
+  "sunid": 238522
+}

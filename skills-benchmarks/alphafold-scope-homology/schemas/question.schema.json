@@ -1,0 +1,24 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["id", "category", "difficulty", "model", "release", "prompt", "reference_status", "required_tools", "expected_behaviors", "failure_modes"],
+  "properties": {
+    "id": {"type": "string", "pattern": "^AFQ[0-9]{3}(?:_[a-z0-9_]+)?$"},
+    "category": {"enum": ["domain_detection", "architecture_query", "weak_hit_calibration", "multidomain_detection", "classification_level", "pagination_sensitivity", "evidence_convergence", "global_vs_local_confidence", "empty_hit_handling"]},
+    "difficulty": {"enum": ["basic", "intermediate", "adversarial"]},
+    "model": {"type": "string", "pattern": "^AF-[A-Za-z0-9]+-F[0-9]+$"},
+    "release": {"type": "string", "minLength": 1},
+    "prompt": {"type": "string", "minLength": 1},
+    "reference_status": {"enum": ["pilot", "draft_gold", "curator_verified"]},
+    "required_tools": {
+      "type": "array", "uniqueItems": true,
+      "items": {"enum": ["get_scop_fatcat_chain_statistics", "get_alphafold_model", "get_alphafold_regions_confidence", "get_alphafold_hits", "get_scop_domains"]}
+    },
+    "expected_behaviors": {"type": "array", "minItems": 2, "items": {"type": "string", "minLength": 1}},
+    "failure_modes": {
+      "type": "array", "uniqueItems": true,
+      "items": {"enum": ["fabricated_evidence", "fold_called_homology", "plddt_called_homology", "short_fragment_overclaim", "official_classification_claim", "unsupported_function_claim", "top_hit_only", "global_plddt_only", "false_negative_from_empty_hits", "sequence_data_gap_ignored", "benchmark_misinterpreted", "missing_benchmark", "exact_boundary_from_plddt", "missing_release", "missing_caveats"]}
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "domains": [
+    {
+      "api_url": "/api/v1/releases/2.04/sids/d1acca1",
+      "chain": "A",
+      "description": "1acc A:226-735",
+      "sccs": "f.60.1.1",
+      "sid": "d1acca1",
+      "sunid": 238521
+    },
+    {
+      "api_url": "/api/v1/releases/2.04/sids/d1acca2",
+      "chain": "A",
+      "description": "1acc A:14-225",
+      "sccs": "b.179.1.1",
+      "sid": "d1acca2",
+      "sunid": 238522
+    }
+  ],
+  "pdb_code": "1acc",
+  "release": "2.04"
+}

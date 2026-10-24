@@ -1,0 +1,29 @@
+{
+  "performance": {
+    "duration_seconds": 24.073,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 0,
+      "input_tokens": 18734,
+      "output_tokens": 558,
+      "reasoning_output_tokens": 211
+    }
+  },
+  "record": {
+    "applied_penalties": [
+      "Missing the collagen-specific partner-chain/partner-dependent assembly limitation, a material warning required by the case; lowers an otherwise complete answer by one point."
+    ],
+    "criterion_scores": {
+      "calibration_and_caveats": 3,
+      "evidence_completeness": 3,
+      "scientific_correctness": 4,
+      "task_resolution": 4
+    },
+    "evaluator": "gpt-5.6-sol",
+    "question_id": "AFQ010",
+    "rubric_notes": "The candidate correctly rejects inference of domain/relationship absence from zero returned FATCAT hits, confines hypotheses to residues 39\u201396 and 957\u20131117, leaves uncovered regions inconclusive, and clearly frames the result as non-official and non-definitive. It reports SCOPe 2.08, UniProt and exact sequence provenance, representative SIDs, lineage, coverage, E-values, identities, redundancy of the three correlated 3hqv chain hits, and detailed local pLDDT distributions. It also avoids global-pLDDT-only, top-hit-only, and official-classification failure modes. No FATCAT benchmark was required by the deterministic contract, so none is missing. The important omission is the case-specific warning that collagen geometry/assembly is partner-chain dependent and may be poorly represented by a single-chain AlphaFold model; the generic statement that assembly context is unestablished does not fully articulate that limitation. Minor wording such as \u201cFnI-like/VWC superfamily\u201d is imprecise because VWC is the family and FnI-like is the superfamily, but the adjacent table and lineage evidence state the hierarchy correctly, so this is not materially misleading. Overall this is otherwise complete and scientifically well calibrated, warranting 3 after the material-warning penalty.",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "score": 3,
+    "timestamp": "2026-09-10T00:43:06Z"
+  }
+}

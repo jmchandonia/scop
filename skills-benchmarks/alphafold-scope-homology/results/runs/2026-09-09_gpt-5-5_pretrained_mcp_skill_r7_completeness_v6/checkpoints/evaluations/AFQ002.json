@@ -1,0 +1,27 @@
+{
+  "performance": {
+    "duration_seconds": 23.76,
+    "usage": {
+      "cache_write_input_tokens": 0,
+      "cached_input_tokens": 10624,
+      "input_tokens": 17280,
+      "output_tokens": 569,
+      "reasoning_output_tokens": 262
+    }
+  },
+  "record": {
+    "applied_penalties": [],
+    "criterion_scores": {
+      "calibration_and_caveats": 4,
+      "evidence_completeness": 4,
+      "scientific_correctness": 4,
+      "task_resolution": 4
+    },
+    "evaluator": "gpt-5.6-sol",
+    "question_id": "AFQ002",
+    "rubric_notes": "The candidate directly resolves the tested proposition and preserves the required non-definitive boundary: it presents a non-official evidence hypothesis, not an official classification or definitive homology claim. It correctly distinguishes SCOPe alpha/beta class c from hemoglobin subunit naming, contrasts full-length all-alpha globin sequence and FATCAT evidence with the fragmentary class-c alternative, reports release 2.08 and representative SIDs, gives sequence provenance and lineage through class/fold/superfamily/family, and quantifies d4aa7a1 as residues 55\u201374 (20/142; 14.08%) with an automated-match caveat. Local and global pLDDT are handled correctly as geometric confidence rather than evolutionary evidence. The response also explains that class labels concern architecture and do not establish target ancestry or classification. Its extra c.2 mention is not developed, but it is framed only as another weak structure-only signal and does not materially impair the complete treatment of the decisive representative. The benchmark caveat is unnecessary because the deterministic contract requires no benchmark call, but the answer does not falsely claim a required benchmark is missing and does not use match fraction as homology evidence. No mandatory penalty or score cap applies.",
+    "run_id": "2026-09-09_gpt-5-5_pretrained_mcp_skill_r7_completeness_v6",
+    "score": 4,
+    "timestamp": "2026-09-10T00:42:14Z"
+  }
+}

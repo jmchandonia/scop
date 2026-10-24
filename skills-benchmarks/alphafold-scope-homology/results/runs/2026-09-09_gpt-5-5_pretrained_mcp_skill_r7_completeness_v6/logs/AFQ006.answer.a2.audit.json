@@ -1,0 +1,116 @@
+{
+  "attempt": 2,
+  "citation_audit": {
+    "issues": [],
+    "items": [
+      {
+        "id": "E1",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d1d5ra2"
+        ]
+      },
+      {
+        "id": "E2",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=seq&hit=d5buga2"
+        ]
+      },
+      {
+        "id": "E3",
+        "unreturned_urls": [],
+        "urls": [
+          "https://scop.berkeley.edu/sunid=49562&ver=2.08",
+          "https://scop.berkeley.edu/sunid=52799&ver=2.08"
+        ]
+      },
+      {
+        "id": "E4",
+        "unreturned_urls": [],
+        "urls": [
+          "https://brass.lbl.gov/~makelyan/scop-test/scop-newui-php-bootstrap/alphafold/af_x_domains/index.php?af=AF-P60484-F1&mode=struct&hit=d1fq1a_"
+        ]
+      },
+      {
+        "id": "E5",
+        "unreturned_urls": [],
+        "urls": [
+          "http://127.0.0.1:18777/api/v1/index.php/releases/2.08/alphafolds/AF-P60484-F1/hits?limit=100"
+        ]
+      }
+    ]
+  },
+  "definitive_claim_matches": [],
+  "duration_seconds": 77.855,
+  "expected_rest_base_url": "http://127.0.0.1:18777/api/v1/index.php",
+  "failed_call_count": 0,
+  "forbidden_events": [],
+  "foreign_mcp_calls": [],
+  "input_attestation": {
+    "model": "AF-P60484-F1",
+    "question_id": "AFQ006",
+    "question_sha256": "52d9f1bb3f03eba15bad04bad5c8aa80a966bd4f2322f6eee1822c4913d00398",
+    "release": "2.08",
+    "skill_sha256": "356411d4a3a1b21734597d169192faf2f2e8fbf760699741fba10f737bb22fc7"
+  },
+  "issues": [],
+  "max_mcp_calls": 8,
+  "missing_benchmark_counts": [],
+  "missing_benchmarks": [],
+  "missing_hits": [],
+  "missing_representative_calls": [],
+  "missing_source_urls": [],
+  "missing_tools": [],
+  "observed_benchmark_counts": [],
+  "observed_benchmarks": [],
+  "observed_hits": [
+    [
+      "2.08",
+      "AF-P60484-F1",
+      100
+    ]
+  ],
+  "off_target_calls": [],
+  "reported_tools": [
+    "get_alphafold_hits",
+    "get_scop_domains"
+  ],
+  "required_benchmark_counts": [],
+  "required_benchmarks": [],
+  "required_hits": [
+    [
+      "2.08",
+      "AF-P60484-F1",
+      100
+    ]
+  ],
+  "required_representatives": [
+    [
+      "2.08",
+      "d1d5ra2"
+    ],
+    [
+      "2.08",
+      "d5buga2"
+    ]
+  ],
+  "successful_call_count": 3,
+  "total_call_count": 3,
+  "uncalled_reported_tools": [],
+  "unfrozen_source_urls": [],
+  "unreported_required_tools": [],
+  "usage": {
+    "cache_write_input_tokens": 0,
+    "cached_input_tokens": 124160,
+    "input_tokens": 160823,
+    "output_tokens": 3463,
+    "reasoning_output_tokens": 936
+  },
+  "used_tools": [
+    "get_alphafold_hits",
+    "get_scop_domains"
+  ],
+  "wrong_release_calls": [],
+  "wrong_source_urls": []
+}

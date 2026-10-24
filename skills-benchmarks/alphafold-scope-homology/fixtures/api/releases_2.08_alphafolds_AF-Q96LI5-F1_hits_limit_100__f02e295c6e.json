@@ -1,0 +1,713 @@
+{
+  "limit": 100,
+  "release": "2.08",
+  "sequence_evidence": {
+    "interpretation": "Stored BLAST rows exist for this exact UniProt-linked sequence and release; public sequence hits may still be empty after endpoint filters.",
+    "sequence_id_available": true,
+    "source": "af_model.uniprot_id",
+    "status": "stored_blast_results_available",
+    "stored_blast_result_count": 31,
+    "uniprot_id_available": true
+  },
+  "sequence_hits": [],
+  "structure_hits": [
+    {
+      "alphafold_range": {
+        "end": 537,
+        "length": 352,
+        "start": 186
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d3i48a_",
+        "comment": "automated match to d1zwxa1",
+        "description": "3i48 A:",
+        "header": "d.151.1.0 (A:) automated matches {Staphylococcus aureus [TaxId: 561307]}",
+        "sccs": "d.151.1.0",
+        "sid": "d3i48a_",
+        "sunid": 211464
+      },
+      "domain_range": {
+        "end": 297,
+        "length": 291,
+        "start": 7
+      },
+      "identity": 9.54,
+      "kind": "structure",
+      "p_value": 0.000144,
+      "rmsd": 2.94,
+      "score": 315.37,
+      "similarity": 19.33,
+      "transform": [
+        [
+          -0.314,
+          0.871,
+          -0.379,
+          -13.306
+        ],
+        [
+          -0.913,
+          -0.168,
+          0.371,
+          29.357
+        ],
+        [
+          0.259,
+          0.462,
+          0.848,
+          6.62
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 538,
+        "length": 353,
+        "start": 186
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2uyrx_",
+        "comment": "automated match to d2ddra1",
+        "description": "2uyr X:",
+        "header": "d.151.1.3 (X:) automated matches {Bacillus cereus [TaxId: 1396]}",
+        "sccs": "d.151.1.3",
+        "sid": "d2uyrx_",
+        "sunid": 168242
+      },
+      "domain_range": {
+        "end": 305,
+        "length": 299,
+        "start": 7
+      },
+      "identity": 10.1,
+      "kind": "structure",
+      "p_value": 0.000244,
+      "rmsd": 2.78,
+      "score": 302.31,
+      "similarity": 20.2,
+      "transform": [
+        [
+          -0.261,
+          -0.555,
+          0.79,
+          -22.455
+        ],
+        [
+          -0.864,
+          0.499,
+          0.064,
+          -1.958
+        ],
+        [
+          -0.43,
+          -0.666,
+          -0.61,
+          41.369
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 538,
+        "length": 352,
+        "start": 187
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ei9a_",
+        "comment": "automated match to d1wdua_",
+        "description": "2ei9 A:",
+        "header": "d.151.1.0 (A:) automated matches {Silkworm (Bombyx mori) [TaxId: 7091]}",
+        "sccs": "d.151.1.0",
+        "sid": "d2ei9a_",
+        "sunid": 204126
+      },
+      "domain_range": {
+        "end": 222,
+        "length": 214,
+        "start": 9
+      },
+      "identity": 7.26,
+      "kind": "structure",
+      "p_value": 0.000658,
+      "rmsd": 2.98,
+      "score": 258.69,
+      "similarity": 16.67,
+      "transform": [
+        [
+          0.11,
+          -0.95,
+          0.291,
+          55.298
+        ],
+        [
+          0.099,
+          0.301,
+          0.948,
+          -26.392
+        ],
+        [
+          -0.989,
+          -0.075,
+          0.127,
+          -5.693
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 539,
+        "length": 352,
+        "start": 188
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1wdub_",
+        "comment": "complexed with cl, po4",
+        "description": "1wdu B:",
+        "header": "d.151.1.1 (B:) Endonuclease domain of TRAS1 retrotransposon (ORF2) {Silkworm (Bombyx mori) [TaxId: 7091]}",
+        "sccs": "d.151.1.1",
+        "sid": "d1wdub_",
+        "sunid": 109287
+      },
+      "domain_range": {
+        "end": 247,
+        "length": 226,
+        "start": 22
+      },
+      "identity": 8.72,
+      "kind": "structure",
+      "p_value": 0.00069,
+      "rmsd": 3.1,
+      "score": 264.27,
+      "similarity": 18.26,
+      "transform": [
+        [
+          -0.68,
+          0.645,
+          -0.35,
+          -36.739
+        ],
+        [
+          0.516,
+          0.759,
+          0.397,
+          -26.995
+        ],
+        [
+          0.521,
+          0.09,
+          -0.849,
+          -1.297
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 156,
+        "length": 120,
+        "start": 37
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ltxa3",
+        "comment": "complexed with cl, far, zn",
+        "description": "1ltx A:444-567",
+        "header": "c.10.2.2 (A:444-567) Rab geranylgeranyltransferase alpha-subunit, C-terminal domain {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.10.2.2",
+        "sid": "d1ltxa3",
+        "sunid": 84713
+      },
+      "domain_range": {
+        "end": 560,
+        "length": 117,
+        "start": 444
+      },
+      "identity": 28.23,
+      "kind": "structure",
+      "p_value": 0.00118,
+      "rmsd": 1.98,
+      "score": 233.41,
+      "similarity": 44.35,
+      "transform": [
+        [
+          -0.757,
+          0.407,
+          0.511,
+          34.313
+        ],
+        [
+          0.043,
+          -0.75,
+          0.661,
+          75.845
+        ],
+        [
+          0.652,
+          0.522,
+          0.55,
+          -99.749
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 536,
+        "length": 350,
+        "start": 187
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4k6lf_",
+        "comment": "automated match to d1sr4b_",
+        "description": "4k6l F:",
+        "header": "d.151.1.0 (F:) automated matches {Salmonella enterica [TaxId: 90370]}",
+        "sccs": "d.151.1.0",
+        "sid": "d4k6lf_",
+        "sunid": 224184
+      },
+      "domain_range": {
+        "end": 266,
+        "length": 242,
+        "start": 25
+      },
+      "identity": 7.43,
+      "kind": "structure",
+      "p_value": 0.00146,
+      "rmsd": 2.97,
+      "score": 248.32,
+      "similarity": 16.98,
+      "transform": [
+        [
+          0.523,
+          -0.588,
+          -0.617,
+          -2.938
+        ],
+        [
+          0.542,
+          0.788,
+          -0.291,
+          -4.956
+        ],
+        [
+          0.658,
+          -0.182,
+          0.731,
+          39.979
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 536,
+        "length": 350,
+        "start": 187
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2f2fb1",
+        "comment": null,
+        "description": "2f2f B:23-283",
+        "header": "d.151.1.1 (B:23-283) Cytolethal distending toxin subunit B {Actinobacillus actinomycetemcomitans [TaxId: 714]}",
+        "sccs": "d.151.1.1",
+        "sid": "d2f2fb1",
+        "sunid": 132811
+      },
+      "domain_range": {
+        "end": 281,
+        "length": 257,
+        "start": 25
+      },
+      "identity": 8.47,
+      "kind": "structure",
+      "p_value": 0.00258,
+      "rmsd": 3.13,
+      "score": 234.05,
+      "similarity": 18.25,
+      "transform": [
+        [
+          0.084,
+          0.853,
+          0.516,
+          -81.074
+        ],
+        [
+          -0.969,
+          0.191,
+          -0.157,
+          5.013
+        ],
+        [
+          -0.233,
+          -0.486,
+          0.842,
+          12.199
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 156,
+        "length": 153,
+        "start": 4
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4p91a_",
+        "comment": "automated match to d4p8sa_",
+        "description": "4p91 A:",
+        "header": "c.10.2.0 (A:) automated matches {Norway rat (Rattus norvegicus) [TaxId: 10116]}",
+        "sccs": "c.10.2.0",
+        "sid": "d4p91a_",
+        "sunid": 257448
+      },
+      "domain_range": {
+        "end": 279,
+        "length": 228,
+        "start": 52
+      },
+      "identity": 14.16,
+      "kind": "structure",
+      "p_value": 0.0142,
+      "rmsd": 2.64,
+      "score": 240.83,
+      "similarity": 21.89,
+      "transform": [
+        [
+          0.039,
+          -0.782,
+          -0.622,
+          62.812
+        ],
+        [
+          0.981,
+          0.149,
+          -0.126,
+          -7.704
+        ],
+        [
+          0.192,
+          -0.605,
+          0.773,
+          -30.408
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 154,
+        "length": 120,
+        "start": 35
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d2ifga3",
+        "comment": null,
+        "description": "2ifg A:36-191",
+        "header": "c.10.2.7 (A:36-191) High affinity nerve growth factor receptor, N-terminal domain {Human (Homo sapiens) [TaxId: 9606]}",
+        "sccs": "c.10.2.7",
+        "sid": "d2ifga3",
+        "sunid": 137337
+      },
+      "domain_range": {
+        "end": 171,
+        "length": 128,
+        "start": 44
+      },
+      "identity": 20.16,
+      "kind": "structure",
+      "p_value": 0.0187,
+      "rmsd": 3.55,
+      "score": 201.04,
+      "similarity": 37.21,
+      "transform": [
+        [
+          -0.241,
+          0.03,
+          0.97,
+          -32.203
+        ],
+        [
+          -0.493,
+          -0.865,
+          -0.096,
+          -27.285
+        ],
+        [
+          0.836,
+          -0.502,
+          0.223,
+          -9.022
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 208,
+        "length": 207,
+        "start": 2
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1xeca_",
+        "comment": "complexed with nag",
+        "description": "1xec A:",
+        "header": "c.10.2.7 (A:) Decorin {Cow (Bos taurus) [TaxId: 9913]}",
+        "sccs": "c.10.2.7",
+        "sid": "d1xeca_",
+        "sunid": 115227
+      },
+      "domain_range": {
+        "end": 293,
+        "length": 226,
+        "start": 68
+      },
+      "identity": 10.36,
+      "kind": "structure",
+      "p_value": 0.0189,
+      "rmsd": 1.49,
+      "score": 229.37,
+      "similarity": 18.21,
+      "transform": [
+        [
+          -0.371,
+          -0.917,
+          0.148,
+          59.71
+        ],
+        [
+          0.928,
+          -0.364,
+          0.072,
+          1.467
+        ],
+        [
+          -0.012,
+          0.164,
+          0.986,
+          -91.128
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 152,
+        "length": 150,
+        "start": 3
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1h6ua2",
+        "comment": null,
+        "description": "1h6u A:36-262",
+        "header": "c.10.2.1 (A:36-262) Internalin H {Listeria monocytogenes [TaxId: 1639]}",
+        "sccs": "c.10.2.1",
+        "sid": "d1h6ua2",
+        "sunid": 65689
+      },
+      "domain_range": {
+        "end": 257,
+        "length": 212,
+        "start": 46
+      },
+      "identity": 14.42,
+      "kind": "structure",
+      "p_value": 0.0212,
+      "rmsd": 2.67,
+      "score": 211.76,
+      "similarity": 26.05,
+      "transform": [
+        [
+          0.079,
+          -0.936,
+          0.342,
+          3.31
+        ],
+        [
+          0.976,
+          0.142,
+          0.164,
+          -0.384
+        ],
+        [
+          -0.202,
+          0.321,
+          0.925,
+          -85.373
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 159,
+        "length": 151,
+        "start": 9
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d1ogqa_",
+        "comment": "complexed with act, nag",
+        "description": "1ogq A:",
+        "header": "c.10.2.8 (A:) Polygalacturonase inhibiting protein PGIP {French bean (Phaseolus vulgaris) [TaxId: 3885]}",
+        "sccs": "c.10.2.8",
+        "sid": "d1ogqa_",
+        "sunid": 86996
+      },
+      "domain_range": {
+        "end": 172,
+        "length": 148,
+        "start": 25
+      },
+      "identity": 21.38,
+      "kind": "structure",
+      "p_value": 0.0231,
+      "rmsd": 3.83,
+      "score": 238.06,
+      "similarity": 35.85,
+      "transform": [
+        [
+          -0.757,
+          -0.64,
+          0.131,
+          80.84
+        ],
+        [
+          -0.652,
+          0.751,
+          -0.103,
+          13.229
+        ],
+        [
+          -0.033,
+          -0.163,
+          -0.986,
+          3.747
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    },
+    {
+      "alphafold_range": {
+        "end": 155,
+        "length": 136,
+        "start": 20
+      },
+      "domain": {
+        "api_url": "/api/v1/releases/2.08/sids/d4xsqb1",
+        "comment": "automated match to d1w8aa_",
+        "description": "4xsq B:21-199",
+        "header": "c.10.2.0 (B:21-199) automated matches {Branchiostoma floridae [TaxId: 7739]}",
+        "sccs": "c.10.2.0",
+        "sid": "d4xsqb1",
+        "sunid": 311703
+      },
+      "domain_range": {
+        "end": 166,
+        "length": 141,
+        "start": 26
+      },
+      "identity": 16.11,
+      "kind": "structure",
+      "p_value": 0.0243,
+      "rmsd": 3.07,
+      "score": 211.45,
+      "similarity": 30.2,
+      "transform": [
+        [
+          -0.241,
+          -0.962,
+          -0.128,
+          26.35
+        ],
+        [
+          -0.752,
+          0.268,
+          -0.602,
+          0.82
+        ],
+        [
+          0.614,
+          -0.049,
+          -0.788,
+          -6.184
+        ],
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ]
+    }
+  ],
+  "subject": {
+    "api_url": "/api/v1/releases/2.08/alphafolds/AF-Q96LI5-F1",
+    "kind": "alphafold",
+    "name": "AF-Q96LI5-F1",
+    "uniprot_accession": "Q96LI5",
+    "description": "CCR4-NOT transcription complex subunit 6-like",
+    "global_plddt": 89.64,
+    "sequence_length": 555
+  }
+}

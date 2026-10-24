@@ -1,0 +1,33 @@
+{
+  "heterogeneity": [
+    {
+      "abbreviation": "ie",
+      "description": "has additional insertions and/or extensions that are not grouped together"
+    }
+  ],
+  "homology_implied_by_level": true,
+  "homology_scope": "px",
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/66880",
+    "canonical_url": "/?sunid=66880&ver=2.08",
+    "description": "1jm7 A:",
+    "level": {
+      "code": "px",
+      "name": "Domain",
+      "plural": "Domains"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/69969",
+      "sccs": "g.44.1.1",
+      "sid": null,
+      "sunid": 69969
+    },
+    "release": "2.08",
+    "sccs": "g.44.1.1",
+    "sid": "d1jm7a_",
+    "sunid": 66880
+  },
+  "release": "2.08",
+  "repeat_family": null,
+  "warnings": []
+}

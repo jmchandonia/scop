@@ -1,0 +1,22 @@
+{
+  "node": {
+    "api_url": "/api/v1/releases/2.08/sunids/47113",
+    "canonical_url": "/?sunid=47113&ver=2.08",
+    "description": "Histone-fold",
+    "level": {
+      "code": "sf",
+      "name": "Superfamily",
+      "plural": "Superfamilies"
+    },
+    "parent": {
+      "api_url": "/api/v1/releases/2.08/sunids/47112",
+      "sccs": "a.22",
+      "sid": null,
+      "sunid": 47112
+    },
+    "release": "2.08",
+    "sccs": "a.22.1",
+    "sid": null,
+    "sunid": 47113
+  }
+}

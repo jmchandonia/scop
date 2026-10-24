@@ -1,0 +1,27 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object", "additionalProperties": false,
+  "required": ["run_id", "question_id", "condition", "model", "answer", "evidence_used", "timestamp"],
+  "properties": {
+    "run_id": {"type": "string", "minLength": 1},
+    "question_id": {"type": "string", "pattern": "^AFQ[0-9]{3}(?:_[a-z0-9_]+)?$"},
+    "condition": {"enum": ["pretrained_only", "pretrained_api", "pretrained_skill", "pretrained_mcp_skill"]},
+    "model": {"type": "string", "minLength": 1},
+    "answer": {"type": "string"},
+    "evidence_used": {"type": "array", "items": {"type": "string"}},
+    "claim_status": {"const": "non_official_evidence_hypothesis"},
+    "input_attestation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["question_id", "question_sha256", "skill_sha256", "model", "release"],
+      "properties": {
+        "question_id": {"type": "string", "minLength": 1},
+        "question_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "skill_sha256": {"type": "string", "pattern": "^[a-f0-9]{64}$"},
+        "model": {"type": "string", "minLength": 1},
+        "release": {"type": "string", "minLength": 1}
+      }
+    },
+    "timestamp": {"type": "string", "format": "date-time"}
+  }
+}
