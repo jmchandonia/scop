@@ -1,3 +1,46 @@
+Changes in 2.08 and afterwards (2026):
+
+Source code
+- Added the Java source used to build SCOPe 2.08, including the SPACI and
+  domain-coverage checks and the chain-versus-domain FATCAT comparison tools.
+- Added the all-chain 90% identity population (clustering of every PDB
+  chain), versioned chain FATCAT runs, an AlphaFold-versus-domain FATCAT
+  runner, and recovery of FATCAT archives from completed segments.
+- Failed structure-validator runs are now treated as missing SPACI evidence.
+- Updated PAST for the current PDB API and its date inconsistencies,
+  Xml2Raf.pm for RAF format 0.03, and the thumbnail scripts for GIMP 3.0.
+
+Public API and MCP server
+- SCOPe now has a public REST API (https://scop.berkeley.edu/api/v1/, with an
+  OpenAPI description) and a public MCP endpoint
+  (https://scop.berkeley.edu/mcp); both are documented at
+  https://scop.berkeley.edu/help/api/.
+
+Research-agent skills (skills/)
+- Added scop-homology, a skill for answering questions about SCOPe domain
+  classifications, evolutionary relationships, PDB-chain comparisons and
+  structural quality through the REST API or MCP server. Homology claims are
+  evidence-gated, negative evidence is handled explicitly, and a
+  deterministic comparison helper (scop_compare.py) is included.
+- Added alphafold-scope-homology, a skill for forming auditable,
+  non-definitive hypotheses about SCOPe relationships of regions of
+  AlphaFold models, with FATCAT, pLDDT and lineage caveats.
+- Both skills explain PDB cluster representatives, sequence similarity and
+  the all-chain population used in chain comparisons.
+
+Skill benchmarks (skills-benchmarks/)
+- Added the scop-homology benchmark (suite 4.3.0): 24 questions with gold
+  records and rubric, and every run of seven OpenAI and Anthropic models in
+  five access conditions with three replicates, scored by two judges, with
+  answers, evaluations, logs and captured API traffic.
+- Added the alphafold-scope-homology benchmark (suite 1.18.4) and its run.
+- Added the complete record of the Nicolin-1 agent session described in the
+  SCOPe 2026 Nucleic Acids Research paper (skills-benchmarks/transcripts/).
+
+Repository
+- Moved to https://github.com/SCOPe-knowledgebase/scop; the default branch is
+  now main.
+
 Changes in 2.07:
 
 Initial release of some of the code.
