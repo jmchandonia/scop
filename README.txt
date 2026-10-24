@@ -17,8 +17,18 @@ https://scop.berkeley.edu/references/
 Downloadable data:
 https://scop.berkeley.edu/downloads/
 
-Research-agent skills:
-https://github.com/SCOPe-knowledgebase/scop/tree/main/skills
+Public REST API (JSON, no key required; OpenAPI description and
+endpoint reference linked from the help page):
+https://scop.berkeley.edu/api/v1/
+https://scop.berkeley.edu/api/v1/openapi.yaml
+https://scop.berkeley.edu/help/api/
 
 Public MCP endpoint (Streamable HTTP):
 https://scop.berkeley.edu/mcp
+
+Research-agent skills (scop-homology and alphafold-scope-homology):
+https://github.com/SCOPe-knowledgebase/scop/tree/main/skills
+
+Skill benchmarks (questions, rubric, every run with answers and judge
+evaluations, and the agent-session transcripts described in our papers):
+https://github.com/SCOPe-knowledgebase/scop/tree/main/skills-benchmarks
