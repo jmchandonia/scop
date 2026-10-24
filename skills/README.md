@@ -16,9 +16,9 @@ or server filesystem.
    installer, or copy them into the skill directory supported by your agent.
    Preserve the `references`, `agents`, and any `scripts` subdirectories.
    The public sources are
-   [scop-homology](https://github.com/jmchandonia/scop/tree/master/skills/scop-homology)
+   [scop-homology](https://github.com/SCOPe-knowledgebase/scop/tree/main/skills/scop-homology)
    and
-   [alphafold-scope-homology](https://github.com/jmchandonia/scop/tree/master/skills/alphafold-scope-homology).
+   [alphafold-scope-homology](https://github.com/SCOPe-knowledgebase/scop/tree/main/skills/alphafold-scope-homology).
 2. In an MCP-capable client, add `https://scop.berkeley.edu/mcp` as a remote
    server using Streamable HTTP. No API key is required. Refresh the server's
    tool list after connecting.

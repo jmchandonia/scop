@@ -18,7 +18,7 @@ Downloadable data:
 https://scop.berkeley.edu/downloads/
 
 Research-agent skills:
-https://github.com/jmchandonia/scop/tree/master/skills
+https://github.com/SCOPe-knowledgebase/scop/tree/main/skills
 
 Public MCP endpoint (Streamable HTTP):
 https://scop.berkeley.edu/mcp
