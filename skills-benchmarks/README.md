@@ -14,3 +14,8 @@ logs and the captured API traffic.
   `gpt-5.6-sol` judge's reports kept as `*_judge-gpt-5-6-sol.md`).
 - `alphafold-scope-homology/`: suite 1.18.4. Twelve questions on locating
   SCOPe-like regions in AlphaFold models, with the current-suite run.
+- `transcripts/`: complete records of agent sessions described in the SCOPe
+  papers. `transcripts/nicolin-1/` holds the Claude Code session behind the
+  Nicolin-1 example in the 2026 *Nucleic Acids Research* paper: the two
+  prompts, the full event stream of each turn, Markdown renderings of the
+  session, and the command used to run it.
