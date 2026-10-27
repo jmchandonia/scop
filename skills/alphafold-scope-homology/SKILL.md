@@ -1,6 +1,8 @@
 ---
 name: alphafold-scope-homology
 description: Form non-official, non-definitive SCOPe relationship hypotheses for regions of an AlphaFold model and provide an auditable evidence trace. Combine local AlphaFold pLDDT confidence, top sequence hits, FATCAT structure hits, bias-aware node-specific chain-statistics caveats, release-scoped SCOPe lineages, annotations, and homology warnings. Use for AlphaFold-to-SCOPe hit interpretation, candidate family or superfamily hypotheses, fold-level similarity assessment, conflicting hit analysis, and multi-domain region analysis. Do not use for general AlphaFold prediction, formal SCOPe classification, or function assignment from similarity alone.
+metadata:
+  version: "1.0.1"
 ---
 
 # AlphaFold–SCOPe Evidence Assessment

@@ -1,6 +1,8 @@
 ---
 name: scop-homology
 description: Use classic SCOP, ASTRAL, and SCOPe structural-classification data through public SCOPe API tools to answer questions about protein domains, hierarchy, homology, folds, families, superfamilies, PDB-chain BLAST and FATCAT comparisons, stable releases, ASTRAL quality, and reproducible citations. Use for SCOP/SCOPe/ASTRAL questions only; this skill does not cover SCOP2, CATH, ECOD, or other classification resources.
+metadata:
+  version: "1.0.1"
 ---
 
 # SCOP Homology

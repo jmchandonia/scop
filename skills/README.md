@@ -43,3 +43,7 @@ Example requests:
 AlphaFold and unclassified-chain matches are evidence for investigation, not
 official SCOPe classifications. Each skill explains the supporting evidence
 and limitations that should accompany a result.
+
+## Versions
+
+Each skill carries its version in the `metadata.version` field of its `SKILL.md`. Version 1.0.0 is the unlabelled version benchmarked for the 2026 *Nucleic Acids Research* article (the `skills/` directory at commit bf929356); 1.0.1 adds only the version field. Repository releases are dated (for example `2026-10-27`) and list the skill and benchmark-suite versions they contain.
